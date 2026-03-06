@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "dashboard_leitura"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "c1bff1e7-9fad-4344-b562-5329202e4175"
+  }
+}

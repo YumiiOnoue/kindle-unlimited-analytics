@@ -1,0 +1,62 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.6.0/schema.json",
+  "name": "cf60c4509e56de60951b",
+  "position": {
+    "x": 16,
+    "y": 346,
+    "z": 1000,
+    "height": 336,
+    "width": 608,
+    "tabOrder": 1000
+  },
+  "visual": {
+    "visualType": "treemap",
+    "query": {
+      "queryState": {
+        "Group": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "analise_leitura_pbi"
+                    }
+                  },
+                  "Property": "categoria"
+                }
+              },
+              "queryRef": "analise_leitura_pbi.categoria",
+              "nativeQueryRef": "categoria",
+              "active": true
+            }
+          ]
+        },
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "analise_leitura_pbi"
+                        }
+                      },
+                      "Property": "custo_real_estimado"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(analise_leitura_pbi.custo_real_estimado)",
+              "nativeQueryRef": "Soma de custo_real_estimado"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

@@ -1,0 +1,23 @@
+model Model
+	culture: pt-BR
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: pt-BR
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_QueryOrder = ["analise_leitura_pbi"]
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table analise_leitura_pbi
+ref table medidas
+ref table calendario
+ref table DateTableTemplate_7750ab65-9f47-4ba5-b9c2-a411576ab549
+ref table LocalDateTable_e62f36a0-ab23-4220-b739-6e48b066d88c
+ref table LocalDateTable_0c13211b-dd37-4c82-9062-bc0e45eb0041
+
+ref cultureInfo pt-BR
+

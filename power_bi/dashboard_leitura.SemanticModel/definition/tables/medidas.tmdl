@@ -1,0 +1,43 @@
+table medidas
+	lineageTag: 34b2a6b5-f0a1-41dc-ba5e-9f170ea8bf72
+
+	measure total_investido = SUM(analise_leitura_pbi[custo_real_estimado])
+		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
+		lineageTag: 715f27ae-ece0-44d8-9b6a-834da69881b2
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	measure total_pagina = sum(analise_leitura_pbi[numero_paginas])
+		formatString: 0
+		lineageTag: 426ab83e-32d4-46b6-9bb2-089848c326a9
+
+	measure eficiencia_financeira = DIVIDE([total_pagina], [Total_Investido])
+		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
+		lineageTag: 547b097a-fda7-426b-8a21-7c1a48fef8ae
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	measure total_livros = COUNT(analise_leitura_pbi[livro_titulo])
+		formatString: 0
+		lineageTag: 3e337a93-1ada-4d8f-9ad1-3c821c428bc5
+
+	measure total_categoria = DISTINCTCOUNT(analise_leitura_pbi[categoria])
+		formatString: 0
+		lineageTag: cde6f00c-aeef-4036-b951-acfeaffba91a
+
+	column Column
+		isHidden
+		formatString: 0
+		lineageTag: 4e0428d7-553b-4a5a-9d26-6a31e308aeaa
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Column]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition medidas = calculated
+		mode: import
+		source = Row("Column", BLANK())
+
+	annotation PBI_Id = fd6c7b79baca4702a20aa700cb6e0fd5
+

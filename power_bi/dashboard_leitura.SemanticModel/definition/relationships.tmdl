@@ -1,0 +1,15 @@
+relationship a939da17-8730-4d00-9f4f-e268b684f05e
+	crossFilteringBehavior: bothDirections
+	fromColumn: analise_leitura_pbi.data_fim
+	toColumn: calendario.Date
+
+relationship b9583e01-9581-4d85-8ed1-d1986671fdf1
+	joinOnDateBehavior: datePartOnly
+	fromColumn: analise_leitura_pbi.data_inicio
+	toColumn: LocalDateTable_e62f36a0-ab23-4220-b739-6e48b066d88c.Date
+
+relationship 63042c90-aabd-4275-940d-71e432a9ec86
+	joinOnDateBehavior: datePartOnly
+	fromColumn: calendario.Date
+	toColumn: LocalDateTable_0c13211b-dd37-4c82-9062-bc0e45eb0041.Date
+

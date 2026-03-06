@@ -1,0 +1,162 @@
+table analise_leitura_pbi
+	lineageTag: f8a3bae3-e74c-4a65-b2ff-2aabfa54d695
+
+	column id_leitura
+		dataType: string
+		lineageTag: c19477af-e944-4fce-b2d4-9a1c1c299a30
+		summarizeBy: none
+		sourceColumn: id_leitura
+
+		annotation SummarizationSetBy = Automatic
+
+	column livro_titulo
+		dataType: string
+		lineageTag: 3f28820e-5891-461f-97d5-5a2eff2b7ef0
+		summarizeBy: none
+		sourceColumn: livro_titulo
+
+		annotation SummarizationSetBy = Automatic
+
+	column autor_nome
+		dataType: string
+		lineageTag: 0451d401-250d-4ddd-9589-2726ed300424
+		summarizeBy: none
+		sourceColumn: autor_nome
+
+		annotation SummarizationSetBy = Automatic
+
+	column autor_nacionalidade
+		dataType: string
+		lineageTag: 35f15cd1-b5ca-4ea8-a454-a3a42dc5e03f
+		summarizeBy: none
+		sourceColumn: autor_nacionalidade
+
+		annotation SummarizationSetBy = Automatic
+
+	column editora_nome
+		dataType: string
+		lineageTag: 2965626b-2d39-4307-a357-c14b7c51ad0f
+		summarizeBy: none
+		sourceColumn: editora_nome
+
+		annotation SummarizationSetBy = Automatic
+
+	column categoria
+		dataType: string
+		lineageTag: e022a6fe-4e75-4ff3-965b-c7a0fc8c3733
+		summarizeBy: none
+		sourceColumn: categoria
+
+		annotation SummarizationSetBy = Automatic
+
+	column formato
+		dataType: string
+		lineageTag: 67b8e061-1782-4079-9005-1b4d98bd3e18
+		summarizeBy: none
+		sourceColumn: formato
+
+		annotation SummarizationSetBy = Automatic
+
+	column data_inicio
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: eace57d6-7c9a-4552-bccf-f67ab5225ac8
+		summarizeBy: none
+		sourceColumn: data_inicio
+
+		variation Variation
+			isDefault
+			relationship: b9583e01-9581-4d85-8ed1-d1986671fdf1
+			defaultHierarchy: LocalDateTable_e62f36a0-ab23-4220-b739-6e48b066d88c.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column data_fim
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 4223e4ee-6a94-4bce-8168-18560ef80a56
+		summarizeBy: none
+		sourceColumn: data_fim
+
+		annotation SummarizationSetBy = Automatic
+
+	column valor_direto
+		dataType: double
+		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
+		lineageTag: 2226b7ac-479b-412f-9e15-5e6a9d6d2e7e
+		summarizeBy: sum
+		sourceColumn: valor_direto
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	column custo_real_estimado
+		dataType: double
+		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
+		lineageTag: 36a70edf-cbf8-4c16-b9ef-292494018315
+		summarizeBy: sum
+		sourceColumn: custo_real_estimado
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	column dias_leitura
+		dataType: int64
+		formatString: 0
+		lineageTag: 448f85a5-dae7-4cdb-a866-3c2baf768091
+		summarizeBy: sum
+		sourceColumn: dias_leitura
+
+		annotation SummarizationSetBy = Automatic
+
+	column numero_paginas
+		dataType: int64
+		formatString: 0
+		lineageTag: fe369ca7-96f1-4ba9-b447-d1758d1e20b8
+		summarizeBy: sum
+		sourceColumn: numero_paginas
+
+		annotation SummarizationSetBy = Automatic
+
+	column paginas_por_dia
+		dataType: double
+		lineageTag: 05559581-cdab-4b19-a2aa-8c132640a95d
+		summarizeBy: sum
+		sourceColumn: paginas_por_dia
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column nota
+		dataType: double
+		lineageTag: e10da685-66f2-40e9-96bb-15b41c044abc
+		summarizeBy: sum
+		sourceColumn: nota
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition analise_leitura_pbi = m
+		mode: import
+		source =
+				let
+				    Fonte = Csv.Document(File.Contents("C:\Users\User\Documents\GitHub\book_analytics\data\analise_leitura_pbi.csv"),[Delimiter=",", Columns=15, Encoding=65001]),
+				    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(Fonte, [PromoteAllScalars=true]),
+				    #"Tipo Alterado com Localidade" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos", {{"custo_real_estimado", type number}}, "en-US"),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Tipo Alterado com Localidade",{{"dias_leitura", Int64.Type}, {"numero_paginas", Int64.Type}}),
+				    #"Tipo Alterado com Localidade1" = Table.TransformColumnTypes(#"Tipo Alterado", {{"paginas_por_dia", type number}}, "en-US"),
+				    #"Tipo Alterado com Localidade2" = Table.TransformColumnTypes(#"Tipo Alterado com Localidade1", {{"nota", type number}}, "en-US"),
+				    #"Tipo Alterado com Localidade3" = Table.TransformColumnTypes(#"Tipo Alterado com Localidade2", {{"valor_direto", type number}}, "en-US"),
+				    #"Tipo Alterado com Localidade4" = Table.TransformColumnTypes(#"Tipo Alterado com Localidade3", {{"data_fim", type datetimezone}}, "pt-BR"),
+				    #"Tipo Alterado com Localidade5" = Table.TransformColumnTypes(#"Tipo Alterado com Localidade4", {{"data_inicio", type datetimezone}}, "pt-BR")
+				in
+				    #"Tipo Alterado com Localidade5"
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

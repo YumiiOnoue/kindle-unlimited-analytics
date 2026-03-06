@@ -1,0 +1,22 @@
+"id_leitura","livro_titulo","autor_nome","autor_nacionalidade","editora_nome","categoria","formato","data_inicio","data_fim","valor_direto","custo_real_estimado","dias_leitura","numero_paginas","paginas_por_dia","nota"
+1,"Yellowface","R.F. Kuang","Chinesa-Americana","Shinchosha","Ficção Científica","kindle","2025-12-22T00:00:00.000Z","2026-01-12T00:00:00.000Z",0,9.95,21,346,16.48,5
+2,"A loja dos dias de chuva","You Yeong Gwang","Sul-Coreana","Livros da Alice","Fantasia","kindle","2026-01-13T00:00:00.000Z","2026-01-25T00:00:00.000Z",0,9.95,12,253,21.08,4
+3,"O burnout","Sophie Kinsella","Britânica","Record","Comédia","kindle","2026-01-26T00:00:00.000Z","2026-02-01T00:00:00.000Z",0,24.9,6,396,66,4
+4,"Amanhã, amanhã, e ainda outro amanhã","Gabrielle Zevin","Americana","Editora Rocco","Ficção Científica","kindle","2024-12-23T00:00:00.000Z","2025-01-15T00:00:00.000Z",0,19.9,23,528,22.96,4
+5,"Amêndoas","Won-pyung Sohn","Sul-Coreana","Editora Rocco","Ficção Científica","kindle","2025-02-01T00:00:00.000Z","2025-02-22T00:00:00.000Z",0,19.9,21,240,11.43,4
+6,"Como tigres na neve","Juhea Kim","Sul-Coreana","Melhoramentos","Ficção Científica","kindle","2025-02-23T00:00:00.000Z","2025-03-02T00:00:00.000Z",0,19.9,7,454,64.86,3
+7,"Clube de leitura dos corações solitários","Lucy Gilmore","Americana","Buzz","Ficção Científica","kindle","2025-03-03T00:00:00.000Z","2025-04-01T00:00:00.000Z",0,9.95,29,353,12.17,4
+8,"O pequeno caderno das coisas não ditas","Clare Pooley","Britânica","Verus","Romance","kindle","2025-04-02T00:00:00.000Z","2025-04-28T00:00:00.000Z",0,9.95,26,414,15.92,4
+9,"As pessoas na plataforma 5","Clare Pooley","Britânica","Verus","Romance","kindle","2025-04-29T00:00:00.000Z","2025-05-12T00:00:00.000Z",0,6.63,13,373,28.69,5
+10,"Tudo que a gente sempre quis","Emily Giffin","Americana","Arqueiro","Romance","kindle","2025-05-13T00:00:00.000Z","2025-05-26T00:00:00.000Z",0,6.63,13,366,28.15,3
+11,"Um experimento de amor em Nova York","Elena Armas","Espanhola","Arqueiro","Comédia","kindle","2025-05-27T00:00:00.000Z","2025-05-30T00:00:00.000Z",0,6.63,3,490,163.33,5
+12,"A noiva do Deus Mar","Axie Oh","Americana","Melhoramentos","Fantasia","kindle","2025-06-01T00:00:00.000Z","2025-06-30T00:00:00.000Z",0,19.9,29,251,8.66,4
+13,"O guardião das coisas perdidas","Ruth Hogan","Britânica","Verus","Romance","kindle","2025-07-13T00:00:00.000Z","2025-07-27T00:00:00.000Z",0,9.95,14,322,23,3
+14,"Vida de gato","Lucilia Reale","Brasileira","Lucília Reale","Casa e Estilo de Vida","kindle","2025-07-28T00:00:00.000Z","2025-07-30T00:00:00.000Z",0,9.95,2,26,13,3
+15,"Mulherzinhas","Louisa May Alcott","Americana","Martin Claret","Ficção Científica","kindle","2025-08-01T00:00:00.000Z","2025-09-01T00:00:00.000Z",0,9.95,31,680,21.94,4
+16,"Algo como ser feliz","Eva Woods","Irlandesa","Verus","Ficção Científica","kindle","2025-09-02T00:00:00.000Z","2025-09-27T00:00:00.000Z",0,9.95,25,481,19.24,3
+17,"Chocolate quente às quintas-feiras","Michiko Aoyama","Japonesa","Arqueiro","Ficção Científica","kindle","2025-09-28T00:00:00.000Z","2025-10-13T00:00:00.000Z",0,9.95,15,138,9.2,4
+18,"Matcha às segundas-feiras","Michiko Aoyama","Japonesa","Arqueiro","Ficção Científica","kindle","2025-10-14T00:00:00.000Z","2025-10-31T00:00:00.000Z",0,9.95,17,155,9.12,4
+19,"Uma tempestade de verão","K. L. Walther","Americana","Editora Rocco","Romance","kindle","2025-11-01T00:00:00.000Z","2025-11-16T00:00:00.000Z",0,9.95,15,345,23,3
+20,"Parte do meu mundo","Abby Jimenez","Americana","Arqueiro","Romance","kindle","2025-11-17T00:00:00.000Z","2025-11-30T00:00:00.000Z",0,9.95,13,419,32.23,3
+21,"Sete verões","Paige Toon","Britânica","Verus","Romance","kindle","2025-12-01T00:00:00.000Z","2025-12-20T00:00:00.000Z",0,19.9,19,429,22.58,3

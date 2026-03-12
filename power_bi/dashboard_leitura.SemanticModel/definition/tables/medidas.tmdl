@@ -25,6 +25,39 @@ table medidas
 		formatString: 0
 		lineageTag: cde6f00c-aeef-4036-b951-acfeaffba91a
 
+	measure livro_favorito = ```
+			
+			SELECTCOLUMNS(
+			    TOPN(
+			        1, 
+			        ALLSELECTED(analise_leitura_pbi), 
+			        [Media_Nota], DESC, 
+			        analise_leitura_pbi[data_fim], DESC 
+			    ), 
+			    "Título", analise_leitura_pbi[livro_titulo]
+			)
+			```
+		lineageTag: 00851da9-6e7c-4c9a-8593-2472058f7853
+
+	measure media_nota = AVERAGE(analise_leitura_pbi[nota])
+		lineageTag: b3c90e95-22f7-4a55-9162-682207dcb641
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure nao_recomendo = ```
+			
+			SELECTCOLUMNS(
+			    TOPN(
+			        1, 
+			        ALLSELECTED(analise_leitura_pbi), 
+			        [Media_Nota], ASC, 
+			        analise_leitura_pbi[data_fim], ASC
+			    ), 
+			    "Título", analise_leitura_pbi[livro_titulo]
+			)
+			```
+		lineageTag: d7e4276b-b4b7-4715-b644-6a7af2fc55c8
+
 	column Column
 		isHidden
 		formatString: 0

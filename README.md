@@ -8,10 +8,12 @@ Este projeto nasceu de uma necessidade pessoal: analisar meus hábitos de leitur
 * **Business Intelligence:** Criar uma base de dados estruturada para alimentar um dashboard no Power BI.
 
 ## 🏗️ Estrutura do Banco de Dados
-O projeto utiliza um banco de dados MySQL com uma arquitetura de Star Schema (Esquema Estrela) simplificada para facilitar a análise:
+O projeto utiliza um banco de dados MySQL com uma arquitetura de Snowflake Schema (Esquema Floco de Neve) simplificada para facilitar a análise:
 
 * **Tabelas Dimensionais:** autores, editoras, categorias, livros e assinatura.
 * **Tabelas Fato:** leituras (registra o evento da leitura e formato) e avaliacoes (registra a performance subjetiva).
+
+![arquitetura](img/book_analysis.drawio.png)
 
 ## 📊 Insights Analíticos (Queries Principais)
 O repositório contém scripts SQL avançados para extrair indicadores como:
@@ -22,16 +24,17 @@ O repositório contém scripts SQL avançados para extrair indicadores como:
 ## 🛠️ Tecnologias Utilizadas
 * **MySQL:** Banco de dados relacional para armazenamento e processamento.
 * **SQL Avançado:** Uso de CTEs (Common Table Expressions), Window Functions e Views complexas para preparação de dados.
-* **Power BI:** Dashboard para visualização dos indicadores financeiros e de comportamento.
+* **Power BI:** [Dashboard](https://app.powerbi.com/view?r=eyJrIjoiMDQwNTM4MWEtMjE2OS00NmYzLWI0NzctODc3NWVjMTllMDlmIiwidCI6IjU3NTI5OTdmLTBkODUtNDI0My04ZjgxLTNiYmZlMTI5ODhjYiJ9) para visualização dos indicadores financeiros e de comportamento.
+
+![Dashboard](img/pag2_dashboard.png)
 
 ## 📁 Organização do Repositório
-* `/data:` Scripts de criação (1_create_table.sql) e inserção de dados históricos.
+* `/data:` Scripts de criação e inserção de dados históricos.
 * `/queries:` Análises comportamentais, financeiras e rankings.
 * `/power_bi:` Arquivos otimizadas para o dashboard.
 
 ## Próximos Passos
-[ ] Finalizar a integração com o Power BI para visualização em tempo real.
-[ ] Implementar uma análise preditiva para estimar quantos livros lerei no próximo semestre.
-[ ] Adicionar métricas de "Livros Abandonados" para entender melhor o desperdício financeiro.
+* [ ] Finalizar a integração com o Power BI para visualização em tempo real.
+* [ ] Implementar uma análise preditiva para estimar quantos livros lerei no próximo semestre.
+* [ ] Adicionar métricas de "Livros Abandonados" para entender melhor o desperdício financeiro.
 
-[Dashboard](https://app.powerbi.com/view?r=eyJrIjoiMDQwNTM4MWEtMjE2OS00NmYzLWI0NzctODc3NWVjMTllMDlmIiwidCI6IjU3NTI5OTdmLTBkODUtNDI0My04ZjgxLTNiYmZlMTI5ODhjYiJ9)

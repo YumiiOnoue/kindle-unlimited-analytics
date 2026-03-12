@@ -12,7 +12,6 @@ WITH assinatura_mes AS (
         ass.valor_mensal / NULLIF(COUNT(l_sub.id_leitura), 0) AS custo_rateado
     FROM assinatura ass
     LEFT JOIN leituras l_sub ON DATE_FORMAT(ass.data_pagamento, '%Y-%m') = DATE_FORMAT(l_sub.data_fim, '%Y-%m')
-    WHERE l_sub.assinatura = TRUE
     GROUP BY ass.data_pagamento, ass.valor_mensal
 )
 SELECT 

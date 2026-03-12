@@ -40,7 +40,6 @@ SELECT
     ROUND(a.valor_mensal / COUNT(l.id_leitura), 2) AS custo_efetivo_por_livro
 FROM leituras l
 JOIN assinatura a ON DATE_FORMAT(l.data_fim, '%Y-%m') = DATE_FORMAT(a.data_pagamento, '%Y-%m')
-WHERE l.assinatura = TRUE
 GROUP BY mes, a.valor_mensal
 ORDER BY mes;
 

@@ -1,4 +1,4 @@
-"id_subscription","servico","valor_mensal","data_pagamento"
+"id_assinatura","servico","valor_mensal","data_pagamento"
 1,"Kindle Unlimited",19.9,1767484800000
 2,"Kindle Unlimited",24.9,1770163200000
 3,"Kindle Unlimited",19.9,1735948800000
@@ -13,3 +13,4 @@
 12,"Kindle Unlimited",19.9,1759536000000
 13,"Kindle Unlimited",19.9,1762214400000
 14,"Kindle Unlimited",19.9,1764806400000
+15,"Kindle Unlimited",19.9,1733270400000

@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.6.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
   "name": "a2a97c3610c1db1309b2",
   "position": {
     "x": 1056,
@@ -23,11 +23,11 @@
                       "Entity": "medidas"
                     }
                   },
-                  "Property": "eficiencia_financeira"
+                  "Property": "custo_medio"
                 }
               },
-              "queryRef": "medidas.eficiencia_financeira",
-              "nativeQueryRef": "eficiencia_financeira"
+              "queryRef": "medidas.custo_medio",
+              "nativeQueryRef": "custo_medio"
             }
           ]
         }
@@ -42,7 +42,7 @@
                     "Entity": "medidas"
                   }
                 },
-                "Property": "eficiencia_financeira"
+                "Property": "custo_medio"
               }
             },
             "direction": "Descending"
@@ -91,7 +91,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Valor Médio por Livro'"
+                  "Value": "'Custo Médio por Livro'"
                 }
               }
             },
@@ -224,5 +224,23 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "e153695c3ca1b0574a90",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "medidas"
+              }
+            },
+            "Property": "custo_medio"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

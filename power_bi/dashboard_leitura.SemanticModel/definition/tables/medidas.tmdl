@@ -58,6 +58,12 @@ table medidas
 			```
 		lineageTag: d7e4276b-b4b7-4715-b644-6a7af2fc55c8
 
+	measure custo_medio = DIVIDE([total_investido],[total_livros])
+		formatString: "R$"#,0.00;-"R$"#,0.00;"R$"#,0.00
+		lineageTag: e69d8da9-a0af-429c-951a-1a8ec00177cb
+
+		annotation PBI_FormatHint = {"currencyCulture":"es-BR"}
+
 	column Column
 		isHidden
 		formatString: 0

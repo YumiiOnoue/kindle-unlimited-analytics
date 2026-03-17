@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.6.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
   "name": "78ae4443557881501e77",
   "position": {
     "x": 767.99999999999989,
@@ -199,7 +199,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Gasto por Formato do Livro'"
+                  "Value": "'Gasto Total por Formato do Livro'"
                 }
               }
             }
@@ -299,5 +299,42 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "91fe8cabb71938761a50",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "analise_leitura_pbi"
+              }
+            },
+            "Property": "formato"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "7c1613060406d0b431a3",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "analise_leitura_pbi"
+                  }
+                },
+                "Property": "custo_real_estimado"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

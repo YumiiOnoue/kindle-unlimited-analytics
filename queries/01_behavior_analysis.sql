@@ -2,55 +2,114 @@
 -- Análise Comportamental 
 -- =====================
 
--- Quantos livros são lidos por mês?
+USE book_analytics;
+
+-- =========================================================
+-- 1. QUANTOS LIVROS SÃO LIDOS POR MÊS?
+-- =========================================================
 SELECT 
     DATE_FORMAT(data_fim, '%Y-%m') AS mes,
     COUNT(*) AS total_livros
-FROM leituras
+FROM fato_leituras
 WHERE data_fim IS NOT NULL
-GROUP BY mes
+GROUP BY DATE_FORMAT(data_fim, '%Y-%m')
 ORDER BY mes;
 
--- Tempo médio de leitura por ano
+-- =========================================================
+-- 2. TEMPO MÉDIO DE LEITURA (EM DIAS) POR ANO
+-- =========================================================
 SELECT 
     YEAR(data_fim) AS ano,
-    ROUND(AVG(DATEDIFF(data_fim, data_inicio)), 1) AS tempo_medio_leitura_dias
-FROM leituras
+    COUNT(id_leitura) AS total_livros,
+    ROUND(AVG(DATEDIFF(data_fim, data_inicio) + 1), 1) AS tempo_medio_leitura_dias
+FROM fato_leituras
 WHERE data_fim IS NOT NULL
-GROUP BY ano
+GROUP BY YEAR(data_fim)
 ORDER BY ano DESC;
 
--- Tempo de leitura detalhado por categoria
-SELECT 
-    c.nome_categoria,
-    COUNT(l.id_leitura) AS total_livros,
-    ROUND(AVG(DATEDIFF(l.data_fim, l.data_inicio)), 1) AS media_dias
-FROM leituras l
-JOIN livros lv ON l.id_livro = lv.id_livro
-JOIN categorias c ON lv.id_categoria = c.id_categoria
-WHERE l.data_fim IS NOT NULL
-GROUP BY c.nome_categoria
-ORDER BY media_dias DESC;
 
--- Quantidade de livros lidos por ano, total de páginas lidas e média de páginas por livro  
+-- =========================================================
+-- 3. QUANTIDADE DE LIVROS LIDOS, TOTAL E MÉDIA DE PÁGINAS POR ANO
+-- =========================================================
 SELECT 
-    YEAR(l.data_fim) AS ano,
-    COUNT(l.id_leitura) AS total_livros,
-    SUM(lv.numero_paginas) AS total_paginas_lidas,
-    ROUND(AVG(lv.numero_paginas), 0) AS media_paginas_por_livro
-FROM leituras l
-JOIN livros lv ON l.id_livro = lv.id_livro
-WHERE l.data_fim IS NOT NULL
-GROUP BY ano
+    YEAR(fl.data_fim) AS ano,
+    COUNT(fl.id_leitura) AS total_livros,
+    SUM(dl.numero_paginas) AS total_paginas_lidas,
+    ROUND(AVG(dl.numero_paginas), 0) AS media_paginas_por_livro
+FROM fato_leituras fl
+INNER JOIN dim_livros dl ON fl.id_livro = dl.id_livro
+WHERE fl.data_fim IS NOT NULL
+GROUP BY YEAR(fl.data_fim)
 ORDER BY ano DESC;
 
--- Média de páginas lidas por dia, detalhada por categoria
+
+-- =========================================================
+-- 4. TEMPO DE LEITURA DETALHADO POR CATEGORIA (DESMEMBRANDO MULTITAGS)
+-- =========================================================
+WITH RECURSIVE categorias_desmembradas AS (
+    -- Separa categorias delimitadas por vírgula em linhas individuais
+    SELECT 
+        fl.id_leitura,
+        (DATEDIFF(fl.data_fim, fl.data_inicio) + 1) AS dias_leitura,
+        TRIM(REGEXP_SUBSTR(dl.categorias, '[^,]+', 1, 1)) AS categoria,
+        1 AS nivel
+    FROM fato_leituras fl
+    INNER JOIN dim_livros dl ON fl.id_livro = dl.id_livro
+    WHERE fl.data_fim IS NOT NULL
+    
+    UNION ALL
+    
+    SELECT 
+        fl.id_leitura,
+        (DATEDIFF(fl.data_fim, fl.data_inicio) + 1) AS dias_leitura,
+        TRIM(REGEXP_SUBSTR(dl.categorias, '[^,]+', 1, nivel + 1)) AS categoria,
+        nivel + 1
+    FROM fato_leituras fl
+    INNER JOIN dim_livros dl ON fl.id_livro = dl.id_livro
+    INNER JOIN categorias_desmembradas cd ON fl.id_leitura = cd.id_leitura
+    WHERE REGEXP_SUBSTR(dl.categorias, '[^,]+', 1, nivel + 1) IS NOT NULL
+)
 SELECT 
-    c.nome_categoria,
-    ROUND(AVG(lv.numero_paginas / DATEDIFF(l.data_fim, l.data_inicio)), 1) AS pags_por_dia_media
-FROM leituras l
-JOIN livros lv ON l.id_livro = lv.id_livro
-JOIN categorias c ON lv.id_categoria = c.id_categoria
-WHERE l.data_fim IS NOT NULL
-GROUP BY 1
-ORDER BY 2 DESC;
+    categoria,
+    COUNT(id_leitura) AS total_leituras,
+    ROUND(AVG(dias_leitura), 1) AS media_dias_por_livro
+FROM categorias_desmembradas
+WHERE categoria <> ''
+GROUP BY categoria
+ORDER BY media_dias_por_livro DESC;
+
+
+-- =========================================================
+-- 5. MÉDIA DE PÁGINAS LIDAS POR DIA POR CATEGORIA
+-- =========================================================
+WITH RECURSIVE categorias_desmembradas AS (
+    SELECT 
+        fl.id_leitura,
+        dl.numero_paginas,
+        (DATEDIFF(fl.data_fim, fl.data_inicio) + 1) AS dias_leitura,
+        TRIM(REGEXP_SUBSTR(dl.categorias, '[^,]+', 1, 1)) AS categoria,
+        1 AS nivel
+    FROM fato_leituras fl
+    INNER JOIN dim_livros dl ON fl.id_livro = dl.id_livro
+    WHERE fl.data_fim IS NOT NULL
+    
+    UNION ALL
+    
+    SELECT 
+        fl.id_leitura,
+        dl.numero_paginas,
+        (DATEDIFF(fl.data_fim, fl.data_inicio) + 1) AS dias_leitura,
+        TRIM(REGEXP_SUBSTR(dl.categorias, '[^,]+', 1, nivel + 1)) AS categoria,
+        nivel + 1
+    FROM fato_leituras fl
+    INNER JOIN dim_livros dl ON fl.id_livro = dl.id_livro
+    INNER JOIN categorias_desmembradas cd ON fl.id_leitura = cd.id_leitura
+    WHERE REGEXP_SUBSTR(dl.categorias, '[^,]+', 1, nivel + 1) IS NOT NULL
+)
+SELECT 
+    categoria,
+    ROUND(AVG(numero_paginas / NULLIF(dias_leitura, 0)), 1) AS media_paginas_por_dia
+FROM categorias_desmembradas
+WHERE categoria <> ''
+GROUP BY categoria
+ORDER BY media_paginas_por_dia DESC;

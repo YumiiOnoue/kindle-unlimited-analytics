@@ -1,65 +1,130 @@
 -- =====================
 -- Análise Financeira
 -- =====================
+USE book_analytics;
 
--- Investimento total em livros por ano
-SELECT 
-    YEAR(l.data_fim) AS ano,
-    SUM(l.valor_pago) AS investimento_compras,
-    -- Soma de todas as mensalidades do ano / total de livros do ano
-    ROUND(SUM(DISTINCT a.valor_mensal * 1) / COUNT(l.id_leitura), 2) AS custo_medio_anual_por_livro
-FROM leituras l
-JOIN assinatura a ON YEAR(l.data_fim) = YEAR(a.data_pagamento)
-GROUP BY ano;
-
--- Gastos mensais
-SELECT 
-    mes,
-    custo_assinatura,
-    custo_compras_avulsas,
-    (custo_assinatura + custo_compras_avulsas) AS total_mes
-FROM (
+-- =========================================================
+-- 1. INVESTIMENTO TOTAL EM LIVROS POR ANO (ASSINATURAS + COMPRAS AVULSAS)
+-- =========================================================
+-- Agrupa primeiro as granularidades separadas para evitar somas duplicadas via JOIN
+WITH total_leituras_ano AS (
     SELECT 
-        DATE_FORMAT(l.data_inicio, '%Y-%m') AS mes,
-        -- Pegamos o valor da assinatura do mês (se houver)
-        COALESCE(MAX(a.valor_mensal), 0) AS custo_assinatura,
-        -- Somamos livros comprados fora da assinatura no mesmo mês
-        SUM(l.valor_pago) AS custo_compras_avulsas
-    FROM leituras l
-    LEFT JOIN assinatura a ON DATE_FORMAT(l.data_inicio, '%Y-%m') = DATE_FORMAT(a.data_pagamento, '%Y-%m')
-    GROUP BY mes
-) AS resumo_mensal
-ORDER BY mes;
-
--- Investimento por livro no kindle
-
+        YEAR(data_fim) AS ano,
+        COUNT(id_leitura) AS total_livros,
+        SUM(valor_pago) AS investimento_compras
+    FROM fato_leituras
+    WHERE data_fim IS NOT NULL
+    GROUP BY YEAR(data_fim)
+),
+total_assinaturas_ano AS (
+    SELECT 
+        YEAR(data_pagamento) AS ano,
+        SUM(valor_mensal) AS investimento_assinatura
+    FROM fato_assinatura
+    GROUP BY YEAR(data_pagamento)
+)
 SELECT 
-    DATE_FORMAT(l.data_fim, '%Y-%m') AS mes,
-    COUNT(l.id_leitura) AS total_livros_ku,
-    a.valor_mensal AS custo_assinatura,
-    ROUND(a.valor_mensal / COUNT(l.id_leitura), 2) AS custo_efetivo_por_livro
-FROM leituras l
-JOIN assinatura a ON DATE_FORMAT(l.data_fim, '%Y-%m') = DATE_FORMAT(a.data_pagamento, '%Y-%m')
-GROUP BY mes, a.valor_mensal
-ORDER BY mes;
-
-
--- Custo médio por página (Geral: Assinatura + Compras Diretas)
-SELECT 
-    YEAR(l.data_fim) AS ano,
-    -- Calculamos o investimento total somando a subquery de assinaturas com a soma de valor_pago
-    (SELECT COALESCE(SUM(valor_mensal), 0) 
-     FROM assinatura 
-     WHERE YEAR(data_pagamento) = YEAR(l.data_fim)) + SUM(l.valor_pago) AS investimento_total_ano,
-    
-    SUM(lv.numero_paginas) AS total_paginas_lidas_geral,
-    
-    -- Cálculo do custo por página
+    l.ano,
+    COALESCE(l.investimento_compras, 0.00) AS investimento_compras,
+    COALESCE(a.investimento_assinatura, 0.00) AS investimento_assinaturas,
+    (COALESCE(l.investimento_compras, 0.00) + COALESCE(a.investimento_assinatura, 0.00)) AS investimento_total,
+    l.total_livros,
     ROUND(
-        ((SELECT COALESCE(SUM(valor_mensal), 0) FROM assinatura WHERE YEAR(data_pagamento) = YEAR(l.data_fim)) + SUM(l.valor_pago)) 
-        / SUM(lv.numero_paginas), 4
+        (COALESCE(l.investimento_compras, 0.00) + COALESCE(a.investimento_assinatura, 0.00)) / NULLIF(l.total_livros, 0), 
+        2
+    ) AS custo_medio_anual_por_livro
+FROM total_leituras_ano l
+LEFT JOIN total_assinaturas_ano a ON l.ano = a.ano
+ORDER BY l.ano DESC;
+
+
+-- =========================================================
+-- 2. GASTOS MENSAIS TOTAIS (MENSALIDADE + COMPRAS AVULSAS)
+-- =========================================================
+-- Considera a competência de cobrança da assinatura como base
+WITH compras_mes AS (
+    SELECT 
+        DATE_FORMAT(data_fim, '%Y-%m') AS mes,
+        SUM(valor_pago) AS custo_compras_avulsas
+    FROM fato_leituras
+    WHERE valor_pago > 0
+    GROUP BY DATE_FORMAT(data_fim, '%Y-%m')
+),
+assinatura_mes AS (
+    SELECT 
+        DATE_FORMAT(data_pagamento, '%Y-%m') AS mes,
+        SUM(valor_mensal) AS custo_assinatura
+    FROM fato_assinatura
+    GROUP BY DATE_FORMAT(data_pagamento, '%Y-%m')
+)
+SELECT 
+    a.mes,
+    COALESCE(a.custo_assinatura, 0.00) AS custo_assinatura,
+    COALESCE(c.custo_compras_avulsas, 0.00) AS custo_compras_avulsas,
+    (COALESCE(a.custo_assinatura, 0.00) + COALESCE(c.custo_compras_avulsas, 0.00)) AS total_mes
+FROM assinatura_mes a
+LEFT JOIN compras_mes c ON a.mes = c.mes
+ORDER BY a.mes DESC;
+
+
+-- =========================================================
+-- 3. CUSTO EFETIVO POR LIVRO NO KINDLE UNLIMITED (POR MÊS)
+-- =========================================================
+WITH leituras_ku AS (
+    SELECT 
+        DATE_FORMAT(data_fim, '%Y-%m') AS mes,
+        COUNT(id_leitura) AS total_livros_ku
+    FROM fato_leituras
+    WHERE formato = 'kindle' AND valor_pago = 0.00
+    GROUP BY DATE_FORMAT(data_fim, '%Y-%m')
+),
+assinatura_ku AS (
+    SELECT 
+        DATE_FORMAT(data_pagamento, '%Y-%m') AS mes,
+        SUM(valor_mensal) AS custo_assinatura
+    FROM fato_assinatura
+    WHERE servico = 'Kindle Unlimited'
+    GROUP BY DATE_FORMAT(data_pagamento, '%Y-%m')
+)
+SELECT 
+    a.mes,
+    COALESCE(l.total_livros_ku, 0) AS total_livros_ku,
+    a.custo_assinatura,
+    ROUND(a.custo_assinatura / NULLIF(l.total_livros_ku, 0), 2) AS custo_efetivo_por_livro
+FROM assinatura_ku a
+LEFT JOIN leituras_ku l ON a.mes = l.mes
+ORDER BY a.mes DESC;
+
+
+-- =========================================================
+-- 4. CUSTO MÉDIO POR PÁGINA (INVESTIMENTO TOTAL / PÁGINAS LIDAS)
+-- =========================================================
+WITH paginas_ano AS (
+    SELECT 
+        YEAR(fl.data_fim) AS ano,
+        SUM(fl.valor_pago) AS compras_avulsas_ano,
+        SUM(dl.numero_paginas) AS total_paginas_lidas_ano
+    FROM fato_leituras fl
+    LEFT JOIN dim_livros dl ON fl.id_livro = dl.id_livro
+    WHERE fl.data_fim IS NOT NULL
+    GROUP BY YEAR(fl.data_fim)
+),
+assinatura_ano AS (
+    SELECT 
+        YEAR(data_pagamento) AS ano,
+        SUM(valor_mensal) AS total_assinatura_ano
+    FROM fato_assinatura
+    GROUP BY YEAR(data_pagamento)
+)
+SELECT 
+    p.ano,
+    (COALESCE(a.total_assinatura_ano, 0.00) + COALESCE(p.compras_avulsas_ano, 0.00)) AS investimento_total_ano,
+    COALESCE(p.total_paginas_lidas_ano, 0) AS total_paginas_lidas_geral,
+    ROUND(
+        (COALESCE(a.total_assinatura_ano, 0.00) + COALESCE(p.compras_avulsas_ano, 0.00)) 
+        / NULLIF(p.total_paginas_lidas_ano, 0), 
+        4
     ) AS custo_por_pagina_geral
-FROM leituras l
-JOIN livros lv ON l.id_livro = lv.id_livro
-WHERE l.data_fim IS NOT NULL
-GROUP BY YEAR(l.data_fim);
+FROM paginas_ano p
+LEFT JOIN assinatura_ano a ON p.ano = a.ano
+ORDER BY p.ano DESC;

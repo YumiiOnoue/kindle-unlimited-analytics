@@ -1,15 +1,25 @@
-relationship a939da17-8730-4d00-9f4f-e268b684f05e
+relationship fcf6a64e-d551-3372-98d1-3618f813c199
+	fromColumn: 'book_analytics fato_leituras'.data_fim
+	toColumn: dim_calendario.Date
+
+relationship ea922d50-44b6-f59b-70b4-222716ce8d19
+	isActive: false
+	fromColumn: 'book_analytics fato_leituras'.data_inicio
+	toColumn: dim_calendario.Date
+
+relationship 9ace03d6-d306-fc16-2ba6-c8788f4ccd08
 	crossFilteringBehavior: bothDirections
-	fromColumn: analise_leitura_pbi.data_fim
-	toColumn: calendario.Date
+	fromColumn: 'book_analytics fato_leituras'.id_livro
+	toColumn: 'book_analytics dim_livros'.id_livro
 
-relationship b9583e01-9581-4d85-8ed1-d1986671fdf1
-	joinOnDateBehavior: datePartOnly
-	fromColumn: analise_leitura_pbi.data_inicio
-	toColumn: LocalDateTable_e62f36a0-ab23-4220-b739-6e48b066d88c.Date
+	annotation PBI_IsFromSource = FS
 
-relationship 63042c90-aabd-4275-940d-71e432a9ec86
-	joinOnDateBehavior: datePartOnly
-	fromColumn: calendario.Date
-	toColumn: LocalDateTable_0c13211b-dd37-4c82-9062-bc0e45eb0041.Date
+relationship 9e9b31a5-768f-8fb3-ac3d-8970387dac18
+	fromColumn: 'book_analytics fato_assinatura'.data_pagamento
+	toColumn: dim_calendario.Date
+
+relationship 80a54226-459f-31dc-711d-a32d676e942a
+	crossFilteringBehavior: bothDirections
+	fromColumn: 'book_analytics dim_livros_categorias'.id_livro
+	toColumn: 'book_analytics dim_livros'.id_livro
 

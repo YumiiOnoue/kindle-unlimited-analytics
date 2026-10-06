@@ -1,0 +1,54 @@
+table 'book_analytics fato_assinatura'
+	lineageTag: 977f347e-4b06-47a0-9cec-37f7ab9b76ef
+
+	column id_assinatura
+		dataType: int64
+		formatString: 0
+		lineageTag: 72fc11f9-2403-417c-8da4-f3af617c8e84
+		summarizeBy: none
+		sourceColumn: id_assinatura
+
+		annotation SummarizationSetBy = User
+
+	column servico
+		dataType: string
+		lineageTag: ea18cf06-c10e-4d88-adec-1cfaa6668ccd
+		summarizeBy: none
+		sourceColumn: servico
+
+		annotation SummarizationSetBy = Automatic
+
+	column valor_mensal
+		dataType: double
+		lineageTag: 80ce81e7-81ae-449e-aeb4-854c41d49fd6
+		summarizeBy: none
+		sourceColumn: valor_mensal
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column data_pagamento
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 8fba3c04-39bc-4b11-8e2c-34d053276176
+		summarizeBy: none
+		sourceColumn: data_pagamento
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	partition 'book_analytics fato_assinatura' = m
+		mode: import
+		source =
+				let
+				  Origem = MySQL.Database("localhost", "book_analytics"),
+				  #"Navegação 1" = Origem{[Schema = "book_analytics", Item = "fato_assinatura"]}[Data]
+				in
+				  #"Navegação 1"
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

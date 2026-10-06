@@ -1,0 +1,144 @@
+table _Medidas
+	lineageTag: c88ae0e2-f6f1-48e2-ab5a-65cf67fbdb71
+
+	measure 'Total Livros Lidos' = COUNTROWS('book_analytics fato_leituras')
+		formatString: 0
+		lineageTag: d4430b8f-4359-4154-b698-7c780e2e3fed
+
+	measure 'Economia Média por Livro KU' = ```
+			
+			VAR LivrosKU = 
+			    CALCULATE(
+			        [Total Livros Lidos], 
+			        'book_analytics fato_leituras'[formato] = "kindle", 
+			        'book_analytics fato_leituras'[valor_pago] = 0
+			    )
+			RETURN
+			DIVIDE([Economia Líquida KU], LivrosKU, BLANK())
+			```
+		lineageTag: 66445008-0e45-4468-977f-c59ca419e08f
+
+	measure '% Meses Ativos KU' = ```
+			
+			VAR MesesPagos = 
+			    CALCULATE(
+			        DISTINCTCOUNT(dim_calendario[AnoMesNum]),
+			        'book_analytics fato_assinatura'[servico] = "Kindle Unlimited"
+			    )
+			VAR MesesComLeitura = 
+			    CALCULATE(
+			        DISTINCTCOUNT(dim_calendario[AnoMesNum]),
+			        'book_analytics fato_leituras'[formato] = "kindle",
+			        'book_analytics fato_leituras'[valor_pago] = 0
+			    )
+			RETURN
+			DIVIDE(MesesComLeitura, MesesPagos, 0)
+			```
+		lineageTag: 5c51083e-cc46-4a03-af6a-682aa528e01e
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Livros por Mês' =
+			
+			VAR QtdMeses = DISTINCTCOUNT(dim_calendario[AnoMesNum])
+			RETURN
+			DIVIDE([Total Livros Lidos], QtdMeses, BLANK())
+		lineageTag: cf8bd574-a26a-437b-bb5a-d74ad4cca769
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Dias Totais de Leitura' =
+			
+			SUMX(
+			    'book_analytics fato_leituras',
+			    DATEDIFF('book_analytics fato_leituras'[data_inicio], 'book_analytics fato_leituras'[data_fim], DAY) + 1
+			)
+		formatString: 0
+		lineageTag: 4f77db59-2c99-47b5-b7aa-9fe4b28f1b20
+
+	measure '% Leituras Rápidas (<= 7 dias)' = ```
+			
+			VAR LeiturasRapidas = 
+			    CALCULATE(
+			        [Total Livros Lidos],
+			        FILTER(
+			            'book_analytics fato_leituras',
+			            (DATEDIFF('book_analytics fato_leituras'[data_inicio], 'book_analytics fato_leituras'[data_fim], DAY) + 1) <= 7
+			        )
+			    )
+			RETURN
+			DIVIDE(LeiturasRapidas, [Total Livros Lidos], 0)
+			```
+		lineageTag: aa8641a7-8d7c-4ae8-9446-cd89e06e4208
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure '% Leituras 4+ Estrelas' = ```
+			
+			VAR LeiturasBoas = 
+			    CALCULATE(
+			        [Total Livros Lidos],
+			        'book_analytics fato_leituras'[nota] >= 4.0
+			    )
+			RETURN
+			DIVIDE(LeiturasBoas, [Total Livros Lidos], 0)
+			```
+		lineageTag: 2249a91a-9fc0-4680-a103-8767399277c9
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Páginas por Título' =
+			
+			DIVIDE([Total Páginas Lidas], [Total Livros Lidos], BLANK())
+		lineageTag: e4a8dd30-bc06-455f-aa16-81160d3bddd6
+
+	measure 'Total Páginas Lidas' =
+			
+			SUMX(
+			    'book_analytics fato_leituras',
+			    RELATED('book_analytics dim_livros'[numero_paginas])
+			)
+		formatString: 0
+		lineageTag: 1bf6150e-8974-4805-a497-8207715add80
+
+	measure 'Valor de Mercado KU' =
+			
+			CALCULATE(
+			    SUM('book_analytics fato_leituras'[preco_livro_avulso]),
+			    'book_analytics fato_leituras'[formato] = "kindle",
+			    'book_analytics fato_leituras'[valor_pago] = 0
+			)
+		lineageTag: 602b02bc-de98-4e38-90f6-4cf2ad59f6ec
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Total Custo Assinatura' =
+			
+			CALCULATE(
+			    SUM('book_analytics fato_assinatura'[valor_mensal]),
+			    'book_analytics fato_assinatura'[servico] = "Kindle Unlimited"
+			)
+		lineageTag: be66fd4f-bcfb-40e3-8425-6e829cccdb05
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Economia Líquida KU' =
+			
+			[Valor de Mercado KU] - [Total Custo Assinatura]
+		lineageTag: 8dbb95bf-cc7d-48b7-8f42-5859d49d84de
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition _Medidas = m
+		mode: import
+		source =
+				let
+				  Origem = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i44FAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [#"Coluna 1" = _t]),
+				    #"Colunas Removidas" = Table.RemoveColumns(Origem,{"Coluna 1"})
+				in
+				  #"Colunas Removidas"
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

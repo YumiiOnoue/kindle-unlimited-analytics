@@ -1,0 +1,103 @@
+table 'book_analytics fato_leituras'
+	lineageTag: 34cd45b8-8d0d-4354-8d57-05a36e8ddd42
+
+	column id_leitura
+		dataType: int64
+		formatString: 0
+		lineageTag: 45fc5a96-0f09-469c-b728-390df47c5274
+		summarizeBy: none
+		sourceColumn: id_leitura
+
+		annotation SummarizationSetBy = User
+
+	column id_livro
+		dataType: int64
+		formatString: 0
+		lineageTag: 03f8c766-addf-4a5e-a0d0-3e9b235ea02d
+		summarizeBy: none
+		sourceColumn: id_livro
+
+		annotation SummarizationSetBy = Automatic
+
+	column data_inicio
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 85b5d163-2a97-4f6a-9838-3f27bba721bb
+		summarizeBy: none
+		sourceColumn: data_inicio
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column data_fim
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 4ae86647-c226-4a33-bef4-543a4d00f5a5
+		summarizeBy: none
+		sourceColumn: data_fim
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column formato
+		dataType: string
+		lineageTag: 1c53d5a6-e45e-484d-b212-745a9168af69
+		summarizeBy: none
+		sourceColumn: formato
+
+		annotation SummarizationSetBy = Automatic
+
+	column preco_livro_avulso
+		dataType: double
+		lineageTag: 051cb471-403b-4bb3-82a7-0c918b545250
+		summarizeBy: sum
+		sourceColumn: preco_livro_avulso
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column valor_pago
+		dataType: double
+		lineageTag: f9dfe348-bea6-4d52-9411-5d2ab5b71711
+		summarizeBy: sum
+		sourceColumn: valor_pago
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column nota
+		dataType: double
+		lineageTag: 2eb3322a-56b9-4a7c-af31-871523ec47a9
+		summarizeBy: sum
+		sourceColumn: nota
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column opiniao_texto
+		dataType: string
+		lineageTag: eb730510-3362-4d0b-85c2-b5e43de63aac
+		summarizeBy: none
+		sourceColumn: opiniao_texto
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'book_analytics fato_leituras' = m
+		mode: import
+		source =
+				let
+				  Origem = MySQL.Database("localhost", "book_analytics"),
+				  #"Navegação 1" = Origem{[Schema = "book_analytics", Item = "fato_leituras"]}[Data],
+				    #"Colunas Removidas" = Table.RemoveColumns(#"Navegação 1",{"book_analytics.dim_livros"})
+				in
+				  #"Colunas Removidas"
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

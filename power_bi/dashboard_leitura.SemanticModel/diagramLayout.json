@@ -4,47 +4,87 @@
     {
       "ordinal": 0,
       "scrollPosition": {
-        "x": 189,
-        "y": 0
+        "x": 87.199996948242188,
+        "y": 136.80000305175781
       },
       "nodes": [
         {
           "location": {
-            "x": 0,
-            "y": 0
+            "x": 75,
+            "y": 455.75
           },
-          "nodeIndex": "analise_leitura_pbi",
-          "nodeLineageTag": "f8a3bae3-e74c-4a65-b2ff-2aabfa54d695",
+          "nodeIndex": "book_analytics dim_livros",
+          "nodeLineageTag": "d2999591-fc5c-4498-8c05-82fb9dc17ac6",
           "size": {
-            "height": 300,
+            "height": 296,
+            "width": 313
+          },
+          "zIndex": 3
+        },
+        {
+          "location": {
+            "x": 803,
+            "y": 6.75
+          },
+          "nodeIndex": "book_analytics fato_assinatura",
+          "nodeLineageTag": "977f347e-4b06-47a0-9cec-37f7ab9b76ef",
+          "size": {
+            "height": 176,
+            "width": 309
+          },
+          "zIndex": 5
+        },
+        {
+          "location": {
+            "x": 102,
+            "y": 12.75
+          },
+          "nodeIndex": "book_analytics fato_leituras",
+          "nodeLineageTag": "34cd45b8-8d0d-4354-8d57-05a36e8ddd42",
+          "size": {
+            "height": 296,
+            "width": 286
+          },
+          "zIndex": 4
+        },
+        {
+          "location": {
+            "x": 485.99999809265137,
+            "y": 256.75
+          },
+          "nodeIndex": "dim_calendario",
+          "nodeLineageTag": "dccd4e3d-00af-4d38-8b4a-f6dd12473305",
+          "size": {
+            "height": 200,
             "width": 234
           },
           "zIndex": 1
         },
         {
           "location": {
-            "x": 718,
-            "y": 50
+            "x": 877,
+            "y": 251.75
           },
-          "nodeIndex": "medidas",
+          "nodeIndex": "_Medidas",
+          "nodeLineageTag": "c88ae0e2-f6f1-48e2-ab5a-65cf67fbdb71",
           "size": {
-            "height": 200,
+            "height": 384,
             "width": 234
           },
-          "zIndex": 2
+          "zIndex": 6
         },
         {
           "location": {
-            "x": 422,
-            "y": 54
+            "x": 486.80000305175781,
+            "y": 600.25
           },
-          "nodeIndex": "calendario",
-          "nodeLineageTag": "7f368fe2-2059-4956-8f9f-f6bccb67382a",
+          "nodeIndex": "book_analytics dim_livros_categorias",
+          "nodeLineageTag": "9b5fe209-9433-4477-bf76-6936e740c1a9",
           "size": {
-            "height": 200,
-            "width": 234
+            "height": 145,
+            "width": 360
           },
-          "zIndex": 0
+          "zIndex": 2
         }
       ],
       "name": "Todas as tabelas",

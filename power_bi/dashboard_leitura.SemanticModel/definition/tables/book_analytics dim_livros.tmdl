@@ -1,0 +1,96 @@
+table 'book_analytics dim_livros'
+	lineageTag: d2999591-fc5c-4498-8c05-82fb9dc17ac6
+
+	column id_livro
+		dataType: int64
+		formatString: 0
+		lineageTag: d56b5bb7-f45f-4c4b-aa63-f120dfa2ca6c
+		summarizeBy: none
+		sourceColumn: id_livro
+
+		annotation SummarizationSetBy = Automatic
+
+	column isbn
+		dataType: string
+		lineageTag: 5d5ac80c-d94f-4642-9fb5-b21912c237d9
+		summarizeBy: none
+		sourceColumn: isbn
+
+		annotation SummarizationSetBy = Automatic
+
+	column titulo
+		dataType: string
+		lineageTag: 0f5632e7-6710-44d6-974d-9fd363a66486
+		summarizeBy: none
+		sourceColumn: titulo
+
+		annotation SummarizationSetBy = Automatic
+
+	column autor
+		dataType: string
+		lineageTag: 1d5de4dd-6817-42af-ab28-b4ca0cc302ad
+		summarizeBy: none
+		sourceColumn: autor
+
+		annotation SummarizationSetBy = Automatic
+
+	column editora
+		dataType: string
+		lineageTag: 1015fc96-d64e-4446-b8c0-a2c705510cc6
+		summarizeBy: none
+		sourceColumn: editora
+
+		annotation SummarizationSetBy = Automatic
+
+	column categorias
+		dataType: string
+		isHidden
+		lineageTag: 9c5791ed-6ad2-4202-a828-07fbd254402a
+		summarizeBy: none
+		sourceColumn: categorias
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ano_publicacao
+		dataType: int64
+		formatString: 0
+		lineageTag: e72d1200-a308-4b63-b58f-db6c97050caf
+		summarizeBy: none
+		sourceColumn: ano_publicacao
+
+		annotation SummarizationSetBy = User
+
+	column numero_paginas
+		dataType: int64
+		formatString: 0
+		lineageTag: 4cee8983-9cae-4ecc-9bbb-dca8f83c96b5
+		summarizeBy: sum
+		sourceColumn: numero_paginas
+
+		annotation SummarizationSetBy = Automatic
+
+	column data_cadastro
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 8ec71937-7c88-41ea-9ff9-e31d90650759
+		summarizeBy: none
+		sourceColumn: data_cadastro
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'book_analytics dim_livros' = m
+		mode: import
+		source =
+				let
+				  Origem = MySQL.Database("localhost", "book_analytics"),
+				  #"Navegação 1" = Origem{[Schema = "book_analytics", Item = "dim_livros"]}[Data],
+				    #"Colunas Removidas" = Table.RemoveColumns(#"Navegação 1",{"book_analytics.fato_leituras"})
+				in
+				  #"Colunas Removidas"
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

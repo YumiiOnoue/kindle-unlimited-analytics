@@ -1,0 +1,122 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "02b79e465bf2d258026a",
+  "position": {
+    "x": 77.598502447055637,
+    "y": 293.76575926385351,
+    "z": 7001,
+    "height": 498.84751573107195,
+    "width": 787.0705248201358,
+    "tabOrder": 7001
+  },
+  "visual": {
+    "visualType": "donutChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "book_analytics fato_leituras"
+                    }
+                  },
+                  "Property": "formato"
+                }
+              },
+              "queryRef": "book_analytics fato_leituras.formato",
+              "nativeQueryRef": "formato",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "book_analytics fato_leituras"
+                        }
+                      },
+                      "Property": "id_leitura"
+                    }
+                  },
+                  "Function": 5
+                }
+              },
+              "queryRef": "CountNonNull(book_analytics fato_leituras.id_leitura)",
+              "nativeQueryRef": "Contagem de id_leitura"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "book_analytics fato_leituras"
+                      }
+                    },
+                    "Property": "id_leitura"
+                  }
+                },
+                "Function": 5
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "56f3fab365e9e042654b",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "book_analytics fato_leituras"
+              }
+            },
+            "Property": "formato"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "f1ff6b401da9ba39d3d9",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "book_analytics fato_leituras"
+                  }
+                },
+                "Property": "id_leitura"
+              }
+            },
+            "Function": 5
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}

@@ -4,8 +4,8 @@
     {
       "ordinal": 0,
       "scrollPosition": {
-        "x": 87.199996948242188,
-        "y": 136.80000305175781
+        "x": 192,
+        "y": 0
       },
       "nodes": [
         {
@@ -19,7 +19,7 @@
             "height": 296,
             "width": 313
           },
-          "zIndex": 3
+          "zIndex": 2
         },
         {
           "location": {
@@ -32,7 +32,7 @@
             "height": 176,
             "width": 309
           },
-          "zIndex": 5
+          "zIndex": 4
         },
         {
           "location": {
@@ -45,7 +45,7 @@
             "height": 296,
             "width": 286
           },
-          "zIndex": 4
+          "zIndex": 3
         },
         {
           "location": {
@@ -59,32 +59,6 @@
             "width": 234
           },
           "zIndex": 1
-        },
-        {
-          "location": {
-            "x": 877,
-            "y": 251.75
-          },
-          "nodeIndex": "_Medidas",
-          "nodeLineageTag": "c88ae0e2-f6f1-48e2-ab5a-65cf67fbdb71",
-          "size": {
-            "height": 384,
-            "width": 234
-          },
-          "zIndex": 6
-        },
-        {
-          "location": {
-            "x": 486.80000305175781,
-            "y": 600.25
-          },
-          "nodeIndex": "book_analytics dim_livros_categorias",
-          "nodeLineageTag": "9b5fe209-9433-4477-bf76-6936e740c1a9",
-          "size": {
-            "height": 145,
-            "width": 360
-          },
-          "zIndex": 2
         }
       ],
       "name": "Todas as tabelas",

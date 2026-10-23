@@ -1,0 +1,29 @@
+table 'book_analytics dim_categoria'
+	lineageTag: cb86bc5b-cdfc-46ba-be3b-14dbeaddfdac
+
+	column id_categoria
+		dataType: int64
+		formatString: 0
+		lineageTag: e346227d-9a45-4297-b131-1fc6abe661a9
+		summarizeBy: none
+		sourceColumn: id_categoria
+
+		annotation SummarizationSetBy = Automatic
+
+	column categoria
+		dataType: string
+		lineageTag: b1fc52d4-0938-49f0-bd21-dca4699cdee3
+		summarizeBy: none
+		sourceColumn: categoria
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'book_analytics dim_categoria' = m
+		mode: import
+		source =
+				let
+				  Fonte = MySQL.Database("localhost", "book_analytics", [ReturnSingleDatabase=true]),
+				  #"Navegação 1" = Fonte{[Schema = "book_analytics", Item = "dim_categoria"]}[Data]
+				in
+				  #"Navegação 1"
+

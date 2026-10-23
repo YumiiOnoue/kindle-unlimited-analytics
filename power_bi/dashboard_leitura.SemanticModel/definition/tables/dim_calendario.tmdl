@@ -51,7 +51,7 @@ table dim_calendario
 	column AnoMesNum
 		formatString: 0
 		lineageTag: 2d123250-2b0b-4920-a8b2-a7adfa9ad2d6
-		summarizeBy: sum
+		summarizeBy: none
 		isNameInferred
 		sourceColumn: [AnoMesNum]
 

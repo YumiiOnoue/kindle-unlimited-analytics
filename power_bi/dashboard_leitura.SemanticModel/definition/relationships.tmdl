@@ -14,12 +14,9 @@ relationship 9ace03d6-d306-fc16-2ba6-c8788f4ccd08
 
 	annotation PBI_IsFromSource = FS
 
-relationship 9e9b31a5-768f-8fb3-ac3d-8970387dac18
-	fromColumn: 'book_analytics fato_assinatura'.data_pagamento
-	toColumn: dim_calendario.Date
+relationship 40d08f15-8790-4a2a-8d9b-bded6487cd40
+	fromColumn: 'book_analytics livro_categoria'.id_categoria
+	toColumn: 'book_analytics dim_categoria'.id_categoria
 
-relationship 80a54226-459f-31dc-711d-a32d676e942a
-	crossFilteringBehavior: bothDirections
-	fromColumn: 'book_analytics dim_livros_categorias'.id_livro
-	toColumn: 'book_analytics dim_livros'.id_livro
+	annotation PBI_IsFromSource = FS
 

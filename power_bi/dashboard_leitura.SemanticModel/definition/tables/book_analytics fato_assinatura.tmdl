@@ -28,12 +28,12 @@ table 'book_analytics fato_assinatura'
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	column data_pagamento
+	column mes_referencia
 		dataType: dateTime
 		formatString: Long Date
-		lineageTag: 8fba3c04-39bc-4b11-8e2c-34d053276176
+		lineageTag: 3ba04424-163f-455c-b0de-7be28defdb3b
 		summarizeBy: none
-		sourceColumn: data_pagamento
+		sourceColumn: mes_referencia
 
 		annotation SummarizationSetBy = Automatic
 

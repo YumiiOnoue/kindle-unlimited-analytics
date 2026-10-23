@@ -49,16 +49,6 @@ table 'book_analytics fato_leituras'
 
 		annotation SummarizationSetBy = Automatic
 
-	column preco_livro_avulso
-		dataType: double
-		lineageTag: 051cb471-403b-4bb3-82a7-0c918b545250
-		summarizeBy: sum
-		sourceColumn: preco_livro_avulso
-
-		annotation SummarizationSetBy = Automatic
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
 	column valor_pago
 		dataType: double
 		lineageTag: f9dfe348-bea6-4d52-9411-5d2ab5b71711
@@ -84,6 +74,50 @@ table 'book_analytics fato_leituras'
 		lineageTag: eb730510-3362-4d0b-85c2-b5e43de63aac
 		summarizeBy: none
 		sourceColumn: opiniao_texto
+
+		annotation SummarizationSetBy = Automatic
+
+	column origem_acesso
+		dataType: string
+		lineageTag: 91b76765-1307-4d9b-bd84-28b988aedb63
+		summarizeBy: none
+		sourceColumn: origem_acesso
+
+		annotation SummarizationSetBy = Automatic
+
+	column preco_digital_na_leitura
+		dataType: double
+		lineageTag: e0f1cec5-bca0-46fd-8fc2-65df6e3b8965
+		summarizeBy: sum
+		sourceColumn: preco_digital_na_leitura
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column preco_fisico_na_leitura
+		dataType: double
+		lineageTag: c737b29a-a24f-4f7e-b33a-293aae3379fc
+		summarizeBy: sum
+		sourceColumn: preco_fisico_na_leitura
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column intencao_compra
+		dataType: string
+		lineageTag: b958b10c-4780-4e7a-bd36-367408c406ea
+		summarizeBy: none
+		sourceColumn: intencao_compra
+
+		annotation SummarizationSetBy = Automatic
+
+	column status_leitura
+		dataType: string
+		lineageTag: 4e91bb7c-f22e-4c13-8afb-ef65f5b48fe6
+		summarizeBy: none
+		sourceColumn: status_leitura
 
 		annotation SummarizationSetBy = Automatic
 

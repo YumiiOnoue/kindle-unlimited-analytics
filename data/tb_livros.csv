@@ -1,60 +1,62 @@
-"id_livro","isbn","titulo","autor","editora","categorias","ano_publicacao","numero_paginas","data_cadastro"
-1,"978-8550801483","Pai Rico, Pai Pobre","Robert T. Kiyosaki","Alta Books","Educação Financeira",2017,322,"2026-09-02 09:52:32"
-2,"978-8535914849","1984","George Orwell","Companhia das Letras","Ficção, Distopia",2009,416,"2026-09-02 09:52:32"
-3,"978-8582467190","Eu sei por que o pássaro canta na gaiola","Maya Angelou","Astral Cultural","Autobiografia, Biografia",2018,336,"2026-09-02 09:52:32"
-4,"978-8580577266","Para Todos os Garotos que Já Amei","Jenny Han","Intrínseca","Romance, Jovem Adulto",2015,320,"2026-09-02 09:52:32"
-5,"978-8580578690","P.S.: Ainda Amo Você","Jenny Han","Intrínseca","Romance, Jovem Adulto",2016,304,"2026-09-02 09:52:32"
-6,"978-8551001981","Agora e Para Sempre, Lara Jean","Jenny Han","Intrínseca","Romance, Jovem Adulto",2017,304,"2026-09-02 09:52:32"
-7,"978-8543108698","Como fazer amigos e influenciar pessoas","Dale Carnegie","Sextante","Autoajuda, Desenvolvimento Pessoal",2003,318,"2026-09-02 09:52:32"
-8,"978-8539004119","O poder do hábito","Charles Duhigg","Objetiva","Autoajuda, Não Ficção",2012,407,"2026-09-02 09:52:32"
-9,"978-8563560605","O jardim secreto","Frances Hodgson Burnett","Companhia das Letras","Literatura Infantil, Clássicos",2013,344,"2026-09-02 09:52:32"
-10,"978-8580573749","Cidades de Papel","John Green","Intrínseca","Romance, Jovem Adulto",2013,368,"2026-09-02 09:52:32"
-11,"978-8545202516","Decifre e Influencie Pessoas","Paulo Vieira","Gente","Autoajuda",2018,224,"2026-09-02 09:52:32"
-12,"978-8582467459","Resolva A Porra Dos Seus Problemas","Laura Jane Williams","Astral Cultural","Autoajuda",2018,224,"2026-09-02 09:52:32"
-13,"978-8554517861","Se não fosse por você, eu não estaria aqui","Paulo Vieira","Companhia Editora Nacional","Biografia",2020,102,"2026-09-02 09:52:32"
-14,"978-8535915761","Sangue de Tinta","Cornelia Maria Funke","Companhia Editora Nacional","Fantasia, Aventura",2009,560,"2026-09-02 09:52:32"
-15,"978-8537801550","O andar do bêbado: Como o acaso determina nossas vidas","Leonard Mlodinow","Zahar","Ciências Sociais, Não Ficção",2009,264,"2026-09-02 09:52:32"
-16,"978-6558382867","Se os gatos desaparecessem do mundo","Genki Kawamura","Bertrand Brasil","Fantasia, Ficção",2023,176,"2026-09-02 09:52:32"
-17,"978-8551009796","Vou te receitar um gato","Syou Ishida","Intrínseca","Ficção de Cura, Literatura Asiática",2023,224,"2026-09-02 09:52:32"
-18,"978-6558382447","A inconveniente loja de conveniência","Kim Ho-Yeon","Bertrand Brasil","Ficção de Cura, Literatura Asiática",2023,270,"2026-09-02 09:52:32"
-19,"978-6555357783","O gato que amava livros","Sosuke Natsukawa","Planeta","Ficção de Cura, Literatura Asiática",2022,240,"2026-09-02 09:52:32"
-20,"ASIN:B07S5XB91G","15 Incríveis Truques Mentais: Facilite sua vida mudando sua mente","Danilo H. Gomes","Independente","Autoajuda",2019,49,"2026-09-02 09:52:32"
-21,"9786586068221","Entregas expressas da Kiki","Daniel Kondo","Estação Liberdade","Romance, Fantasia",2021,236,"2026-09-02 09:52:32"
-22,"978-6556093765","Queria morrer, mas no céu não tem tteokbokki","Baek Sehee","Universo das Livros","Autoajuda, Memórias",2023,192,"2026-09-02 09:52:32"
-23,"978-6555321111","Gente ansiosa","Fredrik Backman","Rocco","Romance, Drama",2021,368,"2026-09-02 09:52:32"
-24,"ASIN:B08ZYJ77JX","O Gato Preto que Só Queria Ser Amado","Rosa Silva","Independente","Literatura Infantil",2021,89,"2026-09-02 09:52:32"
-25,"978-6558383185","Uma noite na livraria Morisaki","Satoshi Yagisawa","Bertrand Brasil","Ficção de Cura, Literatura Asiática",2024,175,"2026-09-02 09:52:32"
-26,"978-6558382461","Meus dias na livraria Morisaki","Satoshi Yagisawa","Bertrand Brasil","Ficção de Cura, Literatura Asiática",2023,167,"2026-09-02 09:52:32"
-27,"978-6555606355","Bem-vindos à livraria Hyunam-dong","Hwang Bo-Reum","Intrínseca","Ficção de Cura, Literatura Asiática",2023,272,"2026-09-02 09:52:32"
-28,"978-6555951479","Amanhã, amanhã, e ainda outro amanhã","Gabrielle Zevin","Rocco","Ficção, Drama",2022,528,"2026-09-02 09:52:32"
-29,"978-6555951783","Amêndoas","Won-pyung Sohn","Rocco","Ficção, Jovem Adulto",2023,240,"2026-09-02 09:52:32"
-30,"978-6555395846","Como tigres na neve","Juhea Kim","Verus","Ficção, Histórico",2022,454,"2026-09-02 09:52:32"
-31,"978-6553933194","Clube de leitura dos corações solitários","Lucy Gilmore","Arqueiro","Ficção, Romance",2024,353,"2026-09-02 09:52:32"
-32,"978-6559240708","O pequeno caderno das coisas não ditas","Clare Pooley","Buzz","Romance, Drama",2022,414,"2026-09-02 09:52:32"
-33,"978-6559243174","As pessoas na plataforma 5","Clare Pooley","Buzz","Romance, Drama",2024,373,"2026-09-02 09:52:32"
-34,"978-8580419450","Tudo que a gente sempre quis","Emily Giffin","Record","Romance, Drama",2019,366,"2026-09-02 09:52:32"
-35,"978-6555654752","Um experimento de amor em Nova York","Elena Armas","Record","Comédia Romântica, Romance",2023,490,"2026-09-02 09:52:32"
-36,"978-6555394474","A noiva do Deus Mar","Axie Oh","Verus","Fantasia, Romance",2022,251,"2026-09-02 09:52:32"
-37,"978-6559242139","O guardião das coisas perdidas","Ruth Hogan","Buzz","Romance, Drama",2023,322,"2026-09-02 09:52:32"
-38,"ASIN:B07TFB3DL8","Vida de gato","Lucilia Reale","Lucília Reale","Casa e Estilo de Vida",2019,26,"2026-09-02 09:52:32"
-39,"978-8544002124","Mulherzinhas","Louisa May Alcott","Martin Claret","Ficção, Clássicos",2019,680,"2026-09-02 09:52:32"
-40,"978-6559241255","Algo como ser feliz","Eva Woods","Buzz","Ficção, Drama",2022,481,"2026-09-02 09:52:32"
-41,"978-6555656725","Chocolate quente às quintas-feiras","Michiko Aoyama","Record","Ficção, Literatura Asiática",2024,138,"2026-09-02 09:52:32"
-42,"978-6555658774","Matcha às segundas-feiras","Michiko Aoyama","Record","Ficção, Literatura Asiática",2025,155,"2026-09-02 09:52:32"
-43,"978-6555951912","Uma tempestade de verão","K. L. Walther","Rocco","Romance, Jovem Adulto",2023,345,"2026-09-02 09:52:32"
-44,"978-6555654899","Parte do meu mundo","Abby Jimenez","Record","Romance, Comédia",2023,419,"2026-09-02 09:52:32"
-45,"978-6559243426","Sete verões","Paige Toon","Buzz","Romance, Drama",2024,429,"2026-09-02 09:52:32"
-46,"978-8551010082","Yellowface","R.F. Kuang","Shinchosha","Ficção, Suspense",2023,346,"2026-09-02 09:52:32"
-47,"978-6585659253","A loja dos dias de chuva","You Yeong Gwang","Livros da Alice","Fantasia, Ficção",2025,253,"2026-09-02 09:52:32"
-48,"978-6555877731","O burnout","Sophie Kinsella","Record","Comédia, Romance",2024,396,"2026-09-02 09:52:32"
-49,"978-6559812172","Uma magia destilada em veneno","Judy I. Lin","Galera","Fantasia, Ficção",2022,403,"2026-09-02 09:52:32"
-50,"978-6559813018","Um veneno doce e sombrio","Judy I. Lin","Galera","Fantasia, Ficção",2023,370,"2026-09-02 09:52:32"
-51,"978-6558384021","Meu Dom Quixote coreano","Kim Ho-Yeon","Bertrand Brasil","Fantasia, Ficção de Cura",2025,356,"2026-09-02 09:52:32"
-52,"978-6558383109","A lanterna das memórias perdidas","Sanaka Hiiragi","Bertrand Brasil","Fantasia, Ficção de Cura",2024,183,"2026-09-02 09:52:32"
-53,"978-6525943480","Maruru e Hachi: Os Gatinhos Companheiros 01","Sonoda Yuri","Panini","Mangá",2026,176,"2026-09-02 18:44:08"
-54,"978-6559700875","Mapa do coração","Susan Wiggs","Harlequin","Romance, Ficção",2021,432,"2026-09-02 18:46:14"
-55,"978-8582357316","Melodia prateada, chamas da noite","Amélie Wen Zhao","Gutenberg Editora","Romance, Ficção, Fantasia",2024,505,"2026-09-02 18:48:20"
-56,"978-8582358078","Estrela escura em brasas, neve caindo em cinzas","Amélie Wen Zhao","Gutenberg Editora","Romance, Ficção, Fantasia",2025,280,"2026-09-02 18:49:50"
-57,"ASIN:B0FPPSN9QZ","Novos Começos em Wildflower Lock","Hannah Lynn","Paper Cat Publishing","Romance, Ficção",2026,282,"2026-09-02 18:52:17"
-58,"978-6502057568","Traduzindo Dados: Como Transformar Números em Decisão","Cristina Sayuri Y. Torres","Clube de Autores","Não-ficção, Negócios, Gestão, Tomada de decisão, Cultura de dados",2026,203,"2026-09-02 18:55:55"
-59,"978-6559244430","Um amor como nos livros","Moira Macdonald","Verus","Ficção, Romance",2025,352,"2026-09-02 19:09:05"
+"id_livro","isbn","titulo","autor","editora","ano_publicacao","numero_paginas"
+1,"978-8550801483","Pai Rico, Pai Pobre","Robert T. Kiyosaki","Alta Books",2017,322
+2,"978-8535914849","1984","George Orwell","Companhia das Letras",2009,416
+3,"978-8582467190","Eu sei por que o pássaro canta na gaiola","Maya Angelou","Astral Cultural",2018,336
+4,"978-8580577266","Para Todos os Garotos que Já Amei","Jenny Han","Intrínseca",2015,320
+5,"978-8580578690","P.S.: Ainda Amo Você","Jenny Han","Intrínseca",2016,304
+6,"978-8551001981","Agora e Para Sempre, Lara Jean","Jenny Han","Intrínseca",2017,304
+7,"978-8543108698","Como fazer amigos e influenciar pessoas","Dale Carnegie","Sextante",2003,318
+8,"978-8539004119","O poder do hábito","Charles Duhigg","Objetiva",2012,407
+9,"978-8563560605","O jardim secreto","Frances Hodgson Burnett","Companhia das Letras",2013,344
+10,"978-8580573749","Cidades de Papel","John Green","Intrínseca",2013,368
+11,"978-8545202516","Decifre e Influencie Pessoas","Paulo Vieira","Gente",2018,224
+12,"978-8582467459","Resolva A Porra Dos Seus Problemas","Laura Jane Williams","Astral Cultural",2018,224
+13,"978-8554517861","Se não fosse por você, eu não estaria aqui","Paulo Vieira","Companhia Editora Nacional",2020,102
+14,"978-8535915761","Sangue de Tinta","Cornelia Maria Funke","Companhia Editora Nacional",2009,560
+15,"978-8537801550","O andar do bêbado: Como o acaso determina nossas vidas","Leonard Mlodinow","Zahar",2009,264
+16,"978-6558382867","Se os gatos desaparecessem do mundo","Genki Kawamura","Bertrand Brasil",2023,176
+17,"978-8551009796","Vou te receitar um gato","Syou Ishida","Intrínseca",2023,224
+18,"978-6558382447","A inconveniente loja de conveniência","Kim Ho-Yeon","Bertrand Brasil",2023,270
+19,"978-6555357783","O gato que amava livros","Sosuke Natsukawa","Planeta",2022,240
+20,"ASIN:B07S5XB91G","15 Incríveis Truques Mentais: Facilite sua vida mudando sua mente","Danilo H. Gomes","Independente",2019,49
+21,"9786586068221","Entregas expressas da Kiki","Daniel Kondo","Estação Liberdade",2021,236
+22,"978-6556093765","Queria morrer, mas no céu não tem tteokbokki","Baek Sehee","Universo das Livros",2023,192
+23,"978-6555321111","Gente ansiosa","Fredrik Backman","Rocco",2021,368
+24,"ASIN:B08ZYJ77JX","O Gato Preto que Só Queria Ser Amado","Rosa Silva","Independente",2021,89
+25,"978-6558383185","Uma noite na livraria Morisaki","Satoshi Yagisawa","Bertrand Brasil",2024,175
+26,"978-6558382461","Meus dias na livraria Morisaki","Satoshi Yagisawa","Bertrand Brasil",2023,167
+27,"978-6555606355","Bem-vindos à livraria Hyunam-dong","Hwang Bo-Reum","Intrínseca",2023,272
+28,"978-6555951479","Amanhã, amanhã, e ainda outro amanhã","Gabrielle Zevin","Rocco",2022,528
+29,"978-6555951783","Amêndoas","Won-pyung Sohn","Rocco",2023,240
+30,"978-6555395846","Como tigres na neve","Juhea Kim","Verus",2022,454
+31,"978-6553933194","Clube de leitura dos corações solitários","Lucy Gilmore","Arqueiro",2024,353
+32,"978-6559240708","O pequeno caderno das coisas não ditas","Clare Pooley","Buzz",2022,414
+33,"978-6559243174","As pessoas na plataforma 5","Clare Pooley","Buzz",2024,373
+34,"978-8580419450","Tudo que a gente sempre quis","Emily Giffin","Record",2019,366
+35,"978-6555654752","Um experimento de amor em Nova York","Elena Armas","Record",2023,490
+36,"978-6555394474","A noiva do Deus Mar","Axie Oh","Verus",2022,251
+37,"978-6559242139","O guardião das coisas perdidas","Ruth Hogan","Buzz",2023,322
+38,"ASIN:B07TFB3DL8","Vida de gato","Lucilia Reale","Lucília Reale",2019,26
+39,"978-8544002124","Mulherzinhas","Louisa May Alcott","Martin Claret",2019,680
+40,"978-6559241255","Algo como ser feliz","Eva Woods","Buzz",2022,481
+41,"978-6555656725","Chocolate quente às quintas-feiras","Michiko Aoyama","Record",2024,138
+42,"978-6555658774","Matcha às segundas-feiras","Michiko Aoyama","Record",2025,155
+43,"978-6555951912","Uma tempestade de verão","K. L. Walther","Rocco",2023,345
+44,"978-6555654899","Parte do meu mundo","Abby Jimenez","Record",2023,419
+45,"978-6559243426","Sete verões","Paige Toon","Buzz",2024,429
+46,"978-8551010082","Yellowface","R.F. Kuang","Shinchosha",2023,346
+47,"978-6585659253","A loja dos dias de chuva","You Yeong Gwang","Livros da Alice",2025,253
+48,"978-6555877731","O burnout","Sophie Kinsella","Record",2024,396
+49,"978-6559812172","Uma magia destilada em veneno","Judy I. Lin","Galera",2022,403
+50,"978-6559813018","Um veneno doce e sombrio","Judy I. Lin","Galera",2023,370
+51,"978-6558384021","Meu Dom Quixote coreano","Kim Ho-Yeon","Bertrand Brasil",2025,356
+52,"978-6558383109","A lanterna das memórias perdidas","Sanaka Hiiragi","Bertrand Brasil",2024,183
+63,"978-6525943480","Maruru e Hachi","Sonoda Yuri","Panini",2026,176
+64,"978-6559244430","Um amor como nos livros","Moira Macdonald","Verus",2025,352
+65,"978-6559700875","Mapa do Coração","Susan Wiggs","Harlequin",2021,432
+66,"978-8582357316","Melodia prateada, chamas da noite","Amélie Wen Zhao","Gutenberg Editora",2024,505
+67,"978-8582358078","Estrela Escura em brasas, neve caindo em cinzas","Amélie Wen Zhao","Gutenberg Editora",2025,280
+68,"ASIN:B0FPPSN9QZ","Novos começos em Wildflower Lock","Hannah Lynn","Paper Cat Publishing",2026,282
+69,"978-6502057568","Traduzindo dados: como transformar números em decisões","Cristina Torres","Clube de Autores",2026,203
+70,"ASIN:B0GNC3MFRN","Café e Bolo em Wildflower Lock","Hannah Lynn","Paper Cat Publishing",2026,282
+71,"ASIN:B0GNPFLY39","Céus Azuis sobre Wildflower Lock","Hannah Lynn","Paper Cat Publishing",2026,348

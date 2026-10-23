@@ -18,10 +18,10 @@ WITH total_leituras_ano AS (
 ),
 total_assinaturas_ano AS (
     SELECT 
-        YEAR(data_pagamento) AS ano,
+        YEAR(mes_referencia) AS ano,
         SUM(valor_mensal) AS investimento_assinatura
     FROM fato_assinatura
-    GROUP BY YEAR(data_pagamento)
+    GROUP BY YEAR(mes_referencia)
 )
 SELECT 
     l.ano,
@@ -52,10 +52,10 @@ WITH compras_mes AS (
 ),
 assinatura_mes AS (
     SELECT 
-        DATE_FORMAT(data_pagamento, '%Y-%m') AS mes,
+        DATE_FORMAT(mes_referencia, '%Y-%m') AS mes,
         SUM(valor_mensal) AS custo_assinatura
     FROM fato_assinatura
-    GROUP BY DATE_FORMAT(data_pagamento, '%Y-%m')
+    GROUP BY DATE_FORMAT(mes_referencia, '%Y-%m')
 )
 SELECT 
     a.mes,
@@ -80,11 +80,11 @@ WITH leituras_ku AS (
 ),
 assinatura_ku AS (
     SELECT 
-        DATE_FORMAT(data_pagamento, '%Y-%m') AS mes,
+        DATE_FORMAT(mes_referencia, '%Y-%m') AS mes,
         SUM(valor_mensal) AS custo_assinatura
     FROM fato_assinatura
     WHERE servico = 'Kindle Unlimited'
-    GROUP BY DATE_FORMAT(data_pagamento, '%Y-%m')
+    GROUP BY DATE_FORMAT(mes_referencia, '%Y-%m')
 )
 SELECT 
     a.mes,
@@ -111,10 +111,10 @@ WITH paginas_ano AS (
 ),
 assinatura_ano AS (
     SELECT 
-        YEAR(data_pagamento) AS ano,
+        YEAR(mes_referencia) AS ano,
         SUM(valor_mensal) AS total_assinatura_ano
     FROM fato_assinatura
-    GROUP BY YEAR(data_pagamento)
+    GROUP BY YEAR(mes_referencia)
 )
 SELECT 
     p.ano,

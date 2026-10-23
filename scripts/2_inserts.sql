@@ -1,32 +1,32 @@
 USE book_analytics;
 
 -- =========================================================
--- 1. FATO ASSINATURA (MENSALIDADES DO'Digital UNLIMITED)
+-- 1. FATO ASSINATURA (Mensalidade do Kindle Unlimited)
 -- =========================================================
 INSERT INTO fato_assinatura (servico, valor_mensal, mes_referencia) VALUES
-    ('Digital Unlimited', 19.90, '2024-12-04'),
-    ('Digital Unlimited', 19.90, '2025-01-04'),
-    ('Digital Unlimited', 19.90, '2025-02-04'),
-    ('Digital Unlimited', 19.90, '2025-03-04'),
-    ('Digital Unlimited', 19.90, '2025-04-04'),
-    ('Digital Unlimited', 19.90, '2025-05-04'),
-    ('Digital Unlimited', 19.90, '2025-06-04'),
-    ('Digital Unlimited', 19.90, '2025-07-04'),
-    ('Digital Unlimited', 19.90, '2025-08-04'),
-    ('Digital Unlimited', 19.90, '2025-09-04'),
-    ('Digital Unlimited', 19.90, '2025-10-04'),
-    ('Digital Unlimited', 19.90, '2025-11-04'),
-    ('Digital Unlimited', 19.90, '2025-12-04'),
-    ('Digital Unlimited', 19.90, '2026-01-04'),
-    ('Digital Unlimited', 24.90, '2026-02-04'),
-    ('Digital Unlimited', 24.90, '2026-03-04'),
-    ('Digital Unlimited', 24.90, '2026-04-04'),
-    ('Digital Unlimited', 24.90, '2026-05-04'),
-    ('Digital Unlimited', 24.90, '2026-06-04'),
-    ('Digital Unlimited', 24.90, '2026-07-04'),
-    ('Digital Unlimited', 24.90, '2026-08-04'),
-    ('Digital Unlimited', 24.90, '2026-09-04'),
-    ('Digital Unlimited', 24.90, '2026-10-04');
+    ('Kindle Unlimited', 19.90, '2024-12-04'),
+    ('Kindle Unlimited', 19.90, '2025-01-04'),
+    ('Kindle Unlimited', 19.90, '2025-02-04'),
+    ('Kindle Unlimited', 19.90, '2025-03-04'),
+    ('Kindle Unlimited', 19.90, '2025-04-04'),
+    ('Kindle Unlimited', 19.90, '2025-05-04'),
+    ('Kindle Unlimited', 19.90, '2025-06-04'),
+    ('Kindle Unlimited', 19.90, '2025-07-04'),
+    ('Kindle Unlimited', 19.90, '2025-08-04'),
+    ('Kindle Unlimited', 19.90, '2025-09-04'),
+    ('Kindle Unlimited', 19.90, '2025-10-04'),
+    ('Kindle Unlimited', 19.90, '2025-11-04'),
+    ('Kindle Unlimited', 19.90, '2025-12-04'),
+    ('Kindle Unlimited', 19.90, '2026-01-04'),
+    ('Kindle Unlimited', 24.90, '2026-02-04'),
+    ('Kindle Unlimited', 24.90, '2026-03-04'),
+    ('Kindle Unlimited', 24.90, '2026-04-04'),
+    ('Kindle Unlimited', 24.90, '2026-05-04'),
+    ('Kindle Unlimited', 24.90, '2026-06-04'),
+    ('Kindle Unlimited', 24.90, '2026-07-04'),
+    ('Kindle Unlimited', 24.90, '2026-08-04'),
+    ('Kindle Unlimited', 24.90, '2026-09-04'),
+    ('Kindle Unlimited', 24.90, '2026-10-04');
 
 -- =========================================================
 -- 2. DIMENSÃO LIVROS

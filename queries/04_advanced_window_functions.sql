@@ -10,16 +10,16 @@ CREATE OR REPLACE VIEW vw_analise_literaria_pbi AS
 WITH assinatura_mes AS (
     -- Calcula o custo rateado por livro para cada mês de assinatura
     SELECT 
-        DATE_FORMAT(ass.data_pagamento, '%Y-%m') AS mes_referencia,
+        DATE_FORMAT(ass.mes_referencia, '%Y-%m') AS mes_referencia,
         -- Divide o valor da mensalidade pelo total de livros lidos via Kindle Unlimited naquele mês
         ass.valor_mensal / NULLIF(COUNT(fl_sub.id_leitura), 0) AS custo_rateado
     FROM fato_assinatura ass
     LEFT JOIN fato_leituras fl_sub 
-        ON DATE_FORMAT(ass.data_pagamento, '%Y-%m') = DATE_FORMAT(fl_sub.data_fim, '%Y-%m')
+        ON DATE_FORMAT(ass.mes_referencia, '%Y-%m') = DATE_FORMAT(fl_sub.data_fim, '%Y-%m')
         AND fl_sub.formato = 'kindle' 
         AND fl_sub.valor_pago = 0.00
     WHERE ass.servico = 'Kindle Unlimited'
-    GROUP BY ass.data_pagamento, ass.valor_mensal
+    GROUP BY ass.mes_referencia, ass.valor_mensal
 )
 SELECT 
     fl.id_leitura,

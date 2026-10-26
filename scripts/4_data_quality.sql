@@ -148,8 +148,7 @@ ORDER BY c.categoria;
 
 
 -- =======================================================================================
--- 9. RELACIONAMENTOS: Verifica se o mesmo livro foi associado à mesma categoria mais de 
--- uma vez
+-- 9. RELACIONAMENTOS: Verifica se o mesmo livro foi associado à mesma categoria mais de uma vez
 -- =======================================================================================
 SELECT
     id_livro,
@@ -161,8 +160,7 @@ HAVING COUNT(*) > 1;
 
 
 -- =======================================================================================
--- 10. LEITURAS: Identifica datas finais anteriores às iniciais, datas futuras e registros
--- com status incompatível com datas
+-- 10. LEITURAS: Identifica datas finais anteriores às iniciais, datas futuras e registros com status incompatível com datas
 -- =======================================================================================
 SELECT
     id_leitura,
@@ -214,8 +212,7 @@ FROM fato_leituras;
 
 
 -- =======================================================================================
--- 13. LEITURAS: Localiza registros com os mesmos atributos relevantes, desconsiderando 
--- o identificador id_leitura
+-- 13. LEITURAS: Localiza registros com os mesmos atributos relevantes, desconsiderando o identificador id_leitura
 -- =======================================================================================
 SELECT
     id_livro,
@@ -246,8 +243,7 @@ ORDER BY quantidade DESC;
 
 
 -- =======================================================================================
--- 15. LEITURAS: Confere a distribuição entre assinatura, compra e empréstimo, cruzando 
--- com o formato
+-- 15. LEITURAS: Confere a distribuição entre assinatura, compra e empréstimo, cruzando com o formato
 -- =======================================================================================
 SELECT
     origem_acesso,
@@ -294,8 +290,7 @@ ORDER BY ano, mes, servico;
 
 
 -- =======================================================================================
--- 18. ASSINATURAS: Verifica lacunas entre o primeiro e o último mês registrados para cada 
--- serviço
+-- 18. ASSINATURAS: Verifica lacunas entre o primeiro e o último mês registrados para cada serviço
 -- =======================================================================================
 WITH RECURSIVE
 periodos AS (

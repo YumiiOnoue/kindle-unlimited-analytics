@@ -1,16 +1,9 @@
 -- =========================================================
--- ANÁLISE FINANCEIRA: ASSINATURA, COMPRAS E VALOR DE REFERÊNCIA
--- Compatível com MySQL 8+.
--- IMPORTANTE:
--- * preco_digital_na_leitura é um preço de referência, não economia comprovada.
--- * preços iguais a zero são tratados como indisponíveis nas comparações de valor.
--- * a assinatura só possui registros de dez/2024 em diante; não extrapolar para anos anteriores.
+-- ANÁLISE FINANCEIRA
 -- =========================================================
 USE book_analytics;
 
 -- 1. CUSTO ANUAL: mensalidades e compras efetivamente pagas
--- Compras são agrupadas pelo início da leitura como aproximação da data de aquisição,
--- pois o esquema não registra uma data de compra separada.
 WITH compras_ano AS (
     SELECT
         YEAR(data_inicio) AS ano,
@@ -43,7 +36,6 @@ LEFT JOIN assinaturas_ano AS s ON s.ano = a.ano
 ORDER BY a.ano;
 
 -- 2. CUSTOS MENSAIS REGISTRADOS
--- Une as mensalidades e pagamentos avulsos sem multiplicar valores em JOINs.
 WITH compras_mes AS (
     SELECT
         DATE_FORMAT(data_inicio, '%Y-%m') AS mes_referencia,
@@ -78,7 +70,6 @@ LEFT JOIN compras_mes AS c ON c.mes_referencia = m.mes_referencia
 ORDER BY m.mes_referencia;
 
 -- 3. CUSTO DA ASSINATURA POR LIVRO CONCLUÍDO VIA KU, POR MÊS
--- É um rateio mensal simples, não o preço cobrado por cada livro.
 WITH leituras_ku_mes AS (
     SELECT
         DATE_FORMAT(data_fim, '%Y-%m') AS mes_referencia,
@@ -107,7 +98,6 @@ LEFT JOIN leituras_ku_mes AS l ON l.mes_referencia = a.mes_referencia
 ORDER BY a.mes_referencia;
 
 -- 4. VALOR DE REFERÊNCIA DOS LIVROS CONCLUÍDOS VIA KU, POR MÊS
--- SUM/AVG ignoram NULL; NULLIF evita tratar preço zero como preço conhecido.
 SELECT
     DATE_FORMAT(data_fim, '%Y-%m') AS mes_referencia,
     COUNT(*) AS livros_concluidos_ku,
@@ -123,8 +113,6 @@ GROUP BY DATE_FORMAT(data_fim, '%Y-%m')
 ORDER BY mes_referencia;
 
 -- 5. COMPARAÇÃO MENSAL: VALOR DIGITAL DE REFERÊNCIA X MENSALIDADE KU
--- Compara apenas meses com cobrança registrada. Uma diferença positiva significa
--- que os preços digitais de referência conhecidos superam a mensalidade; NÃO prova economia real.
 WITH valor_livros_mes AS (
     SELECT
         DATE_FORMAT(data_fim, '%Y-%m') AS mes_referencia,
@@ -158,7 +146,6 @@ LEFT JOIN valor_livros_mes AS l ON l.mes_referencia = a.mes_referencia
 ORDER BY a.mes_referencia;
 
 -- 6. LEITURAS COM PAGAMENTO REGISTRADO E VALOR PAGO
--- Distingue origem do acesso de valor pago: não pressupõe que todo livro digital seja KU.
 SELECT
     origem_acesso,
     formato,

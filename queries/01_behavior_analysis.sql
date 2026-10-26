@@ -1,7 +1,5 @@
 -- =========================================================
 -- ANÁLISE COMPORTAMENTAL DE LEITURA
--- Objetivo: volume, ritmo, conclusão e evolução dos hábitos.
--- Compatível com MySQL 8+.
 -- =========================================================
 USE book_analytics;
 
@@ -17,7 +15,6 @@ SELECT
 FROM fato_leituras;
 
 -- 2. CONCLUSÕES POR MÊS
--- Usa a data de conclusão; leituras em andamento não entram nesta série.
 SELECT
     DATE_FORMAT(data_fim, '%Y-%m') AS mes_referencia,
     COUNT(*) AS livros_concluidos,
@@ -58,7 +55,6 @@ GROUP BY status_leitura
 ORDER BY total_leituras DESC;
 
 -- 5. TEMPO DE LEITURA POR ORIGEM DE ACESSO E FORMATO
--- Inclui somente leituras concluídas com datas válidas.
 SELECT
     origem_acesso,
     formato,
@@ -74,7 +70,6 @@ GROUP BY origem_acesso, formato
 ORDER BY livros_concluidos DESC;
 
 -- 6. LIVROS COM MAIOR TEMPO DE LEITURA
--- Útil para identificar leituras longas; o resultado é limitado aos 10 maiores tempos.
 SELECT
     dl.titulo,
     dl.autor,

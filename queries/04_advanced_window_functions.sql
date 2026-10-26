@@ -1,13 +1,9 @@
 -- =========================================================
 -- ANÁLISES AVANÇADAS E VIEW PARA POWER BI
--- Compatível com MySQL 8+.
 -- =========================================================
 USE book_analytics;
 
--- 1. VIEW CONSOLIDADA PARA POWER BI
--- Corrige referências a colunas antigas e respeita a relação N:N de categorias.
--- O custo_rateado_estimado divide a mensalidade pelo número de livros KU concluídos
--- no mês de conclusão. É uma alocação gerencial, não custo individual observado.
+-- 1. VIEW PARA POWER BI
 CREATE OR REPLACE VIEW vw_analise_literaria_pbi AS
 SELECT
     fl.id_leitura,
@@ -112,7 +108,6 @@ FROM metricas
 ORDER BY mes;
 
 -- 3. RANKING DE LIVROS POR NOTA DENTRO DE CADA CATEGORIA
--- Usa uma CTE para evitar que as categorias múltiplas sejam concatenadas no ranking.
 WITH livros_por_categoria AS (
     SELECT
         c.categoria,

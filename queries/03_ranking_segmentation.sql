@@ -1,12 +1,9 @@
 -- =========================================================
 -- RANKING E SEGMENTAÇÃO
--- Autores, categorias, origem de acesso, formato e intenção de compra.
--- Compatível com MySQL 8+.
 -- =========================================================
 USE book_analytics;
 
 -- 1. RANKING DE AUTORES
--- Inclui todos os registros para retratar as avaliações cadastradas.
 SELECT
     dl.autor,
     COUNT(fl.id_leitura) AS total_registros_leitura,
@@ -19,7 +16,6 @@ HAVING COUNT(fl.id_leitura) >= 1
 ORDER BY nota_media DESC, livros_concluidos DESC, dl.autor;
 
 -- 2. RANKING DE AUTORES COM MÍNIMO DE DUAS LEITURAS
--- Evita destacar um autor com uma única avaliação como se fosse um padrão robusto.
 SELECT
     dl.autor,
     COUNT(*) AS total_registros_leitura,
@@ -32,8 +28,6 @@ HAVING COUNT(*) >= 2
 ORDER BY nota_media DESC, total_registros_leitura DESC, dl.autor;
 
 -- 3. ANÁLISE POR CATEGORIA
--- Um livro pode ter várias categorias; os totais por categoria não devem ser somados
--- para obter o total geral de livros.
 SELECT
     c.id_categoria,
     c.categoria,
@@ -66,7 +60,6 @@ GROUP BY origem_acesso, formato
 ORDER BY total_registros DESC;
 
 -- 5. INTENÇÃO DE COMPRA
--- Valor de referência não equivale a compra efetiva nem a economia comprovada.
 SELECT
     intencao_compra,
     COUNT(*) AS total_registros,
@@ -85,7 +78,6 @@ GROUP BY intencao_compra
 ORDER BY total_registros DESC;
 
 -- 6. FAIXAS DE PREÇO DIGITAL DE REFERÊNCIA
--- Preços iguais a zero são classificados como não informados, não como gratuitos.
 SELECT
     CASE
         WHEN preco_digital_na_leitura IS NULL OR preco_digital_na_leitura = 0 THEN 'Sem preço conhecido'

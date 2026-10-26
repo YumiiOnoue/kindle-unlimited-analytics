@@ -55,7 +55,7 @@ table 'book_analytics dim_livros'
 		dataType: int64
 		formatString: 0
 		lineageTag: 4cee8983-9cae-4ecc-9bbb-dca8f83c96b5
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: numero_paginas
 
 		annotation SummarizationSetBy = Automatic

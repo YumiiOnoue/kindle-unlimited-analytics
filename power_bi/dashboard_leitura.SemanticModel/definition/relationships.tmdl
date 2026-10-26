@@ -20,3 +20,13 @@ relationship 40d08f15-8790-4a2a-8d9b-bded6487cd40
 
 	annotation PBI_IsFromSource = FS
 
+relationship 691cd35d-1866-84cb-355c-71c2f0bb0308
+	fromColumn: 'book_analytics livro_categoria'.id_livro
+	toColumn: 'book_analytics dim_livros'.id_livro
+
+relationship 06a1cb72-97e9-d247-c776-dd123102c077
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'book_analytics fato_assinatura'.mes_referencia
+	toColumn: dim_calendario.Date
+

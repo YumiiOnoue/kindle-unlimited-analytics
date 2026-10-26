@@ -382,7 +382,7 @@ VALUES
     (SELECT id_categoria FROM dim_categoria WHERE categoria = 'Romance')),
 
     ((SELECT id_livro FROM dim_livros WHERE titulo = 'Sete verões'),
-    (SELECT id_categoria FROM dim_categoria WHERE categoria = 'Drama'))
+    (SELECT id_categoria FROM dim_categoria WHERE categoria = 'Drama')),
     
     ((SELECT id_livro FROM dim_livros WHERE titulo = 'Yellowface'),
     (SELECT id_categoria FROM dim_categoria WHERE categoria = 'Suspense')),
@@ -400,7 +400,7 @@ VALUES
     (SELECT id_categoria FROM dim_categoria WHERE categoria = 'Romance')),
 
     ((SELECT id_livro FROM dim_livros WHERE titulo = 'O burnout'),
-    (SELECT id_categoria FROM dim_categoria WHERE categoria = 'Comédia'))
+    (SELECT id_categoria FROM dim_categoria WHERE categoria = 'Comédia')),
 
     ((SELECT id_livro FROM dim_livros WHERE titulo = 'Uma magia destilada em veneno'),
     (SELECT id_categoria FROM dim_categoria WHERE categoria = 'Fantasia')),
@@ -433,7 +433,7 @@ VALUES
     (SELECT id_categoria FROM dim_categoria WHERE categoria = 'Romance')),
 
     ((SELECT id_livro FROM dim_livros WHERE titulo = 'A lanterna das memórias perdidas'),
-    (SELECT id_categoria FROM dim_categoria WHERE categoria = 'Ficção'))
+    (SELECT id_categoria FROM dim_categoria WHERE categoria = 'Ficção')),
 
     ((SELECT id_livro FROM dim_livros WHERE titulo = 'A lanterna das memórias perdidas'),
     (SELECT id_categoria FROM dim_categoria WHERE categoria = 'Literatura Asiática'));

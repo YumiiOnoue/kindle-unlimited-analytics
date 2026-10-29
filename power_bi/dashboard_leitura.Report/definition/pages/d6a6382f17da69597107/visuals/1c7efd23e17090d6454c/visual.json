@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "1c7efd23e17090d6454c",
   "position": {
-    "x": 1524.4229322507842,
-    "y": 68.023448921945743,
+    "x": 932.81167883211685,
+    "y": 67.978179024202845,
     "z": 7002,
-    "height": 174.41909979986087,
-    "width": 205.81453776383586,
+    "height": 173.72201306185173,
+    "width": 258.69473684210527,
     "tabOrder": 7002
   },
   "visual": {
@@ -22,17 +22,17 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "book_analytics fato_leituras"
+                          "Entity": "book_analytics fato_assinatura"
                         }
                       },
-                      "Property": "valor_pago"
+                      "Property": "valor_mensal"
                     }
                   },
                   "Function": 0
                 }
               },
-              "queryRef": "Sum(book_analytics fato_leituras.valor_pago)",
-              "nativeQueryRef": "Soma de valor_pago"
+              "queryRef": "CountNonNull(book_analytics fato_assinatura.valor_mensal)",
+              "nativeQueryRef": "Soma de valor_mensal"
             }
           ]
         },
@@ -43,18 +43,46 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "book_analytics livro_categoria"
+                      "Entity": "book_analytics fato_assinatura"
                     }
                   },
-                  "Property": "id_livro"
+                  "Property": "servico"
                 }
               },
-              "queryRef": "book_analytics livro_categoria.id_livro",
-              "nativeQueryRef": "id_livro"
+              "queryRef": "book_analytics fato_assinatura.servico",
+              "nativeQueryRef": "servico"
             }
           ]
         }
       }
+    },
+    "objects": {
+      "lastDate": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "goals": [
+        {
+          "properties": {
+            "showGoal": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
     },
     "visualContainerObjects": {
       "title": [
@@ -85,6 +113,13 @@
               "expr": {
                 "Literal": {
                   "Value": "'15'"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Total Pago em Kindle+'"
                 }
               }
             }

@@ -1,0 +1,67 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "723e8a0ddbe677c62ada",
+  "position": {
+    "x": 1212.2775259316174,
+    "y": 67.978179024202845,
+    "z": 7004,
+    "height": 277.57756434882828,
+    "width": 657.1223972339609,
+    "tabOrder": 7004
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Vale a pena assinar?",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "18pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Objetivo: decisão financeira",
+                    "textStyle": {
+                      "fontSize": "16pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Indicadores: gasto total com assinatura, gasto com compras, livros concluídos via KU, custo por livro e economia estimada com intenção de compra.",
+                    "textStyle": {
+                      "fontSize": "16pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Gráficos: gasto mensal versus valor de compras que seriam realizadas sem KU; resultado líquido mensal; meses em que a assinatura não teve uso registrado.",
+                    "textStyle": {
+                      "fontSize": "16pt"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

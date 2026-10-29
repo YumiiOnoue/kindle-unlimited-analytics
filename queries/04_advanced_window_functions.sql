@@ -3,7 +3,9 @@
 -- =========================================================
 USE book_analytics;
 
+-- =========================================================
 -- 1. VIEW PARA POWER BI
+-- =========================================================
 CREATE OR REPLACE VIEW vw_analise_literaria_pbi AS
 SELECT
     fl.id_leitura,
@@ -22,9 +24,8 @@ SELECT
     fl.data_fim,
     DATE_FORMAT(fl.data_inicio, '%Y-%m') AS mes_inicio,
     DATE_FORMAT(fl.data_fim, '%Y-%m') AS mes_conclusao,
-    fl.valor_pago,
-    fl.preco_digital_na_leitura,
-    fl.preco_fisico_na_leitura,
+    dl.preco_digital,       
+    dl.preco_fisico,     
     fl.nota,
     fl.opiniao_texto,
     CASE
@@ -74,7 +75,9 @@ LEFT JOIN (
     GROUP BY DATE_FORMAT(data_fim, '%Y-%m')
 ) AS ku ON ku.mes_referencia = DATE_FORMAT(fl.data_fim, '%Y-%m');
 
+-- =========================================================
 -- 2. EVOLUÇÃO MENSAL COM VARIAÇÃO MÊS A MÊS E MÉDIA MÓVEL
+-- =========================================================
 WITH leituras_mensais AS (
     SELECT
         CAST(DATE_FORMAT(data_fim, '%Y-%m-01') AS DATE) AS mes,
@@ -107,7 +110,9 @@ SELECT
 FROM metricas
 ORDER BY mes;
 
+-- =========================================================
 -- 3. RANKING DE LIVROS POR NOTA DENTRO DE CADA CATEGORIA
+-- =========================================================
 WITH livros_por_categoria AS (
     SELECT
         c.categoria,
@@ -142,7 +147,9 @@ FROM ranking
 WHERE ranking_na_categoria <= 5
 ORDER BY categoria, ranking_na_categoria, titulo;
 
+-- =========================================================
 -- 4. ACUMULADO DE PÁGINAS LIDAS POR MÊS
+-- =========================================================
 WITH paginas_mensais AS (
     SELECT
         CAST(DATE_FORMAT(fl.data_fim, '%Y-%m-01') AS DATE) AS mes,
@@ -160,7 +167,9 @@ SELECT
 FROM paginas_mensais
 ORDER BY mes;
 
+-- =========================================================
 -- 5. INDICADORES DE LEITURA POR ORIGEM: SHARE E RANKING DE AVALIAÇÃO
+-- =========================================================
 WITH resumo_origem AS (
     SELECT
         origem_acesso,

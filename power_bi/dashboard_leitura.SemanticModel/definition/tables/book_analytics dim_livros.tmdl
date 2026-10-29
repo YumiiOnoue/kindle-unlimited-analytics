@@ -60,6 +60,26 @@ table 'book_analytics dim_livros'
 
 		annotation SummarizationSetBy = Automatic
 
+	column preco_digital
+		dataType: double
+		lineageTag: 7bc4c337-6b95-4c0c-9bfe-e1670131b9d6
+		summarizeBy: sum
+		sourceColumn: preco_digital
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column preco_fisico
+		dataType: double
+		lineageTag: e5ee838e-c5c8-4130-b1e1-64daaeb41494
+		summarizeBy: sum
+		sourceColumn: preco_fisico
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	partition 'book_analytics dim_livros' = m
 		mode: import
 		source =

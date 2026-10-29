@@ -49,16 +49,6 @@ table 'book_analytics fato_leituras'
 
 		annotation SummarizationSetBy = Automatic
 
-	column valor_pago
-		dataType: double
-		lineageTag: f9dfe348-bea6-4d52-9411-5d2ab5b71711
-		summarizeBy: sum
-		sourceColumn: valor_pago
-
-		annotation SummarizationSetBy = Automatic
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
 	column nota
 		dataType: double
 		lineageTag: 2eb3322a-56b9-4a7c-af31-871523ec47a9
@@ -84,26 +74,6 @@ table 'book_analytics fato_leituras'
 		sourceColumn: origem_acesso
 
 		annotation SummarizationSetBy = Automatic
-
-	column preco_digital_na_leitura
-		dataType: double
-		lineageTag: e0f1cec5-bca0-46fd-8fc2-65df6e3b8965
-		summarizeBy: sum
-		sourceColumn: preco_digital_na_leitura
-
-		annotation SummarizationSetBy = Automatic
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	column preco_fisico_na_leitura
-		dataType: double
-		lineageTag: c737b29a-a24f-4f7e-b33a-293aae3379fc
-		summarizeBy: sum
-		sourceColumn: preco_fisico_na_leitura
-
-		annotation SummarizationSetBy = Automatic
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column intencao_compra
 		dataType: string

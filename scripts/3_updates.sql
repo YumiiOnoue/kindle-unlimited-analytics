@@ -53,3 +53,99 @@ VALUES
        ((SELECT id_livro FROM dim_livros WHERE titulo = 'Traduzindo dados: como transformar números em decisões'), (SELECT id_categoria FROM dim_categoria WHERE categoria = 'Dados')),
        ((SELECT id_livro FROM dim_livros WHERE titulo = 'Café e Bolo em Wildflower Lock'), (SELECT id_categoria FROM dim_categoria WHERE categoria = 'Romance')),
        ((SELECT id_livro FROM dim_livros WHERE titulo = 'Céus Azuis sobre Wildflower Lock'), (SELECT id_categoria FROM dim_categoria WHERE categoria = 'Romance'));
+
+-- ============================================================================
+-- Atualizações das tabelas 28/10
+-- ============================================================================
+-- Alterações na tabela dim_livros, fato_leituras, concentrando as informações dos livros em uma única tabela
+ALTER TABLE dim_livros
+ADD COLUMN preco_digital DECIMAL(10, 2) DEFAULT 0.00,
+ADD COLUMN preco_fisico DECIMAL(10, 2) DEFAULT 0.00;
+
+-- Adiciona preços dos livros
+UPDATE dim_livros d
+SET d.preco_digital = COALESCE((
+        SELECT f.preco_digital_na_leitura
+        FROM fato_leituras f 
+        WHERE f.id_livro = d.id_livro
+    ), 0.00),
+    d.preco_fisico = COALESCE((
+        SELECT f.preco_fisico_na_leitura
+        FROM fato_leituras f 
+        WHERE f.id_livro = d.id_livro
+    ), 0.00);
+
+-- Tratando os preços nulos do dim_livros
+UPDATE dim_livros 
+SET preco_digital = 14.13
+WHERE titulo = 'Como fazer amigos e influenciar pessoas';
+
+UPDATE dim_livros 
+SET preco_digital = 2.97
+WHERE titulo = 'O jardim secreto';
+
+UPDATE dim_livros 
+SET preco_digital = 1.99
+WHERE titulo = '15 Incríveis Truques Mentais: Facilite sua vida mudando sua mente';
+
+UPDATE dim_livros 
+SET preco_digital = 39.90,
+    preco_fisico = 42.75
+WHERE titulo = 'O guardião das coisas perdidas';
+
+UPDATE dim_livros 
+SET preco_digital = 14.90
+WHERE titulo = 'Vida de gato';
+
+UPDATE dim_livros 
+SET preco_digital = 30.18
+WHERE titulo = 'Uma tempestade de verão';
+
+-- Remove as restrições (constraints) de preço primeiro
+ALTER TABLE fato_leituras DROP CONSTRAINT chk_preco_digital;
+ALTER TABLE fato_leituras DROP CONSTRAINT chk_preco_fisico;
+ALTER TABLE fato_leituras DROP CONSTRAINT chk_valor_pago;
+
+-- Remove as colunas da tabela
+ALTER TABLE fato_leituras 
+DROP COLUMN preco_digital_na_leitura,
+DROP COLUMN preco_fisico_na_leitura,
+DROP COLUMN valor_pago;
+
+-- Adicionando mais opções para origem_acesso
+ALTER TABLE fato_leituras 
+MODIFY COLUMN origem_acesso ENUM('Kindle Unlimited', 'Compra', 'Emprestimo', 'Presente', 'Cortesia') 
+NOT NULL DEFAULT 'Kindle Unlimited';
+
+UPDATE fato_leituras 
+SET origem_acesso = 'Cortesia'
+WHERE id_livro IN (
+    SELECT id_livro 
+    FROM dim_livros 
+    WHERE titulo = 'Resolva A Porra Dos Seus Problemas'
+);
+
+UPDATE fato_leituras 
+SET origem_acesso = 'Cortesia'
+WHERE id_livro IN (
+    SELECT id_livro 
+    FROM dim_livros 
+    WHERE titulo = 'Se não fosse por você, eu não estaria aqui'
+);
+
+
+UPDATE fato_leituras 
+SET origem_acesso = 'Cortesia'
+WHERE id_livro IN (
+    SELECT id_livro 
+    FROM dim_livros 
+    WHERE titulo = 'Se os gatos desaparecessem do mundo'
+);
+
+UPDATE fato_leituras 
+SET origem_acesso = 'Cortesia'
+WHERE id_livro IN (
+    SELECT id_livro 
+    FROM dim_livros 
+    WHERE titulo = 'Traduzindo dados: como transformar números em decisões'
+);

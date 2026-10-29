@@ -187,16 +187,12 @@ WHERE
 -- 11. LEITURAS: Verifica valores negativos em custos e preços
 -- =======================================================================================
 SELECT
-    id_leitura,
     id_livro,
-    valor_pago,
-    preco_digital_na_leitura,
-    preco_fisico_na_leitura
-FROM fato_leituras
-WHERE
-    valor_pago < 0
-    OR preco_digital_na_leitura < 0
-    OR preco_fisico_na_leitura < 0;
+    preco_digital,
+    preco_fisico
+FROM dim_livros
+WHERE preco_digital < 0
+    OR preco_fisico < 0;
 
 
 -- =======================================================================================
@@ -204,11 +200,11 @@ WHERE
 -- =======================================================================================
 SELECT
     COUNT(*) AS total_leituras,
-    SUM(preco_digital_na_leitura IS NULL)
+    SUM(preco_digital IS NULL)
         AS sem_preco_digital,
-    SUM(preco_fisico_na_leitura IS NULL)
+    SUM(preco_fisico IS NULL)
         AS sem_preco_fisico
-FROM fato_leituras;
+FROM dim_livros;
 
 
 -- =======================================================================================

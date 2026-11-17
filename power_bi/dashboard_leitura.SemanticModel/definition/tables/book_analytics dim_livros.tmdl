@@ -62,23 +62,25 @@ table 'book_analytics dim_livros'
 
 	column preco_digital
 		dataType: double
-		lineageTag: 7bc4c337-6b95-4c0c-9bfe-e1670131b9d6
+		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
+		lineageTag: b7597fcd-9527-4474-9a0f-da5628cbaada
 		summarizeBy: sum
 		sourceColumn: preco_digital
 
 		annotation SummarizationSetBy = Automatic
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
 
 	column preco_fisico
 		dataType: double
-		lineageTag: e5ee838e-c5c8-4130-b1e1-64daaeb41494
+		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
+		lineageTag: 14ed8ebe-7b11-40c2-9a03-ea9d9f58e0ec
 		summarizeBy: sum
 		sourceColumn: preco_fisico
 
 		annotation SummarizationSetBy = Automatic
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
 
 	partition 'book_analytics dim_livros' = m
 		mode: import

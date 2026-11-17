@@ -1,40 +1,65 @@
-# 📚 Book Analytics: Otimização de Leitura e Assinaturas
-Este projeto nasceu de uma necessidade pessoal: analisar meus hábitos de leitura para tomar decisões baseadas em dados. O objetivo principal é verificar a viabilidade financeira da assinatura Kindle Unlimited, monitorar a evolução do meu volume de leitura ao longo dos anos e identificar preferências literárias para otimizar futuros gastos.
+# 📚 Book Analytics: Análise Financeira e Comportamental de Leituras (MySQL)
 
-## 🎯 Objetivos do Projeto
-* **Análise de ROI (Retorno sobre Investimento):** Calcular o custo real por livro lido através da assinatura versus a compra avulsa.
-* **Monitoramento de Hábito:** Verificar se a quantidade de livros e páginas lidas aumentou ao longo do tempo.
-* **Perfil de Preferências:** Identificar categorias e autores com melhores avaliações para guiar próximas compras.
-* **Business Intelligence:** Criar uma base de dados estruturada para alimentar um dashboard no Power BI.
+## 1. Resumo Executivo
+Projeto de Engenharia e Análise de Dados desenvolvido em **MySQL 8.0** para avaliar o retorno financeiro e o comportamento de leitura do meu acervo pessoal entre 2021 e 2026. O estudo responde se vale a pena manter a assinatura do **Kindle Unlimited** ao comparar o custo mensal recorrente contra o preço de referência digital das obras concluídas no catálogo, além de mapear ritmo de leitura, intenção de compra e avaliação por gênero.
 
-## 🏗️ Estrutura do Banco de Dados
-O projeto utiliza um banco de dados MySQL com uma arquitetura de Snowflake Schema (Esquema Floco de Neve) simplificada para facilitar a análise:
+## 2. Contexto e Objetivo
+Assinaturas digitais recorrentes exigem acompanhamento periódico para verificar se o uso real justifica o custo fixo. A partir do histórico real de 58 livros e 59 registros de leitura, o banco `book_analytics` foi modelado para:
+- Medir a economia líquida mensal e acumulada do Kindle Unlimited frente à compra avulsa de e-books.
+- Calcular o custo rateado real por livro concluído via assinatura.
+- Identificar o ritmo de leitura (dias por livro e páginas por dia) por formato (`Digital` vs. `Físico`) e origem de acesso (`Kindle Unlimited`, `Compra`, `Emprestimo`, `Cortesia`, `Presente`).
+- Avaliar quais categorias, autores e editoras concentram as melhores notas e intenções de compra.
 
-* **Tabelas Dimensionais:** autores, editoras, categorias, livros e assinatura.
-* **Tabelas Fato:** leituras (registra o evento da leitura e formato) e avaliacoes (registra a performance subjetiva).
+## 3. Arquitetura e Modelagem
+O banco segue uma modelagem dimensional (**Star Schema** com relacionamento muitos-para-muitos resolvido por tabela ponte):
+- **Tabelas Fato:** `fato_leituras` (eventos de leitura, datas, status, nota e intenção de compra) e `fato_assinatura` (histórico de cobranças mensais do Kindle Unlimited).
+- **Tabelas Dimensão:** `dim_livros` (metadados bibliográficos e preços de referência digital/físico) e `dim_categoria` (gêneros literários).
+- **Tabela Associativa:** `livro_categoria` (permite classificar cada livro em múltiplas categorias simultaneamente).
 
-![arquitetura](img/book_analysis.drawio.png)
+- [Visualizar Diagrama Entidade-Relacionamento](docs/diagrama-er.md)
+- [Consultar Dicionário de Dados Completo](docs/dicionario-de-dados.md)
 
-## 📊 Insights Analíticos (Queries Principais)
-O repositório contém scripts SQL avançados para extrair indicadores como:
-* **Custo Efetivo por Livro:** Localizado em 02_financial_analysis.sql, esta consulta divide o valor da mensalidade do Kindle Unlimited pelo número de livros lidos no mês, revelando o real benefício da assinatura.
-* **Métricas de Performance:** Cálculo de tempo médio de leitura por categoria e média de páginas lidas por dia.
-* **Ranking de Engajamento:** Identificação de autores e gêneros com as maiores notas médias, auxiliando na curadoria de novas leituras.
+## 4. Perguntas de Negocio e Principais Insights
 
-## 🛠️ Tecnologias Utilizadas
-* **MySQL:** Banco de dados relacional para armazenamento e processamento.
-* **SQL Avançado:** Uso de CTEs (Common Table Expressions), Window Functions e Views complexas para preparação de dados.
-* **Power BI:** [Dashboard](https://app.powerbi.com/view?r=eyJrIjoiMDQwNTM4MWEtMjE2OS00NmYzLWI0NzctODc3NWVjMTllMDlmIiwidCI6IjU3NTI5OTdmLTBkODUtNDI0My04ZjgxLTNiYmZlMTI5ODhjYiJ9) para visualização dos indicadores financeiros e de comportamento.
 
-![Dashboard](img/pag2_dashboard.png)
+## 5. Habilidades Tecnicas 
+- **Modelagem Dimensional e Integridade:** chaves primárias/estrangeiras, constraints `CHECK` para regras de negócio (ex: `status_leitura = 'Lendo'` exige `data_fim IS NULL`) e tabela ponte `N:N`.
+- **Data Quality e Auditoria (`03_qualidade_dados.sql`):** 19 verificações automatizadas incluindo CTE recursiva (`WITH RECURSIVE`) para detectar lacunas de meses na cobrança da assinatura.
+- **SQL Analítico Avançado:** CTEs encadeadas, Window Functions (`LAG`, `AVG() OVER`, `SUM() OVER`, `DENSE_RANK() OVER PARTITION BY`) e agregações condicionais.
+- **Camada Semântica para BI:** view consolidada (`vw_analise_literaria_pbi`) pronta para consumo no Power BI (`dashboard_leitura.pbip`).
 
-## 📁 Organização do Repositório
-* `/data:` Scripts de criação e inserção de dados históricos.
-* `/queries:` Análises comportamentais, financeiras e rankings.
-* `/power_bi:` Arquivos otimizadas para o dashboard.
+## 6. Como Executar o Projeto
 
-## Próximos Passos
-* [ ] Finalizar a integração com o Power BI para visualização em tempo real.
-* [ ] Implementar uma análise preditiva para estimar quantos livros lerei no próximo semestre.
-* [ ] Adicionar métricas de "Livros Abandonados" para entender melhor o desperdício financeiro.
+### Pré-requisitos
+- MySQL 8.0+
+- Power BI Desktop (para visualizar o dashboard)
 
+### 1. Clone o repositório
+
+```bash
+git clone https://github.com/YumiiOnoue/kindle-unlimited-analytics.git
+cd kindle-unlimited-analytics
+```
+
+### 2. Configure o banco de dados
+
+Crie o banco no MySQL:
+
+```sql
+CREATE DATABASE book_analytics;
+```
+
+### 3. Execute os scripts SQL
+
+No MySQL Workbench, execute os arquivos na seguinte ordem:
+
+1. `scripts/1_create_table.sql`
+2. `scripts/2_inserts.sql`
+3. `scripts/3_updates.sql`
+4. `scripts/4_data_quality.sql`
+
+### 4. Acesse o dashboard
+
+Abra o arquivo Power BI disponível na pasta `power_bi/`, configure a conexão com o MySQL e atualize os dados.
+
+**Observação:** execute os scripts de criação, carga e atualização somente uma vez, em um banco recém-criado.

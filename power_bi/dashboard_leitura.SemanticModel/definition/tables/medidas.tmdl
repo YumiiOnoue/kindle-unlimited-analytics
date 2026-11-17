@@ -1,0 +1,281 @@
+table medidas
+	lineageTag: 090311b6-a588-4c36-a417-591413c59cf7
+
+	measure 'Livros Concluidos' =
+			
+			CALCULATE(
+			    COUNTROWS('book_analytics fato_leituras'),
+			    'book_analytics fato_leituras'[status_leitura] = "Lido",
+			    NOT ISBLANK('book_analytics fato_leituras'[data_fim])
+			)
+		formatString: 0
+		lineageTag: b86d99b5-0fb4-44e1-af3b-739a0d286830
+
+	measure 'Livros Em Andamento' = ```
+			
+			CALCULATE(
+			    COUNTROWS('book_analytics fato_leituras'),
+			    'book_analytics fato_leituras'[status_leitura] = "Lendo", 
+			    USERELATIONSHIP(dim_calendario[Date], 'book_analytics fato_leituras'[data_inicio])
+			)
+			```
+		formatString: 0
+		lineageTag: e88c65d4-128e-438f-a81d-f211abc66e4c
+
+	measure 'Livros Abandonados' = ```
+			
+			CALCULATE(
+			    COUNTROWS('book_analytics fato_leituras'),
+			    'book_analytics fato_leituras'[status_leitura] = "Abandonado"
+			)
+			
+			```
+		formatString: 0
+		lineageTag: 777f668d-7e65-4515-94c5-99c464485911
+
+	measure 'Tempo Medio Leitura (Dias)' = ```
+			
+			AVERAGEX(
+			    FILTER(
+			        'book_analytics fato_leituras',
+			        'book_analytics fato_leituras'[status_leitura] = "Lido"
+			            && NOT ISBLANK('book_analytics fato_leituras'[data_inicio])
+			            && NOT ISBLANK('book_analytics fato_leituras'[data_fim])
+			            && 'book_analytics fato_leituras'[data_fim] >= 'book_analytics fato_leituras'[data_inicio]
+			    ),
+			    DATEDIFF(
+			        'book_analytics fato_leituras'[data_inicio],
+			        'book_analytics fato_leituras'[data_fim],
+			        DAY
+			    ) + 1
+			)
+			
+			```
+		lineageTag: 53d91ecb-8b3f-4a53-8af4-6bacdf0bde86
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Custo Total Assinatura' =
+			
+			CALCULATE(
+			    SUM('book_analytics fato_assinatura'[valor_mensal]),
+			    'book_analytics fato_assinatura'[servico] = "Kindle Unlimited"
+			)
+		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
+		lineageTag: 3587935c-6f9d-441b-ac3a-c971a43d1dbe
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	measure meta_leitura = 15
+		formatString: 0
+		lineageTag: f13183a2-f8bf-4603-af5c-d212226bd38a
+
+	measure 'Livros KU Concluidos' = ```
+			
+			CALCULATE(
+			    [Livros Concluidos],
+			    'book_analytics fato_leituras'[origem_acesso] = "Kindle Unlimited"
+			)
+			
+			```
+		formatString: 0
+		lineageTag: 0ceb3075-892b-4ad3-a8f8-3cc7e5254f80
+
+	measure 'Custo KU por Livro Concluido' = ```
+			
+			DIVIDE(
+			    [Custo Total Assinatura],
+			    [Livros KU Concluidos]
+			)
+			
+			```
+		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
+		lineageTag: f9d2e0d2-4cff-4f3d-b07b-12c225f34030
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	measure 'Valor Referencia Digital KU' = ```
+			
+			CALCULATE(
+			    SUMX(
+			        'book_analytics fato_leituras',
+			        VAR Preco =
+			            RELATED('book_analytics dim_livros'[preco_digital])
+			        RETURN
+			            IF(
+			                NOT ISBLANK(Preco) && Preco > 0,
+			                Preco,
+			                BLANK()
+			            )
+			    ),
+			    'book_analytics fato_leituras'[origem_acesso] = "Kindle Unlimited",
+			    'book_analytics fato_leituras'[status_leitura] = "Lido",
+			    NOT ISBLANK('book_analytics fato_leituras'[data_fim])
+			)
+			
+			```
+		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
+		lineageTag: d500a3c8-e9c7-42d0-8536-7574bc04b7c1
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	measure 'Diferenca Referencia vs KU' = ```
+			
+			[Valor Referencia Digital KU] -
+			[Custo Total Assinatura]
+			
+			```
+		lineageTag: 70f409de-d5f5-4f5c-afb7-1b80dbf6e49b
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Multiplo Referencia vs KU' = ```
+			
+			DIVIDE(
+			    [Valor Referencia Digital KU],
+			    [Custo Total Assinatura]
+			)
+			
+			```
+		lineageTag: ed9464a0-fd30-4741-9bd9-251fe0b9be0e
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Nota Media' = ```
+			
+			AVERAGE('book_analytics fato_leituras'[nota])
+			
+			```
+		lineageTag: 03c1d04c-2353-4231-832f-877a72020aab
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Nota Media Livros Concluidos' = ```
+			
+			CALCULATE(
+			    [Nota Media],
+			    'book_analytics fato_leituras'[status_leitura] = "Lido",
+			    NOT ISBLANK('book_analytics fato_leituras'[data_fim])
+			)
+			
+			```
+		lineageTag: 79c4aed5-7b8b-48b4-9454-4c6f03fecf1f
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Titulos Distintos Concluidos' = ```
+			
+			CALCULATE(
+			    DISTINCTCOUNT('book_analytics fato_leituras'[id_livro]),
+			    'book_analytics fato_leituras'[status_leitura] = "Lido",
+			    NOT ISBLANK('book_analytics fato_leituras'[data_fim])
+			)
+			
+			```
+		formatString: 0
+		lineageTag: d955b0e5-afe6-44d8-8650-4ce734ee43c4
+
+	measure 'Leituras Iniciadas' =
+			
+			CALCULATE(
+			    COUNTROWS('book_analytics fato_leituras'),
+			    USERELATIONSHIP(
+			        dim_calendario[Date],
+			        'book_analytics fato_leituras'[data_inicio]
+			    )
+			)
+		formatString: 0
+		lineageTag: e20e54fa-0062-4046-b608-8275cd8b8ffd
+
+	measure 'Total de Leituras' =
+			
+			COUNTROWS('book_analytics fato_leituras')
+		formatString: 0
+		lineageTag: f566bbac-1fb3-400b-8659-279a71dbf411
+
+	measure 'Percentual Concluído' =
+			
+			DIVIDE(
+			    [Livros Concluidos],
+			    [Total de Leituras],
+			    0
+			)
+		lineageTag: 4d54891a-97a2-4e80-8965-a310569c0b06
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Total de Páginas Lidas' =
+			
+			CALCULATE(
+			    SUM('book_analytics dim_livros'[numero_paginas]),
+			    'book_analytics fato_leituras'[status_leitura] = "Lido"
+			)
+		formatString: 0
+		lineageTag: eebe8c90-d83d-4ad4-8174-5f2d34522612
+
+	measure 'Média de Páginas por Livro' =
+			
+			AVERAGEX(
+			    FILTER(
+			        'book_analytics fato_leituras',
+			        'book_analytics fato_leituras'[status_leitura] = "Lido"
+			    ),
+			    RELATED('book_analytics dim_livros'[numero_paginas])
+			)
+		lineageTag: fbc0d74c-8c5d-4567-af86-8b5a64ff5037
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Gasto Total Registrado' =
+			
+			[Gastos Efetivos com Compras]
+			    + [Custo Total Assinatura]
+		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
+		lineageTag: d980b48d-b800-4f57-86f0-85a13bcd1015
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	measure 'Gastos Efetivos com Compras' =
+			
+			CALCULATE(
+			    SUMX(
+			        'book_analytics fato_leituras',
+			        SWITCH(
+			            'book_analytics fato_leituras'[formato],
+			            "Digital",
+			                RELATED('book_analytics dim_livros'[preco_digital]),
+			            "Físico",
+			                RELATED('book_analytics dim_livros'[preco_fisico]),
+			            BLANK()
+			        )
+			    ),
+			    'book_analytics fato_leituras'[origem_acesso] = "Compra"
+			)
+		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
+		lineageTag: 38eccaa8-3f24-4f31-a691-b1f027502ce1
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	measure 'Texto Atualizacao' =
+			
+			"Atualizado em: " & FORMAT(MAX(Consulta[Ultima_Atualizacao]), "dd/mm/yyyy \à\s HH:mm")
+		lineageTag: 2bcabbde-a075-4a72-b778-a201d959573e
+
+	column Column
+		isHidden
+		formatString: 0
+		lineageTag: ea143254-e388-4d2f-b645-b074435b3c87
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Column]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition medidas = calculated
+		mode: import
+		source = Row("Column", BLANK())
+
+	annotation PBI_Id = 70a530fcc6684ecebf0a2843e83dc9fe
+
+	annotation 436ba87b-9c83-4389-a31b-ebd06a36be98 = {"Expression":""}
+

@@ -9,7 +9,7 @@ model Model
 
 annotation __PBI_TimeIntelligenceEnabled = 0
 
-annotation PBI_QueryOrder = ["book_analytics dim_livros","book_analytics fato_assinatura","book_analytics fato_leituras","_Medidas","book_analytics dim_categoria","book_analytics livro_categoria"]
+annotation PBI_QueryOrder = ["book_analytics dim_livros","book_analytics fato_assinatura","book_analytics fato_leituras","_Medidas","book_analytics dim_categoria","book_analytics livro_categoria","Consulta"]
 
 annotation PBI_ProTooling = ["DevMode"]
 
@@ -19,6 +19,8 @@ ref table 'book_analytics fato_leituras'
 ref table dim_calendario
 ref table 'book_analytics dim_categoria'
 ref table 'book_analytics livro_categoria'
+ref table medidas
+ref table Consulta
 
 ref cultureInfo pt-BR
 

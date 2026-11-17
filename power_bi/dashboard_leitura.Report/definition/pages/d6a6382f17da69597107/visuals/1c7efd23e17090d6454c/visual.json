@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "1c7efd23e17090d6454c",
   "position": {
-    "x": 932.81167883211685,
-    "y": 67.978179024202845,
-    "z": 7002,
+    "x": 1561.0509432087549,
+    "y": 406.39650253367586,
+    "z": 3000,
     "height": 173.72201306185173,
     "width": 258.69473684210527,
-    "tabOrder": 7002
+    "tabOrder": 3000
   },
   "visual": {
     "visualType": "kpi",
@@ -82,12 +82,32 @@
             }
           }
         }
+      ],
+      "indicator": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "32D"
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "visualContainerObjects": {
       "title": [
         {
           "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Total Pago em Kindle+'"
+                }
+              }
+            },
             "show": {
               "expr": {
                 "Literal": {
@@ -102,6 +122,17 @@
                 }
               }
             },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#666666'"
+                    }
+                  }
+                }
+              }
+            },
             "alignment": {
               "expr": {
                 "Literal": {
@@ -112,14 +143,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "'15'"
-                }
-              }
-            },
-            "text": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Total Pago em Kindle+'"
+                  "Value": "15D"
                 }
               }
             }
@@ -316,38 +340,49 @@
                 }
               }
             },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#E3DDD3'"
+                    }
+                  }
+                }
+              }
+            },
             "transparency": {
               "expr": {
                 "Literal": {
-                  "Value": "70D"
+                  "Value": "70L"
                 }
               }
             },
             "shadowSpread": {
               "expr": {
                 "Literal": {
-                  "Value": "0D"
+                  "Value": "3L"
                 }
               }
             },
             "shadowBlur": {
               "expr": {
                 "Literal": {
-                  "Value": "3D"
+                  "Value": "15L"
                 }
               }
             },
             "angle": {
               "expr": {
                 "Literal": {
-                  "Value": "90D"
+                  "Value": "0L"
                 }
               }
             },
             "shadowDistance": {
               "expr": {
                 "Literal": {
-                  "Value": "5D"
+                  "Value": "0L"
                 }
               }
             }

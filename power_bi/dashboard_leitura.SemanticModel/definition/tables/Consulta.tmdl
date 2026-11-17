@@ -1,0 +1,26 @@
+table Consulta
+	lineageTag: 8d76c575-fea3-4572-8b9c-e75217e7d6fa
+
+	column Ultima_Atualizacao
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: e8c7b056-cc1c-4f76-bf9b-0792b376fb48
+		summarizeBy: none
+		sourceColumn: Ultima_Atualizacao
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Consulta = m
+		mode: import
+		source =
+				let
+				    DataHoraUTC = DateTimeZone.UtcNow(),
+				    DataHoraBrasilia = DateTimeZone.SwitchZone(DataHoraUTC, -3, 0),
+				    Tabela = #table(type table [Ultima_Atualizacao = datetimezone], {{DataHoraBrasilia}})
+				in
+				    Tabela
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

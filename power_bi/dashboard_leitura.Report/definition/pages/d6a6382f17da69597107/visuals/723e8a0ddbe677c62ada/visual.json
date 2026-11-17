@@ -4,10 +4,10 @@
   "position": {
     "x": 1212.2775259316174,
     "y": 67.978179024202845,
-    "z": 7004,
+    "z": 5000,
     "height": 277.57756434882828,
     "width": 657.1223972339609,
-    "tabOrder": 7004
+    "tabOrder": 5000
   },
   "visual": {
     "visualType": "textbox",
@@ -50,7 +50,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "Gráficos: gasto mensal versus valor de compras que seriam realizadas sem KU; resultado líquido mensal; meses em que a assinatura não teve uso registrado.",
+                    "value": "Gráficos: gasto mensal versus valor de compras que seriam realizadas sem KU; resultado líquido mensal; meses em que a assinatura não tve uo registrado.",
                     "textStyle": {
                       "fontSize": "16pt"
                     }

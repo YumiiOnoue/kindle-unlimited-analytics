@@ -51,7 +51,7 @@ table dim_calendario
 	column AnoMesNum
 		formatString: 0
 		lineageTag: 2d123250-2b0b-4920-a8b2-a7adfa9ad2d6
-		summarizeBy: none
+		summarizeBy: sum
 		isNameInferred
 		sourceColumn: [AnoMesNum]
 
@@ -122,7 +122,7 @@ table dim_calendario
 				    "NomeMes", FORMAT([Date], "mmmm"),
 				    "MesAbrev", FORMAT([Date], "mmm"),
 				    "AnoMesNum", YEAR([Date]) * 100 + MONTH([Date]),
-				    "AnoMes", FORMAT([Date], "yyyy-mm"),
+				    "AnoMes", FORMAT([Date], "mm/yyyy"),
 				    "Trimestre", "T" & FORMAT([Date], "q"),
 				    "TrimestreAno", "T" & FORMAT([Date], "q") & "/" & YEAR([Date]),
 				    "DiaSemanaNum", WEEKDAY([Date], 2), -- 1 = Segunda, 7 = Domingo

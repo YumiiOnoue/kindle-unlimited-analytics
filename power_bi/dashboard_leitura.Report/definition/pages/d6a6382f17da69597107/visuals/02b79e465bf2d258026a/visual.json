@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "02b79e465bf2d258026a",
   "position": {
-    "x": 76.74440391193879,
-    "y": 293.0240876637663,
-    "z": 7001,
+    "x": 1058.7239357851556,
+    "y": 673.257725227463,
+    "z": 2000,
     "height": 340.11724460972874,
     "width": 434.30355850165358,
-    "tabOrder": 7001
+    "tabOrder": 2000
   },
   "visual": {
     "visualType": "donutChart",
@@ -164,6 +164,17 @@
                 }
               }
             },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#666666'"
+                    }
+                  }
+                }
+              }
+            },
             "alignment": {
               "expr": {
                 "Literal": {
@@ -174,7 +185,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "'15'"
+                  "Value": "15D"
                 }
               }
             }
@@ -371,38 +382,49 @@
                 }
               }
             },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#E3DDD3'"
+                    }
+                  }
+                }
+              }
+            },
             "transparency": {
               "expr": {
                 "Literal": {
-                  "Value": "70D"
+                  "Value": "70L"
                 }
               }
             },
             "shadowSpread": {
               "expr": {
                 "Literal": {
-                  "Value": "0D"
+                  "Value": "3L"
                 }
               }
             },
             "shadowBlur": {
               "expr": {
                 "Literal": {
-                  "Value": "3D"
+                  "Value": "15L"
                 }
               }
             },
             "angle": {
               "expr": {
                 "Literal": {
-                  "Value": "90D"
+                  "Value": "0L"
                 }
               }
             },
             "shadowDistance": {
               "expr": {
                 "Literal": {
-                  "Value": "5D"
+                  "Value": "0L"
                 }
               }
             }
@@ -437,42 +459,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "56f3fab365e9e042654b",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "book_analytics fato_leituras"
-              }
-            },
-            "Property": "formato"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "f1ff6b401da9ba39d3d9",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "book_analytics fato_leituras"
-                  }
-                },
-                "Property": "id_leitura"
-              }
-            },
-            "Function": 5
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

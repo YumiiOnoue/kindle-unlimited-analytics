@@ -20,13 +20,14 @@ table 'book_analytics fato_assinatura'
 
 	column valor_mensal
 		dataType: double
+		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
 		lineageTag: 80ce81e7-81ae-449e-aeb4-854c41d49fd6
 		summarizeBy: none
 		sourceColumn: valor_mensal
 
 		annotation SummarizationSetBy = User
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
 
 	column mes_referencia
 		dataType: dateTime

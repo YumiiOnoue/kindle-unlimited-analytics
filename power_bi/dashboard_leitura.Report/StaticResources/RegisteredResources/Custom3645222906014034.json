@@ -1,0 +1,20 @@
+{
+  "name": "Custom",
+  "visualStyles": {
+    "*": {
+      "*": {
+        "filterCard": [
+          {
+            "$id": "Applied",
+            "foregroundColor": {
+              "solid": {
+                "color": "#E66C37"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "foreground": "#000000"
+}

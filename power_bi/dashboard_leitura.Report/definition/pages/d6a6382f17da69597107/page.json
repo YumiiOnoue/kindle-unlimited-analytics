@@ -1,7 +1,7 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
   "name": "d6a6382f17da69597107",
-  "displayName": "Página 2",
+  "displayName": "Viabilidade Financeira",
   "displayOption": "FitToPage",
   "height": 1080,
   "width": 1920,
@@ -25,7 +25,7 @@
               "color": {
                 "expr": {
                   "Literal": {
-                    "Value": "'#F9D8A6'"
+                    "Value": "'#F7F5F0'"
                   }
                 }
               }

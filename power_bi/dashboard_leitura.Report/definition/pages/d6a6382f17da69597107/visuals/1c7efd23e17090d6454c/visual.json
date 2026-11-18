@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "1c7efd23e17090d6454c",
   "position": {
-    "x": 1561.0509432087549,
-    "y": 406.39650253367586,
+    "x": 1324.0725813085035,
+    "y": 60.644545708786417,
     "z": 3000,
-    "height": 173.72201306185173,
-    "width": 258.69473684210527,
+    "height": 200,
+    "width": 250,
     "tabOrder": 3000
   },
   "visual": {
@@ -17,22 +17,17 @@
           "projections": [
             {
               "field": {
-                "Aggregation": {
+                "Measure": {
                   "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "book_analytics fato_assinatura"
-                        }
-                      },
-                      "Property": "valor_mensal"
+                    "SourceRef": {
+                      "Entity": "medidas"
                     }
                   },
-                  "Function": 0
+                  "Property": "Diferenca Referencia vs KU"
                 }
               },
-              "queryRef": "CountNonNull(book_analytics fato_assinatura.valor_mensal)",
-              "nativeQueryRef": "Soma de valor_mensal"
+              "queryRef": "medidas.Diferenca Referencia vs KU",
+              "nativeQueryRef": "Diferenca Referencia vs KU"
             }
           ]
         },
@@ -104,7 +99,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Total Pago em Kindle+'"
+                  "Value": "'Diferença entre valor de referência e mensalidades'"
                 }
               }
             },
@@ -118,7 +113,7 @@
             "titleWrap": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
             },

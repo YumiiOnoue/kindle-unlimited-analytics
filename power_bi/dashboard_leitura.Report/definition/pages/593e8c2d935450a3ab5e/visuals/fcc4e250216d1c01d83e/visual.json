@@ -1,19 +1,38 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
-  "name": "02b79e465bf2d258026a",
+  "name": "fcc4e250216d1c01d83e",
   "position": {
-    "x": 1058.7239357851556,
-    "y": 673.257725227463,
-    "z": 2000,
-    "height": 340.11724460972874,
-    "width": 434.30355850165358,
-    "tabOrder": 2000
+    "x": 1601.0160067119614,
+    "y": 48.515636567029134,
+    "z": 13004,
+    "height": 200.12700083899517,
+    "width": 250.66412226298385,
+    "tabOrder": 6001
   },
   "visual": {
-    "visualType": "donutChart",
+    "visualType": "kpi",
     "query": {
       "queryState": {
-        "Category": {
+        "Indicator": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "medidas"
+                    }
+                  },
+                  "Property": "% Livros com Intenção de Compra"
+                }
+              },
+              "queryRef": "medidas.% Livros com Intenção de Compra",
+              "nativeQueryRef": "% Livros com Intenção de Compra",
+              "format": "0.00%;-0.00%;0.00%"
+            }
+          ]
+        },
+        "TrendLine": {
           "projections": [
             {
               "field": {
@@ -23,122 +42,50 @@
                       "Entity": "book_analytics fato_leituras"
                     }
                   },
-                  "Property": "formato"
+                  "Property": "data_fim"
                 }
               },
-              "queryRef": "book_analytics fato_leituras.formato",
-              "nativeQueryRef": "formato",
-              "active": true
-            }
-          ]
-        },
-        "Y": {
-          "projections": [
-            {
-              "field": {
-                "Aggregation": {
-                  "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "book_analytics fato_leituras"
-                        }
-                      },
-                      "Property": "id_leitura"
-                    }
-                  },
-                  "Function": 5
-                }
-              },
-              "queryRef": "CountNonNull(book_analytics fato_leituras.id_leitura)",
-              "nativeQueryRef": "Contagem de id_leitura"
+              "queryRef": "book_analytics fato_leituras.data_fim",
+              "nativeQueryRef": "data_fim"
             }
           ]
         }
-      },
-      "sortDefinition": {
-        "sort": [
-          {
-            "field": {
-              "Aggregation": {
-                "Expression": {
-                  "Column": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Entity": "book_analytics fato_leituras"
-                      }
-                    },
-                    "Property": "id_leitura"
-                  }
-                },
-                "Function": 5
-              }
-            },
-            "direction": "Descending"
-          }
-        ],
-        "isDefaultSort": true
       }
     },
     "objects": {
-      "dataPoint": [
+      "goals": [
         {
           "properties": {
-            "fill": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 4,
-                      "Percent": 0
-                    }
-                  }
-                }
-              }
-            },
-            "fillTransparency": {
+            "showGoal": {
               "expr": {
                 "Literal": {
-                  "Value": "51D"
-                }
-              }
-            },
-            "borderShow": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
-            "borderSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "1D"
-                }
-              }
-            },
-            "borderColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 9,
-                      "Percent": 0.2
-                    }
-                  }
+                  "Value": "true"
                 }
               }
             }
           }
         }
       ],
-      "labels": [
+      "lastDate": [
         {
           "properties": {
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "indicator": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "32D"
                 }
               }
             }
@@ -150,6 +97,13 @@
       "title": [
         {
           "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Lidos com Intenção de Leitura'"
+                }
+              }
+            },
             "show": {
               "expr": {
                 "Literal": {
@@ -160,7 +114,7 @@
             "titleWrap": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
             },

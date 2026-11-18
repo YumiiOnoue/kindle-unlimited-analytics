@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "ab85de3fe0a5aa9cccab",
   "position": {
-    "x": 411.62907552767172,
-    "y": 420.35003051766472,
+    "x": 412.38291081974762,
+    "y": 303.22272854393208,
     "z": 4000,
-    "height": 340.11724460972874,
-    "width": 547.67597337156315,
+    "height": 329.50203168440618,
+    "width": 1508.0277032918223,
     "tabOrder": 4000
   },
   "visual": {
@@ -23,11 +23,11 @@
                       "Entity": "dim_calendario"
                     }
                   },
-                  "Property": "Ano"
+                  "Property": "AnoMes"
                 }
               },
-              "queryRef": "dim_calendario.Ano",
-              "nativeQueryRef": "Ano",
+              "queryRef": "dim_calendario.AnoMes",
+              "nativeQueryRef": "AnoMes",
               "active": true
             }
           ]
@@ -36,48 +36,39 @@
           "projections": [
             {
               "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "medidas"
+                    }
+                  },
+                  "Property": "Valor Referencia Digital KU"
+                }
+              },
+              "queryRef": "medidas.Valor Referencia Digital KU",
+              "nativeQueryRef": "Valor Referencia Digital KU"
+            },
+            {
+              "field": {
                 "Aggregation": {
                   "Expression": {
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "book_analytics fato_leituras"
+                          "Entity": "book_analytics fato_assinatura"
                         }
                       },
-                      "Property": "id_leitura"
+                      "Property": "valor_mensal"
                     }
                   },
-                  "Function": 5
+                  "Function": 0
                 }
               },
-              "queryRef": "Sum(book_analytics fato_leituras.id_leitura)",
-              "nativeQueryRef": "Contagem de id_leitura"
+              "queryRef": "CountNonNull(book_analytics fato_assinatura.valor_mensal)",
+              "nativeQueryRef": "Soma de valor_mensal"
             }
           ]
         }
-      },
-      "sortDefinition": {
-        "sort": [
-          {
-            "field": {
-              "Aggregation": {
-                "Expression": {
-                  "Column": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Entity": "book_analytics fato_leituras"
-                      }
-                    },
-                    "Property": "id_leitura"
-                  }
-                },
-                "Function": 5
-              }
-            },
-            "direction": "Descending"
-          }
-        ],
-        "isDefaultSort": true
       }
     },
     "objects": {
@@ -123,10 +114,15 @@
       "dataPoint": [
         {
           "properties": {
-            "borderShow": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 4,
+                      "Percent": 0
+                    }
+                  }
                 }
               }
             },
@@ -137,15 +133,10 @@
                 }
               }
             },
-            "fill": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 4,
-                      "Percent": 0
-                    }
-                  }
+            "borderShow": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             },
@@ -205,7 +196,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Quantidade de Livros Lidos por Ano'"
+                  "Value": "''"
                 }
               }
             },

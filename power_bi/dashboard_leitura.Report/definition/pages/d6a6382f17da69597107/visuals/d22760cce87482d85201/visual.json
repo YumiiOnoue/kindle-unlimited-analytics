@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "d22760cce87482d85201",
   "position": {
-    "x": 1160.9894678940641,
-    "y": 405.55111549724154,
+    "x": 1024.8928224784904,
+    "y": 60.644545708786417,
     "z": 0,
-    "height": 150,
-    "width": 310,
+    "height": 200,
+    "width": 250,
     "tabOrder": 0
   },
   "visual": {
@@ -23,11 +23,11 @@
                       "Entity": "medidas"
                     }
                   },
-                  "Property": "Livros KU Concluidos"
+                  "Property": "Valor Referencia Digital KU"
                 }
               },
-              "queryRef": "medidas.Livros KU Concluidos",
-              "nativeQueryRef": "Livros KU Concluidos"
+              "queryRef": "medidas.Valor Referencia Digital KU",
+              "nativeQueryRef": "Valor Referencia Digital KU"
             }
           ]
         },
@@ -41,11 +41,11 @@
                       "Entity": "book_analytics fato_leituras"
                     }
                   },
-                  "Property": "origem_acesso"
+                  "Property": "data_fim"
                 }
               },
-              "queryRef": "book_analytics fato_leituras.origem_acesso",
-              "nativeQueryRef": "origem_acesso"
+              "queryRef": "book_analytics fato_leituras.data_fim",
+              "nativeQueryRef": "data_fim"
             }
           ]
         }
@@ -106,7 +106,7 @@
             "titleWrap": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
             },
@@ -397,6 +397,19 @@
               "expr": {
                 "Literal": {
                   "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "lockAspect": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             }

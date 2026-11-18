@@ -4,10 +4,10 @@
   "position": {
     "x": 15.293865850869016,
     "y": 1036.3351117694178,
-    "z": 13001,
+    "z": 5000,
     "height": 33.381166205915719,
     "width": 300.4304958532415,
-    "tabOrder": 12000
+    "tabOrder": 5000
   },
   "visual": {
     "visualType": "textbox",
@@ -19,19 +19,13 @@
               {
                 "textRuns": [
                   {
-                    "value": "Atualizado em: ",
-                    "textStyle": {
-                      "color": "#ffffff"
-                    }
-                  },
-                  {
                     "value": {
                       "propertyIdentifier": {
                         "objectName": "values",
                         "propertyName": "expr"
                       },
                       "selector": {
-                        "id": "data_atualizacao"
+                        "id": "atualizacao"
                       }
                     },
                     "textStyle": {
@@ -59,43 +53,28 @@
                             "Version": 2,
                             "From": [
                               {
-                                "Name": "c",
-                                "Entity": "Consulta",
+                                "Name": "m",
+                                "Entity": "medidas",
                                 "Type": 0
                               }
                             ],
                             "Select": [
                               {
-                                "Column": {
+                                "Measure": {
                                   "Expression": {
                                     "SourceRef": {
-                                      "Source": "c"
+                                      "Source": "m"
                                     }
                                   },
-                                  "Property": "Ultima_Atualizacao"
+                                  "Property": "Texto Atualizacao"
                                 },
-                                "Name": "Consulta.Ultima_Atualizacao"
-                              }
-                            ],
-                            "OrderBy": [
-                              {
-                                "Direction": 1,
-                                "Expression": {
-                                  "Column": {
-                                    "Expression": {
-                                      "SourceRef": {
-                                        "Source": "c"
-                                      }
-                                    },
-                                    "Property": "Ultima_Atualizacao"
-                                  }
-                                }
+                                "Name": "medidas.Texto Atualizacao"
                               }
                             ]
                           }
                         }
                       },
-                      "Property": "Consulta.Ultima_Atualizacao"
+                      "Property": "medidas.Texto Atualizacao"
                     }
                   },
                   "IncludeAllTypes": 1
@@ -106,7 +85,7 @@
                     "kind": "NaturalLanguage",
                     "annotation": {
                       "name": "data_atualizacao",
-                      "utterance": "ultima atualizacao"
+                      "utterance": "texto atualizacao"
                     }
                   }
                 }
@@ -122,6 +101,62 @@
           },
           "selector": {
             "id": "data_atualizacao"
+          }
+        },
+        {
+          "properties": {
+            "expr": {
+              "expr": {
+                "Min": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "Subquery": {
+                          "Query": {
+                            "Version": 2,
+                            "From": [
+                              {
+                                "Name": "c",
+                                "Entity": "Consulta",
+                                "Type": 0
+                              }
+                            ],
+                            "Select": [
+                              {
+                                "Measure": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "c"
+                                    }
+                                  },
+                                  "Property": "Texto Atualizacao"
+                                },
+                                "Name": "Consulta.Texto Atualizacao"
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      "Property": "Consulta.Texto Atualizacao"
+                    }
+                  },
+                  "IncludeAllTypes": 1
+                },
+                "Annotations": {
+                  "NaturalLanguage": {
+                    "version": 1,
+                    "kind": "NaturalLanguage",
+                    "annotation": {
+                      "name": "atualizacao",
+                      "utterance": "texto atualizacao"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "atualizacao"
           }
         }
       ]

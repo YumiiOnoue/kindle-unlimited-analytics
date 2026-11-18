@@ -1,10 +1,15 @@
 table Consulta
-	lineageTag: 8d76c575-fea3-4572-8b9c-e75217e7d6fa
+	lineageTag: 12f2041a-6867-4776-8df8-722c197038a5
+
+	measure 'Texto Atualizacao' =
+			
+			"Atualizado em: " & FORMAT(MAX(Consulta[Ultima_Atualizacao]), "dd/mm/yyyy \à\s HH:mm")
+		lineageTag: 66df223a-2a72-4771-bd0c-906bd77ec1d0
 
 	column Ultima_Atualizacao
 		dataType: dateTime
 		formatString: General Date
-		lineageTag: e8c7b056-cc1c-4f76-bf9b-0792b376fb48
+		lineageTag: fb292268-7bb8-45f6-be7f-411e7ef6e63b
 		summarizeBy: none
 		sourceColumn: Ultima_Atualizacao
 

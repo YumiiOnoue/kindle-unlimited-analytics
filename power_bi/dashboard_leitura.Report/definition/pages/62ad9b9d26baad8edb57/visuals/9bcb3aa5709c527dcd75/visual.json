@@ -1,0 +1,85 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "9bcb3aa5709c527dcd75",
+  "position": {
+    "x": 440.68369881718132,
+    "y": 735.82048793327522,
+    "z": 5004,
+    "height": 301.20124368697253,
+    "width": 485.15636567029134,
+    "tabOrder": 6004
+  },
+  "visual": {
+    "visualType": "donutChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "book_analytics fato_leituras"
+                    }
+                  },
+                  "Property": "intencao_compra"
+                }
+              },
+              "queryRef": "book_analytics fato_leituras.intencao_compra",
+              "nativeQueryRef": "intencao_compra",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "book_analytics fato_leituras"
+                        }
+                      },
+                      "Property": "id_leitura"
+                    }
+                  },
+                  "Function": 5
+                }
+              },
+              "queryRef": "CountNonNull(book_analytics fato_leituras.id_leitura)",
+              "nativeQueryRef": "Contagem de id_leitura"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "book_analytics fato_leituras"
+                      }
+                    },
+                    "Property": "id_leitura"
+                  }
+                },
+                "Function": 5
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

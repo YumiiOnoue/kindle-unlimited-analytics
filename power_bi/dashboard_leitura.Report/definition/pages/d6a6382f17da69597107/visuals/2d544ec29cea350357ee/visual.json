@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "2d544ec29cea350357ee",
   "position": {
-    "x": 671.94253450033159,
-    "y": 53.675882933458446,
+    "x": 412.38291081974762,
+    "y": 60.644545708786417,
     "z": 1000,
-    "height": 238.55947970425976,
-    "width": 451.27501577389137,
+    "height": 200,
+    "width": 250,
     "tabOrder": 1000
   },
   "visual": {
@@ -17,17 +17,22 @@
           "projections": [
             {
               "field": {
-                "Measure": {
+                "Aggregation": {
                   "Expression": {
-                    "SourceRef": {
-                      "Entity": "medidas"
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "book_analytics fato_assinatura"
+                        }
+                      },
+                      "Property": "mes_referencia"
                     }
                   },
-                  "Property": "Custo KU por Livro Concluido"
+                  "Function": 5
                 }
               },
-              "queryRef": "medidas.Custo KU por Livro Concluido",
-              "nativeQueryRef": "Custo KU por Livro Concluido"
+              "queryRef": "CountNonNull(book_analytics fato_assinatura.mes_referencia)",
+              "nativeQueryRef": "Contagem de mes_referencia"
             }
           ]
         },
@@ -38,14 +43,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "book_analytics fato_leituras"
+                      "Entity": "book_analytics fato_assinatura"
                     }
                   },
-                  "Property": "origem_acesso"
+                  "Property": "servico"
                 }
               },
-              "queryRef": "book_analytics fato_leituras.origem_acesso",
-              "nativeQueryRef": "origem_acesso"
+              "queryRef": "book_analytics fato_assinatura.servico",
+              "nativeQueryRef": "servico"
             }
           ]
         }
@@ -106,7 +111,7 @@
             "titleWrap": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
             },
@@ -132,6 +137,13 @@
               "expr": {
                 "Literal": {
                   "Value": "15D"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Total de Mensalidades Pagos'"
                 }
               }
             }

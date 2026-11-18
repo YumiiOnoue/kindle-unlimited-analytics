@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "c5ecca37ca3c90a3ad0b",
   "position": {
-    "x": 1287.2129565229734,
-    "y": 767.44403911938787,
+    "x": 1273.5354598845147,
+    "y": 139.48245513020876,
     "z": 2000,
-    "height": 192.83557942760996,
-    "width": 290.247366973516,
+    "height": 200,
+    "width": 250,
     "tabOrder": 2000
   },
   "visual": {
@@ -38,14 +38,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "dim_calendario"
+                      "Entity": "book_analytics fato_leituras"
                     }
                   },
-                  "Property": "Date"
+                  "Property": "data_fim"
                 }
               },
-              "queryRef": "dim_calendario.Date",
-              "nativeQueryRef": "Date"
+              "queryRef": "book_analytics fato_leituras.data_fim",
+              "nativeQueryRef": "data_fim"
             }
           ]
         }
@@ -58,7 +58,7 @@
             "showGoal": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             }
@@ -69,6 +69,32 @@
         {
           "properties": {
             "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "trendline": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "indicator": [
+        {
+          "properties": {
+            "showIcon": {
               "expr": {
                 "Literal": {
                   "Value": "false"
@@ -93,7 +119,7 @@
             "titleWrap": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
             },

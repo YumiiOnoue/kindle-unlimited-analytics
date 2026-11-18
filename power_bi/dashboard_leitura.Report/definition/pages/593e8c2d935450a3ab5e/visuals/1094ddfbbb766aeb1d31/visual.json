@@ -4,10 +4,10 @@
   "position": {
     "x": 14.407191322476731,
     "y": 239.79963483363451,
-    "z": 12000,
+    "z": 4000,
     "height": 283.43129717092154,
     "width": 294.99992154524483,
-    "tabOrder": 10000
+    "tabOrder": 3000
   },
   "visual": {
     "visualType": "pageNavigator",
@@ -143,6 +143,51 @@
           },
           "selector": {
             "id": "selected"
+          }
+        },
+        {
+          "properties": {
+            "fillColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 4,
+                      "Percent": 0.6
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "hover"
+          }
+        },
+        {
+          "properties": {
+            "fillColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 4,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "50D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "press"
           }
         }
       ],

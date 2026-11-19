@@ -75,19 +75,19 @@ table 'book_analytics fato_leituras'
 
 		annotation SummarizationSetBy = Automatic
 
-	column intencao_compra
-		dataType: string
-		lineageTag: b958b10c-4780-4e7a-bd36-367408c406ea
-		summarizeBy: none
-		sourceColumn: intencao_compra
-
-		annotation SummarizationSetBy = Automatic
-
 	column status_leitura
 		dataType: string
 		lineageTag: 4e91bb7c-f22e-4c13-8afb-ef65f5b48fe6
 		summarizeBy: none
 		sourceColumn: status_leitura
+
+		annotation SummarizationSetBy = Automatic
+
+	column motivacao_leitura
+		dataType: string
+		lineageTag: 659bbd48-94da-4c42-b687-423c5fbed8e5
+		summarizeBy: none
+		sourceColumn: motivacao_leitura
 
 		annotation SummarizationSetBy = Automatic
 

@@ -7,7 +7,7 @@
     "z": 2000,
     "height": 234.91102579216516,
     "width": 293.63878224020647,
-    "tabOrder": 1000
+    "tabOrder": 5000
   },
   "visual": {
     "visualType": "advancedSlicerVisual",
@@ -390,5 +390,5 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "f7583bab9c5e47850432"
+  "parentGroupName": "1b4561f3be04052d4650"
 }

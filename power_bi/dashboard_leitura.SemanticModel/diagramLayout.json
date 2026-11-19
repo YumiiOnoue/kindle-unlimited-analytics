@@ -4,13 +4,13 @@
     {
       "ordinal": 0,
       "scrollPosition": {
-        "x": 766.4000244140625,
-        "y": 0
+        "x": 785.00001335144043,
+        "y": 62.400001525878906
       },
       "nodes": [
         {
           "location": {
-            "x": 2,
+            "x": 118,
             "y": 0
           },
           "nodeIndex": "book_analytics dim_livros",
@@ -19,12 +19,12 @@
             "height": 296,
             "width": 313
           },
-          "zIndex": 2
+          "zIndex": 8
         },
         {
           "location": {
-            "x": 804,
-            "y": 0
+            "x": 902,
+            "y": 370
           },
           "nodeIndex": "book_analytics fato_assinatura",
           "nodeLineageTag": "977f347e-4b06-47a0-9cec-37f7ab9b76ef",
@@ -32,12 +32,12 @@
             "height": 176,
             "width": 309
           },
-          "zIndex": 3
+          "zIndex": 4
         },
         {
           "location": {
-            "x": 401,
-            "y": 126.125
+            "x": 510,
+            "y": 0
           },
           "nodeIndex": "book_analytics fato_leituras",
           "nodeLineageTag": "34cd45b8-8d0d-4354-8d57-05a36e8ddd42",
@@ -45,12 +45,12 @@
             "height": 296,
             "width": 286
           },
-          "zIndex": 6
+          "zIndex": 7
         },
         {
           "location": {
-            "x": 733.99999809265137,
-            "y": 318.125
+            "x": 1036.9999980926514,
+            "y": 49.125
           },
           "nodeIndex": "dim_calendario",
           "nodeLineageTag": "dccd4e3d-00af-4d38-8b4a-f6dd12473305",
@@ -58,12 +58,12 @@
             "height": 200,
             "width": 234
           },
-          "zIndex": 5
+          "zIndex": 6
         },
         {
           "location": {
-            "x": 44.600021362304688,
-            "y": 624.87500762939453
+            "x": 523,
+            "y": 383.87500762939453
           },
           "nodeIndex": "book_analytics dim_categoria",
           "nodeLineageTag": "cb86bc5b-cdfc-46ba-be3b-14dbeaddfdac",
@@ -71,12 +71,12 @@
             "height": 128,
             "width": 234
           },
-          "zIndex": 4
+          "zIndex": 5
         },
         {
           "location": {
-            "x": 0,
-            "y": 359.875
+            "x": 133,
+            "y": 373.875
           },
           "nodeIndex": "book_analytics livro_categoria",
           "nodeLineageTag": "1e2f694b-9f28-4019-a439-b28590a847f0",
@@ -84,20 +84,7 @@
             "height": 145,
             "width": 279
           },
-          "zIndex": 1
-        },
-        {
-          "location": {
-            "x": 1167,
-            "y": 209.83749771118164
-          },
-          "nodeIndex": "medidas",
-          "nodeLineageTag": "090311b6-a588-4c36-a417-591413c59cf7",
-          "size": {
-            "height": 300,
-            "width": 234
-          },
-          "zIndex": 0
+          "zIndex": 3
         },
         {
           "location": {
@@ -108,6 +95,18 @@
           "nodeLineageTag": "12f2041a-6867-4776-8df8-722c197038a5",
           "size": {
             "height": 104,
+            "width": 234
+          },
+          "zIndex": 2
+        },
+        {
+          "location": {
+            "x": 1470.0000133514404,
+            "y": 439.83749771118164
+          },
+          "nodeIndex": "Medidas",
+          "size": {
+            "height": 300,
             "width": 234
           },
           "zIndex": 0

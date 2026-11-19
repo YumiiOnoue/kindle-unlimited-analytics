@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "fa81b6c809d02415447e",
   "position": {
-    "x": 1564.6292792866896,
-    "y": 133.41800055933012,
-    "z": 5005,
-    "height": 200,
-    "width": 250,
-    "tabOrder": 6005
+    "x": 1571.399394738884,
+    "y": 61.025219213160547,
+    "z": 6000,
+    "height": 199.07370347075303,
+    "width": 250.59866201612442,
+    "tabOrder": 7000
   },
   "visual": {
     "visualType": "kpi",
@@ -20,7 +20,7 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "medidas"
+                      "Entity": "Medidas"
                     }
                   },
                   "Property": "Total de Páginas Lidas"

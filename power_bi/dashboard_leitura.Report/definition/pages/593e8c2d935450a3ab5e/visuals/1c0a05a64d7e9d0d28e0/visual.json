@@ -2,15 +2,15 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "1c0a05a64d7e9d0d28e0",
   "position": {
-    "x": 1315.610668115502,
-    "y": 712.7860783969063,
-    "z": 6000,
-    "height": 339.70245609549528,
-    "width": 536.0622573067642,
+    "x": 1090.4266122526456,
+    "y": 680.30180800075925,
+    "z": 5000,
+    "height": 369.30669577184074,
+    "width": 793.03753618374219,
     "tabOrder": 5000
   },
   "visual": {
-    "visualType": "clusteredBarChart",
+    "visualType": "clusteredColumnChart",
     "query": {
       "queryState": {
         "Category": {
@@ -20,17 +20,18 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "book_analytics dim_categoria"
+                      "Entity": "dim_calendario"
                     }
                   },
-                  "Property": "categoria"
+                  "Property": "AnoMes"
                 }
               },
-              "queryRef": "book_analytics dim_categoria.categoria",
-              "nativeQueryRef": "categoria",
+              "queryRef": "dim_calendario.AnoMes",
+              "nativeQueryRef": "AnoMes",
               "active": true
             }
-          ]
+          ],
+          "showAll": true
         },
         "Y": {
           "projections": [
@@ -39,35 +40,17 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "medidas"
+                      "Entity": "Medidas"
                     }
                   },
-                  "Property": "Livros Concluidos"
+                  "Property": "Livros KU Concluidos"
                 }
               },
-              "queryRef": "medidas.Livros Concluidos",
-              "nativeQueryRef": "Livros Concluidos"
+              "queryRef": "medidas.Livros KU Concluidos",
+              "nativeQueryRef": "Livros KU Concluidos"
             }
           ]
         }
-      },
-      "sortDefinition": {
-        "sort": [
-          {
-            "field": {
-              "Measure": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "medidas"
-                  }
-                },
-                "Property": "Livros Concluidos"
-              }
-            },
-            "direction": "Descending"
-          }
-        ],
-        "isDefaultSort": true
       }
     },
     "objects": {
@@ -228,6 +211,13 @@
               "expr": {
                 "Literal": {
                   "Value": "'15'"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Distribuição de utilização mensal do Kindle+'"
                 }
               }
             }
@@ -505,76 +495,24 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "f7691d325e2e2046ac77",
+        "name": "d054b5c1853d8b3dac70",
         "field": {
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "book_analytics dim_categoria"
+                "Entity": "dim_calendario"
               }
             },
-            "Property": "categoria"
+            "Property": "Ano"
           }
         },
-        "type": "TopN",
+        "type": "Categorical",
         "filter": {
           "Version": 2,
           "From": [
             {
-              "Name": "subquery",
-              "Expression": {
-                "Subquery": {
-                  "Query": {
-                    "Version": 2,
-                    "From": [
-                      {
-                        "Name": "b",
-                        "Entity": "book_analytics dim_categoria",
-                        "Type": 0
-                      },
-                      {
-                        "Name": "m",
-                        "Entity": "medidas",
-                        "Type": 0
-                      }
-                    ],
-                    "Select": [
-                      {
-                        "Column": {
-                          "Expression": {
-                            "SourceRef": {
-                              "Source": "b"
-                            }
-                          },
-                          "Property": "categoria"
-                        },
-                        "Name": "field"
-                      }
-                    ],
-                    "OrderBy": [
-                      {
-                        "Direction": 2,
-                        "Expression": {
-                          "Measure": {
-                            "Expression": {
-                              "SourceRef": {
-                                "Source": "m"
-                              }
-                            },
-                            "Property": "Livros Concluidos"
-                          }
-                        }
-                      }
-                    ],
-                    "Top": 5
-                  }
-                }
-              },
-              "Type": 2
-            },
-            {
-              "Name": "b",
-              "Entity": "book_analytics dim_categoria",
+              "Name": "d",
+              "Entity": "dim_calendario",
               "Type": 0
             }
           ],
@@ -587,23 +525,35 @@
                       "Column": {
                         "Expression": {
                           "SourceRef": {
-                            "Source": "b"
+                            "Source": "d"
                           }
                         },
-                        "Property": "categoria"
+                        "Property": "Ano"
                       }
                     }
                   ],
-                  "Table": {
-                    "SourceRef": {
-                      "Source": "subquery"
-                    }
-                  }
+                  "Values": [
+                    [
+                      {
+                        "Literal": {
+                          "Value": "2025L"
+                        }
+                      }
+                    ],
+                    [
+                      {
+                        "Literal": {
+                          "Value": "2026L"
+                        }
+                      }
+                    ]
+                  ]
                 }
               }
             }
           ]
-        }
+        },
+        "howCreated": "User"
       }
     ]
   }

@@ -1,0 +1,56 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "baca449ec4e8de21295e",
+  "position": {
+    "x": 970.71920260065724,
+    "y": 41.871005136744195,
+    "z": 7000,
+    "height": 199.07370347075303,
+    "width": 274.01909771856594,
+    "tabOrder": 7000
+  },
+  "visual": {
+    "visualType": "kpi",
+    "query": {
+      "queryState": {
+        "Indicator": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas"
+                    }
+                  },
+                  "Property": "Custo KU por Livro Concluido"
+                }
+              },
+              "queryRef": "medidas.Custo KU por Livro Concluido",
+              "nativeQueryRef": "Custo KU por Livro Concluido"
+            }
+          ]
+        },
+        "TrendLine": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "book_analytics fato_leituras"
+                    }
+                  },
+                  "Property": "data_fim"
+                }
+              },
+              "queryRef": "book_analytics fato_leituras.data_fim",
+              "nativeQueryRef": "data_fim"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

@@ -7,7 +7,7 @@
     "z": 5000,
     "height": 33.381166205915719,
     "width": 300.4304958532415,
-    "tabOrder": 5000
+    "tabOrder": 6000
   },
   "visual": {
     "visualType": "textbox",
@@ -54,7 +54,7 @@
                             "From": [
                               {
                                 "Name": "m",
-                                "Entity": "medidas",
+                                "Entity": "Medidas",
                                 "Type": 0
                               }
                             ],
@@ -163,5 +163,5 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "f7583bab9c5e47850432"
+  "parentGroupName": "1b4561f3be04052d4650"
 }

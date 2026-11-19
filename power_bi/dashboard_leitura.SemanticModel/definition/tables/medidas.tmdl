@@ -1,4 +1,4 @@
-table medidas
+table Medidas
 	lineageTag: 090311b6-a588-4c36-a417-591413c59cf7
 
 	measure 'Livros Concluidos' =
@@ -26,9 +26,8 @@ table medidas
 			
 			CALCULATE(
 			    COUNTROWS('book_analytics fato_leituras'),
-			    'book_analytics fato_leituras'[status_leitura] = "Abandonado"
-			)
-			
+			    'book_analytics fato_leituras'[status_leitura] = "Abandonado" 
+			)+0
 			```
 		formatString: 0
 		lineageTag: 777f668d-7e65-4515-94c5-99c464485911
@@ -148,9 +147,8 @@ table medidas
 			AVERAGE('book_analytics fato_leituras'[nota])
 			
 			```
+		formatString: 0.00
 		lineageTag: 03c1d04c-2353-4231-832f-877a72020aab
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	measure 'Nota Media Livros Concluidos' = ```
 			
@@ -258,26 +256,229 @@ table medidas
 
 		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
 
-	measure 'Livros Lidos com Intenção de Compra' =
+	measure 'Livros Lidos com Motivação de Leitura' =
 			
 			CALCULATE(
 			    DISTINCTCOUNT('book_analytics fato_leituras'[id_livro]),
 			    'book_analytics fato_leituras'[status_leitura] = "Lido",
-			    'book_analytics fato_leituras'[intencao_compra] = "Sim"
+			    'book_analytics fato_leituras'[motivacao_leitura] = "Sim"
 			)
 		formatString: 0
 		lineageTag: 015321f3-42db-427d-a90e-10973a0e1492
 
-	measure '% Livros com Intenção de Compra' =
+	measure '% Livros com Motivação de Leitura' =
 			
 			DIVIDE(
-			    [Livros Lidos com Intenção de Compra],
-			    [Livros Concluidos],
+			    [Livros Lidos com Motivação de Leitura],
+			    [Livros KU Concluidos],
 			    0
 			)
 		lineageTag: 18500d0a-e6cf-4133-948d-f71a662ef101
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Nota Media outras origens' =
+			
+			CALCULATE(
+			    [Nota Media],
+			    'book_analytics fato_leituras'[origem_acesso] <> "Kindle Unlimited"
+			)
+		lineageTag: 9592b3fd-b425-42c0-a688-e5c94f51de4d
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Meses Sem Conclusão KU' =
+			
+			COUNTROWS(
+			    FILTER(
+			        VALUES('dim_calendario'[AnoMes]),
+			        [Meses Assinados KU] > 0 &&
+			        (ISBLANK([Livros KU Concluidos]) || [Livros KU Concluidos] = 0)
+			    )
+			)
+		formatString: 0
+		lineageTag: e1f57b06-5cc2-4eb3-bcb8-e46347e33c27
+
+	measure 'Meses Assinados KU' =
+			
+			CALCULATE(
+			    DISTINCTCOUNT('book_analytics fato_assinatura'[id_assinatura]),
+			    'book_analytics fato_assinatura'[servico] = "Kindle Unlimited"
+			)
+		formatString: 0
+		lineageTag: 036a7205-7af8-4789-83ed-366c7b84f226
+
+	measure 'Valor Referencia Acumulado KU' =
+			
+			CALCULATE(
+			    [Valor Referencia Digital KU],
+			    FILTER(
+			        ALL('dim_calendario'),
+			        'dim_calendario'[Date] <= MAX('dim_calendario'[Date])
+			    )
+			)
+		lineageTag: de01fbda-da7a-4c3e-8d62-9b8b1552b5a0
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Investimento Acumulado KU' =
+			
+			CALCULATE(
+			    [Custo Total Assinatura],
+			    FILTER(
+			        ALL('dim_calendario'),
+			        'dim_calendario'[Date] <= MAX('dim_calendario'[Date])
+			    )
+			)
+		lineageTag: cc875818-7a7d-420e-8967-49b731e404a6
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Custo Total Compras Lidos' =
+			
+			CALCULATE(
+			    SUMX(
+			        'book_analytics fato_leituras',
+			        IF(
+			            'book_analytics fato_leituras'[formato] = "Digital",
+			            RELATED('book_analytics dim_livros'[preco_digital]),
+			            RELATED('book_analytics dim_livros'[preco_fisico])
+			        )
+			    ),
+			    'book_analytics fato_leituras'[origem_acesso] = "Compra",
+			    'book_analytics fato_leituras'[status_leitura] = "Lido"
+			)
+		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
+		lineageTag: 3ae90dbd-c08b-4cc5-861b-842959170d7f
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	measure 'Cor Aproveitamento KU' =
+			
+			VAR Qtd = [Livros KU Concluidos]
+			VAR Ref = [Valor Referencia Digital KU]
+			VAR Mensalidade = [Custo Total Assinatura]
+			RETURN
+			SWITCH(
+			    TRUE(),
+			    ISBLANK(Mensalidade) || Mensalidade = 0, BLANK(),
+			    Qtd = 0 || ISBLANK(Qtd), "#D9534F", // Ocioso (0 livros)
+			    Qtd = 1 || Ref < Mensalidade, "#E07A5F", // Baixo aproveitamento (1 livro ou valor de ref. abaixo da mensalidade)
+			    "#52796F" // Bom aproveitamento (2+ livros e acima do break-even)
+			)
+		lineageTag: 904eaaa8-287a-4624-8582-94a0ebd95e7f
+
+	measure 'Meses Cobertos KU' =
+			
+			COUNTROWS(
+			    FILTER(
+			        VALUES('dim_calendario'[AnoMes]),
+			        [Custo Total Assinatura] > 0 &&
+			        [Valor Referencia Digital KU] >= [Custo Total Assinatura]
+			    )
+			)
+		formatString: 0
+		lineageTag: fbfa0e72-4653-4501-9b61-754837c08323
+
+	measure '% Mensalidades Cobertas KU' =
+			
+			DIVIDE(
+			    [Meses Cobertos KU],
+			    [Meses Assinados KU],
+			    0
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 5fa10431-2a02-4d53-85ff-523eafaa1d18
+
+	measure 'Subtitulo Economia KU' =
+			
+			VAR Economia = [Valor Referencia Digital KU] - [Custo Total Assinatura]
+			RETURN
+			"Ref.: " & FORMAT([Valor Referencia Digital KU], "R$ #,##0.00") & " vs. Pago: " & FORMAT([Custo Total Assinatura], "R$ #,##0.00")
+		lineageTag: 3ca0b2d2-a5fa-4975-be58-632c73ff1bde
+
+	measure 'Subtitulo Mensalidades Cobertas' =
+			
+			VAR Cobertos = COALESCE([Meses Cobertos KU], 0)
+			VAR TotalMeses = COALESCE([Meses Assinados KU], 0)
+			RETURN
+			Cobertos & " de " & TotalMeses & IF(TotalMeses = 1, " mês coberto", " meses cobertos")
+		lineageTag: 5eed8c68-d99b-4d01-b43b-0737e0129a9b
+
+	measure 'Total de Categorias' =
+			
+			COUNTROWS('book_analytics dim_categoria')
+		formatString: 0
+		lineageTag: 954ab153-a785-4461-beb9-aaccec6b093d
+
+	measure 'Livros Concluidos Outras Origens' =
+			
+			CALCULATE(
+			    [Livros Concluidos],
+			    'book_analytics fato_leituras'[origem_acesso] <> "Kindle Unlimited"
+			)
+		formatString: 0
+		lineageTag: 805bac4c-8a90-41d5-9070-f43edd7a5f98
+
+	measure 'Nota Media KU' =
+			
+			CALCULATE(
+			    [Nota Media],
+			    'book_analytics fato_leituras'[origem_acesso] = "Kindle Unlimited"
+			)
+		lineageTag: 60e1fa06-9639-44b3-9c81-8e4d97be5caa
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Livros Intencao Previa' =
+			
+			CALCULATE(
+			    [Livros Concluidos],
+			    'book_analytics fato_leituras'[motivacao_leitura] = "Sim"
+			)
+		formatString: 0
+		lineageTag: 10a5d493-7da0-455c-bed3-014c2214441a
+
+	measure 'Livros Descoberta' =
+			
+			CALCULATE(
+			    [Livros Concluidos],
+			    'book_analytics fato_leituras'[motivacao_leitura] = "Não"
+			)
+		formatString: 0
+		lineageTag: 560b96f7-bcee-4726-bdb8-175537b30210
+
+	measure '% Descoberta Categoria' =
+			
+			DIVIDE([Livros Descoberta], [Livros Concluidos], 0)
+		lineageTag: 4b1b70be-7480-4285-af72-e063737cdf9f
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Notas em Ambas Origens' =
+			
+			IF(
+			    NOT(ISBLANK([Nota Media KU])) && NOT(ISBLANK([Nota Media Outras Origens])),
+			    1,
+			    0
+			)
+		formatString: 0
+		lineageTag: 668948c9-a5c7-4126-a902-42f32f8c61d1
+
+	measure 'Total Autores Lidos' =
+			
+			CALCULATE(
+			    DISTINCTCOUNT('book_analytics dim_livros'[autor]),
+			    'book_analytics fato_leituras'[status_leitura] = "Lido"
+			)
+		formatString: 0
+		lineageTag: f4e10b15-58dd-4438-8d80-ba0f7144866a
+
+	measure 'Total Editoras' =
+			
+			DISTINCTCOUNT('book_analytics dim_livros'[editora])
+		formatString: 0
+		lineageTag: ae5a60dc-49b9-48c3-b519-0e246209ec9c
 
 	column Column
 		isHidden
@@ -289,11 +490,13 @@ table medidas
 
 		annotation SummarizationSetBy = Automatic
 
-	partition medidas = calculated
+	partition Medidas = calculated
 		mode: import
 		source = Row("Column", BLANK())
 
 	annotation PBI_Id = 70a530fcc6684ecebf0a2843e83dc9fe
 
-	annotation 436ba87b-9c83-4389-a31b-ebd06a36be98 = {"Expression":""}
+	annotation 436ba87b-9c83-4389-a31b-ebd06a36be98 = {"Expression":null}
+
+	annotation 277cc1b9-af89-4597-8e15-cacc25c0886b = Para usar caracteres especiais em um nome de tabela calculado, feche o nome completo com colchetes ( [] ) e adicione ] a quaisquer colchetes de fechamento no nome.
 

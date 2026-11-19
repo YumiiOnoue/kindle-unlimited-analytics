@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "21be1c12603040240b26",
   "position": {
-    "x": 371.9532136805567,
-    "y": 396.21103196407125,
-    "z": 4000,
-    "height": 359.82430453879942,
-    "width": 1548.4574004310132,
-    "tabOrder": 4000
+    "x": 1001.1950027159152,
+    "y": 293.6838674633351,
+    "z": 2000,
+    "height": 375.6865057810196,
+    "width": 882.95864049041666,
+    "tabOrder": 2000
   },
   "visual": {
     "visualType": "hundredPercentStackedColumnChart",
@@ -23,11 +23,11 @@
                       "Entity": "dim_calendario"
                     }
                   },
-                  "Property": "AnoMes"
+                  "Property": "Ano"
                 }
               },
-              "queryRef": "dim_calendario.AnoMes",
-              "nativeQueryRef": "AnoMes",
+              "queryRef": "dim_calendario.Ano",
+              "nativeQueryRef": "Ano",
               "active": true
             }
           ]
@@ -42,11 +42,11 @@
                       "Entity": "book_analytics fato_leituras"
                     }
                   },
-                  "Property": "intencao_compra"
+                  "Property": "motivacao_leitura"
                 }
               },
-              "queryRef": "book_analytics fato_leituras.intencao_compra",
-              "nativeQueryRef": "intencao_compra"
+              "queryRef": "book_analytics fato_leituras.motivacao_leitura",
+              "nativeQueryRef": "motivacao_leitura"
             }
           ]
         },
@@ -73,6 +73,29 @@
             }
           ]
         }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "book_analytics fato_leituras"
+                      }
+                    },
+                    "Property": "id_leitura"
+                  }
+                },
+                "Function": 5
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
       }
     },
     "objects": {
@@ -151,6 +174,104 @@
               }
             }
           }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 4,
+                      "Percent": 0.2
+                    }
+                  }
+                }
+              }
+            },
+            "fillTransparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "book_analytics fato_leituras"
+                          }
+                        },
+                        "Property": "intencao_compra"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Sim'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 4,
+                      "Percent": -0.25
+                    }
+                  }
+                }
+              }
+            },
+            "fillTransparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "50D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "book_analytics fato_leituras"
+                          }
+                        },
+                        "Property": "intencao_compra"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Não'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
         }
       ],
       "labels": [
@@ -160,6 +281,82 @@
               "expr": {
                 "Literal": {
                   "Value": "true"
+                }
+              }
+            },
+            "labelOrientation": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
+                }
+              }
+            },
+            "optimizeLabelDisplay": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "labelPosition": {
+              "expr": {
+                "Literal": {
+                  "Value": "'InsideCenter'"
+                }
+              }
+            },
+            "labelOverflow": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "enableValueDataLabel": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "labelContentLayout": {
+              "expr": {
+                "Literal": {
+                  "Value": "'MultiLine'"
+                }
+              }
+            },
+            "labelContainerMaxWidth": {
+              "expr": {
+                "Literal": {
+                  "Value": "400D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "legend": [
+        {
+          "properties": {
+            "showGradientLegend": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "position": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Top'"
                 }
               }
             }

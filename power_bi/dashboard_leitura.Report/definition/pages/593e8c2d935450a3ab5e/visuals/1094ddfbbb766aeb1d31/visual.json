@@ -7,7 +7,7 @@
     "z": 4000,
     "height": 283.43129717092154,
     "width": 294.99992154524483,
-    "tabOrder": 3000
+    "tabOrder": 0
   },
   "visual": {
     "visualType": "pageNavigator",
@@ -645,6 +645,6 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "f7583bab9c5e47850432",
+  "parentGroupName": "1b4561f3be04052d4650",
   "howCreated": "InsertVisualButton"
 }

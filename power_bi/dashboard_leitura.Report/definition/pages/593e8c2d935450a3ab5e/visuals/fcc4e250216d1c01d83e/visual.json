@@ -4,10 +4,10 @@
   "position": {
     "x": 1601.0160067119614,
     "y": 48.515636567029134,
-    "z": 13004,
+    "z": 8000,
     "height": 200.12700083899517,
     "width": 250.66412226298385,
-    "tabOrder": 6001
+    "tabOrder": 7000
   },
   "visual": {
     "visualType": "kpi",
@@ -20,10 +20,10 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "medidas"
+                      "Entity": "Medidas"
                     }
                   },
-                  "Property": "% Livros com Intenção de Compra"
+                  "Property": "% Livros com Motivação de Leitura"
                 }
               },
               "queryRef": "medidas.% Livros com Intenção de Compra",
@@ -100,7 +100,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Lidos com Intenção de Leitura'"
+                  "Value": "'Lidos no Kindle+ com Intenção de Leitura'"
                 }
               }
             },

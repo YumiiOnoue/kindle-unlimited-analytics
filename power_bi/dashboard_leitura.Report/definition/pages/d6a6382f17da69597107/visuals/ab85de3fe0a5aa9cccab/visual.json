@@ -2,15 +2,15 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "ab85de3fe0a5aa9cccab",
   "position": {
-    "x": 412.38291081974762,
-    "y": 303.22272854393208,
-    "z": 4000,
-    "height": 329.50203168440618,
-    "width": 1508.0277032918223,
-    "tabOrder": 4000
+    "x": 1138.5017459455264,
+    "y": 282.24163886086751,
+    "z": 2000,
+    "height": 389.03577248389848,
+    "width": 740,
+    "tabOrder": 2000
   },
   "visual": {
-    "visualType": "clusteredColumnChart",
+    "visualType": "lineChart",
     "query": {
       "queryState": {
         "Category": {
@@ -36,20 +36,6 @@
           "projections": [
             {
               "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "medidas"
-                    }
-                  },
-                  "Property": "Valor Referencia Digital KU"
-                }
-              },
-              "queryRef": "medidas.Valor Referencia Digital KU",
-              "nativeQueryRef": "Valor Referencia Digital KU"
-            },
-            {
-              "field": {
                 "Aggregation": {
                   "Expression": {
                     "Column": {
@@ -64,8 +50,22 @@
                   "Function": 0
                 }
               },
-              "queryRef": "CountNonNull(book_analytics fato_assinatura.valor_mensal)",
+              "queryRef": "Sum(book_analytics fato_assinatura.valor_mensal)",
               "nativeQueryRef": "Soma de valor_mensal"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas"
+                    }
+                  },
+                  "Property": "Custo Total Compras Lidos"
+                }
+              },
+              "queryRef": "medidas.Custo Total Compras Lidos",
+              "nativeQueryRef": "Custo Total Compras Lidos"
             }
           ]
         }
@@ -94,7 +94,61 @@
                   "Value": "true"
                 }
               }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "15D"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "detailLabelPrecision": {
+              "expr": {
+                "Literal": {
+                  "Value": "1L"
+                }
+              }
             }
+          }
+        },
+        {
+          "properties": {
+            "showSeries": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "optimizeLabelDisplay": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "medidas.Valor Referencia Acumulado KU"
           }
         }
       ],
@@ -125,40 +179,73 @@
                   }
                 }
               }
-            },
-            "fillTransparency": {
+            }
+          }
+        },
+        {
+          "properties": {},
+          "selector": {
+            "metadata": "CountNonNull(book_analytics fato_assinatura.valor_mensal)"
+          }
+        }
+      ],
+      "legend": [
+        {
+          "properties": {
+            "position": {
               "expr": {
                 "Literal": {
-                  "Value": "51D"
+                  "Value": "'Top'"
                 }
               }
-            },
-            "borderShow": {
+            }
+          }
+        }
+      ],
+      "seriesLabels": [
+        {
+          "properties": {
+            "show": {
               "expr": {
                 "Literal": {
                   "Value": "false"
                 }
               }
-            },
-            "borderSize": {
+            }
+          }
+        }
+      ],
+      "lineStyles": [
+        {
+          "properties": {
+            "showMarker": {
               "expr": {
                 "Literal": {
-                  "Value": "1D"
+                  "Value": "true"
                 }
               }
             },
-            "borderColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 9,
-                      "Percent": 0.2
-                    }
-                  }
+            "markerSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "5D"
                 }
               }
             }
+          }
+        },
+        {
+          "properties": {
+            "showMarker": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "medidas.Investimento Acumulado KU"
           }
         }
       ]
@@ -196,7 +283,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "''"
+                  "Value": "'Compras vs Assinatura'"
                 }
               }
             },
@@ -235,7 +322,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "15D"
+                  "Value": "'15'"
                 }
               }
             }

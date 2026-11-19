@@ -1,2 +1,5263 @@
 cultureInfo pt-BR
 
+	linguisticMetadata =
+			{
+			  "Version": "4.1.0",
+			  "Language": "en-US",
+			  "Entities": {
+			    "book_analytics_dim_livro": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "book_analytics dim_livros"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "book_analytics dim_livro": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "book_analytic dim_livro": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        }
+			      ]
+			    },
+			    "book_analytics_dim_livro.id_livro": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "book_analytics dim_livros",
+			          "ConceptualProperty": "id_livro"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "id livro": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "id_livro": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "identification livro": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "identity livro": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "identifier livro": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "credential livro": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "book_analytics_dim_livro.isbn": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "book_analytics dim_livros",
+			          "ConceptualProperty": "isbn"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "isbn": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "book_analytics_dim_livro.titulo": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "book_analytics dim_livros",
+			          "ConceptualProperty": "titulo"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "titulo": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "book_analytics_dim_livro.autor": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "book_analytics dim_livros",
+			          "ConceptualProperty": "autor"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "autor": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "book_analytics_dim_livro.editora": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "book_analytics dim_livros",
+			          "ConceptualProperty": "editora"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "editora": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "book_analytics_dim_livro.ano_publicacao": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "book_analytics dim_livros",
+			          "ConceptualProperty": "ano_publicacao"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ano publicacao": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "ano_publicacao": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "book_analytics_dim_livro.numero_pagina": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "book_analytics dim_livros",
+			          "ConceptualProperty": "numero_paginas"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "numero pagina": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "numero_paginas": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "book_analytics_dim_livro.preco_digital": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "book_analytics dim_livros",
+			          "ConceptualProperty": "preco_digital"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "preco digital": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "preco_digital": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "book_analytics_dim_livro.preco_fisico": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "book_analytics dim_livros",
+			          "ConceptualProperty": "preco_fisico"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "preco fisico": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "preco_fisico": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "book_analytics_fato_assinatura": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "book_analytics fato_assinatura"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "book_analytics fato_assinatura": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "book_analytic fato_assinatura": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        }
+			      ]
+			    },
+			    "book_analytics_fato_assinatura.id_assinatura": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "book_analytics fato_assinatura",
+			          "ConceptualProperty": "id_assinatura"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "id assinatura": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "id_assinatura": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "identification assinatura": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "identity assinatura": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "identifier assinatura": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "credential assinatura": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "book_analytics_fato_assinatura.servico": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "book_analytics fato_assinatura",
+			          "ConceptualProperty": "servico"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "servico": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "book_analytics_fato_assinatura.valor_mensal": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "book_analytics fato_assinatura",
+			          "ConceptualProperty": "valor_mensal"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "valor mensal": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "valor_mensal": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "courage mensal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "bravery mensal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "heroism mensal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "fearlessness mensal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "boldness mensal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "gallantry mensal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "lionheartedness mensal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "pluck mensal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "spirit mensal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "nerve mensal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        }
+			      ]
+			    },
+			    "book_analytics_fato_assinatura.mes_referencia": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "book_analytics fato_assinatura",
+			          "ConceptualProperty": "mes_referencia"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "mes referencia": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "me referencia": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "mes_referencia": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "book_analytics_fato_leitura": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "book_analytics fato_leituras"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "book_analytics fato_leitura": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "book_analytic fato_leitura": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        }
+			      ]
+			    },
+			    "book_analytics_fato_leitura.id_leitura": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "book_analytics fato_leituras",
+			          "ConceptualProperty": "id_leitura"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "id leitura": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "id_leitura": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "identification leitura": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "identity leitura": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "identifier leitura": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "credential leitura": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "book_analytics_fato_leitura.id_livro": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "book_analytics fato_leituras",
+			          "ConceptualProperty": "id_livro"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "id livro": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "id_livro": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "identification livro": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "identity livro": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "identifier livro": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "credential livro": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "book_analytics_fato_leitura.data_inicio": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "book_analytics fato_leituras",
+			          "ConceptualProperty": "data_inicio"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "data inicio": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "data_inicio": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        },
+			        {
+			          "information inicio": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "fact inicio": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "info inicio": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "statistic inicio": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "document inicio": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "figure inicio": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "record inicio": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "book_analytics_fato_leitura.data_fim": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "book_analytics fato_leituras",
+			          "ConceptualProperty": "data_fim"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "data fim": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "data_fim": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        },
+			        {
+			          "information fim": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "fact fim": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "info fim": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "statistic fim": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "document fim": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "figure fim": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "record fim": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "book_analytics_fato_leitura.formato": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "book_analytics fato_leituras",
+			          "ConceptualProperty": "formato"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "formato": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "book_analytics_fato_leitura.notum": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "book_analytics fato_leituras",
+			          "ConceptualProperty": "nota"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "notum": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "book_analytics_fato_leitura.opiniao_texto": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "book_analytics fato_leituras",
+			          "ConceptualProperty": "opiniao_texto"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "opiniao texto": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "opiniao_texto": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "book_analytics_fato_leitura.origem_acesso": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "book_analytics fato_leituras",
+			          "ConceptualProperty": "origem_acesso"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "origem acesso": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "origem_acesso": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "book_analytics_fato_leitura.status_leitura": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "book_analytics fato_leituras",
+			          "ConceptualProperty": "status_leitura"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "status leitura": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "status_leitura": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "category leitura": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "importance leitura": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "prestige leitura": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "prominence leitura": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "condition leitura": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "class leitura": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "grade leitura": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "level leitura": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "position leitura": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "rank leitura": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "book_analytics_fato_leitura.motivacao_leitura": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "book_analytics fato_leituras",
+			          "ConceptualProperty": "motivacao_leitura"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "motivacao leitura": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "motivacao_leitura": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "dim_calendario": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_calendario"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "dim calendario": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "dim_calendario": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "dim_calendario.date": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_calendario",
+			          "ConceptualProperty": "Date"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "date": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "moment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "period": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "dim_calendario.ano": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_calendario",
+			          "ConceptualProperty": "Ano"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ano": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "dim_calendario.mes_num": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_calendario",
+			          "ConceptualProperty": "MesNum"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "mes num": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "me num": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "MesNum": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "me number": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "dim_calendario.nome_me": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_calendario",
+			          "ConceptualProperty": "NomeMes"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "nome me": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "NomeMes": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "dim_calendario.mes_abrev": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_calendario",
+			          "ConceptualProperty": "MesAbrev"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "mes abrev": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "me abrev": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "MesAbrev": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "dim_calendario.ano_mes_num": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_calendario",
+			          "ConceptualProperty": "AnoMesNum"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ano mes num": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "ano me num": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "AnoMesNum": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "ano me number": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        }
+			      ]
+			    },
+			    "dim_calendario.ano_me": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_calendario",
+			          "ConceptualProperty": "AnoMes"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ano me": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "AnoMes": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "dim_calendario.trimestre": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_calendario",
+			          "ConceptualProperty": "Trimestre"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "trimestre": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "dim_calendario.trimestre_ano": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_calendario",
+			          "ConceptualProperty": "TrimestreAno"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "trimestre ano": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "TrimestreAno": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "dim_calendario.dia_semana_num": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_calendario",
+			          "ConceptualProperty": "DiaSemanaNum"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "dia semana num": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "DiaSemanaNum": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "dia semana number": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        }
+			      ]
+			    },
+			    "dim_calendario.dia_semana": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_calendario",
+			          "ConceptualProperty": "DiaSemana"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "dia semana": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "DiaSemana": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "dim_calendario.dia_semana_abrev": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_calendario",
+			          "ConceptualProperty": "DiaSemanaAbrev"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "dia semana abrev": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "DiaSemanaAbrev": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "book_analytics_dim_categoria": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "book_analytics dim_categoria"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "book_analytics dim_categoria": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "book_analytic dim_categoria": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        }
+			      ]
+			    },
+			    "book_analytics_dim_categoria.id_categoria": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "book_analytics dim_categoria",
+			          "ConceptualProperty": "id_categoria"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "id categoria": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "id_categoria": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "identification categoria": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "identity categoria": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "identifier categoria": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "credential categoria": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "book_analytics_dim_categoria.categoria": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "book_analytics dim_categoria",
+			          "ConceptualProperty": "categoria"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "categoria": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "book_analytics_livro_categoria": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "book_analytics livro_categoria"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "book_analytics livro_categoria": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "book_analytic livro_categoria": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        }
+			      ]
+			    },
+			    "book_analytics_livro_categoria.id_livro": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "book_analytics livro_categoria",
+			          "ConceptualProperty": "id_livro"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "id livro": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "id_livro": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "identification livro": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "identity livro": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "identifier livro": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "credential livro": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "book_analytics_livro_categoria.id_categoria": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "book_analytics livro_categoria",
+			          "ConceptualProperty": "id_categoria"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "id categoria": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "id_categoria": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "identification categoria": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "identity categoria": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "identifier categoria": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "credential categoria": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "consulta": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Consulta"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "consulta": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "consulta.ultima_atualizacao": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Consulta",
+			          "ConceptualProperty": "Ultima_Atualizacao"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ultima atualizacao": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Ultima_Atualizacao": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "consulta.texto_atualizacao": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Consulta",
+			          "ConceptualProperty": "Texto Atualizacao"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "texto atualizacao": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medidas.livros_intencao_previa": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Livros Intencao Previa"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Intenção Prévia": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "medidas.livros_descoberta": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Livros Descoberta"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Descoberta": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "medidas.nota_media_ku": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Nota Media KU"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Kindle+": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "medidas.nota_media_outras_origens": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Nota Media outras origens"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Outras Origens": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    }
+			  },
+			  "Relationships": {
+			    "book_analytics_fato_leitura_has_dim_calendario": {
+			      "Binding": {
+			        "ConceptualEntity": "book_analytics fato_leituras"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "book_analytics_fato_leitura": {
+			          "Target": {
+			            "Entity": "book_analytics_fato_leitura"
+			          }
+			        },
+			        "dim_calendario": {
+			          "Target": {
+			            "Entity": "dim_calendario"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "book_analytics_fato_leitura"
+			            },
+			            "Object": {
+			              "Role": "dim_calendario"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "book_analytics_fato_leituras_have_dim_calendarios"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_calendario"
+			            },
+			            "Object": {
+			              "Role": "book_analytics_fato_leitura"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_calendarios_have_book_analytics_fato_leituras"
+			        }
+			      ]
+			    },
+			    "book_analytics_fato_leitura_has_book_analytics_dim_livro": {
+			      "Binding": {
+			        "ConceptualEntity": "book_analytics fato_leituras"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "book_analytics_fato_leitura": {
+			          "Target": {
+			            "Entity": "book_analytics_fato_leitura"
+			          }
+			        },
+			        "book_analytics_dim_livro": {
+			          "Target": {
+			            "Entity": "book_analytics_dim_livro"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "book_analytics_fato_leitura"
+			            },
+			            "Object": {
+			              "Role": "book_analytics_dim_livro"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "book_analytics_fato_leituras_have_book_analytics_dim_livros"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "book_analytics_dim_livro"
+			            },
+			            "Object": {
+			              "Role": "book_analytics_fato_leitura"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "book_analytics_dim_livros_have_book_analytics_fato_leituras"
+			        }
+			      ]
+			    },
+			    "book_analytics_fato_assinatura_has_dim_calendario": {
+			      "Binding": {
+			        "ConceptualEntity": "book_analytics fato_assinatura"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "book_analytics_fato_assinatura": {
+			          "Target": {
+			            "Entity": "book_analytics_fato_assinatura"
+			          }
+			        },
+			        "dim_calendario": {
+			          "Target": {
+			            "Entity": "dim_calendario"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "book_analytics_fato_assinatura"
+			            },
+			            "Object": {
+			              "Role": "dim_calendario"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "book_analytics_fato_assinaturas_have_dim_calendarios"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_calendario"
+			            },
+			            "Object": {
+			              "Role": "book_analytics_fato_assinatura"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_calendarios_have_book_analytics_fato_assinaturas"
+			        }
+			      ]
+			    },
+			    "book_analytics_fato_leitura_has_medida_notas_em_ambas_origens": {
+			      "Binding": {
+			        "ConceptualEntity": "book_analytics fato_leituras"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "book_analytics_fato_leitura": {
+			          "Target": {
+			            "Entity": "book_analytics_fato_leitura"
+			          }
+			        },
+			        "medida.notas_em_ambas_origens": {
+			          "Target": {
+			            "Entity": "medida.notas_em_ambas_origens"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "book_analytics_fato_leitura"
+			            },
+			            "Object": {
+			              "Role": "medida.notas_em_ambas_origens"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "book_analytics_fato_leituras_have_notas_em_ambas_origens"
+			        }
+			      ]
+			    },
+			    "consulta_has_texto_atualizacao": {
+			      "Binding": {
+			        "ConceptualEntity": "Consulta"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "consulta": {
+			          "Target": {
+			            "Entity": "consulta"
+			          }
+			        },
+			        "consulta.texto_atualizacao": {
+			          "Target": {
+			            "Entity": "consulta.texto_atualizacao"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "consulta"
+			            },
+			            "Object": {
+			              "Role": "consulta.texto_atualizacao"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "consultas_have_texto_atualizacao"
+			        }
+			      ]
+			    },
+			    "consulta_has_ultima_atualizacao": {
+			      "Binding": {
+			        "ConceptualEntity": "Consulta"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "consulta": {
+			          "Target": {
+			            "Entity": "consulta"
+			          }
+			        },
+			        "consulta.ultima_atualizacao": {
+			          "Target": {
+			            "Entity": "consulta.ultima_atualizacao"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "consulta"
+			            },
+			            "Object": {
+			              "Role": "consulta.ultima_atualizacao"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "consultas_have_ultima_atualizacaos"
+			        }
+			      ]
+			    },
+			    "book_analytics_fato_leitura_has_medida_descoberta_categoria": {
+			      "Binding": {
+			        "ConceptualEntity": "book_analytics fato_leituras"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "book_analytics_fato_leitura": {
+			          "Target": {
+			            "Entity": "book_analytics_fato_leitura"
+			          }
+			        },
+			        "medida.descoberta_categoria": {
+			          "Target": {
+			            "Entity": "medida.descoberta_categoria"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "book_analytics_fato_leitura"
+			            },
+			            "Object": {
+			              "Role": "medida.descoberta_categoria"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "book_analytics_fato_leituras_have__descoberta_categoria"
+			        }
+			      ]
+			    },
+			    "book_analytics_fato_leitura_has_medida_livros_descoberta": {
+			      "Binding": {
+			        "ConceptualEntity": "book_analytics fato_leituras"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "book_analytics_fato_leitura": {
+			          "Target": {
+			            "Entity": "book_analytics_fato_leitura"
+			          }
+			        },
+			        "medida.livros_descoberta": {
+			          "Target": {
+			            "Entity": "medida.livros_descoberta"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "book_analytics_fato_leitura"
+			            },
+			            "Object": {
+			              "Role": "medida.livros_descoberta"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "book_analytics_fato_leituras_have_livros_descoberta"
+			        }
+			      ]
+			    },
+			    "book_analytics_fato_leitura_has_medida_livros_intencao_previa": {
+			      "Binding": {
+			        "ConceptualEntity": "book_analytics fato_leituras"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "book_analytics_fato_leitura": {
+			          "Target": {
+			            "Entity": "book_analytics_fato_leitura"
+			          }
+			        },
+			        "medida.livros_intencao_previa": {
+			          "Target": {
+			            "Entity": "medida.livros_intencao_previa"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "book_analytics_fato_leitura"
+			            },
+			            "Object": {
+			              "Role": "medida.livros_intencao_previa"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "book_analytics_fato_leituras_have_livros_intencao_previa"
+			        }
+			      ]
+			    },
+			    "book_analytics_fato_leitura_has_medida_nota_media_KU": {
+			      "Binding": {
+			        "ConceptualEntity": "book_analytics fato_leituras"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "book_analytics_fato_leitura": {
+			          "Target": {
+			            "Entity": "book_analytics_fato_leitura"
+			          }
+			        },
+			        "medida.nota_media_KU": {
+			          "Target": {
+			            "Entity": "medida.nota_media_KU"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "book_analytics_fato_leitura"
+			            },
+			            "Object": {
+			              "Role": "medida.nota_media_KU"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "book_analytics_fato_leituras_have_nota_media_KU"
+			        }
+			      ]
+			    },
+			    "book_analytics_fato_leitura_has_medida_livros_concluidos_outras_origens": {
+			      "Binding": {
+			        "ConceptualEntity": "book_analytics fato_leituras"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "book_analytics_fato_leitura": {
+			          "Target": {
+			            "Entity": "book_analytics_fato_leitura"
+			          }
+			        },
+			        "medida.livros_concluidos_outras_origens": {
+			          "Target": {
+			            "Entity": "medida.livros_concluidos_outras_origens"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "book_analytics_fato_leitura"
+			            },
+			            "Object": {
+			              "Role": "medida.livros_concluidos_outras_origens"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "book_analytics_fato_leituras_have_livros_concluidos_outras_origens"
+			        }
+			      ]
+			    },
+			    "book_analytics_dim_categoria_has_medida_total_de_categorias": {
+			      "Binding": {
+			        "ConceptualEntity": "book_analytics dim_categoria"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "book_analytics_dim_categoria": {
+			          "Target": {
+			            "Entity": "book_analytics_dim_categoria"
+			          }
+			        },
+			        "medida.total_de_categorias": {
+			          "Target": {
+			            "Entity": "medida.total_de_categorias"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "book_analytics_dim_categoria"
+			            },
+			            "Object": {
+			              "Role": "medida.total_de_categorias"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "book_analytics_dim_categorias_have_total_de_categorias"
+			        }
+			      ]
+			    },
+			    "dim_calendario_has_medida_subtitulo_mensalidades_cobertas": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_calendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_calendario": {
+			          "Target": {
+			            "Entity": "dim_calendario"
+			          }
+			        },
+			        "medida.subtitulo_mensalidades_cobertas": {
+			          "Target": {
+			            "Entity": "medida.subtitulo_mensalidades_cobertas"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_calendario"
+			            },
+			            "Object": {
+			              "Role": "medida.subtitulo_mensalidades_cobertas"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_calendarios_have_subtitulo_mensalidades_cobertas"
+			        }
+			      ]
+			    },
+			    "book_analytics_fato_assinatura_has_medida_subtitulo_mensalidades_cobertas": {
+			      "Binding": {
+			        "ConceptualEntity": "book_analytics fato_assinatura"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "book_analytics_fato_assinatura": {
+			          "Target": {
+			            "Entity": "book_analytics_fato_assinatura"
+			          }
+			        },
+			        "medida.subtitulo_mensalidades_cobertas": {
+			          "Target": {
+			            "Entity": "medida.subtitulo_mensalidades_cobertas"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "book_analytics_fato_assinatura"
+			            },
+			            "Object": {
+			              "Role": "medida.subtitulo_mensalidades_cobertas"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "book_analytics_fato_assinaturas_have_subtitulo_mensalidades_cobertas"
+			        }
+			      ]
+			    },
+			    "book_analytics_fato_leitura_has_medida_subtitulo_economia_KU": {
+			      "Binding": {
+			        "ConceptualEntity": "book_analytics fato_leituras"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "book_analytics_fato_leitura": {
+			          "Target": {
+			            "Entity": "book_analytics_fato_leitura"
+			          }
+			        },
+			        "medida.subtitulo_economia_KU": {
+			          "Target": {
+			            "Entity": "medida.subtitulo_economia_KU"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "book_analytics_fato_leitura"
+			            },
+			            "Object": {
+			              "Role": "medida.subtitulo_economia_KU"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "book_analytics_fato_leituras_have_subtitulo_economia_KU"
+			        }
+			      ]
+			    },
+			    "book_analytics_fato_assinatura_has_medida_subtitulo_economia_KU": {
+			      "Binding": {
+			        "ConceptualEntity": "book_analytics fato_assinatura"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "book_analytics_fato_assinatura": {
+			          "Target": {
+			            "Entity": "book_analytics_fato_assinatura"
+			          }
+			        },
+			        "medida.subtitulo_economia_KU": {
+			          "Target": {
+			            "Entity": "medida.subtitulo_economia_KU"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "book_analytics_fato_assinatura"
+			            },
+			            "Object": {
+			              "Role": "medida.subtitulo_economia_KU"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "book_analytics_fato_assinaturas_have_subtitulo_economia_KU"
+			        }
+			      ]
+			    },
+			    "book_analytics_dim_livro_has_medida_subtitulo_economia_KU": {
+			      "Binding": {
+			        "ConceptualEntity": "book_analytics dim_livros"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "book_analytics_dim_livro": {
+			          "Target": {
+			            "Entity": "book_analytics_dim_livro"
+			          }
+			        },
+			        "medida.subtitulo_economia_KU": {
+			          "Target": {
+			            "Entity": "medida.subtitulo_economia_KU"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "book_analytics_dim_livro"
+			            },
+			            "Object": {
+			              "Role": "medida.subtitulo_economia_KU"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "book_analytics_dim_livros_have_subtitulo_economia_KU"
+			        }
+			      ]
+			    },
+			    "dim_calendario_has_medida_mensalidades_cobertas_KU": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_calendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_calendario": {
+			          "Target": {
+			            "Entity": "dim_calendario"
+			          }
+			        },
+			        "medida.mensalidades_cobertas_KU": {
+			          "Target": {
+			            "Entity": "medida.mensalidades_cobertas_KU"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_calendario"
+			            },
+			            "Object": {
+			              "Role": "medida.mensalidades_cobertas_KU"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_calendarios_have__mensalidades_cobertas_KU"
+			        }
+			      ]
+			    },
+			    "book_analytics_fato_assinatura_has_medida_mensalidades_cobertas_KU": {
+			      "Binding": {
+			        "ConceptualEntity": "book_analytics fato_assinatura"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "book_analytics_fato_assinatura": {
+			          "Target": {
+			            "Entity": "book_analytics_fato_assinatura"
+			          }
+			        },
+			        "medida.mensalidades_cobertas_KU": {
+			          "Target": {
+			            "Entity": "medida.mensalidades_cobertas_KU"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "book_analytics_fato_assinatura"
+			            },
+			            "Object": {
+			              "Role": "medida.mensalidades_cobertas_KU"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "book_analytics_fato_assinaturas_have__mensalidades_cobertas_KU"
+			        }
+			      ]
+			    },
+			    "dim_calendario_has_medida_meses_cobertos_KU": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_calendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_calendario": {
+			          "Target": {
+			            "Entity": "dim_calendario"
+			          }
+			        },
+			        "medida.meses_cobertos_KU": {
+			          "Target": {
+			            "Entity": "medida.meses_cobertos_KU"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_calendario"
+			            },
+			            "Object": {
+			              "Role": "medida.meses_cobertos_KU"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_calendarios_have_meses_cobertos_KU"
+			        }
+			      ]
+			    },
+			    "book_analytics_fato_leitura_has_medida_cor_aproveitamento_KU": {
+			      "Binding": {
+			        "ConceptualEntity": "book_analytics fato_leituras"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "book_analytics_fato_leitura": {
+			          "Target": {
+			            "Entity": "book_analytics_fato_leitura"
+			          }
+			        },
+			        "medida.cor_aproveitamento_KU": {
+			          "Target": {
+			            "Entity": "medida.cor_aproveitamento_KU"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "book_analytics_fato_leitura"
+			            },
+			            "Object": {
+			              "Role": "medida.cor_aproveitamento_KU"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "book_analytics_fato_leituras_have_cor_aproveitamento_KU"
+			        }
+			      ]
+			    },
+			    "book_analytics_fato_assinatura_has_medida_cor_aproveitamento_KU": {
+			      "Binding": {
+			        "ConceptualEntity": "book_analytics fato_assinatura"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "book_analytics_fato_assinatura": {
+			          "Target": {
+			            "Entity": "book_analytics_fato_assinatura"
+			          }
+			        },
+			        "medida.cor_aproveitamento_KU": {
+			          "Target": {
+			            "Entity": "medida.cor_aproveitamento_KU"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "book_analytics_fato_assinatura"
+			            },
+			            "Object": {
+			              "Role": "medida.cor_aproveitamento_KU"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "book_analytics_fato_assinaturas_have_cor_aproveitamento_KU"
+			        }
+			      ]
+			    },
+			    "book_analytics_dim_livro_has_medida_cor_aproveitamento_KU": {
+			      "Binding": {
+			        "ConceptualEntity": "book_analytics dim_livros"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "book_analytics_dim_livro": {
+			          "Target": {
+			            "Entity": "book_analytics_dim_livro"
+			          }
+			        },
+			        "medida.cor_aproveitamento_KU": {
+			          "Target": {
+			            "Entity": "medida.cor_aproveitamento_KU"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "book_analytics_dim_livro"
+			            },
+			            "Object": {
+			              "Role": "medida.cor_aproveitamento_KU"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "book_analytics_dim_livros_have_cor_aproveitamento_KU"
+			        }
+			      ]
+			    },
+			    "book_analytics_fato_leitura_has_medida_custo_total_compras_lidos": {
+			      "Binding": {
+			        "ConceptualEntity": "book_analytics fato_leituras"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "book_analytics_fato_leitura": {
+			          "Target": {
+			            "Entity": "book_analytics_fato_leitura"
+			          }
+			        },
+			        "medida.custo_total_compras_lidos": {
+			          "Target": {
+			            "Entity": "medida.custo_total_compras_lidos"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "book_analytics_fato_leitura"
+			            },
+			            "Object": {
+			              "Role": "medida.custo_total_compras_lidos"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "book_analytics_fato_leituras_have_custo_total_compras_lidos"
+			        }
+			      ]
+			    },
+			    "book_analytics_dim_livro_has_medida_custo_total_compras_lidos": {
+			      "Binding": {
+			        "ConceptualEntity": "book_analytics dim_livros"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "book_analytics_dim_livro": {
+			          "Target": {
+			            "Entity": "book_analytics_dim_livro"
+			          }
+			        },
+			        "medida.custo_total_compras_lidos": {
+			          "Target": {
+			            "Entity": "medida.custo_total_compras_lidos"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "book_analytics_dim_livro"
+			            },
+			            "Object": {
+			              "Role": "medida.custo_total_compras_lidos"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "book_analytics_dim_livros_have_custo_total_compras_lidos"
+			        }
+			      ]
+			    },
+			    "book_analytics_fato_assinatura_has_medida_investimento_acumulado_KU": {
+			      "Binding": {
+			        "ConceptualEntity": "book_analytics fato_assinatura"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "book_analytics_fato_assinatura": {
+			          "Target": {
+			            "Entity": "book_analytics_fato_assinatura"
+			          }
+			        },
+			        "medida.investimento_acumulado_KU": {
+			          "Target": {
+			            "Entity": "medida.investimento_acumulado_KU"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "book_analytics_fato_assinatura"
+			            },
+			            "Object": {
+			              "Role": "medida.investimento_acumulado_KU"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "book_analytics_fato_assinaturas_have_investimento_acumulado_KU"
+			        }
+			      ]
+			    },
+			    "book_analytics_fato_leitura_has_medida_valor_referencia_acumulado_KU": {
+			      "Binding": {
+			        "ConceptualEntity": "book_analytics fato_leituras"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "book_analytics_fato_leitura": {
+			          "Target": {
+			            "Entity": "book_analytics_fato_leitura"
+			          }
+			        },
+			        "medida.valor_referencia_acumulado_KU": {
+			          "Target": {
+			            "Entity": "medida.valor_referencia_acumulado_KU"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "book_analytics_fato_leitura"
+			            },
+			            "Object": {
+			              "Role": "medida.valor_referencia_acumulado_KU"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "book_analytics_fato_leituras_have_valor_referencia_acumulado_KU"
+			        }
+			      ]
+			    },
+			    "book_analytics_dim_livro_has_medida_valor_referencia_acumulado_KU": {
+			      "Binding": {
+			        "ConceptualEntity": "book_analytics dim_livros"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "book_analytics_dim_livro": {
+			          "Target": {
+			            "Entity": "book_analytics_dim_livro"
+			          }
+			        },
+			        "medida.valor_referencia_acumulado_KU": {
+			          "Target": {
+			            "Entity": "medida.valor_referencia_acumulado_KU"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "book_analytics_dim_livro"
+			            },
+			            "Object": {
+			              "Role": "medida.valor_referencia_acumulado_KU"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "book_analytics_dim_livros_have_valor_referencia_acumulado_KU"
+			        }
+			      ]
+			    },
+			    "book_analytics_fato_assinatura_has_medida_meses_assinados_KU": {
+			      "Binding": {
+			        "ConceptualEntity": "book_analytics fato_assinatura"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "book_analytics_fato_assinatura": {
+			          "Target": {
+			            "Entity": "book_analytics_fato_assinatura"
+			          }
+			        },
+			        "medida.meses_assinados_KU": {
+			          "Target": {
+			            "Entity": "medida.meses_assinados_KU"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "book_analytics_fato_assinatura"
+			            },
+			            "Object": {
+			              "Role": "medida.meses_assinados_KU"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "book_analytics_fato_assinaturas_have_meses_assinados_KU"
+			        }
+			      ]
+			    },
+			    "dim_calendario_has_medida_meses_sem_conclusão_KU": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_calendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_calendario": {
+			          "Target": {
+			            "Entity": "dim_calendario"
+			          }
+			        },
+			        "medida.meses_sem_conclusão_KU": {
+			          "Target": {
+			            "Entity": "medida.meses_sem_conclusão_KU"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_calendario"
+			            },
+			            "Object": {
+			              "Role": "medida.meses_sem_conclusão_KU"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_calendarios_have_meses_sem_conclusão_KU"
+			        }
+			      ]
+			    },
+			    "book_analytics_fato_leitura_has_medida_nota_media_outras_origens": {
+			      "Binding": {
+			        "ConceptualEntity": "book_analytics fato_leituras"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "book_analytics_fato_leitura": {
+			          "Target": {
+			            "Entity": "book_analytics_fato_leitura"
+			          }
+			        },
+			        "medida.nota_media_outras_origens": {
+			          "Target": {
+			            "Entity": "medida.nota_media_outras_origens"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "book_analytics_fato_leitura"
+			            },
+			            "Object": {
+			              "Role": "medida.nota_media_outras_origens"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "book_analytics_fato_leituras_have_nota_media_outras_origens"
+			        }
+			      ]
+			    },
+			    "book_analytics_fato_leitura_has_medida_livros_com_motivação_de_leitura": {
+			      "Binding": {
+			        "ConceptualEntity": "book_analytics fato_leituras"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "book_analytics_fato_leitura": {
+			          "Target": {
+			            "Entity": "book_analytics_fato_leitura"
+			          }
+			        },
+			        "medida.livros_com_motivação_de_leitura": {
+			          "Target": {
+			            "Entity": "medida.livros_com_motivação_de_leitura"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "book_analytics_fato_leitura"
+			            },
+			            "Object": {
+			              "Role": "medida.livros_com_motivação_de_leitura"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "book_analytics_fato_leituras_have__livros_com_motivação_de_leitura"
+			        }
+			      ]
+			    },
+			    "book_analytics_fato_leitura_has_medida_livros_lidos_com_motivação_de_leitura": {
+			      "Binding": {
+			        "ConceptualEntity": "book_analytics fato_leituras"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "book_analytics_fato_leitura": {
+			          "Target": {
+			            "Entity": "book_analytics_fato_leitura"
+			          }
+			        },
+			        "medida.livros_lidos_com_motivação_de_leitura": {
+			          "Target": {
+			            "Entity": "medida.livros_lidos_com_motivação_de_leitura"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "book_analytics_fato_leitura"
+			            },
+			            "Object": {
+			              "Role": "medida.livros_lidos_com_motivação_de_leitura"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "book_analytics_fato_leituras_have_livros_lidos_com_motivação_de_leitura"
+			        }
+			      ]
+			    },
+			    "book_analytics_fato_leitura_has_medida_gastos_efetivos_com_compras": {
+			      "Binding": {
+			        "ConceptualEntity": "book_analytics fato_leituras"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "book_analytics_fato_leitura": {
+			          "Target": {
+			            "Entity": "book_analytics_fato_leitura"
+			          }
+			        },
+			        "medida.gastos_efetivos_com_compras": {
+			          "Target": {
+			            "Entity": "medida.gastos_efetivos_com_compras"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "book_analytics_fato_leitura"
+			            },
+			            "Object": {
+			              "Role": "medida.gastos_efetivos_com_compras"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "book_analytics_fato_leituras_have_gastos_efetivos_com_compras"
+			        }
+			      ]
+			    },
+			    "book_analytics_dim_livro_has_medida_gastos_efetivos_com_compras": {
+			      "Binding": {
+			        "ConceptualEntity": "book_analytics dim_livros"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "book_analytics_dim_livro": {
+			          "Target": {
+			            "Entity": "book_analytics_dim_livro"
+			          }
+			        },
+			        "medida.gastos_efetivos_com_compras": {
+			          "Target": {
+			            "Entity": "medida.gastos_efetivos_com_compras"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "book_analytics_dim_livro"
+			            },
+			            "Object": {
+			              "Role": "medida.gastos_efetivos_com_compras"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "book_analytics_dim_livros_have_gastos_efetivos_com_compras"
+			        }
+			      ]
+			    },
+			    "book_analytics_fato_leitura_has_medida_gasto_total_registrado": {
+			      "Binding": {
+			        "ConceptualEntity": "book_analytics fato_leituras"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "book_analytics_fato_leitura": {
+			          "Target": {
+			            "Entity": "book_analytics_fato_leitura"
+			          }
+			        },
+			        "medida.gasto_total_registrado": {
+			          "Target": {
+			            "Entity": "medida.gasto_total_registrado"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "book_analytics_fato_leitura"
+			            },
+			            "Object": {
+			              "Role": "medida.gasto_total_registrado"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "book_analytics_fato_leituras_have_gasto_total_registrado"
+			        }
+			      ]
+			    },
+			    "book_analytics_fato_assinatura_has_medida_gasto_total_registrado": {
+			      "Binding": {
+			        "ConceptualEntity": "book_analytics fato_assinatura"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "book_analytics_fato_assinatura": {
+			          "Target": {
+			            "Entity": "book_analytics_fato_assinatura"
+			          }
+			        },
+			        "medida.gasto_total_registrado": {
+			          "Target": {
+			            "Entity": "medida.gasto_total_registrado"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "book_analytics_fato_assinatura"
+			            },
+			            "Object": {
+			              "Role": "medida.gasto_total_registrado"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "book_analytics_fato_assinaturas_have_gasto_total_registrado"
+			        }
+			      ]
+			    },
+			    "book_analytics_dim_livro_has_medida_gasto_total_registrado": {
+			      "Binding": {
+			        "ConceptualEntity": "book_analytics dim_livros"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "book_analytics_dim_livro": {
+			          "Target": {
+			            "Entity": "book_analytics_dim_livro"
+			          }
+			        },
+			        "medida.gasto_total_registrado": {
+			          "Target": {
+			            "Entity": "medida.gasto_total_registrado"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "book_analytics_dim_livro"
+			            },
+			            "Object": {
+			              "Role": "medida.gasto_total_registrado"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "book_analytics_dim_livros_have_gasto_total_registrado"
+			        }
+			      ]
+			    },
+			    "book_analytics_fato_leitura_has_medida_média_de_páginas_por_livro": {
+			      "Binding": {
+			        "ConceptualEntity": "book_analytics fato_leituras"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "book_analytics_fato_leitura": {
+			          "Target": {
+			            "Entity": "book_analytics_fato_leitura"
+			          }
+			        },
+			        "medida.média_de_páginas_por_livro": {
+			          "Target": {
+			            "Entity": "medida.média_de_páginas_por_livro"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "book_analytics_fato_leitura"
+			            },
+			            "Object": {
+			              "Role": "medida.média_de_páginas_por_livro"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "book_analytics_fato_leituras_have_média_de_páginas_por_livro"
+			        }
+			      ]
+			    },
+			    "book_analytics_dim_livro_has_medida_média_de_páginas_por_livro": {
+			      "Binding": {
+			        "ConceptualEntity": "book_analytics dim_livros"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "book_analytics_dim_livro": {
+			          "Target": {
+			            "Entity": "book_analytics_dim_livro"
+			          }
+			        },
+			        "medida.média_de_páginas_por_livro": {
+			          "Target": {
+			            "Entity": "medida.média_de_páginas_por_livro"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "book_analytics_dim_livro"
+			            },
+			            "Object": {
+			              "Role": "medida.média_de_páginas_por_livro"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "book_analytics_dim_livros_have_média_de_páginas_por_livro"
+			        }
+			      ]
+			    },
+			    "book_analytics_dim_livro_has_medida_total_de_páginas_lidas": {
+			      "Binding": {
+			        "ConceptualEntity": "book_analytics dim_livros"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "book_analytics_dim_livro": {
+			          "Target": {
+			            "Entity": "book_analytics_dim_livro"
+			          }
+			        },
+			        "medida.total_de_páginas_lidas": {
+			          "Target": {
+			            "Entity": "medida.total_de_páginas_lidas"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "book_analytics_dim_livro"
+			            },
+			            "Object": {
+			              "Role": "medida.total_de_páginas_lidas"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "book_analytics_dim_livros_have_total_de_páginas_lidas"
+			        }
+			      ]
+			    },
+			    "book_analytics_fato_leitura_has_medida_percentual_concluído": {
+			      "Binding": {
+			        "ConceptualEntity": "book_analytics fato_leituras"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "book_analytics_fato_leitura": {
+			          "Target": {
+			            "Entity": "book_analytics_fato_leitura"
+			          }
+			        },
+			        "medida.percentual_concluído": {
+			          "Target": {
+			            "Entity": "medida.percentual_concluído"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "book_analytics_fato_leitura"
+			            },
+			            "Object": {
+			              "Role": "medida.percentual_concluído"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "book_analytics_fato_leituras_have_percentual_concluído"
+			        }
+			      ]
+			    },
+			    "book_analytics_fato_leitura_has_medida_total_de_leituras": {
+			      "Binding": {
+			        "ConceptualEntity": "book_analytics fato_leituras"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "book_analytics_fato_leitura": {
+			          "Target": {
+			            "Entity": "book_analytics_fato_leitura"
+			          }
+			        },
+			        "medida.total_de_leituras": {
+			          "Target": {
+			            "Entity": "medida.total_de_leituras"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "book_analytics_fato_leitura"
+			            },
+			            "Object": {
+			              "Role": "medida.total_de_leituras"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "book_analytics_fato_leituras_have_total_de_leituras"
+			        }
+			      ]
+			    },
+			    "book_analytics_fato_leitura_has_medida_leituras_iniciadas": {
+			      "Binding": {
+			        "ConceptualEntity": "book_analytics fato_leituras"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "book_analytics_fato_leitura": {
+			          "Target": {
+			            "Entity": "book_analytics_fato_leitura"
+			          }
+			        },
+			        "medida.leituras_iniciadas": {
+			          "Target": {
+			            "Entity": "medida.leituras_iniciadas"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "book_analytics_fato_leitura"
+			            },
+			            "Object": {
+			              "Role": "medida.leituras_iniciadas"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "book_analytics_fato_leituras_have_leituras_iniciadas"
+			        }
+			      ]
+			    },
+			    "book_analytics_fato_leitura_has_medida_titulos_distintos_concluidos": {
+			      "Binding": {
+			        "ConceptualEntity": "book_analytics fato_leituras"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "book_analytics_fato_leitura": {
+			          "Target": {
+			            "Entity": "book_analytics_fato_leitura"
+			          }
+			        },
+			        "medida.titulos_distintos_concluidos": {
+			          "Target": {
+			            "Entity": "medida.titulos_distintos_concluidos"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "book_analytics_fato_leitura"
+			            },
+			            "Object": {
+			              "Role": "medida.titulos_distintos_concluidos"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "book_analytics_fato_leituras_have_titulos_distintos_concluidos"
+			        }
+			      ]
+			    },
+			    "book_analytics_fato_leitura_has_medida_nota_media_livros_concluidos": {
+			      "Binding": {
+			        "ConceptualEntity": "book_analytics fato_leituras"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "book_analytics_fato_leitura": {
+			          "Target": {
+			            "Entity": "book_analytics_fato_leitura"
+			          }
+			        },
+			        "medida.nota_media_livros_concluidos": {
+			          "Target": {
+			            "Entity": "medida.nota_media_livros_concluidos"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "book_analytics_fato_leitura"
+			            },
+			            "Object": {
+			              "Role": "medida.nota_media_livros_concluidos"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "book_analytics_fato_leituras_have_nota_media_livros_concluidos"
+			        }
+			      ]
+			    },
+			    "book_analytics_fato_leitura_has_medida_nota_media": {
+			      "Binding": {
+			        "ConceptualEntity": "book_analytics fato_leituras"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "book_analytics_fato_leitura": {
+			          "Target": {
+			            "Entity": "book_analytics_fato_leitura"
+			          }
+			        },
+			        "medida.nota_media": {
+			          "Target": {
+			            "Entity": "medida.nota_media"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "book_analytics_fato_leitura"
+			            },
+			            "Object": {
+			              "Role": "medida.nota_media"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "book_analytics_fato_leituras_have_nota_media"
+			        }
+			      ]
+			    },
+			    "book_analytics_fato_leitura_has_medida_multiplo_referencia_vs_KU": {
+			      "Binding": {
+			        "ConceptualEntity": "book_analytics fato_leituras"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "book_analytics_fato_leitura": {
+			          "Target": {
+			            "Entity": "book_analytics_fato_leitura"
+			          }
+			        },
+			        "medida.multiplo_referencia_vs_KU": {
+			          "Target": {
+			            "Entity": "medida.multiplo_referencia_vs_KU"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "book_analytics_fato_leitura"
+			            },
+			            "Object": {
+			              "Role": "medida.multiplo_referencia_vs_KU"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "book_analytics_fato_leituras_have_multiplo_referencia_vs_KU"
+			        }
+			      ]
+			    },
+			    "book_analytics_fato_assinatura_has_medida_multiplo_referencia_vs_KU": {
+			      "Binding": {
+			        "ConceptualEntity": "book_analytics fato_assinatura"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "book_analytics_fato_assinatura": {
+			          "Target": {
+			            "Entity": "book_analytics_fato_assinatura"
+			          }
+			        },
+			        "medida.multiplo_referencia_vs_KU": {
+			          "Target": {
+			            "Entity": "medida.multiplo_referencia_vs_KU"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "book_analytics_fato_assinatura"
+			            },
+			            "Object": {
+			              "Role": "medida.multiplo_referencia_vs_KU"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "book_analytics_fato_assinaturas_have_multiplo_referencia_vs_KU"
+			        }
+			      ]
+			    },
+			    "book_analytics_dim_livro_has_medida_multiplo_referencia_vs_KU": {
+			      "Binding": {
+			        "ConceptualEntity": "book_analytics dim_livros"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "book_analytics_dim_livro": {
+			          "Target": {
+			            "Entity": "book_analytics_dim_livro"
+			          }
+			        },
+			        "medida.multiplo_referencia_vs_KU": {
+			          "Target": {
+			            "Entity": "medida.multiplo_referencia_vs_KU"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "book_analytics_dim_livro"
+			            },
+			            "Object": {
+			              "Role": "medida.multiplo_referencia_vs_KU"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "book_analytics_dim_livros_have_multiplo_referencia_vs_KU"
+			        }
+			      ]
+			    },
+			    "book_analytics_fato_leitura_has_medida_diferenca_referencia_vs_KU": {
+			      "Binding": {
+			        "ConceptualEntity": "book_analytics fato_leituras"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "book_analytics_fato_leitura": {
+			          "Target": {
+			            "Entity": "book_analytics_fato_leitura"
+			          }
+			        },
+			        "medida.diferenca_referencia_vs_KU": {
+			          "Target": {
+			            "Entity": "medida.diferenca_referencia_vs_KU"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "book_analytics_fato_leitura"
+			            },
+			            "Object": {
+			              "Role": "medida.diferenca_referencia_vs_KU"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "book_analytics_fato_leituras_have_diferenca_referencia_vs_KU"
+			        }
+			      ]
+			    },
+			    "book_analytics_fato_assinatura_has_medida_diferenca_referencia_vs_KU": {
+			      "Binding": {
+			        "ConceptualEntity": "book_analytics fato_assinatura"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "book_analytics_fato_assinatura": {
+			          "Target": {
+			            "Entity": "book_analytics_fato_assinatura"
+			          }
+			        },
+			        "medida.diferenca_referencia_vs_KU": {
+			          "Target": {
+			            "Entity": "medida.diferenca_referencia_vs_KU"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "book_analytics_fato_assinatura"
+			            },
+			            "Object": {
+			              "Role": "medida.diferenca_referencia_vs_KU"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "book_analytics_fato_assinaturas_have_diferenca_referencia_vs_KU"
+			        }
+			      ]
+			    },
+			    "book_analytics_dim_livro_has_medida_diferenca_referencia_vs_KU": {
+			      "Binding": {
+			        "ConceptualEntity": "book_analytics dim_livros"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "book_analytics_dim_livro": {
+			          "Target": {
+			            "Entity": "book_analytics_dim_livro"
+			          }
+			        },
+			        "medida.diferenca_referencia_vs_KU": {
+			          "Target": {
+			            "Entity": "medida.diferenca_referencia_vs_KU"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "book_analytics_dim_livro"
+			            },
+			            "Object": {
+			              "Role": "medida.diferenca_referencia_vs_KU"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "book_analytics_dim_livros_have_diferenca_referencia_vs_KU"
+			        }
+			      ]
+			    },
+			    "book_analytics_fato_leitura_has_medida_valor_referencia_digital_KU": {
+			      "Binding": {
+			        "ConceptualEntity": "book_analytics fato_leituras"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "book_analytics_fato_leitura": {
+			          "Target": {
+			            "Entity": "book_analytics_fato_leitura"
+			          }
+			        },
+			        "medida.valor_referencia_digital_KU": {
+			          "Target": {
+			            "Entity": "medida.valor_referencia_digital_KU"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "book_analytics_fato_leitura"
+			            },
+			            "Object": {
+			              "Role": "medida.valor_referencia_digital_KU"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "book_analytics_fato_leituras_have_valor_referencia_digital_KU"
+			        }
+			      ]
+			    },
+			    "book_analytics_dim_livro_has_medida_valor_referencia_digital_KU": {
+			      "Binding": {
+			        "ConceptualEntity": "book_analytics dim_livros"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "book_analytics_dim_livro": {
+			          "Target": {
+			            "Entity": "book_analytics_dim_livro"
+			          }
+			        },
+			        "medida.valor_referencia_digital_KU": {
+			          "Target": {
+			            "Entity": "medida.valor_referencia_digital_KU"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "book_analytics_dim_livro"
+			            },
+			            "Object": {
+			              "Role": "medida.valor_referencia_digital_KU"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "book_analytics_dim_livros_have_valor_referencia_digital_KU"
+			        }
+			      ]
+			    },
+			    "book_analytics_fato_leitura_has_medida_custo_KU_por_livro_concluido": {
+			      "Binding": {
+			        "ConceptualEntity": "book_analytics fato_leituras"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "book_analytics_fato_leitura": {
+			          "Target": {
+			            "Entity": "book_analytics_fato_leitura"
+			          }
+			        },
+			        "medida.custo_KU_por_livro_concluido": {
+			          "Target": {
+			            "Entity": "medida.custo_KU_por_livro_concluido"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "book_analytics_fato_leitura"
+			            },
+			            "Object": {
+			              "Role": "medida.custo_KU_por_livro_concluido"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "book_analytics_fato_leituras_have_custo_KU_por_livro_concluido"
+			        }
+			      ]
+			    },
+			    "book_analytics_fato_assinatura_has_medida_custo_KU_por_livro_concluido": {
+			      "Binding": {
+			        "ConceptualEntity": "book_analytics fato_assinatura"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "book_analytics_fato_assinatura": {
+			          "Target": {
+			            "Entity": "book_analytics_fato_assinatura"
+			          }
+			        },
+			        "medida.custo_KU_por_livro_concluido": {
+			          "Target": {
+			            "Entity": "medida.custo_KU_por_livro_concluido"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "book_analytics_fato_assinatura"
+			            },
+			            "Object": {
+			              "Role": "medida.custo_KU_por_livro_concluido"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "book_analytics_fato_assinaturas_have_custo_KU_por_livro_concluido"
+			        }
+			      ]
+			    },
+			    "book_analytics_fato_leitura_has_medida_livros_KU_concluidos": {
+			      "Binding": {
+			        "ConceptualEntity": "book_analytics fato_leituras"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "book_analytics_fato_leitura": {
+			          "Target": {
+			            "Entity": "book_analytics_fato_leitura"
+			          }
+			        },
+			        "medida.livros_KU_concluidos": {
+			          "Target": {
+			            "Entity": "medida.livros_KU_concluidos"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "book_analytics_fato_leitura"
+			            },
+			            "Object": {
+			              "Role": "medida.livros_KU_concluidos"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "book_analytics_fato_leituras_have_livros_KU_concluidos"
+			        }
+			      ]
+			    },
+			    "book_analytics_fato_assinatura_has_medida_custo_total_assinatura": {
+			      "Binding": {
+			        "ConceptualEntity": "book_analytics fato_assinatura"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "book_analytics_fato_assinatura": {
+			          "Target": {
+			            "Entity": "book_analytics_fato_assinatura"
+			          }
+			        },
+			        "medida.custo_total_assinatura": {
+			          "Target": {
+			            "Entity": "medida.custo_total_assinatura"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "book_analytics_fato_assinatura"
+			            },
+			            "Object": {
+			              "Role": "medida.custo_total_assinatura"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "book_analytics_fato_assinaturas_have_custo_total_assinatura"
+			        }
+			      ]
+			    },
+			    "book_analytics_fato_leitura_has_medida_livros_abandonados": {
+			      "Binding": {
+			        "ConceptualEntity": "book_analytics fato_leituras"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "book_analytics_fato_leitura": {
+			          "Target": {
+			            "Entity": "book_analytics_fato_leitura"
+			          }
+			        },
+			        "medida.livros_abandonados": {
+			          "Target": {
+			            "Entity": "medida.livros_abandonados"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "book_analytics_fato_leitura"
+			            },
+			            "Object": {
+			              "Role": "medida.livros_abandonados"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "book_analytics_fato_leituras_have_livros_abandonados"
+			        }
+			      ]
+			    },
+			    "book_analytics_fato_leitura_has_medida_livros_em_andamento": {
+			      "Binding": {
+			        "ConceptualEntity": "book_analytics fato_leituras"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "book_analytics_fato_leitura": {
+			          "Target": {
+			            "Entity": "book_analytics_fato_leitura"
+			          }
+			        },
+			        "medida.livros_em_andamento": {
+			          "Target": {
+			            "Entity": "medida.livros_em_andamento"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "book_analytics_fato_leitura"
+			            },
+			            "Object": {
+			              "Role": "medida.livros_em_andamento"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "book_analytics_fato_leituras_have_livros_em_andamento"
+			        }
+			      ]
+			    },
+			    "book_analytics_fato_leitura_has_medida_livros_concluidos": {
+			      "Binding": {
+			        "ConceptualEntity": "book_analytics fato_leituras"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "book_analytics_fato_leitura": {
+			          "Target": {
+			            "Entity": "book_analytics_fato_leitura"
+			          }
+			        },
+			        "medida.livros_concluidos": {
+			          "Target": {
+			            "Entity": "medida.livros_concluidos"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "book_analytics_fato_leitura"
+			            },
+			            "Object": {
+			              "Role": "medida.livros_concluidos"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "book_analytics_fato_leituras_have_livros_concluidos"
+			        }
+			      ]
+			    },
+			    "book_analytics_dim_categoria_has_categoria": {
+			      "Binding": {
+			        "ConceptualEntity": "book_analytics dim_categoria"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "book_analytics_dim_categoria": {
+			          "Target": {
+			            "Entity": "book_analytics_dim_categoria"
+			          }
+			        },
+			        "book_analytics_dim_categoria.categoria": {
+			          "Target": {
+			            "Entity": "book_analytics_dim_categoria.categoria"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "book_analytics_dim_categoria"
+			            },
+			            "Object": {
+			              "Role": "book_analytics_dim_categoria.categoria"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "book_analytics_dim_categorias_have_categorias"
+			        }
+			      ]
+			    },
+			    "book_analytics_dim_categoria_has_id_categoria": {
+			      "Binding": {
+			        "ConceptualEntity": "book_analytics dim_categoria"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "book_analytics_dim_categoria": {
+			          "Target": {
+			            "Entity": "book_analytics_dim_categoria"
+			          }
+			        },
+			        "book_analytics_dim_categoria.id_categoria": {
+			          "Target": {
+			            "Entity": "book_analytics_dim_categoria.id_categoria"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "book_analytics_dim_categoria"
+			            },
+			            "Object": {
+			              "Role": "book_analytics_dim_categoria.id_categoria"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "book_analytics_dim_categorias_have_id_categorias"
+			        }
+			      ]
+			    },
+			    "dim_calendario_has_dia_semana_abrev": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_calendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_calendario": {
+			          "Target": {
+			            "Entity": "dim_calendario"
+			          }
+			        },
+			        "dim_calendario.dia_semana_abrev": {
+			          "Target": {
+			            "Entity": "dim_calendario.dia_semana_abrev"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_calendario"
+			            },
+			            "Object": {
+			              "Role": "dim_calendario.dia_semana_abrev"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_calendarios_have_dia_semana_abrevs"
+			        }
+			      ]
+			    },
+			    "dim_calendario_has_dia_semana": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_calendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_calendario": {
+			          "Target": {
+			            "Entity": "dim_calendario"
+			          }
+			        },
+			        "dim_calendario.dia_semana": {
+			          "Target": {
+			            "Entity": "dim_calendario.dia_semana"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_calendario"
+			            },
+			            "Object": {
+			              "Role": "dim_calendario.dia_semana"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_calendarios_have_dia_semanas"
+			        }
+			      ]
+			    },
+			    "dim_calendario_has_dia_semana_num": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_calendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_calendario": {
+			          "Target": {
+			            "Entity": "dim_calendario"
+			          }
+			        },
+			        "dim_calendario.dia_semana_num": {
+			          "Target": {
+			            "Entity": "dim_calendario.dia_semana_num"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_calendario"
+			            },
+			            "Object": {
+			              "Role": "dim_calendario.dia_semana_num"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_calendarios_have_dia_semana_nums"
+			        }
+			      ]
+			    },
+			    "dim_calendario_has_trimestre_ano": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_calendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_calendario": {
+			          "Target": {
+			            "Entity": "dim_calendario"
+			          }
+			        },
+			        "dim_calendario.trimestre_ano": {
+			          "Target": {
+			            "Entity": "dim_calendario.trimestre_ano"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_calendario"
+			            },
+			            "Object": {
+			              "Role": "dim_calendario.trimestre_ano"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_calendarios_have_trimestre_anos"
+			        }
+			      ]
+			    },
+			    "dim_calendario_has_trimestre": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_calendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_calendario": {
+			          "Target": {
+			            "Entity": "dim_calendario"
+			          }
+			        },
+			        "dim_calendario.trimestre": {
+			          "Target": {
+			            "Entity": "dim_calendario.trimestre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_calendario"
+			            },
+			            "Object": {
+			              "Role": "dim_calendario.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_calendarios_have_trimestres"
+			        }
+			      ]
+			    },
+			    "dim_calendario_has_ano_me": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_calendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_calendario": {
+			          "Target": {
+			            "Entity": "dim_calendario"
+			          }
+			        },
+			        "dim_calendario.ano_me": {
+			          "Target": {
+			            "Entity": "dim_calendario.ano_me"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_calendario"
+			            },
+			            "Object": {
+			              "Role": "dim_calendario.ano_me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_calendarios_have_ano_me"
+			        }
+			      ]
+			    },
+			    "dim_calendario_has_ano_mes_num": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_calendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_calendario": {
+			          "Target": {
+			            "Entity": "dim_calendario"
+			          }
+			        },
+			        "dim_calendario.ano_mes_num": {
+			          "Target": {
+			            "Entity": "dim_calendario.ano_mes_num"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_calendario"
+			            },
+			            "Object": {
+			              "Role": "dim_calendario.ano_mes_num"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_calendarios_have_ano_mes_nums"
+			        }
+			      ]
+			    },
+			    "dim_calendario_has_mes_abrev": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_calendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_calendario": {
+			          "Target": {
+			            "Entity": "dim_calendario"
+			          }
+			        },
+			        "dim_calendario.mes_abrev": {
+			          "Target": {
+			            "Entity": "dim_calendario.mes_abrev"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_calendario"
+			            },
+			            "Object": {
+			              "Role": "dim_calendario.mes_abrev"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_calendarios_have_mes_abrevs"
+			        }
+			      ]
+			    },
+			    "dim_calendario_has_nome_me": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_calendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_calendario": {
+			          "Target": {
+			            "Entity": "dim_calendario"
+			          }
+			        },
+			        "dim_calendario.nome_me": {
+			          "Target": {
+			            "Entity": "dim_calendario.nome_me"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_calendario"
+			            },
+			            "Object": {
+			              "Role": "dim_calendario.nome_me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_calendarios_have_nome_me"
+			        }
+			      ]
+			    },
+			    "dim_calendario_has_mes_num": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_calendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_calendario": {
+			          "Target": {
+			            "Entity": "dim_calendario"
+			          }
+			        },
+			        "dim_calendario.mes_num": {
+			          "Target": {
+			            "Entity": "dim_calendario.mes_num"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_calendario"
+			            },
+			            "Object": {
+			              "Role": "dim_calendario.mes_num"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_calendarios_have_mes_nums"
+			        }
+			      ]
+			    },
+			    "dim_calendario_has_ano": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_calendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_calendario": {
+			          "Target": {
+			            "Entity": "dim_calendario"
+			          }
+			        },
+			        "dim_calendario.ano": {
+			          "Target": {
+			            "Entity": "dim_calendario.ano"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_calendario"
+			            },
+			            "Object": {
+			              "Role": "dim_calendario.ano"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_calendarios_have_anos"
+			        }
+			      ]
+			    },
+			    "dim_calendario_has_date": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_calendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_calendario": {
+			          "Target": {
+			            "Entity": "dim_calendario"
+			          }
+			        },
+			        "dim_calendario.date": {
+			          "Target": {
+			            "Entity": "dim_calendario.date"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_calendario"
+			            },
+			            "Object": {
+			              "Role": "dim_calendario.date"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_calendarios_have_dates"
+			        }
+			      ]
+			    },
+			    "book_analytics_fato_leitura_has_motivacao_leitura": {
+			      "Binding": {
+			        "ConceptualEntity": "book_analytics fato_leituras"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "book_analytics_fato_leitura": {
+			          "Target": {
+			            "Entity": "book_analytics_fato_leitura"
+			          }
+			        },
+			        "book_analytics_fato_leitura.motivacao_leitura": {
+			          "Target": {
+			            "Entity": "book_analytics_fato_leitura.motivacao_leitura"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "book_analytics_fato_leitura"
+			            },
+			            "Object": {
+			              "Role": "book_analytics_fato_leitura.motivacao_leitura"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "book_analytics_fato_leituras_have_motivacao_leituras"
+			        }
+			      ]
+			    },
+			    "book_analytics_fato_leitura_has_status_leitura": {
+			      "Binding": {
+			        "ConceptualEntity": "book_analytics fato_leituras"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "book_analytics_fato_leitura": {
+			          "Target": {
+			            "Entity": "book_analytics_fato_leitura"
+			          }
+			        },
+			        "book_analytics_fato_leitura.status_leitura": {
+			          "Target": {
+			            "Entity": "book_analytics_fato_leitura.status_leitura"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "book_analytics_fato_leitura"
+			            },
+			            "Object": {
+			              "Role": "book_analytics_fato_leitura.status_leitura"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "book_analytics_fato_leituras_have_status_leituras"
+			        }
+			      ]
+			    },
+			    "book_analytics_fato_leitura_has_origem_acesso": {
+			      "Binding": {
+			        "ConceptualEntity": "book_analytics fato_leituras"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "book_analytics_fato_leitura": {
+			          "Target": {
+			            "Entity": "book_analytics_fato_leitura"
+			          }
+			        },
+			        "book_analytics_fato_leitura.origem_acesso": {
+			          "Target": {
+			            "Entity": "book_analytics_fato_leitura.origem_acesso"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "book_analytics_fato_leitura"
+			            },
+			            "Object": {
+			              "Role": "book_analytics_fato_leitura.origem_acesso"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "book_analytics_fato_leituras_have_origem_acessos"
+			        }
+			      ]
+			    },
+			    "book_analytics_fato_leitura_has_opiniao_texto": {
+			      "Binding": {
+			        "ConceptualEntity": "book_analytics fato_leituras"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "book_analytics_fato_leitura": {
+			          "Target": {
+			            "Entity": "book_analytics_fato_leitura"
+			          }
+			        },
+			        "book_analytics_fato_leitura.opiniao_texto": {
+			          "Target": {
+			            "Entity": "book_analytics_fato_leitura.opiniao_texto"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "book_analytics_fato_leitura"
+			            },
+			            "Object": {
+			              "Role": "book_analytics_fato_leitura.opiniao_texto"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "book_analytics_fato_leituras_have_opiniao_textos"
+			        }
+			      ]
+			    },
+			    "book_analytics_fato_leitura_has_notum": {
+			      "Binding": {
+			        "ConceptualEntity": "book_analytics fato_leituras"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "book_analytics_fato_leitura": {
+			          "Target": {
+			            "Entity": "book_analytics_fato_leitura"
+			          }
+			        },
+			        "book_analytics_fato_leitura.notum": {
+			          "Target": {
+			            "Entity": "book_analytics_fato_leitura.notum"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "book_analytics_fato_leitura"
+			            },
+			            "Object": {
+			              "Role": "book_analytics_fato_leitura.notum"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "book_analytics_fato_leituras_have_nota"
+			        }
+			      ]
+			    },
+			    "book_analytics_fato_leitura_has_formato": {
+			      "Binding": {
+			        "ConceptualEntity": "book_analytics fato_leituras"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "book_analytics_fato_leitura": {
+			          "Target": {
+			            "Entity": "book_analytics_fato_leitura"
+			          }
+			        },
+			        "book_analytics_fato_leitura.formato": {
+			          "Target": {
+			            "Entity": "book_analytics_fato_leitura.formato"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "book_analytics_fato_leitura"
+			            },
+			            "Object": {
+			              "Role": "book_analytics_fato_leitura.formato"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "book_analytics_fato_leituras_have_formatos"
+			        }
+			      ]
+			    },
+			    "book_analytics_fato_leitura_has_data_fim": {
+			      "Binding": {
+			        "ConceptualEntity": "book_analytics fato_leituras"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "book_analytics_fato_leitura": {
+			          "Target": {
+			            "Entity": "book_analytics_fato_leitura"
+			          }
+			        },
+			        "book_analytics_fato_leitura.data_fim": {
+			          "Target": {
+			            "Entity": "book_analytics_fato_leitura.data_fim"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "book_analytics_fato_leitura"
+			            },
+			            "Object": {
+			              "Role": "book_analytics_fato_leitura.data_fim"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "book_analytics_fato_leituras_have_data_fims"
+			        }
+			      ]
+			    },
+			    "book_analytics_fato_leitura_has_data_inicio": {
+			      "Binding": {
+			        "ConceptualEntity": "book_analytics fato_leituras"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "book_analytics_fato_leitura": {
+			          "Target": {
+			            "Entity": "book_analytics_fato_leitura"
+			          }
+			        },
+			        "book_analytics_fato_leitura.data_inicio": {
+			          "Target": {
+			            "Entity": "book_analytics_fato_leitura.data_inicio"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "book_analytics_fato_leitura"
+			            },
+			            "Object": {
+			              "Role": "book_analytics_fato_leitura.data_inicio"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "book_analytics_fato_leituras_have_data_inicios"
+			        }
+			      ]
+			    },
+			    "book_analytics_fato_leitura_has_id_leitura": {
+			      "Binding": {
+			        "ConceptualEntity": "book_analytics fato_leituras"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "book_analytics_fato_leitura": {
+			          "Target": {
+			            "Entity": "book_analytics_fato_leitura"
+			          }
+			        },
+			        "book_analytics_fato_leitura.id_leitura": {
+			          "Target": {
+			            "Entity": "book_analytics_fato_leitura.id_leitura"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "book_analytics_fato_leitura"
+			            },
+			            "Object": {
+			              "Role": "book_analytics_fato_leitura.id_leitura"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "book_analytics_fato_leituras_have_id_leituras"
+			        }
+			      ]
+			    },
+			    "book_analytics_fato_assinatura_has_mes_referencia": {
+			      "Binding": {
+			        "ConceptualEntity": "book_analytics fato_assinatura"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "book_analytics_fato_assinatura": {
+			          "Target": {
+			            "Entity": "book_analytics_fato_assinatura"
+			          }
+			        },
+			        "book_analytics_fato_assinatura.mes_referencia": {
+			          "Target": {
+			            "Entity": "book_analytics_fato_assinatura.mes_referencia"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "book_analytics_fato_assinatura"
+			            },
+			            "Object": {
+			              "Role": "book_analytics_fato_assinatura.mes_referencia"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "book_analytics_fato_assinaturas_have_mes_referencias"
+			        }
+			      ]
+			    },
+			    "book_analytics_fato_assinatura_has_valor_mensal": {
+			      "Binding": {
+			        "ConceptualEntity": "book_analytics fato_assinatura"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "book_analytics_fato_assinatura": {
+			          "Target": {
+			            "Entity": "book_analytics_fato_assinatura"
+			          }
+			        },
+			        "book_analytics_fato_assinatura.valor_mensal": {
+			          "Target": {
+			            "Entity": "book_analytics_fato_assinatura.valor_mensal"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "book_analytics_fato_assinatura"
+			            },
+			            "Object": {
+			              "Role": "book_analytics_fato_assinatura.valor_mensal"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "book_analytics_fato_assinaturas_have_valor_mensal"
+			        }
+			      ]
+			    },
+			    "book_analytics_fato_assinatura_has_servico": {
+			      "Binding": {
+			        "ConceptualEntity": "book_analytics fato_assinatura"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "book_analytics_fato_assinatura": {
+			          "Target": {
+			            "Entity": "book_analytics_fato_assinatura"
+			          }
+			        },
+			        "book_analytics_fato_assinatura.servico": {
+			          "Target": {
+			            "Entity": "book_analytics_fato_assinatura.servico"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "book_analytics_fato_assinatura"
+			            },
+			            "Object": {
+			              "Role": "book_analytics_fato_assinatura.servico"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "book_analytics_fato_assinaturas_have_servicos"
+			        }
+			      ]
+			    },
+			    "book_analytics_fato_assinatura_has_id_assinatura": {
+			      "Binding": {
+			        "ConceptualEntity": "book_analytics fato_assinatura"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "book_analytics_fato_assinatura": {
+			          "Target": {
+			            "Entity": "book_analytics_fato_assinatura"
+			          }
+			        },
+			        "book_analytics_fato_assinatura.id_assinatura": {
+			          "Target": {
+			            "Entity": "book_analytics_fato_assinatura.id_assinatura"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "book_analytics_fato_assinatura"
+			            },
+			            "Object": {
+			              "Role": "book_analytics_fato_assinatura.id_assinatura"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "book_analytics_fato_assinaturas_have_id_assinaturas"
+			        }
+			      ]
+			    },
+			    "book_analytics_dim_livro_has_preco_fisico": {
+			      "Binding": {
+			        "ConceptualEntity": "book_analytics dim_livros"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "book_analytics_dim_livro": {
+			          "Target": {
+			            "Entity": "book_analytics_dim_livro"
+			          }
+			        },
+			        "book_analytics_dim_livro.preco_fisico": {
+			          "Target": {
+			            "Entity": "book_analytics_dim_livro.preco_fisico"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "book_analytics_dim_livro"
+			            },
+			            "Object": {
+			              "Role": "book_analytics_dim_livro.preco_fisico"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "book_analytics_dim_livros_have_preco_fisicos"
+			        },
+			        {
+			          "Adjective": {
+			            "Subject": {
+			              "Role": "book_analytics_dim_livro"
+			            },
+			            "Adjectives": [
+			              {
+			                "expensive": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Antonyms": [
+			              {
+			                "cheap": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Measurement": {
+			              "Role": "book_analytics_dim_livro.preco_fisico"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "preco_fisico_indicates_how_expensive_book_analytics_dim_livros_are"
+			        }
+			      ]
+			    },
+			    "book_analytics_dim_livro_has_preco_digital": {
+			      "Binding": {
+			        "ConceptualEntity": "book_analytics dim_livros"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "book_analytics_dim_livro": {
+			          "Target": {
+			            "Entity": "book_analytics_dim_livro"
+			          }
+			        },
+			        "book_analytics_dim_livro.preco_digital": {
+			          "Target": {
+			            "Entity": "book_analytics_dim_livro.preco_digital"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "book_analytics_dim_livro"
+			            },
+			            "Object": {
+			              "Role": "book_analytics_dim_livro.preco_digital"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "book_analytics_dim_livros_have_preco_digitals"
+			        },
+			        {
+			          "Adjective": {
+			            "Subject": {
+			              "Role": "book_analytics_dim_livro"
+			            },
+			            "Adjectives": [
+			              {
+			                "expensive": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Antonyms": [
+			              {
+			                "cheap": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Measurement": {
+			              "Role": "book_analytics_dim_livro.preco_digital"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "preco_digital_indicates_how_expensive_book_analytics_dim_livros_are"
+			        }
+			      ]
+			    },
+			    "book_analytics_dim_livro_has_numero_pagina": {
+			      "Binding": {
+			        "ConceptualEntity": "book_analytics dim_livros"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "book_analytics_dim_livro": {
+			          "Target": {
+			            "Entity": "book_analytics_dim_livro"
+			          }
+			        },
+			        "book_analytics_dim_livro.numero_pagina": {
+			          "Target": {
+			            "Entity": "book_analytics_dim_livro.numero_pagina"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "book_analytics_dim_livro"
+			            },
+			            "Object": {
+			              "Role": "book_analytics_dim_livro.numero_pagina"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "book_analytics_dim_livros_have_numero_paginas"
+			        }
+			      ]
+			    },
+			    "book_analytics_dim_livro_has_ano_publicacao": {
+			      "Binding": {
+			        "ConceptualEntity": "book_analytics dim_livros"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "book_analytics_dim_livro": {
+			          "Target": {
+			            "Entity": "book_analytics_dim_livro"
+			          }
+			        },
+			        "book_analytics_dim_livro.ano_publicacao": {
+			          "Target": {
+			            "Entity": "book_analytics_dim_livro.ano_publicacao"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "book_analytics_dim_livro"
+			            },
+			            "Object": {
+			              "Role": "book_analytics_dim_livro.ano_publicacao"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "book_analytics_dim_livros_have_ano_publicacaos"
+			        }
+			      ]
+			    },
+			    "book_analytics_dim_livro_has_editora": {
+			      "Binding": {
+			        "ConceptualEntity": "book_analytics dim_livros"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "book_analytics_dim_livro": {
+			          "Target": {
+			            "Entity": "book_analytics_dim_livro"
+			          }
+			        },
+			        "book_analytics_dim_livro.editora": {
+			          "Target": {
+			            "Entity": "book_analytics_dim_livro.editora"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "book_analytics_dim_livro"
+			            },
+			            "Object": {
+			              "Role": "book_analytics_dim_livro.editora"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "book_analytics_dim_livros_have_editoras"
+			        }
+			      ]
+			    },
+			    "book_analytics_dim_livro_has_autor": {
+			      "Binding": {
+			        "ConceptualEntity": "book_analytics dim_livros"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "book_analytics_dim_livro": {
+			          "Target": {
+			            "Entity": "book_analytics_dim_livro"
+			          }
+			        },
+			        "book_analytics_dim_livro.autor": {
+			          "Target": {
+			            "Entity": "book_analytics_dim_livro.autor"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "book_analytics_dim_livro"
+			            },
+			            "Object": {
+			              "Role": "book_analytics_dim_livro.autor"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "book_analytics_dim_livros_have_autors"
+			        }
+			      ]
+			    },
+			    "book_analytics_dim_livro_has_titulo": {
+			      "Binding": {
+			        "ConceptualEntity": "book_analytics dim_livros"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "book_analytics_dim_livro": {
+			          "Target": {
+			            "Entity": "book_analytics_dim_livro"
+			          }
+			        },
+			        "book_analytics_dim_livro.titulo": {
+			          "Target": {
+			            "Entity": "book_analytics_dim_livro.titulo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "book_analytics_dim_livro"
+			            },
+			            "Object": {
+			              "Role": "book_analytics_dim_livro.titulo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "book_analytics_dim_livros_have_titulos"
+			        }
+			      ]
+			    },
+			    "book_analytics_dim_livro_has_isbn": {
+			      "Binding": {
+			        "ConceptualEntity": "book_analytics dim_livros"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "book_analytics_dim_livro": {
+			          "Target": {
+			            "Entity": "book_analytics_dim_livro"
+			          }
+			        },
+			        "book_analytics_dim_livro.isbn": {
+			          "Target": {
+			            "Entity": "book_analytics_dim_livro.isbn"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "book_analytics_dim_livro"
+			            },
+			            "Object": {
+			              "Role": "book_analytics_dim_livro.isbn"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "book_analytics_dim_livros_have_isbns"
+			        }
+			      ]
+			    },
+			    "book_analytics_dim_livro_has_id_livro": {
+			      "Binding": {
+			        "ConceptualEntity": "book_analytics dim_livros"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "book_analytics_dim_livro": {
+			          "Target": {
+			            "Entity": "book_analytics_dim_livro"
+			          }
+			        },
+			        "book_analytics_dim_livro.id_livro": {
+			          "Target": {
+			            "Entity": "book_analytics_dim_livro.id_livro"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "book_analytics_dim_livro"
+			            },
+			            "Object": {
+			              "Role": "book_analytics_dim_livro.id_livro"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "book_analytics_dim_livros_have_id_livros"
+			        }
+			      ]
+			    },
+			    "book_analytics_livro_categoria_has_book_analytics_dim_categoria": {
+			      "Binding": {
+			        "ConceptualEntity": "book_analytics livro_categoria"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "book_analytics_livro_categoria": {
+			          "Target": {
+			            "Entity": "book_analytics_livro_categoria"
+			          }
+			        },
+			        "book_analytics_dim_categoria": {
+			          "Target": {
+			            "Entity": "book_analytics_dim_categoria"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "book_analytics_livro_categoria"
+			            },
+			            "Object": {
+			              "Role": "book_analytics_dim_categoria"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "book_analytics_livro_categorias_have_book_analytics_dim_categorias"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "book_analytics_dim_categoria"
+			            },
+			            "Object": {
+			              "Role": "book_analytics_livro_categoria"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "book_analytics_dim_categorias_have_book_analytics_livro_categorias"
+			        }
+			      ]
+			    },
+			    "book_analytics_livro_categoria_has_book_analytics_dim_livro": {
+			      "Binding": {
+			        "ConceptualEntity": "book_analytics livro_categoria"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "book_analytics_livro_categoria": {
+			          "Target": {
+			            "Entity": "book_analytics_livro_categoria"
+			          }
+			        },
+			        "book_analytics_dim_livro": {
+			          "Target": {
+			            "Entity": "book_analytics_dim_livro"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "book_analytics_livro_categoria"
+			            },
+			            "Object": {
+			              "Role": "book_analytics_dim_livro"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "book_analytics_livro_categorias_have_book_analytics_dim_livros"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "book_analytics_dim_livro"
+			            },
+			            "Object": {
+			              "Role": "book_analytics_livro_categoria"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "book_analytics_dim_livros_have_book_analytics_livro_categorias"
+			        }
+			      ]
+			    }
+			  },
+			  "Agents": {
+			    "Internal": {
+			      "Version": "1.1.0"
+			    }
+			  }
+			}
+		contentType: json
+

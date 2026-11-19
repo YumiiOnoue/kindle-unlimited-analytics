@@ -2,15 +2,15 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "c3e7d709cedb09d1d9ac",
   "position": {
-    "x": 400.57399447098868,
-    "y": 712.7860783969063,
-    "z": 5000,
-    "height": 335.77526007126988,
-    "width": 903.25508557183718,
+    "x": 377.08157357756369,
+    "y": 682.24552745219,
+    "z": 4000,
+    "height": 367.36297632041,
+    "width": 691.96412470934365,
     "tabOrder": 4000
   },
   "visual": {
-    "visualType": "clusteredColumnChart",
+    "visualType": "hundredPercentStackedColumnChart",
     "query": {
       "queryState": {
         "Category": {
@@ -28,7 +28,26 @@
               },
               "queryRef": "dim_calendario.Ano",
               "nativeQueryRef": "Ano",
-              "active": true
+              "active": true,
+              "format": "0"
+            }
+          ]
+        },
+        "Series": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "book_analytics fato_leituras"
+                    }
+                  },
+                  "Property": "origem_acesso"
+                }
+              },
+              "queryRef": "book_analytics fato_leituras.origem_acesso",
+              "nativeQueryRef": "origem_acesso"
             }
           ]
         },
@@ -39,7 +58,7 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "medidas"
+                      "Entity": "Medidas"
                     }
                   },
                   "Property": "Livros Concluidos"
@@ -58,7 +77,7 @@
               "Measure": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "medidas"
+                    "Entity": "Medidas"
                   }
                 },
                 "Property": "Livros Concluidos"
@@ -181,6 +200,26 @@
               "expr": {
                 "Literal": {
                   "Value": "true"
+                }
+              }
+            },
+            "detailLabelPrecision": {
+              "expr": {
+                "Literal": {
+                  "Value": "1L"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "legend": [
+        {
+          "properties": {
+            "position": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Top'"
                 }
               }
             }

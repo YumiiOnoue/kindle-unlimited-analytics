@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "c5ecca37ca3c90a3ad0b",
   "position": {
-    "x": 1273.5354598845147,
-    "y": 139.48245513020876,
-    "z": 2000,
+    "x": 1283.4366415767827,
+    "y": 61.025219213160547,
+    "z": 1000,
     "height": 200,
     "width": 250,
-    "tabOrder": 2000
+    "tabOrder": 1000
   },
   "visual": {
     "visualType": "kpi",
@@ -20,7 +20,7 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "medidas"
+                      "Entity": "Medidas"
                     }
                   },
                   "Property": "Tempo Medio Leitura (Dias)"
@@ -145,6 +145,13 @@
               "expr": {
                 "Literal": {
                   "Value": "15D"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Velocidade de Conclusão'"
                 }
               }
             }

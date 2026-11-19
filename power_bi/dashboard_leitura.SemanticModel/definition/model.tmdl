@@ -19,7 +19,7 @@ ref table 'book_analytics fato_leituras'
 ref table dim_calendario
 ref table 'book_analytics dim_categoria'
 ref table 'book_analytics livro_categoria'
-ref table medidas
+ref table Medidas
 ref table Consulta
 
 ref cultureInfo pt-BR

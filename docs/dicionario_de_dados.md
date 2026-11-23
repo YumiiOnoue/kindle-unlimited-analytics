@@ -34,10 +34,10 @@
 | `data_fim` | `DATE` | `NULL, CHECK (>= data_inicio)` | Data de conclusao ou abandono (nula se status for `Lendo`). |
 | `formato` | `ENUM` | `NOT NULL, DEFAULT 'Digital'` | Midia utilizada: `Digital` ou `Fisico`. |
 | `origem_acesso` | `ENUM` | `NOT NULL` | Canal de obtencao: `Kindle Unlimited`, `Compra`, `Emprestimo`, `Presente` ou `Cortesia`. |
-| `intencao_compra` | `ENUM` | `NOT NULL` | Indica se compraria a obra apos ler: `Sim`, `Nao` ou `Indefinido`. |
+| `motivacao_leitura` | `ENUM` | `NOT NULL` | Indica se queria ler ou se só leu por estar disponível no KU: `Sim` ou `Nao`. |
 | `nota` | `DECIMAL(2,1)` | `NOT NULL, CHECK (1.0 a 5.0)` | Avaliacao pessoal atribuida ao livro. |
-| `opiniao_texto` | `TEXT` | `NULL` | Resenha ou comentario pessoal sobre a leitura. |
-| `status_leitura` | `ENUM` | `NOT NULL, DEFAULT 'Lido'` | Situacao da leitura: `Lido`, `Lendo` ou `Abandonado`. |
+| `opiniao_texto` | `TEXT` | `NULL` | Resenha ou comentário pessoal sobre a leitura. |
+| `status_leitura` | `ENUM` | `NOT NULL, DEFAULT 'Lido'` | Situação da leitura: `Lido`, `Lendo` ou `Abandonado`. |
 
 ## Tabela: `fato_assinatura`
 | Nome da Coluna | Tipo de Dado | Chave / Restricao | Descricao de Negocio |

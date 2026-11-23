@@ -35,7 +35,7 @@ erDiagram
         date data_fim
         enum formato
         enum origem_acesso
-        enum intencao_compra
+        enum motivacao_leitura
         decimal nota
         text opiniao_texto
         enum status_leitura

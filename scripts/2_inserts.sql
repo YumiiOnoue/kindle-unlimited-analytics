@@ -443,7 +443,7 @@ VALUES
 -- 3. FATO LEITURAS
 -- =========================================================
 -- Usa subqueries por título para vincular o id_livro correto automaticamente
-INSERT INTO fato_leituras (id_livro, data_inicio, data_fim, formato, origem_acesso, valor_pago, preco_digital_na_leitura, preco_fisico_na_leitura, intencao_compra, nota, opiniao_texto)
+INSERT INTO fato_leituras (id_livro, data_inicio, data_fim, formato, origem_acesso, valor_pago, preco_digital_na_leitura, preco_fisico_na_leitura, motivacao_leitura, nota, opiniao_texto)
 VALUES
     -- 2021
     ((SELECT id_livro FROM dim_livros WHERE titulo = 'Pai Rico, Pai Pobre'), '2021-01-10', '2021-01-20', 'Digital', 'Compra', 14.15, 14.15, 44.11, 'Sim', 4.0, ''),

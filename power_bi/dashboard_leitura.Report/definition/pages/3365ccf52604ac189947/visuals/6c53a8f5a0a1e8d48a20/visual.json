@@ -4,10 +4,10 @@
   "position": {
     "x": 890.02946750542753,
     "y": 260.45840649171924,
-    "z": 6000,
+    "z": 5000,
     "height": 379.02529302899444,
     "width": 518.97309353200774,
-    "tabOrder": 6003
+    "tabOrder": 6000
   },
   "visual": {
     "visualType": "barChart",
@@ -805,62 +805,6 @@
             }
           ]
         }
-      },
-      {
-        "name": "027df0b09553000cc6b9",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "Livros Intencao Previa"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "aaa2e60d409971000071",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "Livros Descoberta"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "074eab482beed2ec312b",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "Livros Concluidos"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "85ca66330030d0016580",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "% Descoberta Categoria"
-          }
-        },
-        "type": "Advanced"
       }
     ]
   }

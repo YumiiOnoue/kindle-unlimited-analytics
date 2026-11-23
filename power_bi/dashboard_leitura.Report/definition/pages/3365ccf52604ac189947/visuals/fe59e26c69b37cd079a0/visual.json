@@ -4,7 +4,7 @@
   "position": {
     "x": 348.98797237526185,
     "y": 667.46333514394348,
-    "z": 6500,
+    "z": 6000,
     "height": 383.31465818266469,
     "width": 1060.3131838286645,
     "tabOrder": 2000
@@ -828,48 +828,6 @@
   },
   "filterConfig": {
     "filters": [
-      {
-        "name": "56b248222c3e7ac15d93",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "Nota Media outras origens"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "ec4bc600cd000e1ad0c0",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "Nota Media KU"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "16c2de875539ab063087",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "book_analytics dim_categoria"
-              }
-            },
-            "Property": "categoria"
-          }
-        },
-        "type": "Categorical"
-      },
       {
         "name": "3d292d518e5a3b749b46",
         "field": {

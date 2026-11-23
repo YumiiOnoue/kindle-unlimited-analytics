@@ -4,10 +4,10 @@
   "position": {
     "x": 1428.3715372080389,
     "y": 663.64925894312091,
-    "z": 5000,
+    "z": 4000,
     "height": 389.03577248389848,
     "width": 472.94544890199421,
-    "tabOrder": 6002
+    "tabOrder": 5000
   },
   "visual": {
     "visualType": "clusteredBarChart",
@@ -521,20 +521,6 @@
   },
   "filterConfig": {
     "filters": [
-      {
-        "name": "dbc38d1248381b8e11b6",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "book_analytics dim_livros"
-              }
-            },
-            "Property": "autor"
-          }
-        },
-        "type": "TopN"
-      },
       {
         "name": "b2fed18502a9177bc617",
         "field": {

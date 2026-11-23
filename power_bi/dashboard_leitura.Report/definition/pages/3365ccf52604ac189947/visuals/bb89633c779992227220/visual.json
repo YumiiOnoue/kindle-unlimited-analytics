@@ -782,34 +782,6 @@
             }
           ]
         }
-      },
-      {
-        "name": "198d25f6b1ee4e18a8e8",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "Livros KU Concluidos"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "e1ff25cc058b0620dcda",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "Livros Concluidos Outras Origens"
-          }
-        },
-        "type": "Advanced"
       }
     ]
   }

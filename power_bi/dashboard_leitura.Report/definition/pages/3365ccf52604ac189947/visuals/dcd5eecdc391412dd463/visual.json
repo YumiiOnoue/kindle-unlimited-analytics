@@ -604,20 +604,6 @@
             }
           ]
         }
-      },
-      {
-        "name": "288d4625cbe04065d02b",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "Tempo Medio Leitura (Dias)"
-          }
-        },
-        "type": "Advanced"
       }
     ]
   }

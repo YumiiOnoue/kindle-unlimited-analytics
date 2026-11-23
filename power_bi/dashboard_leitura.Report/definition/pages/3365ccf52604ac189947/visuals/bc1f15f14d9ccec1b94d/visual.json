@@ -4,10 +4,10 @@
   "position": {
     "x": 349.86950125753333,
     "y": 36.930669577184069,
-    "z": 4000,
+    "z": 3000,
     "height": 199.07370347075303,
     "width": 248.25661844588026,
-    "tabOrder": 6001
+    "tabOrder": 4000
   },
   "visual": {
     "visualType": "kpi",
@@ -425,37 +425,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "7bf6f081ae3a1565d870",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "book_analytics fato_leituras"
-              }
-            },
-            "Property": "data_fim"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "ea6355c01e9585206dc0",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "Total de Categorias"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

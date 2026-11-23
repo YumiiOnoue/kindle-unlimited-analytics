@@ -16,17 +16,16 @@ O banco segue uma modelagem dimensional (**Star Schema** com relacionamento muit
 - **Tabelas Dimensão:** `dim_livros` (metadados bibliográficos e preços de referência digital/físico) e `dim_categoria` (gêneros literários).
 - **Tabela Associativa:** `livro_categoria` (permite classificar cada livro em múltiplas categorias simultaneamente).
 
-- [Visualizar Diagrama Entidade-Relacionamento](docs/diagrama-er.md)
-- [Consultar Dicionário de Dados Completo](docs/dicionario-de-dados.md)
+[Visualizar Diagrama Entidade-Relacionamento](docs/diagrama-er.md)
+[Consultar Dicionário de Dados Completo](docs/dicionario_de_dados.md)
 
 ## 4. Perguntas de Negocio e Principais Insights
 
 
 ## 5. Habilidades Tecnicas 
-- **Modelagem Dimensional e Integridade:** chaves primárias/estrangeiras, constraints `CHECK` para regras de negócio (ex: `status_leitura = 'Lendo'` exige `data_fim IS NULL`) e tabela ponte `N:N`.
-- **Data Quality e Auditoria (`03_qualidade_dados.sql`):** 19 verificações automatizadas incluindo CTE recursiva (`WITH RECURSIVE`) para detectar lacunas de meses na cobrança da assinatura.
-- **SQL Analítico Avançado:** CTEs encadeadas, Window Functions (`LAG`, `AVG() OVER`, `SUM() OVER`, `DENSE_RANK() OVER PARTITION BY`) e agregações condicionais.
-- **Camada Semântica para BI:** view consolidada (`vw_analise_literaria_pbi`) pronta para consumo no Power BI (`dashboard_leitura.pbip`).
+- **Modelagem Dimensional e Integridade:** 
+- **Data Quality e Auditoria (`4_data_quality.sql`):** 
+- **SQL Analítico Avançado:** 
 
 ## 6. Como Executar o Projeto
 
@@ -57,6 +56,13 @@ No MySQL Workbench, execute os arquivos na seguinte ordem:
 2. `scripts/2_inserts.sql`
 3. `scripts/3_updates.sql`
 4. `scripts/4_data_quality.sql`
+
+O script de carga inicial deve ser executado apenas uma vez em um banco vazio.
+
+O script de atualização deve ser executado somente quando houver novos dados ou correções a registrar, após verificar se os registros já não existem no banco.
+
+O script `4_data_quality.sql` deve ser executado após as cargas para verificar a integridade e consistência dos dados.
+
 
 ### 4. Acesse o dashboard
 

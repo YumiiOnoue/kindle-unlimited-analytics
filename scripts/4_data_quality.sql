@@ -52,13 +52,13 @@ FROM fato_assinatura;
 -- =======================================================================================
 SELECT
     id_livro,
-    isbn,
+    id_externo,
     titulo,
     autor
 FROM dim_livros
 WHERE
-    isbn IS NULL
-    OR TRIM(isbn) = ''
+    id_externo IS NULL
+    OR TRIM(id_externo) = ''
     OR titulo IS NULL
     OR TRIM(titulo) = ''
     OR autor IS NULL
@@ -66,13 +66,13 @@ WHERE
 
 
 -- =======================================================================================
--- 3. LIVROS: Encontra ISBN duplicado
+-- 3. LIVROS: Encontra id_externo duplicado
 -- =======================================================================================
 SELECT
-    isbn,
+    id_externo,
     COUNT(*) AS quantidade
 FROM dim_livros
-GROUP BY isbn
+GROUP BY id_externo
 HAVING COUNT(*) > 1;
 
 

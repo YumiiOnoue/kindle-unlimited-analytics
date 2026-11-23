@@ -8,12 +8,18 @@ USE book_analytics;
 -- ==============================================
 CREATE TABLE IF NOT EXISTS dim_livros (
     id_livro INT PRIMARY KEY AUTO_INCREMENT,
-    isbn VARCHAR(20) UNIQUE NOT NULL,
+    id_externo VARCHAR(20) UNIQUE NOT NULL,
     titulo VARCHAR(255) NOT NULL,
     autor VARCHAR(150) NOT NULL,
     editora VARCHAR(100) DEFAULT 'Independente',
     ano_publicacao INT,
-    numero_paginas INT DEFAULT 0
+    numero_paginas INT DEFAULT 0,
+    preco_digital DECIMAL(10, 2) NULL,
+    preco_fisico DECIMAL(10, 2) NULL,
+
+    CONSTRAINT chk_preco_digital CHECK (preco_digital >= 0 OR preco_digital IS NULL),
+    CONSTRAINT chk_preco_fisico CHECK (preco_fisico >= 0 OR preco_fisico IS NULL),
+    CONSTRAINT chk_numero_paginas CHECK (numero_paginas >= 0)
 );
 
 -- =========================================================
@@ -40,9 +46,10 @@ CREATE TABLE IF NOT EXISTS livro_categoria (
 -- =========================================================
 -- 4. TABELA FATO: fato_assinatura
 -- =========================================================
+-- Em 22 de outubro de 2026, a Amazon anunciou e oficializou a mudança do nome de Kindle Unlimited para Kindle+
 CREATE TABLE IF NOT EXISTS fato_assinatura (
     id_assinatura INT PRIMARY KEY AUTO_INCREMENT,
-    servico VARCHAR(50) NOT NULL DEFAULT 'Kindle Unlimited',
+    servico VARCHAR(50) NOT NULL DEFAULT 'Kindle+',
     valor_mensal DECIMAL(10, 2) NOT NULL,
     mes_referencia DATE NOT NULL,
     CONSTRAINT uq_servico_data UNIQUE (servico, mes_referencia)
@@ -58,10 +65,7 @@ CREATE TABLE IF NOT EXISTS fato_leituras (
     data_inicio DATE NOT NULL,
     data_fim DATE NULL,
     formato ENUM('Digital', 'Físico') NOT NULL DEFAULT 'Digital',
-    origem_acesso ENUM('Kindle Unlimited', 'Compra', 'Emprestimo', 'Presente', 'Cortesia') NOT NULL DEFAULT 'Kindle Unlimited',
-    valor_pago DECIMAL(10, 2) NOT NULL DEFAULT 0.00,
-    preco_digital_na_leitura DECIMAL(10, 2),
-    preco_fisico_na_leitura DECIMAL(10, 2),
+    origem_acesso ENUM('Kindle+', 'Compra', 'Emprestado', 'Presente', 'Cortesia') NOT NULL DEFAULT 'Kindle+',
     motivacao_leitura ENUM('Sim', 'Não') NOT NULL DEFAULT 'Sim',
     nota DECIMAL(2, 1) NOT NULL,
     opiniao_texto TEXT,
@@ -71,9 +75,6 @@ CREATE TABLE IF NOT EXISTS fato_leituras (
     CONSTRAINT fk_fato_livros FOREIGN KEY (id_livro) REFERENCES dim_livros(id_livro),
     CONSTRAINT chk_nota CHECK (nota >= 1.0 AND nota <= 5.0),
     CONSTRAINT chk_datas CHECK (data_fim >= data_inicio OR data_fim IS NULL),
-    CONSTRAINT chk_valor_pago CHECK (valor_pago >= 0.00),
-    CONSTRAINT chk_preco_digital CHECK (preco_digital_na_leitura >= 0.00 OR preco_digital_na_leitura IS NULL),
-    CONSTRAINT chk_preco_fisico CHECK (preco_fisico_na_leitura >= 0.00 OR preco_fisico_na_leitura IS NULL),
     CONSTRAINT chk_status_data_fim CHECK ((status_leitura = 'Lendo' AND data_fim IS NULL) OR (status_leitura IN ('Lido', 'Abandonado') AND data_fim IS NOT NULL))
 );
 
@@ -81,5 +82,14 @@ CREATE TABLE IF NOT EXISTS fato_leituras (
 -- 6. ÍNDICES
 -- =========================================================
 -- Índices para otimizar os JOINs e agregações nas análises
-CREATE INDEX idx_leituras_data_fim ON fato_leituras(data_fim);
-CREATE INDEX idx_assinatura_data ON fato_assinatura(mes_referencia);
+CREATE INDEX idx_leituras_data_inicio
+    ON fato_leituras(data_inicio);
+
+CREATE INDEX idx_leituras_data_fim
+    ON fato_leituras(data_fim);
+
+CREATE INDEX idx_leituras_origem
+    ON fato_leituras(origem_acesso);
+
+CREATE INDEX idx_assinatura_data
+    ON fato_assinatura(mes_referencia);

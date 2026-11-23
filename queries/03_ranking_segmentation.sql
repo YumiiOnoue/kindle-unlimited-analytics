@@ -66,10 +66,10 @@ GROUP BY origem_acesso, formato
 ORDER BY total_registros DESC;
 
 -- =========================================================
--- 5. INTENÇÃO DE COMPRA
+-- 5. MOTIVAÇÃO DE LEITURA
 -- =========================================================
 SELECT
-    f.intencao_compra,
+    f.motivacao_leitura,
     COUNT(*) AS total_registros,
     SUM(f.origem_acesso = 'Kindle Unlimited') AS registros_via_ku,
     SUM(f.origem_acesso = 'Compra') AS registros_com_origem_compra,
@@ -77,13 +77,13 @@ SELECT
     ROUND(AVG(NULLIF(d.preco_fisico, 0)), 2) AS preco_fisico_medio,
     ROUND(AVG(f.nota), 2) AS nota_media,
     ROUND(SUM(CASE
-        WHEN f.origem_acesso = 'Kindle Unlimited' AND f.intencao_compra = 'Sim'
+        WHEN f.origem_acesso = 'Kindle Unlimited' AND f.motivacao_leitura = 'Sim'
         THEN COALESCE(NULLIF(d.preco_digital, 0), 0)
         ELSE 0
     END), 2) AS soma_referencia_digital_conhecida_para_intencao_sim
 FROM fato_leituras f
 JOIN dim_livros d ON f.id_livro = d.id_livro
-GROUP BY f.intencao_compra
+GROUP BY f.motivacao_leitura
 ORDER BY total_registros DESC;
 
 -- =========================================================
@@ -99,7 +99,7 @@ SELECT
     END AS faixa_preco_digital,
     COUNT(*) AS total_registros,
     SUM(f.origem_acesso = 'Kindle Unlimited') AS registros_via_ku,
-    SUM(f.intencao_compra = 'Sim') AS intencao_compra_sim,
+    SUM(f.motivacao_leitura = 'Sim') AS motivacao_leitura_sim,
     ROUND(AVG(f.nota), 2) AS nota_media
 FROM fato_leituras f
 JOIN dim_livros d ON f.id_livro = d.id_livro

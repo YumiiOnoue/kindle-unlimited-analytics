@@ -19,7 +19,7 @@ SELECT
     fl.formato,
     fl.origem_acesso,
     fl.status_leitura,
-    fl.intencao_compra,
+    fl.motivacao_leitura,
     fl.data_inicio,
     fl.data_fim,
     DATE_FORMAT(fl.data_inicio, '%Y-%m') AS mes_inicio,

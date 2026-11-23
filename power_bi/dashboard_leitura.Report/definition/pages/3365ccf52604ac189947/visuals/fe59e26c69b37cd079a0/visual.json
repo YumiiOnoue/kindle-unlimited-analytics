@@ -42,7 +42,7 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "Nota Media KU"
+                  "Property": "Nota Media Kindle+"
                 }
               },
               "queryRef": "medidas.Nota Media KU",
@@ -77,7 +77,7 @@
                     "Entity": "Medidas"
                   }
                 },
-                "Property": "Nota Media KU"
+                "Property": "Nota Media Kindle+"
               }
             },
             "direction": "Descending"

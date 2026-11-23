@@ -42,7 +42,7 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "Livros KU Concluidos"
+                  "Property": "Livros Kindle+ Concluidos"
                 }
               },
               "queryRef": "medidas.Livros KU Concluidos",
@@ -56,7 +56,7 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "Valor Referencia Digital KU"
+                  "Property": "Valor Referencia Digital Kindle+"
                 }
               },
               "queryRef": "medidas.Valor Referencia Digital KU",
@@ -74,7 +74,7 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "Custo KU por Livro Concluido"
+                  "Property": "Custo Kindle+ por Livro Concluido"
                 }
               },
               "queryRef": "medidas.Custo KU por Livro Concluido",
@@ -260,7 +260,7 @@
                           "Entity": "Medidas"
                         }
                       },
-                      "Property": "Cor Aproveitamento KU"
+                      "Property": "Cor Aproveitamento Kindle+"
                     }
                   }
                 }

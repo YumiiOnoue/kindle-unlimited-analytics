@@ -42,7 +42,7 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "Valor Referencia Acumulado KU"
+                  "Property": "Valor Referencia Acumulado Kindle+"
                 }
               },
               "queryRef": "medidas.Valor Referencia Acumulado KU",
@@ -56,7 +56,7 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "Investimento Acumulado KU"
+                  "Property": "Investimento Acumulado Kindle+"
                 }
               },
               "queryRef": "medidas.Investimento Acumulado KU",

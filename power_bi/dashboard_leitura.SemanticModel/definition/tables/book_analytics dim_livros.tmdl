@@ -10,14 +10,6 @@ table 'book_analytics dim_livros'
 
 		annotation SummarizationSetBy = Automatic
 
-	column isbn
-		dataType: string
-		lineageTag: 5d5ac80c-d94f-4642-9fb5-b21912c237d9
-		summarizeBy: none
-		sourceColumn: isbn
-
-		annotation SummarizationSetBy = Automatic
-
 	column titulo
 		dataType: string
 		lineageTag: 0f5632e7-6710-44d6-974d-9fd363a66486
@@ -81,6 +73,14 @@ table 'book_analytics dim_livros'
 		annotation SummarizationSetBy = Automatic
 
 		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	column id_externo
+		dataType: string
+		lineageTag: 0f4e483a-a503-4497-809e-cb4eff68e4aa
+		summarizeBy: none
+		sourceColumn: id_externo
+
+		annotation SummarizationSetBy = Automatic
 
 	partition 'book_analytics dim_livros' = m
 		mode: import

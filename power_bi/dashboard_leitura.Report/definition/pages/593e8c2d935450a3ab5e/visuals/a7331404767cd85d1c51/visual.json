@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "a7331404767cd85d1c51",
   "position": {
-    "x": 377.08157357756369,
-    "y": 274.0644426517344,
+    "x": 377.01081832563636,
+    "y": 274.90372169577654,
     "z": 6000,
-    "height": 377.08157357756369,
-    "width": 691.96412470934365,
+    "height": 377.01081832563636,
+    "width": 457.51833682225669,
     "tabOrder": 6000
   },
   "visual": {
@@ -56,11 +56,11 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "Valor Referencia Digital KU"
+                  "Property": "Valor Referencia Digital Kindle+"
                 }
               },
               "queryRef": "medidas.Valor Referencia Digital KU",
-              "nativeQueryRef": "Valor Referencia Digital KU"
+              "nativeQueryRef": "Valor Referencia Digital Kindle+"
             }
           ]
         }

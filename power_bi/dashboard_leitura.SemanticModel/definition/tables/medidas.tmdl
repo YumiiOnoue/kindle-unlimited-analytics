@@ -59,7 +59,7 @@ table Medidas
 			
 			CALCULATE(
 			    SUM('book_analytics fato_assinatura'[valor_mensal]),
-			    'book_analytics fato_assinatura'[servico] = "Kindle Unlimited"
+			    'book_analytics fato_assinatura'[servico] = "Kindle+"
 			)
 		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
 		lineageTag: 3587935c-6f9d-441b-ac3a-c971a43d1dbe
@@ -70,31 +70,28 @@ table Medidas
 		formatString: 0
 		lineageTag: f13183a2-f8bf-4603-af5c-d212226bd38a
 
-	measure 'Livros KU Concluidos' = ```
+	measure 'Livros Kindle+ Concluidos' = ```
 			
 			CALCULATE(
 			    [Livros Concluidos],
-			    'book_analytics fato_leituras'[origem_acesso] = "Kindle Unlimited"
+			    'book_analytics fato_leituras'[origem_acesso] = "Kindle+"
 			)
 			
 			```
 		formatString: 0
 		lineageTag: 0ceb3075-892b-4ad3-a8f8-3cc7e5254f80
 
-	measure 'Custo KU por Livro Concluido' = ```
+	measure 'Custo Kindle+ por Livro Concluido' = ```
 			
 			DIVIDE(
 			    [Custo Total Assinatura],
-			    [Livros KU Concluidos]
+			    [Livros Kindle+ Concluidos]
 			)
 			
 			```
-		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
 		lineageTag: f9d2e0d2-4cff-4f3d-b07b-12c225f34030
 
-		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
-
-	measure 'Valor Referencia Digital KU' = ```
+	measure 'Valor Referencia Digital Kindle+' = ```
 			
 			CALCULATE(
 			    SUMX(
@@ -108,7 +105,7 @@ table Medidas
 			                BLANK()
 			            )
 			    ),
-			    'book_analytics fato_leituras'[origem_acesso] = "Kindle Unlimited",
+			    'book_analytics fato_leituras'[origem_acesso] = "Kindle+",
 			    'book_analytics fato_leituras'[status_leitura] = "Lido",
 			    NOT ISBLANK('book_analytics fato_leituras'[data_fim])
 			)
@@ -119,21 +116,18 @@ table Medidas
 
 		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
 
-	measure 'Diferenca Referencia vs KU' = ```
+	measure 'Diferenca Referencia vs Kindle+' = ```
 			
-			[Valor Referencia Digital KU] -
+			[Valor Referencia Digital Kindle+] -
 			[Custo Total Assinatura]
 			
 			```
-		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
 		lineageTag: 70f409de-d5f5-4f5c-afb7-1b80dbf6e49b
 
-		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
-
-	measure 'Multiplo Referencia vs KU' = ```
+	measure 'Multiplo Referencia vs Kindle+' = ```
 			
 			DIVIDE(
-			    [Valor Referencia Digital KU],
+			    [Valor Referencia Digital Kindle+],
 			    [Custo Total Assinatura]
 			)
 			
@@ -270,7 +264,7 @@ table Medidas
 			
 			DIVIDE(
 			    [Livros Lidos com Motivação de Leitura],
-			    [Livros KU Concluidos],
+			    [Livros Kindle+ Concluidos],
 			    0
 			)
 		lineageTag: 18500d0a-e6cf-4133-948d-f71a662ef101
@@ -281,37 +275,36 @@ table Medidas
 			
 			CALCULATE(
 			    [Nota Media],
-			    'book_analytics fato_leituras'[origem_acesso] <> "Kindle Unlimited"
+			    'book_analytics fato_leituras'[origem_acesso] <> "Kindle+"
 			)
 		lineageTag: 9592b3fd-b425-42c0-a688-e5c94f51de4d
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure 'Meses Sem Conclusão KU' =
+	measure 'Meses Sem Conclusão Kindle+' =
 			
 			COUNTROWS(
 			    FILTER(
 			        VALUES('dim_calendario'[AnoMes]),
-			        [Meses Assinados KU] > 0 &&
-			        (ISBLANK([Livros KU Concluidos]) || [Livros KU Concluidos] = 0)
+			        [Meses Assinados Kindle+] > 0 &&
+			        (ISBLANK([Livros Kindle+ Concluidos]) || [Livros Kindle+ Concluidos] = 0)
 			    )
 			)
-		formatString: 0
 		lineageTag: e1f57b06-5cc2-4eb3-bcb8-e46347e33c27
 
-	measure 'Meses Assinados KU' =
+	measure 'Meses Assinados Kindle+' =
 			
 			CALCULATE(
 			    DISTINCTCOUNT('book_analytics fato_assinatura'[id_assinatura]),
-			    'book_analytics fato_assinatura'[servico] = "Kindle Unlimited"
+			    'book_analytics fato_assinatura'[servico] = "Kindle+"
 			)
 		formatString: 0
 		lineageTag: 036a7205-7af8-4789-83ed-366c7b84f226
 
-	measure 'Valor Referencia Acumulado KU' =
+	measure 'Valor Referencia Acumulado Kindle+' =
 			
 			CALCULATE(
-			    [Valor Referencia Digital KU],
+			    [Valor Referencia Digital Kindle+],
 			    FILTER(
 			        ALL('dim_calendario'),
 			        'dim_calendario'[Date] <= MAX('dim_calendario'[Date])
@@ -321,7 +314,7 @@ table Medidas
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure 'Investimento Acumulado KU' =
+	measure 'Investimento Acumulado Kindle+' =
 			
 			CALCULATE(
 			    [Custo Total Assinatura],
@@ -353,54 +346,53 @@ table Medidas
 
 		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
 
-	measure 'Cor Aproveitamento KU' =
+	measure 'Cor Aproveitamento Kindle+' =
 			
-			VAR Qtd = [Livros KU Concluidos]
-			VAR Ref = [Valor Referencia Digital KU]
+			VAR Qtde = [Livros Kindle+ Concluidos]
+			VAR Ref = [Valor Referencia Digital Kindle+]
 			VAR Mensalidade = [Custo Total Assinatura]
 			RETURN
 			SWITCH(
 			    TRUE(),
 			    ISBLANK(Mensalidade) || Mensalidade = 0, BLANK(),
-			    Qtd = 0 || ISBLANK(Qtd), "#D9534F", // Ocioso (0 livros)
-			    Qtd = 1 || Ref < Mensalidade, "#E07A5F", // Baixo aproveitamento (1 livro ou valor de ref. abaixo da mensalidade)
+			    Qtde = 0 || ISBLANK(Qtde), "#D9534F", // Ocioso (0 livros)
+			    Qtde = 1 || Ref < Mensalidade, "#E07A5F", // Baixo aproveitamento (1 livro ou valor de ref. abaixo da mensalidade)
 			    "#52796F" // Bom aproveitamento (2+ livros e acima do break-even)
 			)
 		lineageTag: 904eaaa8-287a-4624-8582-94a0ebd95e7f
 
-	measure 'Meses Cobertos KU' =
+	measure 'Meses Cobertos Kindle+' =
 			
 			COUNTROWS(
 			    FILTER(
 			        VALUES('dim_calendario'[AnoMes]),
 			        [Custo Total Assinatura] > 0 &&
-			        [Valor Referencia Digital KU] >= [Custo Total Assinatura]
+			        [Valor Referencia Digital Kindle+] >= [Custo Total Assinatura]
 			    )
 			)
 		formatString: 0
 		lineageTag: fbfa0e72-4653-4501-9b61-754837c08323
 
-	measure '% Mensalidades Cobertas KU' =
+	measure '% Mensalidades Cobertas Kindle+' =
 			
 			DIVIDE(
-			    [Meses Cobertos KU],
-			    [Meses Assinados KU],
+			    [Meses Cobertos Kindle+],
+			    [Meses Assinados Kindle+],
 			    0
 			)
-		formatString: 0.00%;-0.00%;0.00%
 		lineageTag: 5fa10431-2a02-4d53-85ff-523eafaa1d18
 
-	measure 'Subtitulo Economia KU' =
+	measure 'Subtitulo Economia Kindle+' =
 			
-			VAR Economia = [Valor Referencia Digital KU] - [Custo Total Assinatura]
+			VAR Economia = [Valor Referencia Digital Kindle+] - [Custo Total Assinatura]
 			RETURN
-			"Ref.: " & FORMAT([Valor Referencia Digital KU], "R$ #,##0.00") & " vs. Pago: " & FORMAT([Custo Total Assinatura], "R$ #,##0.00")
+			"Ref.: " & FORMAT([Valor Referencia Digital Kindle+], "R$ #,##0.00") & " vs. Pago: " & FORMAT([Custo Total Assinatura], "R$ #,##0.00")
 		lineageTag: 3ca0b2d2-a5fa-4975-be58-632c73ff1bde
 
 	measure 'Subtitulo Mensalidades Cobertas' =
 			
-			VAR Cobertos = COALESCE([Meses Cobertos KU], 0)
-			VAR TotalMeses = COALESCE([Meses Assinados KU], 0)
+			VAR Cobertos = COALESCE([Meses Cobertos Kindle+], 0)
+			VAR TotalMeses = COALESCE([Meses Assinados Kindle+], 0)
 			RETURN
 			Cobertos & " de " & TotalMeses & IF(TotalMeses = 1, " mês coberto", " meses cobertos")
 		lineageTag: 5eed8c68-d99b-4d01-b43b-0737e0129a9b
@@ -415,16 +407,16 @@ table Medidas
 			
 			CALCULATE(
 			    [Livros Concluidos],
-			    'book_analytics fato_leituras'[origem_acesso] <> "Kindle Unlimited"
+			    'book_analytics fato_leituras'[origem_acesso] <> "Kindle+"
 			)
 		formatString: 0
 		lineageTag: 805bac4c-8a90-41d5-9070-f43edd7a5f98
 
-	measure 'Nota Media KU' =
+	measure 'Nota Media Kindle+' =
 			
 			CALCULATE(
 			    [Nota Media],
-			    'book_analytics fato_leituras'[origem_acesso] = "Kindle Unlimited"
+			    'book_analytics fato_leituras'[origem_acesso] = "Kindle+"
 			)
 		lineageTag: 60e1fa06-9639-44b3-9c81-8e4d97be5caa
 
@@ -458,11 +450,10 @@ table Medidas
 	measure 'Notas em Ambas Origens' =
 			
 			IF(
-			    NOT(ISBLANK([Nota Media KU])) && NOT(ISBLANK([Nota Media Outras Origens])),
+			    NOT(ISBLANK([Nota Media Kindle+])) && NOT(ISBLANK([Nota Media Outras Origens])),
 			    1,
 			    0
 			)
-		formatString: 0
 		lineageTag: 668948c9-a5c7-4126-a902-42f32f8c61d1
 
 	measure 'Total Autores Lidos' =

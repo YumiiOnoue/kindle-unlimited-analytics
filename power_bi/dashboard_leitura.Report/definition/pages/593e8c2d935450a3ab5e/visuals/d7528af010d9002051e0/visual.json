@@ -23,11 +23,11 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "Livros KU Concluidos"
+                  "Property": "Livros Kindle+ Concluidos"
                 }
               },
               "queryRef": "medidas.Livros KU Concluidos",
-              "nativeQueryRef": "Livros KU Concluidos"
+              "nativeQueryRef": "Livros Kindle+ Concluidos"
             }
           ]
         },

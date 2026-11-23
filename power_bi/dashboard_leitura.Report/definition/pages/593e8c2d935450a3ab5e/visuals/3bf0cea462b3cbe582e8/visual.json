@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "3bf0cea462b3cbe582e8",
   "position": {
-    "x": 1090.4266122526456,
-    "y": 274.0644426517344,
+    "x": 852.20153725690727,
+    "y": 274.90372169577654,
     "z": 9000,
-    "height": 377.08157357756369,
-    "width": 793.03753618374219,
+    "height": 377.01081832563636,
+    "width": 1030.888956359162,
     "tabOrder": 8000
   },
   "visual": {
@@ -43,11 +43,11 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "Custo KU por Livro Concluido"
+                  "Property": "Custo Kindle+ por Livro Concluido"
                 }
               },
               "queryRef": "medidas.Custo KU por Livro Concluido",
-              "nativeQueryRef": "Custo KU por Livro Concluido"
+              "nativeQueryRef": "Custo Kindle+ por Livro Concluido"
             }
           ]
         }

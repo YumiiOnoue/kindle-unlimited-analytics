@@ -23,7 +23,7 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "Diferenca Referencia vs KU"
+                  "Property": "Diferenca Referencia vs Kindle+"
                 }
               },
               "queryRef": "medidas.Diferenca Referencia vs KU",
@@ -170,7 +170,7 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "Subtitulo Economia KU"
+                  "Property": "Subtitulo Economia Kindle+"
                 }
               }
             },

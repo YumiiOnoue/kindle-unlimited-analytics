@@ -23,11 +23,11 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "Meses Sem Conclusão KU"
+                  "Property": "Meses Sem Conclusão Kindle+"
                 }
               },
               "queryRef": "medidas.Meses Sem Conclusão KU",
-              "nativeQueryRef": "Meses Sem Conclusão KU"
+              "nativeQueryRef": "Meses Sem Conclusão Kindle+"
             }
           ]
         },

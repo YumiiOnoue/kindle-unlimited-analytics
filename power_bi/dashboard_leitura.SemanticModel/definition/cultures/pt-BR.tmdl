@@ -90,22 +90,6 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "book_analytics_dim_livro.isbn": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "book_analytics dim_livros",
-			          "ConceptualProperty": "isbn"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "isbn": {
-			            "State": "Generated"
-			          }
-			        }
-			      ]
-			    },
 			    "book_analytics_dim_livro.titulo": {
 			      "Definition": {
 			        "Binding": {
@@ -1793,7 +1777,7 @@ cultureInfo pt-BR
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Medidas",
-			          "ConceptualProperty": "Nota Media KU"
+			          "ConceptualProperty": "Nota Media Kindle+"
 			        }
 			      },
 			      "State": "Generated",

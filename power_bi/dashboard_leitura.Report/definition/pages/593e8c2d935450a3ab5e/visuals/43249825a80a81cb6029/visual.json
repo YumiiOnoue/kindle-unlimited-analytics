@@ -23,11 +23,11 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "Custo KU por Livro Concluido"
+                  "Property": "Custo Kindle+ por Livro Concluido"
                 }
               },
               "queryRef": "medidas.Custo KU por Livro Concluido",
-              "nativeQueryRef": "Custo KU por Livro Concluido"
+              "nativeQueryRef": "Custo Kindle+ por Livro Concluido"
             }
           ]
         },

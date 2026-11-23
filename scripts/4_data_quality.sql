@@ -1,13 +1,34 @@
-
--- =======================================================================================
--- OBJETIVO: Diagnosticar a qualidade e a consistência dos dados
-
--- PRÉ-REQUISITOS:
+-- =========================================================
+-- VERIFICAÇÃO DA QUALIDADE DOS DADOS
+-- =========================================================
+-- Objetivo:
+-- Executar consultas de validação para avaliar a consistência, integridade e qualidade dos dados
+-- armazenados no banco book_analytics.
+--
+-- As verificações contemplam:
+-- - Volume e distribuição dos registros;
+-- - Campos obrigatórios e valores ausentes;
+-- - Duplicidade de livros, leituras e categorias;
+-- - Integridade dos relacionamentos entre tabelas;
+-- - Consistência das datas e dos status de leitura;
+-- - Validação de preços e valores financeiros;
+-- - Consistência das origens de acesso e formatos;
+-- - Integridade dos registros de assinatura;
+-- - Identificação de lacunas nos meses de referência.
+--
+-- IMPORTANTE:
+-- Este script contém consultas de verificação (SELECT) e não altera os dados ou a estrutura do banco.
+--
+-- Execução recomendada:
 --   1. Executar 1_create_table.sql
 --   2. Executar 2_inserts.sql
 --   3. Executar 3_updates.sql
 
 -- =======================================================================================
+
+-- =====================
+-- BANCO DE DADOS
+-- =====================
 USE book_analytics;
 
 -- =======================================================================================
@@ -199,7 +220,7 @@ WHERE preco_digital < 0
 -- 12. LEITURAS: Verifica preços não informados
 -- =======================================================================================
 SELECT
-    COUNT(*) AS total_leituras,
+    COUNT(*) AS total_livros,
     SUM(preco_digital IS NULL)
         AS sem_preco_digital,
     SUM(preco_fisico IS NULL)

@@ -1,3 +1,19 @@
+-- =========================================================
+-- CARGA INICIAL DOS DADOS
+-- =========================================================
+
+-- IMPORTANTE:
+-- Este script deve ser executado somente uma vez, após a criação das tabelas em 1_create_table.sql.
+--
+-- Não executar novamente em um banco que já contenha os dados desta carga, pois os INSERTs podem gerar
+-- registros duplicados ou erros de chave única.
+--
+-- Para inclusão de novos registros, utilizar 3_updates.sql.
+-- =========================================================
+
+-- =====================
+-- BANCO DE DADOS
+-- =====================
 USE book_analytics;
 
 -- =========================================================
@@ -94,6 +110,9 @@ INSERT INTO dim_livros (id_externo, titulo, autor, editora, ano_publicacao, nume
     ('978-6558384021', 'Meu Dom Quixote coreano', 'Kim Ho-Yeon', 'Bertrand Brasil', 2025, 356, 12.99, 59.90),
     ('978-6558383109', 'A lanterna das memórias perdidas', 'Sanaka Hiiragi', 'Bertrand Brasil', 2024, 183, 35.91, 59.90);
 
+-- =========================================================
+-- 3. DIMENSÃO CATEGORIA
+-- =========================================================
 INSERT INTO dim_categoria (categoria)
 VALUES
     ('Autoajuda'),
@@ -126,7 +145,9 @@ VALUES
     ('Suspense'),
     ('Tomada de Decisão');
 
-
+-- =========================================================
+-- 4. TABELA DE RELACIONAMENTO LIVRO-CATEGORIA
+-- =========================================================
 INSERT INTO livro_categoria (id_livro, id_categoria)
 VALUES
     ((SELECT id_livro FROM dim_livros WHERE titulo = 'Pai Rico, Pai Pobre'), 
@@ -440,7 +461,7 @@ VALUES
 
 
 -- =========================================================
--- 3. FATO LEITURAS
+-- 5. FATO LEITURAS
 -- =========================================================
 INSERT INTO fato_leituras (id_livro, data_inicio, data_fim, formato, origem_acesso, motivacao_leitura, nota, opiniao_texto, status_leitura)
 VALUES

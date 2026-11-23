@@ -1,3 +1,7 @@
+-- =========================================================
+-- CRIAÇÃO DA ESTRUTURA DO BANCO DE DADOS
+-- =========================================================
+
 -- =====================
 -- BANCO DE DADOS
 -- =====================
@@ -13,13 +17,13 @@ CREATE TABLE IF NOT EXISTS dim_livros (
     autor VARCHAR(150) NOT NULL,
     editora VARCHAR(100) DEFAULT 'Independente',
     ano_publicacao INT,
-    numero_paginas INT DEFAULT 0,
+    numero_paginas INT NULL,
     preco_digital DECIMAL(10, 2) NULL,
     preco_fisico DECIMAL(10, 2) NULL,
 
     CONSTRAINT chk_preco_digital CHECK (preco_digital >= 0 OR preco_digital IS NULL),
     CONSTRAINT chk_preco_fisico CHECK (preco_fisico >= 0 OR preco_fisico IS NULL),
-    CONSTRAINT chk_numero_paginas CHECK (numero_paginas >= 0)
+    CONSTRAINT chk_numero_paginas CHECK (numero_paginas > 0 OR numero_paginas IS NULL)
 );
 
 -- =========================================================
@@ -75,7 +79,8 @@ CREATE TABLE IF NOT EXISTS fato_leituras (
     CONSTRAINT fk_fato_livros FOREIGN KEY (id_livro) REFERENCES dim_livros(id_livro),
     CONSTRAINT chk_nota CHECK (nota >= 1.0 AND nota <= 5.0),
     CONSTRAINT chk_datas CHECK (data_fim >= data_inicio OR data_fim IS NULL),
-    CONSTRAINT chk_status_data_fim CHECK ((status_leitura = 'Lendo' AND data_fim IS NULL) OR (status_leitura IN ('Lido', 'Abandonado') AND data_fim IS NOT NULL))
+    CONSTRAINT chk_status_data_fim CHECK ((status_leitura = 'Lendo' AND data_fim IS NULL) OR (status_leitura = 'Lido' AND data_fim IS NOT NULL) OR (status_leitura = 'Abandonado')
+)
 );
 
 -- =========================================================

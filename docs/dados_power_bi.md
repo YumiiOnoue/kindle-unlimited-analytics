@@ -11,6 +11,7 @@ O objetivo é organizar os dados para permitir análises financeiras, comportame
 ### Fluxo de dados
 
 ```mermaid
+flowchart TD
     A[MySQL<br/>book_analytics] -->|Conexão direta| B[Power BI]
 
     B --> C[Modelo Semântico]
@@ -102,35 +103,35 @@ CALCULATE(
 
 ### 4.2. Indicadores financeiros
 
-**Total de Mensalidades KU**
+**Total de Mensalidades Kindle+**
 
 ```dax
-Total Mensalidades KU =
+Total Mensalidades Kindle+ =
 SUM(fato_assinatura[valor_mensal])
 ```
 
-**Custo por Livro Concluído via KU**
+**Custo por Livro Concluído via Kindle+**
 
 ```dax
-Custo por Livro KU =
+Custo por Livro Kindle+ =
 DIVIDE(
-    [Total Mensalidades KU],
-    [Livros Concluídos via KU],
+    [Total Mensalidades Kindle+],
+    [Livros Concluídos via Kindle+],
     0
 )
 ```
 
-**Valor de Referência dos Livros KU**
+**Valor de Referência dos Livros Kindle+**
 
 ```dax
-Valor Referência Livros KU =
+Valor Referência Livros Kindle+ =
 CALCULATE(
     SUMX(
         fato_leituras,
         RELATED(dim_livros[preco_digital])
     ),
     fato_leituras[status_leitura] = "Lido",
-    fato_leituras[origem_acesso] = "Kindle Unlimited"
+    fato_leituras[origem_acesso] = "Kindle+"
 )
 ```
 
@@ -142,10 +143,10 @@ Esta seção documenta as principais medidas utilizadas no modelo semântico do 
 |---|---|---|---|---|
 | `Livros Concluídos` | Quantificar os livros finalizados. | Contagem distinta de livros com status "Lido". | `fato_leituras` | Visão Geral |
 | `Nota Média das Leituras` | Avaliar a satisfação com as leituras. | Média das notas dos livros concluídos. | `fato_leituras` | Visão Geral |
-| `Total Mensalidades KU` | Mensurar o investimento na assinatura. | Soma dos valores mensais registrados. | `fato_assinatura` | Visão Geral / Viabilidade Financeira |
-| `Livros Concluídos via KU` | Identificar os livros concluídos pelo serviço. | Contagem distinta de livros com origem "Kindle Unlimited" e status "Lido". | `fato_leituras` | Viabilidade Financeira |
-| `Custo por Livro KU` | Calcular o custo médio da assinatura por livro concluído via KU. | Total de mensalidades dividido pela quantidade de livros concluídos via KU. | `fato_assinatura`, `fato_leituras` | Viabilidade Financeira |
-| `Valor Referência Livros KU` | Estimar o valor de mercado dos livros lidos via assinatura. | Soma dos preços digitais de referência dos livros concluídos via KU. | `fato_leituras`, `dim_livros` | Viabilidade Financeira |
+| `Total Mensalidades Kindle+` | Mensurar o investimento na assinatura. | Soma dos valores mensais registrados. | `fato_assinatura` | Visão Geral / Viabilidade Financeira |
+| `Livros Concluídos via Kindle+` | Identificar os livros concluídos pelo serviço. | Contagem distinta de livros com origem "Kindle+" e status "Lido". | `fato_leituras` | Viabilidade Financeira |
+| `Custo por Livro Kindle+` | Calcular o custo médio da assinatura por livro concluído via Kindle+. | Total de mensalidades dividido pela quantidade de livros concluídos via Kindle+. | `fato_assinatura`, `fato_leituras` | Viabilidade Financeira |
+| `Valor Referência Livros Kindle+` | Estimar o valor de mercado dos livros lidos via assinatura. | Soma dos preços digitais de referência dos livros concluídos via Kindle+. | `fato_leituras`, `dim_livros` | Viabilidade Financeira |
 | `Livros Lidos com Intenção de Compra` | Identificar livros que já despertavam interesse de compra. | Contagem distinta de livros concluídos com intenção de compra igual a "Sim". | `fato_leituras` | Análise Comportamental |
 | `% Livros com Intenção de Compra` | Mensurar a participação dos livros com intenção prévia de compra. | Livros com intenção de compra divididos pelo total de livros concluídos. | `fato_leituras` | Análise Comportamental |
 
@@ -154,7 +155,7 @@ Esta seção documenta as principais medidas utilizadas no modelo semântico do 
 
 ### Intenção de compra
 
-A coluna `motivacao_leitura` identifica se o livro fazia parte do interesse de leitura da pessoa ou se foi lido por estar disponível no Kindle Unlimited.
+A coluna `motivacao_leitura` identifica se o livro fazia parte do interesse de leitura da pessoa ou se foi lido por estar disponível no Kindle+.
 
 - `Sim`: havia intenção de compra ou interesse prévio no livro.
 - `Não`: o livro foi lido por estar disponível, sem intenção prévia de compra.
@@ -164,9 +165,9 @@ A coluna `motivacao_leitura` identifica se o livro fazia parte do interesse de l
 
 A coluna `origem_acesso` identifica como o livro foi obtido:
 
-- Kindle Unlimited;
+- Kindle+;
 - Compra;
-- Empréstimo;
+- Emprestado;
 - Presente;
 - Cortesia.
 

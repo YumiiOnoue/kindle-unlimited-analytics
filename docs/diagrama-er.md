@@ -8,7 +8,7 @@ erDiagram
 
     DIM_LIVROS {
         int id_livro PK
-        varchar isbn UK
+        varchar id_externo UK
         varchar titulo
         varchar autor
         varchar editora

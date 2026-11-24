@@ -4,14 +4,14 @@
 | Nome da Coluna | Tipo de Dado | Chave / Restricao | Descricao de Negocio |
 | :--- | :--- | :--- | :--- |
 | `id_livro` | `INT` | `PK, AUTO_INCREMENT` | Identificador unico do livro. |
-| `isbn` | `VARCHAR(20)` | `UNIQUE, NOT NULL` | Codigo ISBN-13 ou ASIN da Amazon. |
+| `id_externo` | `VARCHAR(20)` | `UNIQUE, NOT NULL` | Codigo ISBN-13 ou ASIN da Amazon. |
 | `titulo` | `VARCHAR(255)` | `NOT NULL` | Titulo completo da obra. |
 | `autor` | `VARCHAR(150)` | `NOT NULL` | Nome do autor principal. |
 | `editora` | `VARCHAR(100)` | `DEFAULT 'Independente'` | Editora responsavel pela publicacao. |
 | `ano_publicacao` | `INT` | `NULL` | Ano de publicacao da edicao lida. |
-| `numero_paginas` | `INT` | `DEFAULT 0, CHECK (>= 0)` | Quantidade total de paginas da edicao. |
-| `preco_digital` | `DECIMAL(10,2)` | `DEFAULT 0.00, CHECK (>= 0)` | Preco de referencia do e-book avulso na Amazon (R$). |
-| `preco_fisico` | `DECIMAL(10,2)` | `DEFAULT 0.00, CHECK (>= 0)` | Preco de referencia da edicao fisica (R$). |
+| `numero_paginas` | `INT` | `NULL` | Quantidade total de paginas da edicao. |
+| `preco_digital` | `DECIMAL(10,2)` | `NULL` | Preco de referencia do e-book avulso na Amazon (R$). |
+| `preco_fisico` | `DECIMAL(10,2)` | `NULL` | Preco de referencia da edicao fisica (R$). |
 
 ## Tabela: `dim_categoria`
 | Nome da Coluna | Tipo de Dado | Chave / Restricao | Descricao de Negocio |
@@ -33,8 +33,8 @@
 | `data_inicio` | `DATE` | `NOT NULL` | Data em que a leitura foi iniciada. |
 | `data_fim` | `DATE` | `NULL, CHECK (>= data_inicio)` | Data de conclusao ou abandono (nula se status for `Lendo`). |
 | `formato` | `ENUM` | `NOT NULL, DEFAULT 'Digital'` | Midia utilizada: `Digital` ou `Fisico`. |
-| `origem_acesso` | `ENUM` | `NOT NULL` | Canal de obtencao: `Kindle Unlimited`, `Compra`, `Emprestimo`, `Presente` ou `Cortesia`. |
-| `motivacao_leitura` | `ENUM` | `NOT NULL` | Indica se queria ler ou se só leu por estar disponível no KU: `Sim` ou `Nao`. |
+| `origem_acesso` | `ENUM` | `NOT NULL` | Canal de obtencao: `Kindle+`, `Compra`, `Emprestado`, `Presente` ou `Cortesia`. |
+| `motivacao_leitura` | `ENUM` | `NOT NULL` | Indica se queria ler ou se só leu por estar disponível no Kindle+: `Sim` ou `Nao`. |
 | `nota` | `DECIMAL(2,1)` | `NOT NULL, CHECK (1.0 a 5.0)` | Avaliacao pessoal atribuida ao livro. |
 | `opiniao_texto` | `TEXT` | `NULL` | Resenha ou comentário pessoal sobre a leitura. |
 | `status_leitura` | `ENUM` | `NOT NULL, DEFAULT 'Lido'` | Situação da leitura: `Lido`, `Lendo` ou `Abandonado`. |
@@ -43,6 +43,6 @@
 | Nome da Coluna | Tipo de Dado | Chave / Restricao | Descricao de Negocio |
 | :--- | :--- | :--- | :--- |
 | `id_assinatura` | `INT` | `PK, AUTO_INCREMENT` | Identificador unico do registro mensal da assinatura. |
-| `servico` | `VARCHAR(50)` | `UQ (servico, mes_referencia)` | Nome do servico assinado (`Kindle Unlimited`). |
+| `servico` | `VARCHAR(50)` | `UQ (servico, mes_referencia)` | Nome do servico assinado (`Kindle+`). |
 | `valor_mensal` | `DECIMAL(10,2)` | `NOT NULL` | Valor pago na fatura mensal (R$). |
 | `mes_referencia` | `DATE` | `UQ (servico, mes_referencia)` | Data de cobranca do ciclo mensal. |

@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.15.0/schema.json",
   "name": "fcc4e250216d1c01d83e",
   "position": {
     "x": 1601.0160067119614,
@@ -100,7 +100,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Lidos no Kindle+ com Intenção de Leitura'"
+                  "Value": "'Leituras Planejadas no Kindle+'"
                 }
               }
             },

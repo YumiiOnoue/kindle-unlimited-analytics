@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.15.0/schema.json",
   "name": "13ac62c7e02ce9b0977a",
   "position": {
     "x": 404.29207728718859,
@@ -151,7 +151,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Volume de Leitura'"
+                  "Value": "'Total de Livros Concluídos'"
                 }
               }
             }

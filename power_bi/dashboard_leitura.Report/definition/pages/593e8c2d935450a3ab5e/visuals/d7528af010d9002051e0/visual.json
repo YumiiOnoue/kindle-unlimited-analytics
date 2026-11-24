@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.15.0/schema.json",
   "name": "d7528af010d9002051e0",
   "position": {
     "x": 709.45759977222031,
@@ -154,7 +154,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Livros Concluídos'"
+                  "Value": "'Livros Concluídos no Kindle+'"
                 }
               }
             },

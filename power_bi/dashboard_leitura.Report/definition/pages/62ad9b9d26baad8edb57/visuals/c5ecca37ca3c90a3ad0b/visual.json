@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.15.0/schema.json",
   "name": "c5ecca37ca3c90a3ad0b",
   "position": {
     "x": 1283.4366415767827,
@@ -151,7 +151,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Velocidade de Conclusão'"
+                  "Value": "'Ritmo Médio (Págs/Dia)'"
                 }
               }
             }

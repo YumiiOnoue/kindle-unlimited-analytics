@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.15.0/schema.json",
   "name": "3c876ce7908e4609ddc0",
   "position": {
     "x": 1608.9839327577333,
@@ -99,7 +99,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Aproveitamento Financeiro Mensal'"
+                  "Value": "'Taxa de Retorno Mensal (Payback)'"
                 }
               }
             },

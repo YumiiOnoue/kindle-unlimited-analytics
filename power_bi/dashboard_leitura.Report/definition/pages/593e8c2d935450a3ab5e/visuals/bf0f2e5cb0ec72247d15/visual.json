@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.15.0/schema.json",
   "name": "bf0f2e5cb0ec72247d15",
   "position": {
     "x": 1301.8362478819483,
@@ -119,7 +119,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Meses sem Conclusão de Livros no Kindle+'"
+                  "Value": "'Meses sem Leituras Concluídas'"
                 }
               }
             },

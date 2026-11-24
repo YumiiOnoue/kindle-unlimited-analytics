@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.15.0/schema.json",
   "name": "dcd5eecdc391412dd463",
   "position": {
     "x": 1428.6337968015944,
@@ -228,6 +228,13 @@
                       "Value": "'#666666'"
                     }
                   }
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Tempo Médio de Leitura por Categoria (Dias)'"
                 }
               }
             }

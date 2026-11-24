@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.15.0/schema.json",
   "name": "ab85de3fe0a5aa9cccab",
   "position": {
     "x": 1138.5017459455264,
@@ -10,7 +10,7 @@
     "tabOrder": 2000
   },
   "visual": {
-    "visualType": "lineChart",
+    "visualType": "columnChart",
     "query": {
       "queryState": {
         "Category": {
@@ -23,11 +23,11 @@
                       "Entity": "dim_calendario"
                     }
                   },
-                  "Property": "AnoMes"
+                  "Property": "Ano"
                 }
               },
-              "queryRef": "dim_calendario.AnoMes",
-              "nativeQueryRef": "AnoMes",
+              "queryRef": "dim_calendario.Ano",
+              "nativeQueryRef": "Ano",
               "active": true
             }
           ]
@@ -36,22 +36,17 @@
           "projections": [
             {
               "field": {
-                "Aggregation": {
+                "Measure": {
                   "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "book_analytics fato_assinatura"
-                        }
-                      },
-                      "Property": "valor_mensal"
+                    "SourceRef": {
+                      "Entity": "Medidas"
                     }
                   },
-                  "Function": 0
+                  "Property": "Custo Total Assinatura"
                 }
               },
-              "queryRef": "Sum(book_analytics fato_assinatura.valor_mensal)",
-              "nativeQueryRef": "Soma de valor_mensal"
+              "queryRef": "Medidas.Custo Total Assinatura",
+              "nativeQueryRef": "Custo Total Assinatura"
             },
             {
               "field": {
@@ -64,11 +59,30 @@
                   "Property": "Custo Total Compras Lidos"
                 }
               },
-              "queryRef": "medidas.Custo Total Compras Lidos",
-              "nativeQueryRef": "Custo Total Compras Lidos"
+              "queryRef": "Medidas.Custo Total Compras Lidos",
+              "nativeQueryRef": "Custo Total Compras Avulsas",
+              "displayName": "Custo Total Compras Avulsas"
             }
           ]
         }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Medidas"
+                  }
+                },
+                "Property": "Custo Total Assinatura"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
       }
     },
     "objects": {
@@ -187,6 +201,63 @@
           "selector": {
             "metadata": "CountNonNull(book_analytics fato_assinatura.valor_mensal)"
           }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#E07A5F'"
+                    }
+                  }
+                }
+              }
+            },
+            "fillTransparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "50D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Medidas.Custo Total Assinatura"
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#2E473B'"
+                    }
+                  }
+                }
+              }
+            },
+            "fillTransparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "50D"
+                }
+              }
+            },
+            "borderShow": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Medidas.Custo Total Compras Lidos"
+          }
         }
       ],
       "legend": [
@@ -199,53 +270,6 @@
                 }
               }
             }
-          }
-        }
-      ],
-      "seriesLabels": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "lineStyles": [
-        {
-          "properties": {
-            "showMarker": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "markerSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "5D"
-                }
-              }
-            }
-          }
-        },
-        {
-          "properties": {
-            "showMarker": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "medidas.Investimento Acumulado KU"
           }
         }
       ]
@@ -283,7 +307,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Compras vs Assinatura'"
+                  "Value": "'Gasto Anual: Compras Avulsas vs. Assinatura'"
                 }
               }
             },

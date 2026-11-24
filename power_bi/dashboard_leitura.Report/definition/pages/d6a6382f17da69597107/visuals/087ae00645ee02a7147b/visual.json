@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.15.0/schema.json",
   "name": "087ae00645ee02a7147b",
   "position": {
     "x": 369.96539147978581,
@@ -78,7 +78,8 @@
                 }
               },
               "queryRef": "medidas.Custo KU por Livro Concluido",
-              "nativeQueryRef": "Custo KU por Livro Concluido"
+              "nativeQueryRef": "Custo por Livro Concluído",
+              "displayName": "Custo por Livro Concluído"
             }
           ]
         },
@@ -96,7 +97,8 @@
                 }
               },
               "queryRef": "medidas.Custo Total Assinatura",
-              "nativeQueryRef": "Custo Total Assinatura"
+              "nativeQueryRef": "Mensalidade",
+              "displayName": "Mensalidade"
             }
           ]
         }
@@ -393,7 +395,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Identificação de meses de baixo aproveitamento'"
+                  "Value": "'Identificação de Meses de Baixo Aproveitamento do Kindle+'"
                 }
               }
             },

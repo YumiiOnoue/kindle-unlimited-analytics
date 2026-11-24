@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.15.0/schema.json",
   "name": "bb89633c779992227220",
   "position": {
     "x": 349.67546000768164,
@@ -64,7 +64,8 @@
                 }
               },
               "queryRef": "medidas.Livros KU Concluidos",
-              "nativeQueryRef": "Livros KU Concluidos"
+              "nativeQueryRef": "Kindle+",
+              "displayName": "Kindle+"
             },
             {
               "field": {
@@ -78,7 +79,8 @@
                 }
               },
               "queryRef": "medidas.Livros Concluidos Outras Origens",
-              "nativeQueryRef": "Livros Concluidos Outras Origens"
+              "nativeQueryRef": "Outras Origens",
+              "displayName": "Outras Origens"
             }
           ]
         }
@@ -309,6 +311,20 @@
               }
             }
           }
+        },
+        {
+          "properties": {
+            "showSeries": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "medidas.Livros KU Concluidos"
+          }
         }
       ],
       "totals": [
@@ -366,7 +382,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Top Categorias Mais Lidos'"
+                  "Value": "'Categorias Mais Lidas por Origem'"
                 }
               }
             },

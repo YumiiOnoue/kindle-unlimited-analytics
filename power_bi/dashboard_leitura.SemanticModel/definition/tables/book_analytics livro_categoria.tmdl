@@ -28,3 +28,5 @@ table 'book_analytics livro_categoria'
 				in
 				  #"Navegação 1"
 
+	annotation PBI_ResultType = Table
+

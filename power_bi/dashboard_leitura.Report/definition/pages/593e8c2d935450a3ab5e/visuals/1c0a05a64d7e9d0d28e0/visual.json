@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.15.0/schema.json",
   "name": "1c0a05a64d7e9d0d28e0",
   "position": {
     "x": 1090.4266122526456,
@@ -217,7 +217,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Distribuição de utilização mensal do Kindle+'"
+                  "Value": "'Quantidade Mensal de Livros Concluídos no Kindle+'"
                 }
               }
             }

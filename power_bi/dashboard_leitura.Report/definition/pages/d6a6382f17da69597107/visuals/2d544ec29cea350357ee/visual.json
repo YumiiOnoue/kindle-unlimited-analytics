@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.15.0/schema.json",
   "name": "2d544ec29cea350357ee",
   "position": {
     "x": 394.75688678513228,
@@ -143,7 +143,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Total de Mensalidades Pagos'"
+                  "Value": "'Total de Mensalidades Pagas'"
                 }
               }
             }

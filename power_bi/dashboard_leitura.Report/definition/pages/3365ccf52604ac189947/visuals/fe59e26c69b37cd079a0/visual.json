@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.15.0/schema.json",
   "name": "fe59e26c69b37cd079a0",
   "position": {
     "x": 348.98797237526185,
@@ -299,6 +299,20 @@
                   "Value": "'Top'"
                 }
               }
+            },
+            "legendMarkerRendering": {
+              "expr": {
+                "Literal": {
+                  "Value": "'markerCircleDefault'"
+                }
+              }
+            },
+            "showTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
             }
           }
         }
@@ -551,7 +565,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Comparação de Nota Média: Kindle+ vs. Outras Origens'"
+                  "Value": "'Avaliação Média por Categoria: Kindle+ vs. Outras Origens'"
                 }
               }
             }

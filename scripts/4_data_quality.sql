@@ -199,7 +199,7 @@ WHERE
         AND data_fim IS NOT NULL
     )
     OR (
-        status_leitura IN ('Lido', 'Abandonado')
+        status_leitura = 'Lido'
         AND data_fim IS NULL
     );
 

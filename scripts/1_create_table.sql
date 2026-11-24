@@ -62,7 +62,7 @@ CREATE TABLE IF NOT EXISTS fato_assinatura (
 -- =========================================================
 -- 5. TABELA FATO: fato_leituras
 -- =========================================================
--- Registra o evento de leitura, formato, custos e avaliação final
+-- Registra o evento de leitura, formato e avaliação final
 CREATE TABLE IF NOT EXISTS fato_leituras (
     id_leitura INT PRIMARY KEY AUTO_INCREMENT,
     id_livro INT NOT NULL,

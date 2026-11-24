@@ -26,7 +26,7 @@ assinaturas_ano AS (
         YEAR(mes_referencia) AS ano,
         SUM(valor_mensal) AS total_assinaturas
     FROM fato_assinatura
-    WHERE servico = 'Kindle Unlimited'
+    WHERE servico = 'Kindle+'
     GROUP BY YEAR(mes_referencia)
 ),
 anos AS (
@@ -68,7 +68,7 @@ assinaturas_mes AS (
         DATE_FORMAT(mes_referencia, '%Y-%m') AS mes_referencia,
         SUM(valor_mensal) AS custo_assinatura
     FROM fato_assinatura
-    WHERE servico = 'Kindle Unlimited'
+    WHERE servico = 'Kindle+'
     GROUP BY DATE_FORMAT(mes_referencia, '%Y-%m')
 ),
 meses AS (
@@ -95,7 +95,7 @@ WITH leituras_ku_mes AS (
         DATE_FORMAT(data_fim, '%Y-%m') AS mes_referencia,
         COUNT(*) AS livros_concluidos_ku
     FROM fato_leituras
-    WHERE origem_acesso = 'Kindle Unlimited'
+    WHERE origem_acesso = 'Kindle+'
       AND status_leitura = 'Lido'
       AND data_fim IS NOT NULL
     GROUP BY DATE_FORMAT(data_fim, '%Y-%m')
@@ -105,7 +105,7 @@ assinaturas_mes AS (
         DATE_FORMAT(mes_referencia, '%Y-%m') AS mes_referencia,
         SUM(valor_mensal) AS custo_assinatura
     FROM fato_assinatura
-    WHERE servico = 'Kindle Unlimited'
+    WHERE servico = 'Kindle+'
     GROUP BY DATE_FORMAT(mes_referencia, '%Y-%m')
 )
 SELECT
@@ -129,7 +129,7 @@ SELECT
     ROUND(AVG(fl.nota), 2) AS nota_media
 FROM fato_leituras fl
 INNER JOIN dim_livros dl ON fl.id_livro = dl.id_livro
-WHERE fl.origem_acesso = 'Kindle Unlimited'
+WHERE fl.origem_acesso = 'Kindle+'
   AND fl.status_leitura = 'Lido'
   AND fl.data_fim IS NOT NULL
 GROUP BY DATE_FORMAT(fl.data_fim, '%Y-%m')
@@ -146,7 +146,7 @@ WITH valor_livros_mes AS (
         COUNT(NULLIF(dl.preco_digital, 0)) AS qtd_precos_digitais_conhecidos
     FROM fato_leituras fl
     INNER JOIN dim_livros dl ON fl.id_livro = dl.id_livro
-    WHERE fl.origem_acesso = 'Kindle Unlimited'
+    WHERE fl.origem_acesso = 'Kindle+'
       AND fl.status_leitura = 'Lido'
       AND fl.data_fim IS NOT NULL
     GROUP BY DATE_FORMAT(fl.data_fim, '%Y-%m')
@@ -156,7 +156,7 @@ assinaturas_mes AS (
         DATE_FORMAT(mes_referencia, '%Y-%m') AS mes_referencia,
         SUM(valor_mensal) AS custo_assinatura
     FROM fato_assinatura
-    WHERE servico = 'Kindle Unlimited'
+    WHERE servico = 'Kindle+'
     GROUP BY DATE_FORMAT(mes_referencia, '%Y-%m')
 )
 SELECT

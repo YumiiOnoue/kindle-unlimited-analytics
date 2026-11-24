@@ -71,13 +71,13 @@ ORDER BY total_registros DESC;
 SELECT
     f.motivacao_leitura,
     COUNT(*) AS total_registros,
-    SUM(f.origem_acesso = 'Kindle Unlimited') AS registros_via_ku,
+    SUM(f.origem_acesso = 'Kindle+') AS registros_via_ku,
     SUM(f.origem_acesso = 'Compra') AS registros_com_origem_compra,
     ROUND(AVG(NULLIF(d.preco_digital, 0)), 2) AS preco_digital_medio,
     ROUND(AVG(NULLIF(d.preco_fisico, 0)), 2) AS preco_fisico_medio,
     ROUND(AVG(f.nota), 2) AS nota_media,
     ROUND(SUM(CASE
-        WHEN f.origem_acesso = 'Kindle Unlimited' AND f.motivacao_leitura = 'Sim'
+        WHEN f.origem_acesso = 'Kindle+' AND f.motivacao_leitura = 'Sim'
         THEN COALESCE(NULLIF(d.preco_digital, 0), 0)
         ELSE 0
     END), 2) AS soma_referencia_digital_conhecida_para_intencao_sim
@@ -98,7 +98,7 @@ SELECT
         ELSE 'R$ 50 ou mais'
     END AS faixa_preco_digital,
     COUNT(*) AS total_registros,
-    SUM(f.origem_acesso = 'Kindle Unlimited') AS registros_via_ku,
+    SUM(f.origem_acesso = 'Kindle+') AS registros_via_ku,
     SUM(f.motivacao_leitura = 'Sim') AS motivacao_leitura_sim,
     ROUND(AVG(f.nota), 2) AS nota_media
 FROM fato_leituras f

@@ -22,7 +22,7 @@ SELECT
     ROUND(AVG(DATEDIFF(data_fim, data_inicio) + 1), 1) AS media_dias_leitura,
     SUM(formato = 'Digital') AS leituras_digitais,
     SUM(formato = 'Físico') AS leituras_fisicas,
-    SUM(origem_acesso = 'Kindle Unlimited') AS leituras_via_ku
+    SUM(origem_acesso = 'Kindle+') AS leituras_via_ku
 FROM fato_leituras
 WHERE status_leitura = 'Lido'
   AND data_fim IS NOT NULL

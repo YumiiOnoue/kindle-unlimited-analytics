@@ -1731,7 +1731,7 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "medidas.livros_intencao_previa": {
+			    "medida.livros_intencao_previa": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Medidas",
@@ -1740,6 +1740,11 @@ cultureInfo pt-BR
 			      },
 			      "State": "Generated",
 			      "Terms": [
+			        {
+			          "livros intencao previa": {
+			            "State": "Generated"
+			          }
+			        },
 			        {
 			          "Intenção Prévia": {
 			            "State": "Suggested",
@@ -1752,7 +1757,7 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "medidas.livros_descoberta": {
+			    "medida.livros_descoberta": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Medidas",
@@ -1761,6 +1766,11 @@ cultureInfo pt-BR
 			      },
 			      "State": "Generated",
 			      "Terms": [
+			        {
+			          "livros descoberta": {
+			            "State": "Generated"
+			          }
+			        },
 			        {
 			          "Descoberta": {
 			            "State": "Suggested",
@@ -1773,7 +1783,7 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "medidas.nota_media_ku": {
+			    "medida.nota_media_kindle": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Medidas",
@@ -1782,6 +1792,11 @@ cultureInfo pt-BR
 			      },
 			      "State": "Generated",
 			      "Terms": [
+			        {
+			          "nota media kindle+": {
+			            "State": "Generated"
+			          }
+			        },
 			        {
 			          "Kindle+": {
 			            "State": "Suggested",
@@ -1794,7 +1809,7 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "medidas.nota_media_outras_origens": {
+			    "medida.nota_media_outras_origens": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Medidas",
@@ -1804,6 +1819,11 @@ cultureInfo pt-BR
 			      "State": "Generated",
 			      "Terms": [
 			        {
+			          "nota media outras origens": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
 			          "Outras Origens": {
 			            "State": "Suggested",
 			            "Source": {
@@ -1811,6 +1831,1216 @@ cultureInfo pt-BR
 			              "Agent": "PowerBI.VisualColumnRename"
 			            },
 			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "book_analytics_dim_livro.id_externo": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "book_analytics dim_livros",
+			          "ConceptualProperty": "id_externo"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "id externo": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "id_externo": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "identification externo": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "identity externo": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "identifier externo": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "credential externo": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "medida": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "medida": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida.column": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Column"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "column": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "pilaster": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "pier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "pillar": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "post": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "support": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "stake": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "pole": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "buttress": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "underpinning": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "contribution": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        }
+			      ]
+			    },
+			    "medida.livros_concluidos": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Livros Concluidos"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "livros concluidos": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida.livros_em_andamento": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Livros Em Andamento"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "livros em andamento": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida.livros_abandonados": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Livros Abandonados"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "livros abandonados": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida.tempo_medio_leitura_dias": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Tempo Medio Leitura (Dias)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "tempo medio leitura (dias)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "tempo medio leitura": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        }
+			      ]
+			    },
+			    "medida.custo_total_assinatura": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Custo Total Assinatura"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "custo total assinatura": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "custo aggregate assinatura": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "custo overall assinatura": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "Mensalidade": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "medida.meta_leitura": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "meta_leitura"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "meta leitura": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "meta_leitura": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "medida.livros_kindle_concluidos": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Livros Kindle+ Concluidos"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "livros kindle+ concluidos": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Kindle+": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "medida.custo_kindle_por_livro_concluido": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Custo Kindle+ por Livro Concluido"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "custo kindle+ por livro concluido": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Custo por Livro Concluído": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "medida.valor_referencia_digital_kindle": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Valor Referencia Digital Kindle+"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "valor referencia digital kindle+": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida.diferenca_referencia_vs_kindle": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Diferenca Referencia vs Kindle+"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "diferenca referencia vs kindle+": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida.multiplo_referencia_vs_kindle": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Multiplo Referencia vs Kindle+"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "multiplo referencia vs kindle+": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida.nota_media": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Nota Media"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "nota media": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "media": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "notum television": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "notum radio": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "notum broadcasting": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "television": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "radio": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "broadcasting": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "notum vehicle": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "notum mode": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "notum method": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "notum avenue": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        }
+			      ]
+			    },
+			    "medida.nota_media_livros_concluidos": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Nota Media Livros Concluidos"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "nota media livros concluidos": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida.titulos_distintos_concluidos": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Titulos Distintos Concluidos"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "titulos distintos concluidos": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida.leituras_iniciadas": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Leituras Iniciadas"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "leituras iniciadas": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida.total_de_leituras": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Total de Leituras"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "total de leituras": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "aggregate de leitura": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "overall de leitura": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ]
+			    },
+			    "medida.percentual_concluído": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Percentual Concluído"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "percentual concluído": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida.total_de_páginas_lidas": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Total de Páginas Lidas"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "total de páginas lidas": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "aggregate de página lida": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "overall de página lida": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        }
+			      ]
+			    },
+			    "medida.média_de_páginas_por_livro": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Média de Páginas por Livro"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "média de páginas por livro": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida.gasto_total_registrado": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Gasto Total Registrado"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "gasto total registrado": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "gasto aggregate registrado": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "gasto overall registrado": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ]
+			    },
+			    "medida.gastos_efetivos_com_compras": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Gastos Efetivos com Compras"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "gastos efetivos com compras": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida.livros_lidos_com_motivação_de_leitura": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Livros Lidos com Motivação de Leitura"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "livros lidos com motivação de leitura": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida.livros_com_motivação_de_leitura": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "% Livros com Motivação de Leitura"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "% livros com motivação de leitura": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida.meses_sem_conclusão_kindle": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Meses Sem Conclusão Kindle+"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "meses sem conclusão kindle+": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida.meses_assinados_kindle": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Meses Assinados Kindle+"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "meses assinados kindle+": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida.valor_referencia_acumulado_kindle": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Valor Referencia Acumulado Kindle+"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "valor referencia acumulado kindle+": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Valor de Referencia Acumulado": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "medida.investimento_acumulado_kindle": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Investimento Acumulado Kindle+"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "investimento acumulado kindle+": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Investimento Acumulado": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "medida.custo_total_compras_lidos": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Custo Total Compras Lidos"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "custo total compras lidos": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "custo aggregate compra lido": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "custo overall compra lido": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "Custo Total Compras Avulsas": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "medida.cor_aproveitamento_kindle": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Cor Aproveitamento Kindle+"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "cor aproveitamento kindle+": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida.meses_cobertos_kindle": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Meses Cobertos Kindle+"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "meses cobertos kindle+": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida.mensalidades_cobertas_kindle": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "% Mensalidades Cobertas Kindle+"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "% mensalidades cobertas kindle+": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "percentage mensalidade coberta kindle+": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.624
+			          }
+			        },
+			        {
+			          "pct mensalidade coberta kindle+": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        }
+			      ]
+			    },
+			    "medida.subtitulo_economia_kindle": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Subtitulo Economia Kindle+"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "subtitulo economia kindle+": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida.subtitulo_mensalidades_cobertas": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Subtitulo Mensalidades Cobertas"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "subtitulo mensalidades cobertas": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida.total_de_categorias": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Total de Categorias"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "total de categorias": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "aggregate de categoria": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "overall de categoria": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ]
+			    },
+			    "medida.livros_concluidos_outras_origens": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Livros Concluidos Outras Origens"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "livros concluidos outras origens": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Outras Origens": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "medida.descoberta_categoria": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "% Descoberta Categoria"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "% descoberta categoria": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "percentage descoberta categoria": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "pct descoberta categoria": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ]
+			    },
+			    "medida.notas_em_ambas_origens": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Notas em Ambas Origens"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "notas em ambas origens": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida.total_autores_lidos": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Total Autores Lidos"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "total autores lidos": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "aggregate autore lido": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "overall autore lido": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ]
+			    },
+			    "medida.total_editoras": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Total Editoras"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "total editoras": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "aggregate editora": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "overall editora": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
 			          }
 			        }
 			      ]
@@ -1955,6 +3185,72 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
+			    "book_analytics_dim_livro_has_medida_total_editoras": {
+			      "Binding": {
+			        "ConceptualEntity": "book_analytics dim_livros"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "book_analytics_dim_livro": {
+			          "Target": {
+			            "Entity": "book_analytics_dim_livro"
+			          }
+			        },
+			        "medida.total_editoras": {
+			          "Target": {
+			            "Entity": "medida.total_editoras"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "book_analytics_dim_livro"
+			            },
+			            "Object": {
+			              "Role": "medida.total_editoras"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "book_analytics_dim_livros_have_total_editoras"
+			        }
+			      ]
+			    },
+			    "book_analytics_dim_livro_has_medida_total_autores_lidos": {
+			      "Binding": {
+			        "ConceptualEntity": "book_analytics dim_livros"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "book_analytics_dim_livro": {
+			          "Target": {
+			            "Entity": "book_analytics_dim_livro"
+			          }
+			        },
+			        "medida.total_autores_lidos": {
+			          "Target": {
+			            "Entity": "medida.total_autores_lidos"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "book_analytics_dim_livro"
+			            },
+			            "Object": {
+			              "Role": "medida.total_autores_lidos"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "book_analytics_dim_livros_have_total_autores_lidos"
+			        }
+			      ]
+			    },
 			    "book_analytics_fato_leitura_has_medida_notas_em_ambas_origens": {
 			      "Binding": {
 			        "ConceptualEntity": "book_analytics fato_leituras"
@@ -1988,72 +3284,6 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "consulta_has_texto_atualizacao": {
-			      "Binding": {
-			        "ConceptualEntity": "Consulta"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "consulta": {
-			          "Target": {
-			            "Entity": "consulta"
-			          }
-			        },
-			        "consulta.texto_atualizacao": {
-			          "Target": {
-			            "Entity": "consulta.texto_atualizacao"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "consulta"
-			            },
-			            "Object": {
-			              "Role": "consulta.texto_atualizacao"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "consultas_have_texto_atualizacao"
-			        }
-			      ]
-			    },
-			    "consulta_has_ultima_atualizacao": {
-			      "Binding": {
-			        "ConceptualEntity": "Consulta"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "consulta": {
-			          "Target": {
-			            "Entity": "consulta"
-			          }
-			        },
-			        "consulta.ultima_atualizacao": {
-			          "Target": {
-			            "Entity": "consulta.ultima_atualizacao"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "consulta"
-			            },
-			            "Object": {
-			              "Role": "consulta.ultima_atualizacao"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "consultas_have_ultima_atualizacaos"
-			        }
-			      ]
-			    },
 			    "book_analytics_fato_leitura_has_medida_descoberta_categoria": {
 			      "Binding": {
 			        "ConceptualEntity": "book_analytics fato_leituras"
@@ -2084,105 +3314,6 @@ cultureInfo pt-BR
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "book_analytics_fato_leituras_have__descoberta_categoria"
-			        }
-			      ]
-			    },
-			    "book_analytics_fato_leitura_has_medida_livros_descoberta": {
-			      "Binding": {
-			        "ConceptualEntity": "book_analytics fato_leituras"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "book_analytics_fato_leitura": {
-			          "Target": {
-			            "Entity": "book_analytics_fato_leitura"
-			          }
-			        },
-			        "medida.livros_descoberta": {
-			          "Target": {
-			            "Entity": "medida.livros_descoberta"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "book_analytics_fato_leitura"
-			            },
-			            "Object": {
-			              "Role": "medida.livros_descoberta"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "book_analytics_fato_leituras_have_livros_descoberta"
-			        }
-			      ]
-			    },
-			    "book_analytics_fato_leitura_has_medida_livros_intencao_previa": {
-			      "Binding": {
-			        "ConceptualEntity": "book_analytics fato_leituras"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "book_analytics_fato_leitura": {
-			          "Target": {
-			            "Entity": "book_analytics_fato_leitura"
-			          }
-			        },
-			        "medida.livros_intencao_previa": {
-			          "Target": {
-			            "Entity": "medida.livros_intencao_previa"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "book_analytics_fato_leitura"
-			            },
-			            "Object": {
-			              "Role": "medida.livros_intencao_previa"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "book_analytics_fato_leituras_have_livros_intencao_previa"
-			        }
-			      ]
-			    },
-			    "book_analytics_fato_leitura_has_medida_nota_media_KU": {
-			      "Binding": {
-			        "ConceptualEntity": "book_analytics fato_leituras"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "book_analytics_fato_leitura": {
-			          "Target": {
-			            "Entity": "book_analytics_fato_leitura"
-			          }
-			        },
-			        "medida.nota_media_KU": {
-			          "Target": {
-			            "Entity": "medida.nota_media_KU"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "book_analytics_fato_leitura"
-			            },
-			            "Object": {
-			              "Role": "medida.nota_media_KU"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "book_analytics_fato_leituras_have_nota_media_KU"
 			        }
 			      ]
 			    },
@@ -2318,7 +3449,7 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "book_analytics_fato_leitura_has_medida_subtitulo_economia_KU": {
+			    "book_analytics_fato_leitura_has_medida_subtitulo_economia_kindle": {
 			      "Binding": {
 			        "ConceptualEntity": "book_analytics fato_leituras"
 			      },
@@ -2329,9 +3460,9 @@ cultureInfo pt-BR
 			            "Entity": "book_analytics_fato_leitura"
 			          }
 			        },
-			        "medida.subtitulo_economia_KU": {
+			        "medida.subtitulo_economia_kindle": {
 			          "Target": {
-			            "Entity": "medida.subtitulo_economia_KU"
+			            "Entity": "medida.subtitulo_economia_kindle"
 			          }
 			        }
 			      },
@@ -2342,16 +3473,16 @@ cultureInfo pt-BR
 			              "Role": "book_analytics_fato_leitura"
 			            },
 			            "Object": {
-			              "Role": "medida.subtitulo_economia_KU"
+			              "Role": "medida.subtitulo_economia_kindle"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "book_analytics_fato_leituras_have_subtitulo_economia_KU"
+			          "ID": "book_analytics_fato_leituras_have_subtitulo_economia_kindle"
 			        }
 			      ]
 			    },
-			    "book_analytics_fato_assinatura_has_medida_subtitulo_economia_KU": {
+			    "book_analytics_fato_assinatura_has_medida_subtitulo_economia_kindle": {
 			      "Binding": {
 			        "ConceptualEntity": "book_analytics fato_assinatura"
 			      },
@@ -2362,9 +3493,9 @@ cultureInfo pt-BR
 			            "Entity": "book_analytics_fato_assinatura"
 			          }
 			        },
-			        "medida.subtitulo_economia_KU": {
+			        "medida.subtitulo_economia_kindle": {
 			          "Target": {
-			            "Entity": "medida.subtitulo_economia_KU"
+			            "Entity": "medida.subtitulo_economia_kindle"
 			          }
 			        }
 			      },
@@ -2375,16 +3506,16 @@ cultureInfo pt-BR
 			              "Role": "book_analytics_fato_assinatura"
 			            },
 			            "Object": {
-			              "Role": "medida.subtitulo_economia_KU"
+			              "Role": "medida.subtitulo_economia_kindle"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "book_analytics_fato_assinaturas_have_subtitulo_economia_KU"
+			          "ID": "book_analytics_fato_assinaturas_have_subtitulo_economia_kindle"
 			        }
 			      ]
 			    },
-			    "book_analytics_dim_livro_has_medida_subtitulo_economia_KU": {
+			    "book_analytics_dim_livro_has_medida_subtitulo_economia_kindle": {
 			      "Binding": {
 			        "ConceptualEntity": "book_analytics dim_livros"
 			      },
@@ -2395,9 +3526,9 @@ cultureInfo pt-BR
 			            "Entity": "book_analytics_dim_livro"
 			          }
 			        },
-			        "medida.subtitulo_economia_KU": {
+			        "medida.subtitulo_economia_kindle": {
 			          "Target": {
-			            "Entity": "medida.subtitulo_economia_KU"
+			            "Entity": "medida.subtitulo_economia_kindle"
 			          }
 			        }
 			      },
@@ -2408,16 +3539,16 @@ cultureInfo pt-BR
 			              "Role": "book_analytics_dim_livro"
 			            },
 			            "Object": {
-			              "Role": "medida.subtitulo_economia_KU"
+			              "Role": "medida.subtitulo_economia_kindle"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "book_analytics_dim_livros_have_subtitulo_economia_KU"
+			          "ID": "book_analytics_dim_livros_have_subtitulo_economia_kindle"
 			        }
 			      ]
 			    },
-			    "dim_calendario_has_medida_mensalidades_cobertas_KU": {
+			    "dim_calendario_has_medida_mensalidades_cobertas_kindle": {
 			      "Binding": {
 			        "ConceptualEntity": "dim_calendario"
 			      },
@@ -2428,9 +3559,9 @@ cultureInfo pt-BR
 			            "Entity": "dim_calendario"
 			          }
 			        },
-			        "medida.mensalidades_cobertas_KU": {
+			        "medida.mensalidades_cobertas_kindle": {
 			          "Target": {
-			            "Entity": "medida.mensalidades_cobertas_KU"
+			            "Entity": "medida.mensalidades_cobertas_kindle"
 			          }
 			        }
 			      },
@@ -2441,16 +3572,16 @@ cultureInfo pt-BR
 			              "Role": "dim_calendario"
 			            },
 			            "Object": {
-			              "Role": "medida.mensalidades_cobertas_KU"
+			              "Role": "medida.mensalidades_cobertas_kindle"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "dim_calendarios_have__mensalidades_cobertas_KU"
+			          "ID": "dim_calendarios_have__mensalidades_cobertas_kindle"
 			        }
 			      ]
 			    },
-			    "book_analytics_fato_assinatura_has_medida_mensalidades_cobertas_KU": {
+			    "book_analytics_fato_assinatura_has_medida_mensalidades_cobertas_kindle": {
 			      "Binding": {
 			        "ConceptualEntity": "book_analytics fato_assinatura"
 			      },
@@ -2461,9 +3592,9 @@ cultureInfo pt-BR
 			            "Entity": "book_analytics_fato_assinatura"
 			          }
 			        },
-			        "medida.mensalidades_cobertas_KU": {
+			        "medida.mensalidades_cobertas_kindle": {
 			          "Target": {
-			            "Entity": "medida.mensalidades_cobertas_KU"
+			            "Entity": "medida.mensalidades_cobertas_kindle"
 			          }
 			        }
 			      },
@@ -2474,16 +3605,16 @@ cultureInfo pt-BR
 			              "Role": "book_analytics_fato_assinatura"
 			            },
 			            "Object": {
-			              "Role": "medida.mensalidades_cobertas_KU"
+			              "Role": "medida.mensalidades_cobertas_kindle"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "book_analytics_fato_assinaturas_have__mensalidades_cobertas_KU"
+			          "ID": "book_analytics_fato_assinaturas_have__mensalidades_cobertas_kindle"
 			        }
 			      ]
 			    },
-			    "dim_calendario_has_medida_meses_cobertos_KU": {
+			    "dim_calendario_has_medida_meses_cobertos_kindle": {
 			      "Binding": {
 			        "ConceptualEntity": "dim_calendario"
 			      },
@@ -2494,9 +3625,9 @@ cultureInfo pt-BR
 			            "Entity": "dim_calendario"
 			          }
 			        },
-			        "medida.meses_cobertos_KU": {
+			        "medida.meses_cobertos_kindle": {
 			          "Target": {
-			            "Entity": "medida.meses_cobertos_KU"
+			            "Entity": "medida.meses_cobertos_kindle"
 			          }
 			        }
 			      },
@@ -2507,16 +3638,16 @@ cultureInfo pt-BR
 			              "Role": "dim_calendario"
 			            },
 			            "Object": {
-			              "Role": "medida.meses_cobertos_KU"
+			              "Role": "medida.meses_cobertos_kindle"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "dim_calendarios_have_meses_cobertos_KU"
+			          "ID": "dim_calendarios_have_meses_cobertos_kindle"
 			        }
 			      ]
 			    },
-			    "book_analytics_fato_leitura_has_medida_cor_aproveitamento_KU": {
+			    "book_analytics_fato_leitura_has_medida_cor_aproveitamento_kindle": {
 			      "Binding": {
 			        "ConceptualEntity": "book_analytics fato_leituras"
 			      },
@@ -2527,9 +3658,9 @@ cultureInfo pt-BR
 			            "Entity": "book_analytics_fato_leitura"
 			          }
 			        },
-			        "medida.cor_aproveitamento_KU": {
+			        "medida.cor_aproveitamento_kindle": {
 			          "Target": {
-			            "Entity": "medida.cor_aproveitamento_KU"
+			            "Entity": "medida.cor_aproveitamento_kindle"
 			          }
 			        }
 			      },
@@ -2540,16 +3671,16 @@ cultureInfo pt-BR
 			              "Role": "book_analytics_fato_leitura"
 			            },
 			            "Object": {
-			              "Role": "medida.cor_aproveitamento_KU"
+			              "Role": "medida.cor_aproveitamento_kindle"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "book_analytics_fato_leituras_have_cor_aproveitamento_KU"
+			          "ID": "book_analytics_fato_leituras_have_cor_aproveitamento_kindle"
 			        }
 			      ]
 			    },
-			    "book_analytics_fato_assinatura_has_medida_cor_aproveitamento_KU": {
+			    "book_analytics_fato_assinatura_has_medida_cor_aproveitamento_kindle": {
 			      "Binding": {
 			        "ConceptualEntity": "book_analytics fato_assinatura"
 			      },
@@ -2560,9 +3691,9 @@ cultureInfo pt-BR
 			            "Entity": "book_analytics_fato_assinatura"
 			          }
 			        },
-			        "medida.cor_aproveitamento_KU": {
+			        "medida.cor_aproveitamento_kindle": {
 			          "Target": {
-			            "Entity": "medida.cor_aproveitamento_KU"
+			            "Entity": "medida.cor_aproveitamento_kindle"
 			          }
 			        }
 			      },
@@ -2573,16 +3704,16 @@ cultureInfo pt-BR
 			              "Role": "book_analytics_fato_assinatura"
 			            },
 			            "Object": {
-			              "Role": "medida.cor_aproveitamento_KU"
+			              "Role": "medida.cor_aproveitamento_kindle"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "book_analytics_fato_assinaturas_have_cor_aproveitamento_KU"
+			          "ID": "book_analytics_fato_assinaturas_have_cor_aproveitamento_kindle"
 			        }
 			      ]
 			    },
-			    "book_analytics_dim_livro_has_medida_cor_aproveitamento_KU": {
+			    "book_analytics_dim_livro_has_medida_cor_aproveitamento_kindle": {
 			      "Binding": {
 			        "ConceptualEntity": "book_analytics dim_livros"
 			      },
@@ -2593,9 +3724,9 @@ cultureInfo pt-BR
 			            "Entity": "book_analytics_dim_livro"
 			          }
 			        },
-			        "medida.cor_aproveitamento_KU": {
+			        "medida.cor_aproveitamento_kindle": {
 			          "Target": {
-			            "Entity": "medida.cor_aproveitamento_KU"
+			            "Entity": "medida.cor_aproveitamento_kindle"
 			          }
 			        }
 			      },
@@ -2606,12 +3737,12 @@ cultureInfo pt-BR
 			              "Role": "book_analytics_dim_livro"
 			            },
 			            "Object": {
-			              "Role": "medida.cor_aproveitamento_KU"
+			              "Role": "medida.cor_aproveitamento_kindle"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "book_analytics_dim_livros_have_cor_aproveitamento_KU"
+			          "ID": "book_analytics_dim_livros_have_cor_aproveitamento_kindle"
 			        }
 			      ]
 			    },
@@ -2681,7 +3812,7 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "book_analytics_fato_assinatura_has_medida_investimento_acumulado_KU": {
+			    "book_analytics_fato_assinatura_has_medida_investimento_acumulado_kindle": {
 			      "Binding": {
 			        "ConceptualEntity": "book_analytics fato_assinatura"
 			      },
@@ -2692,9 +3823,9 @@ cultureInfo pt-BR
 			            "Entity": "book_analytics_fato_assinatura"
 			          }
 			        },
-			        "medida.investimento_acumulado_KU": {
+			        "medida.investimento_acumulado_kindle": {
 			          "Target": {
-			            "Entity": "medida.investimento_acumulado_KU"
+			            "Entity": "medida.investimento_acumulado_kindle"
 			          }
 			        }
 			      },
@@ -2705,16 +3836,16 @@ cultureInfo pt-BR
 			              "Role": "book_analytics_fato_assinatura"
 			            },
 			            "Object": {
-			              "Role": "medida.investimento_acumulado_KU"
+			              "Role": "medida.investimento_acumulado_kindle"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "book_analytics_fato_assinaturas_have_investimento_acumulado_KU"
+			          "ID": "book_analytics_fato_assinaturas_have_investimento_acumulado_kindle"
 			        }
 			      ]
 			    },
-			    "book_analytics_fato_leitura_has_medida_valor_referencia_acumulado_KU": {
+			    "book_analytics_fato_leitura_has_medida_valor_referencia_acumulado_kindle": {
 			      "Binding": {
 			        "ConceptualEntity": "book_analytics fato_leituras"
 			      },
@@ -2725,9 +3856,9 @@ cultureInfo pt-BR
 			            "Entity": "book_analytics_fato_leitura"
 			          }
 			        },
-			        "medida.valor_referencia_acumulado_KU": {
+			        "medida.valor_referencia_acumulado_kindle": {
 			          "Target": {
-			            "Entity": "medida.valor_referencia_acumulado_KU"
+			            "Entity": "medida.valor_referencia_acumulado_kindle"
 			          }
 			        }
 			      },
@@ -2738,16 +3869,16 @@ cultureInfo pt-BR
 			              "Role": "book_analytics_fato_leitura"
 			            },
 			            "Object": {
-			              "Role": "medida.valor_referencia_acumulado_KU"
+			              "Role": "medida.valor_referencia_acumulado_kindle"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "book_analytics_fato_leituras_have_valor_referencia_acumulado_KU"
+			          "ID": "book_analytics_fato_leituras_have_valor_referencia_acumulado_kindle"
 			        }
 			      ]
 			    },
-			    "book_analytics_dim_livro_has_medida_valor_referencia_acumulado_KU": {
+			    "book_analytics_dim_livro_has_medida_valor_referencia_acumulado_kindle": {
 			      "Binding": {
 			        "ConceptualEntity": "book_analytics dim_livros"
 			      },
@@ -2758,9 +3889,9 @@ cultureInfo pt-BR
 			            "Entity": "book_analytics_dim_livro"
 			          }
 			        },
-			        "medida.valor_referencia_acumulado_KU": {
+			        "medida.valor_referencia_acumulado_kindle": {
 			          "Target": {
-			            "Entity": "medida.valor_referencia_acumulado_KU"
+			            "Entity": "medida.valor_referencia_acumulado_kindle"
 			          }
 			        }
 			      },
@@ -2771,16 +3902,16 @@ cultureInfo pt-BR
 			              "Role": "book_analytics_dim_livro"
 			            },
 			            "Object": {
-			              "Role": "medida.valor_referencia_acumulado_KU"
+			              "Role": "medida.valor_referencia_acumulado_kindle"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "book_analytics_dim_livros_have_valor_referencia_acumulado_KU"
+			          "ID": "book_analytics_dim_livros_have_valor_referencia_acumulado_kindle"
 			        }
 			      ]
 			    },
-			    "book_analytics_fato_assinatura_has_medida_meses_assinados_KU": {
+			    "book_analytics_fato_assinatura_has_medida_meses_assinados_kindle": {
 			      "Binding": {
 			        "ConceptualEntity": "book_analytics fato_assinatura"
 			      },
@@ -2791,9 +3922,9 @@ cultureInfo pt-BR
 			            "Entity": "book_analytics_fato_assinatura"
 			          }
 			        },
-			        "medida.meses_assinados_KU": {
+			        "medida.meses_assinados_kindle": {
 			          "Target": {
-			            "Entity": "medida.meses_assinados_KU"
+			            "Entity": "medida.meses_assinados_kindle"
 			          }
 			        }
 			      },
@@ -2804,16 +3935,16 @@ cultureInfo pt-BR
 			              "Role": "book_analytics_fato_assinatura"
 			            },
 			            "Object": {
-			              "Role": "medida.meses_assinados_KU"
+			              "Role": "medida.meses_assinados_kindle"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "book_analytics_fato_assinaturas_have_meses_assinados_KU"
+			          "ID": "book_analytics_fato_assinaturas_have_meses_assinados_kindle"
 			        }
 			      ]
 			    },
-			    "dim_calendario_has_medida_meses_sem_conclusão_KU": {
+			    "dim_calendario_has_medida_meses_sem_conclusão_kindle": {
 			      "Binding": {
 			        "ConceptualEntity": "dim_calendario"
 			      },
@@ -2824,9 +3955,9 @@ cultureInfo pt-BR
 			            "Entity": "dim_calendario"
 			          }
 			        },
-			        "medida.meses_sem_conclusão_KU": {
+			        "medida.meses_sem_conclusão_kindle": {
 			          "Target": {
-			            "Entity": "medida.meses_sem_conclusão_KU"
+			            "Entity": "medida.meses_sem_conclusão_kindle"
 			          }
 			        }
 			      },
@@ -2837,45 +3968,12 @@ cultureInfo pt-BR
 			              "Role": "dim_calendario"
 			            },
 			            "Object": {
-			              "Role": "medida.meses_sem_conclusão_KU"
+			              "Role": "medida.meses_sem_conclusão_kindle"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "dim_calendarios_have_meses_sem_conclusão_KU"
-			        }
-			      ]
-			    },
-			    "book_analytics_fato_leitura_has_medida_nota_media_outras_origens": {
-			      "Binding": {
-			        "ConceptualEntity": "book_analytics fato_leituras"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "book_analytics_fato_leitura": {
-			          "Target": {
-			            "Entity": "book_analytics_fato_leitura"
-			          }
-			        },
-			        "medida.nota_media_outras_origens": {
-			          "Target": {
-			            "Entity": "medida.nota_media_outras_origens"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "book_analytics_fato_leitura"
-			            },
-			            "Object": {
-			              "Role": "medida.nota_media_outras_origens"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "book_analytics_fato_leituras_have_nota_media_outras_origens"
+			          "ID": "dim_calendarios_have_meses_sem_conclusão_kindle"
 			        }
 			      ]
 			    },
@@ -3407,7 +4505,7 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "book_analytics_fato_leitura_has_medida_multiplo_referencia_vs_KU": {
+			    "book_analytics_fato_leitura_has_medida_multiplo_referencia_vs_kindle": {
 			      "Binding": {
 			        "ConceptualEntity": "book_analytics fato_leituras"
 			      },
@@ -3418,9 +4516,9 @@ cultureInfo pt-BR
 			            "Entity": "book_analytics_fato_leitura"
 			          }
 			        },
-			        "medida.multiplo_referencia_vs_KU": {
+			        "medida.multiplo_referencia_vs_kindle": {
 			          "Target": {
-			            "Entity": "medida.multiplo_referencia_vs_KU"
+			            "Entity": "medida.multiplo_referencia_vs_kindle"
 			          }
 			        }
 			      },
@@ -3431,16 +4529,16 @@ cultureInfo pt-BR
 			              "Role": "book_analytics_fato_leitura"
 			            },
 			            "Object": {
-			              "Role": "medida.multiplo_referencia_vs_KU"
+			              "Role": "medida.multiplo_referencia_vs_kindle"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "book_analytics_fato_leituras_have_multiplo_referencia_vs_KU"
+			          "ID": "book_analytics_fato_leituras_have_multiplo_referencia_vs_kindle"
 			        }
 			      ]
 			    },
-			    "book_analytics_fato_assinatura_has_medida_multiplo_referencia_vs_KU": {
+			    "book_analytics_fato_assinatura_has_medida_multiplo_referencia_vs_kindle": {
 			      "Binding": {
 			        "ConceptualEntity": "book_analytics fato_assinatura"
 			      },
@@ -3451,9 +4549,9 @@ cultureInfo pt-BR
 			            "Entity": "book_analytics_fato_assinatura"
 			          }
 			        },
-			        "medida.multiplo_referencia_vs_KU": {
+			        "medida.multiplo_referencia_vs_kindle": {
 			          "Target": {
-			            "Entity": "medida.multiplo_referencia_vs_KU"
+			            "Entity": "medida.multiplo_referencia_vs_kindle"
 			          }
 			        }
 			      },
@@ -3464,16 +4562,16 @@ cultureInfo pt-BR
 			              "Role": "book_analytics_fato_assinatura"
 			            },
 			            "Object": {
-			              "Role": "medida.multiplo_referencia_vs_KU"
+			              "Role": "medida.multiplo_referencia_vs_kindle"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "book_analytics_fato_assinaturas_have_multiplo_referencia_vs_KU"
+			          "ID": "book_analytics_fato_assinaturas_have_multiplo_referencia_vs_kindle"
 			        }
 			      ]
 			    },
-			    "book_analytics_dim_livro_has_medida_multiplo_referencia_vs_KU": {
+			    "book_analytics_dim_livro_has_medida_multiplo_referencia_vs_kindle": {
 			      "Binding": {
 			        "ConceptualEntity": "book_analytics dim_livros"
 			      },
@@ -3484,9 +4582,9 @@ cultureInfo pt-BR
 			            "Entity": "book_analytics_dim_livro"
 			          }
 			        },
-			        "medida.multiplo_referencia_vs_KU": {
+			        "medida.multiplo_referencia_vs_kindle": {
 			          "Target": {
-			            "Entity": "medida.multiplo_referencia_vs_KU"
+			            "Entity": "medida.multiplo_referencia_vs_kindle"
 			          }
 			        }
 			      },
@@ -3497,16 +4595,16 @@ cultureInfo pt-BR
 			              "Role": "book_analytics_dim_livro"
 			            },
 			            "Object": {
-			              "Role": "medida.multiplo_referencia_vs_KU"
+			              "Role": "medida.multiplo_referencia_vs_kindle"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "book_analytics_dim_livros_have_multiplo_referencia_vs_KU"
+			          "ID": "book_analytics_dim_livros_have_multiplo_referencia_vs_kindle"
 			        }
 			      ]
 			    },
-			    "book_analytics_fato_leitura_has_medida_diferenca_referencia_vs_KU": {
+			    "book_analytics_fato_leitura_has_medida_diferenca_referencia_vs_kindle": {
 			      "Binding": {
 			        "ConceptualEntity": "book_analytics fato_leituras"
 			      },
@@ -3517,9 +4615,9 @@ cultureInfo pt-BR
 			            "Entity": "book_analytics_fato_leitura"
 			          }
 			        },
-			        "medida.diferenca_referencia_vs_KU": {
+			        "medida.diferenca_referencia_vs_kindle": {
 			          "Target": {
-			            "Entity": "medida.diferenca_referencia_vs_KU"
+			            "Entity": "medida.diferenca_referencia_vs_kindle"
 			          }
 			        }
 			      },
@@ -3530,16 +4628,16 @@ cultureInfo pt-BR
 			              "Role": "book_analytics_fato_leitura"
 			            },
 			            "Object": {
-			              "Role": "medida.diferenca_referencia_vs_KU"
+			              "Role": "medida.diferenca_referencia_vs_kindle"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "book_analytics_fato_leituras_have_diferenca_referencia_vs_KU"
+			          "ID": "book_analytics_fato_leituras_have_diferenca_referencia_vs_kindle"
 			        }
 			      ]
 			    },
-			    "book_analytics_fato_assinatura_has_medida_diferenca_referencia_vs_KU": {
+			    "book_analytics_fato_assinatura_has_medida_diferenca_referencia_vs_kindle": {
 			      "Binding": {
 			        "ConceptualEntity": "book_analytics fato_assinatura"
 			      },
@@ -3550,9 +4648,9 @@ cultureInfo pt-BR
 			            "Entity": "book_analytics_fato_assinatura"
 			          }
 			        },
-			        "medida.diferenca_referencia_vs_KU": {
+			        "medida.diferenca_referencia_vs_kindle": {
 			          "Target": {
-			            "Entity": "medida.diferenca_referencia_vs_KU"
+			            "Entity": "medida.diferenca_referencia_vs_kindle"
 			          }
 			        }
 			      },
@@ -3563,16 +4661,16 @@ cultureInfo pt-BR
 			              "Role": "book_analytics_fato_assinatura"
 			            },
 			            "Object": {
-			              "Role": "medida.diferenca_referencia_vs_KU"
+			              "Role": "medida.diferenca_referencia_vs_kindle"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "book_analytics_fato_assinaturas_have_diferenca_referencia_vs_KU"
+			          "ID": "book_analytics_fato_assinaturas_have_diferenca_referencia_vs_kindle"
 			        }
 			      ]
 			    },
-			    "book_analytics_dim_livro_has_medida_diferenca_referencia_vs_KU": {
+			    "book_analytics_dim_livro_has_medida_diferenca_referencia_vs_kindle": {
 			      "Binding": {
 			        "ConceptualEntity": "book_analytics dim_livros"
 			      },
@@ -3583,9 +4681,9 @@ cultureInfo pt-BR
 			            "Entity": "book_analytics_dim_livro"
 			          }
 			        },
-			        "medida.diferenca_referencia_vs_KU": {
+			        "medida.diferenca_referencia_vs_kindle": {
 			          "Target": {
-			            "Entity": "medida.diferenca_referencia_vs_KU"
+			            "Entity": "medida.diferenca_referencia_vs_kindle"
 			          }
 			        }
 			      },
@@ -3596,16 +4694,16 @@ cultureInfo pt-BR
 			              "Role": "book_analytics_dim_livro"
 			            },
 			            "Object": {
-			              "Role": "medida.diferenca_referencia_vs_KU"
+			              "Role": "medida.diferenca_referencia_vs_kindle"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "book_analytics_dim_livros_have_diferenca_referencia_vs_KU"
+			          "ID": "book_analytics_dim_livros_have_diferenca_referencia_vs_kindle"
 			        }
 			      ]
 			    },
-			    "book_analytics_fato_leitura_has_medida_valor_referencia_digital_KU": {
+			    "book_analytics_fato_leitura_has_medida_valor_referencia_digital_kindle": {
 			      "Binding": {
 			        "ConceptualEntity": "book_analytics fato_leituras"
 			      },
@@ -3616,9 +4714,9 @@ cultureInfo pt-BR
 			            "Entity": "book_analytics_fato_leitura"
 			          }
 			        },
-			        "medida.valor_referencia_digital_KU": {
+			        "medida.valor_referencia_digital_kindle": {
 			          "Target": {
-			            "Entity": "medida.valor_referencia_digital_KU"
+			            "Entity": "medida.valor_referencia_digital_kindle"
 			          }
 			        }
 			      },
@@ -3629,16 +4727,16 @@ cultureInfo pt-BR
 			              "Role": "book_analytics_fato_leitura"
 			            },
 			            "Object": {
-			              "Role": "medida.valor_referencia_digital_KU"
+			              "Role": "medida.valor_referencia_digital_kindle"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "book_analytics_fato_leituras_have_valor_referencia_digital_KU"
+			          "ID": "book_analytics_fato_leituras_have_valor_referencia_digital_kindle"
 			        }
 			      ]
 			    },
-			    "book_analytics_dim_livro_has_medida_valor_referencia_digital_KU": {
+			    "book_analytics_dim_livro_has_medida_valor_referencia_digital_kindle": {
 			      "Binding": {
 			        "ConceptualEntity": "book_analytics dim_livros"
 			      },
@@ -3649,9 +4747,9 @@ cultureInfo pt-BR
 			            "Entity": "book_analytics_dim_livro"
 			          }
 			        },
-			        "medida.valor_referencia_digital_KU": {
+			        "medida.valor_referencia_digital_kindle": {
 			          "Target": {
-			            "Entity": "medida.valor_referencia_digital_KU"
+			            "Entity": "medida.valor_referencia_digital_kindle"
 			          }
 			        }
 			      },
@@ -3662,16 +4760,16 @@ cultureInfo pt-BR
 			              "Role": "book_analytics_dim_livro"
 			            },
 			            "Object": {
-			              "Role": "medida.valor_referencia_digital_KU"
+			              "Role": "medida.valor_referencia_digital_kindle"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "book_analytics_dim_livros_have_valor_referencia_digital_KU"
+			          "ID": "book_analytics_dim_livros_have_valor_referencia_digital_kindle"
 			        }
 			      ]
 			    },
-			    "book_analytics_fato_leitura_has_medida_custo_KU_por_livro_concluido": {
+			    "book_analytics_fato_leitura_has_medida_custo_kindle_por_livro_concluido": {
 			      "Binding": {
 			        "ConceptualEntity": "book_analytics fato_leituras"
 			      },
@@ -3682,9 +4780,9 @@ cultureInfo pt-BR
 			            "Entity": "book_analytics_fato_leitura"
 			          }
 			        },
-			        "medida.custo_KU_por_livro_concluido": {
+			        "medida.custo_kindle_por_livro_concluido": {
 			          "Target": {
-			            "Entity": "medida.custo_KU_por_livro_concluido"
+			            "Entity": "medida.custo_kindle_por_livro_concluido"
 			          }
 			        }
 			      },
@@ -3695,16 +4793,16 @@ cultureInfo pt-BR
 			              "Role": "book_analytics_fato_leitura"
 			            },
 			            "Object": {
-			              "Role": "medida.custo_KU_por_livro_concluido"
+			              "Role": "medida.custo_kindle_por_livro_concluido"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "book_analytics_fato_leituras_have_custo_KU_por_livro_concluido"
+			          "ID": "book_analytics_fato_leituras_have_custo_kindle_por_livro_concluido"
 			        }
 			      ]
 			    },
-			    "book_analytics_fato_assinatura_has_medida_custo_KU_por_livro_concluido": {
+			    "book_analytics_fato_assinatura_has_medida_custo_kindle_por_livro_concluido": {
 			      "Binding": {
 			        "ConceptualEntity": "book_analytics fato_assinatura"
 			      },
@@ -3715,9 +4813,9 @@ cultureInfo pt-BR
 			            "Entity": "book_analytics_fato_assinatura"
 			          }
 			        },
-			        "medida.custo_KU_por_livro_concluido": {
+			        "medida.custo_kindle_por_livro_concluido": {
 			          "Target": {
-			            "Entity": "medida.custo_KU_por_livro_concluido"
+			            "Entity": "medida.custo_kindle_por_livro_concluido"
 			          }
 			        }
 			      },
@@ -3728,16 +4826,16 @@ cultureInfo pt-BR
 			              "Role": "book_analytics_fato_assinatura"
 			            },
 			            "Object": {
-			              "Role": "medida.custo_KU_por_livro_concluido"
+			              "Role": "medida.custo_kindle_por_livro_concluido"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "book_analytics_fato_assinaturas_have_custo_KU_por_livro_concluido"
+			          "ID": "book_analytics_fato_assinaturas_have_custo_kindle_por_livro_concluido"
 			        }
 			      ]
 			    },
-			    "book_analytics_fato_leitura_has_medida_livros_KU_concluidos": {
+			    "book_analytics_fato_leitura_has_medida_livros_kindle_concluidos": {
 			      "Binding": {
 			        "ConceptualEntity": "book_analytics fato_leituras"
 			      },
@@ -3748,9 +4846,9 @@ cultureInfo pt-BR
 			            "Entity": "book_analytics_fato_leitura"
 			          }
 			        },
-			        "medida.livros_KU_concluidos": {
+			        "medida.livros_kindle_concluidos": {
 			          "Target": {
-			            "Entity": "medida.livros_KU_concluidos"
+			            "Entity": "medida.livros_kindle_concluidos"
 			          }
 			        }
 			      },
@@ -3761,12 +4859,45 @@ cultureInfo pt-BR
 			              "Role": "book_analytics_fato_leitura"
 			            },
 			            "Object": {
-			              "Role": "medida.livros_KU_concluidos"
+			              "Role": "medida.livros_kindle_concluidos"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "book_analytics_fato_leituras_have_livros_KU_concluidos"
+			          "ID": "book_analytics_fato_leituras_have_livros_kindle_concluidos"
+			        }
+			      ]
+			    },
+			    "medida_has_meta_leitura": {
+			      "Binding": {
+			        "ConceptualEntity": "Medidas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "medida": {
+			          "Target": {
+			            "Entity": "medida"
+			          }
+			        },
+			        "medida.meta_leitura": {
+			          "Target": {
+			            "Entity": "medida.meta_leitura"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "medida"
+			            },
+			            "Object": {
+			              "Role": "medida.meta_leitura"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "medidas_have_meta_leitura"
 			        }
 			      ]
 			    },
@@ -3800,6 +4931,39 @@ cultureInfo pt-BR
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "book_analytics_fato_assinaturas_have_custo_total_assinatura"
+			        }
+			      ]
+			    },
+			    "medida_has_tempo_medio_leitura_dias": {
+			      "Binding": {
+			        "ConceptualEntity": "Medidas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "medida": {
+			          "Target": {
+			            "Entity": "medida"
+			          }
+			        },
+			        "medida.tempo_medio_leitura_dias": {
+			          "Target": {
+			            "Entity": "medida.tempo_medio_leitura_dias"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "medida"
+			            },
+			            "Object": {
+			              "Role": "medida.tempo_medio_leitura_dias"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "medidas_have_tempo_medio_leitura_dias"
 			        }
 			      ]
 			    },
@@ -3899,6 +5063,237 @@ cultureInfo pt-BR
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "book_analytics_fato_leituras_have_livros_concluidos"
+			        }
+			      ]
+			    },
+			    "book_analytics_dim_livro_has_id_externo": {
+			      "Binding": {
+			        "ConceptualEntity": "book_analytics dim_livros"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "book_analytics_dim_livro": {
+			          "Target": {
+			            "Entity": "book_analytics_dim_livro"
+			          }
+			        },
+			        "book_analytics_dim_livro.id_externo": {
+			          "Target": {
+			            "Entity": "book_analytics_dim_livro.id_externo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "book_analytics_dim_livro"
+			            },
+			            "Object": {
+			              "Role": "book_analytics_dim_livro.id_externo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "book_analytics_dim_livros_have_id_externos"
+			        }
+			      ]
+			    },
+			    "book_analytics_fato_leitura_has_medida_nota_media_outras_origens": {
+			      "Binding": {
+			        "ConceptualEntity": "book_analytics fato_leituras"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "book_analytics_fato_leitura": {
+			          "Target": {
+			            "Entity": "book_analytics_fato_leitura"
+			          }
+			        },
+			        "medida.nota_media_outras_origens": {
+			          "Target": {
+			            "Entity": "medida.nota_media_outras_origens"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "book_analytics_fato_leitura"
+			            },
+			            "Object": {
+			              "Role": "medida.nota_media_outras_origens"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "book_analytics_fato_leituras_have_nota_media_outras_origens"
+			        }
+			      ]
+			    },
+			    "book_analytics_fato_leitura_has_medida_nota_media_kindle": {
+			      "Binding": {
+			        "ConceptualEntity": "book_analytics fato_leituras"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "book_analytics_fato_leitura": {
+			          "Target": {
+			            "Entity": "book_analytics_fato_leitura"
+			          }
+			        },
+			        "medida.nota_media_kindle": {
+			          "Target": {
+			            "Entity": "medida.nota_media_kindle"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "book_analytics_fato_leitura"
+			            },
+			            "Object": {
+			              "Role": "medida.nota_media_kindle"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "book_analytics_fato_leituras_have_nota_media_kindle"
+			        }
+			      ]
+			    },
+			    "book_analytics_fato_leitura_has_medida_livros_descoberta": {
+			      "Binding": {
+			        "ConceptualEntity": "book_analytics fato_leituras"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "book_analytics_fato_leitura": {
+			          "Target": {
+			            "Entity": "book_analytics_fato_leitura"
+			          }
+			        },
+			        "medida.livros_descoberta": {
+			          "Target": {
+			            "Entity": "medida.livros_descoberta"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "book_analytics_fato_leitura"
+			            },
+			            "Object": {
+			              "Role": "medida.livros_descoberta"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "book_analytics_fato_leituras_have_livros_descoberta"
+			        }
+			      ]
+			    },
+			    "book_analytics_fato_leitura_has_medida_livros_intencao_previa": {
+			      "Binding": {
+			        "ConceptualEntity": "book_analytics fato_leituras"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "book_analytics_fato_leitura": {
+			          "Target": {
+			            "Entity": "book_analytics_fato_leitura"
+			          }
+			        },
+			        "medida.livros_intencao_previa": {
+			          "Target": {
+			            "Entity": "medida.livros_intencao_previa"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "book_analytics_fato_leitura"
+			            },
+			            "Object": {
+			              "Role": "medida.livros_intencao_previa"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "book_analytics_fato_leituras_have_livros_intencao_previa"
+			        }
+			      ]
+			    },
+			    "consulta_has_texto_atualizacao": {
+			      "Binding": {
+			        "ConceptualEntity": "Consulta"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "consulta": {
+			          "Target": {
+			            "Entity": "consulta"
+			          }
+			        },
+			        "consulta.texto_atualizacao": {
+			          "Target": {
+			            "Entity": "consulta.texto_atualizacao"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "consulta"
+			            },
+			            "Object": {
+			              "Role": "consulta.texto_atualizacao"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "consultas_have_texto_atualizacao"
+			        }
+			      ]
+			    },
+			    "consulta_has_ultima_atualizacao": {
+			      "Binding": {
+			        "ConceptualEntity": "Consulta"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "consulta": {
+			          "Target": {
+			            "Entity": "consulta"
+			          }
+			        },
+			        "consulta.ultima_atualizacao": {
+			          "Target": {
+			            "Entity": "consulta.ultima_atualizacao"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "consulta"
+			            },
+			            "Object": {
+			              "Role": "consulta.ultima_atualizacao"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "consultas_have_ultima_atualizacaos"
 			        }
 			      ]
 			    },
@@ -5075,39 +6470,6 @@ cultureInfo pt-BR
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "book_analytics_dim_livros_have_titulos"
-			        }
-			      ]
-			    },
-			    "book_analytics_dim_livro_has_isbn": {
-			      "Binding": {
-			        "ConceptualEntity": "book_analytics dim_livros"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "book_analytics_dim_livro": {
-			          "Target": {
-			            "Entity": "book_analytics_dim_livro"
-			          }
-			        },
-			        "book_analytics_dim_livro.isbn": {
-			          "Target": {
-			            "Entity": "book_analytics_dim_livro.isbn"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "book_analytics_dim_livro"
-			            },
-			            "Object": {
-			              "Role": "book_analytics_dim_livro.isbn"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "book_analytics_dim_livros_have_isbns"
 			        }
 			      ]
 			    },

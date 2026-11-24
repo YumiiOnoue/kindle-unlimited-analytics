@@ -89,7 +89,10 @@ table Medidas
 			)
 			
 			```
+		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
 		lineageTag: f9d2e0d2-4cff-4f3d-b07b-12c225f34030
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
 
 	measure 'Valor Referencia Digital Kindle+' = ```
 			
@@ -122,7 +125,10 @@ table Medidas
 			[Custo Total Assinatura]
 			
 			```
+		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
 		lineageTag: 70f409de-d5f5-4f5c-afb7-1b80dbf6e49b
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
 
 	measure 'Multiplo Referencia vs Kindle+' = ```
 			
@@ -380,6 +386,7 @@ table Medidas
 			    [Meses Assinados Kindle+],
 			    0
 			)
+		formatString: 0.00%;-0.00%;0.00%
 		lineageTag: 5fa10431-2a02-4d53-85ff-523eafaa1d18
 
 	measure 'Subtitulo Economia Kindle+' =

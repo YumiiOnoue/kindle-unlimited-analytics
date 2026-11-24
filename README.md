@@ -1,18 +1,18 @@
 # 📚 Book Analytics: Análise Financeira e Comportamental de Leituras (MySQL)
 
 ## 1. Resumo Executivo
-Projeto de Engenharia e Análise de Dados desenvolvido em **MySQL 8.0** para avaliar o retorno financeiro e o comportamento de leitura do meu acervo pessoal entre 2021 e 2026. O estudo responde se vale a pena manter a assinatura do **Kindle Unlimited** ao comparar o custo mensal recorrente contra o preço de referência digital das obras concluídas no catálogo, além de mapear ritmo de leitura, intenção de compra e avaliação por gênero.
+Projeto de Engenharia e Análise de Dados desenvolvido em **MySQL 8.0** para avaliar o retorno financeiro e o comportamento de leitura do meu acervo pessoal entre 2021 e 2026. O estudo responde se vale a pena manter a assinatura do **Kindle+** ao comparar o custo mensal recorrente contra o preço de referência digital das obras concluídas no catálogo, além de mapear ritmo de leitura, intenção de compra e avaliação por gênero.
 
 ## 2. Contexto e Objetivo
 Assinaturas digitais recorrentes exigem acompanhamento periódico para verificar se o uso real justifica o custo fixo. A partir do histórico real de 58 livros e 59 registros de leitura, o banco `book_analytics` foi modelado para:
-- Medir a economia líquida mensal e acumulada do Kindle Unlimited frente à compra avulsa de e-books.
+- Medir a economia líquida mensal e acumulada do Kindle+ frente à compra avulsa de e-books.
 - Calcular o custo rateado real por livro concluído via assinatura.
-- Identificar o ritmo de leitura (dias por livro e páginas por dia) por formato (`Digital` vs. `Físico`) e origem de acesso (`Kindle Unlimited`, `Compra`, `Emprestimo`, `Cortesia`, `Presente`).
+- Identificar o ritmo de leitura (dias por livro e páginas por dia) por formato (`Digital` vs. `Físico`) e origem de acesso (`Kindle+`, `Compra`, `Emprestimo`, `Cortesia`, `Presente`).
 - Avaliar quais categorias, autores e editoras concentram as melhores notas e intenções de compra.
 
 ## 3. Arquitetura e Modelagem
 O banco segue uma modelagem dimensional (**Star Schema** com relacionamento muitos-para-muitos resolvido por tabela ponte):
-- **Tabelas Fato:** `fato_leituras` (eventos de leitura, datas, status, nota e intenção de compra) e `fato_assinatura` (histórico de cobranças mensais do Kindle Unlimited).
+- **Tabelas Fato:** `fato_leituras` (eventos de leitura, datas, status, nota e intenção de compra) e `fato_assinatura` (histórico de cobranças mensais do Kindle+).
 - **Tabelas Dimensão:** `dim_livros` (metadados bibliográficos e preços de referência digital/físico) e `dim_categoria` (gêneros literários).
 - **Tabela Associativa:** `livro_categoria` (permite classificar cada livro em múltiplas categorias simultaneamente).
 

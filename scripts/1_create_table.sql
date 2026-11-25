@@ -71,17 +71,23 @@ CREATE TABLE IF NOT EXISTS fato_leituras (
     formato ENUM('Digital', 'Físico') NOT NULL DEFAULT 'Digital',
     origem_acesso ENUM('Kindle+', 'Compra', 'Emprestado', 'Presente', 'Cortesia') NOT NULL DEFAULT 'Kindle+',
     motivacao_leitura ENUM('Sim', 'Não') NOT NULL DEFAULT 'Sim',
-    nota DECIMAL(2, 1) NOT NULL,
+    nota DECIMAL(2, 1) NULL,
     opiniao_texto TEXT,
     status_leitura ENUM('Lido', 'Lendo', 'Abandonado') NOT NULL DEFAULT 'Lido',
    
     -- Restrições de integridade
     CONSTRAINT fk_fato_livros FOREIGN KEY (id_livro) REFERENCES dim_livros(id_livro),
-    CONSTRAINT chk_nota CHECK (nota >= 1.0 AND nota <= 5.0),
-    CONSTRAINT chk_datas CHECK (data_fim >= data_inicio OR data_fim IS NULL),
-    CONSTRAINT chk_status_data_fim CHECK ((status_leitura = 'Lendo' AND data_fim IS NULL) OR (status_leitura = 'Lido' AND data_fim IS NOT NULL) OR (status_leitura = 'Abandonado')
-)
-);
+    CONSTRAINT chk_nota CHECK (nota IS NULL OR nota BETWEEN 1.0 AND 5.0),
+    CONSTRAINT chk_datas 
+    CHECK (data_fim >= data_inicio OR data_fim IS NULL),
+    CONSTRAINT chk_status_data_fim 
+    CHECK (
+        (status_leitura = 'Lido' AND data_fim IS NOT NULL)
+        OR
+        (status_leitura = 'Lendo' AND data_fim IS NULL)
+        OR
+        (status_leitura = 'Abandonado')
+    ));
 
 -- =========================================================
 -- 6. ÍNDICES

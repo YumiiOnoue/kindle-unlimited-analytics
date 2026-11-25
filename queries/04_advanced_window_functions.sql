@@ -1,5 +1,5 @@
 -- =========================================================
--- ANÁLISES AVANÇADAS E VIEW PARA POWER BI
+-- ANÁLISES AVANÇADAS COM WINDOW FUNCTIONS
 -- =========================================================
 USE book_analytics;
 

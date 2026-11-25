@@ -219,6 +219,13 @@
                   }
                 }
               }
+            },
+            "fillTransparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "50D"
+                }
+              }
             }
           },
           "selector": {
@@ -264,7 +271,7 @@
             "fillTransparency": {
               "expr": {
                 "Literal": {
-                  "Value": "60D"
+                  "Value": "65D"
                 }
               }
             }
@@ -312,7 +319,7 @@
             "fillTransparency": {
               "expr": {
                 "Literal": {
-                  "Value": "70D"
+                  "Value": "75D"
                 }
               }
             }

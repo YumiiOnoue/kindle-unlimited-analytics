@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.15.0/schema.json",
   "name": "89fc7a88999060679c07",
   "position": {
-    "x": 369.96539147978581,
-    "y": 282.24163886086751,
+    "x": 369.38472727272728,
+    "y": 282.00339393939396,
     "z": 6000,
-    "height": 389.03577248389848,
-    "width": 740,
+    "height": 389.24412121212123,
+    "width": 897.64460606060607,
     "tabOrder": 6000
   },
   "visual": {
@@ -103,6 +103,13 @@
               "expr": {
                 "Literal": {
                   "Value": "true"
+                }
+              }
+            },
+            "axisType": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Scalar'"
                 }
               }
             }
@@ -236,10 +243,52 @@
                   "Value": "false"
                 }
               }
+            },
+            "labelPosition": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Above'"
+                }
+              }
             }
           },
           "selector": {
             "metadata": "medidas.Valor Referencia Acumulado KU"
+          }
+        },
+        {
+          "properties": {
+            "labelPosition": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Under'"
+                }
+              }
+            },
+            "showSeries": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "enableBackground": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "backgroundTransparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "20D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "medidas.Investimento Acumulado KU"
           }
         }
       ],

@@ -348,7 +348,7 @@
             "fillTransparency": {
               "expr": {
                 "Literal": {
-                  "Value": "70D"
+                  "Value": "80D"
                 }
               }
             }
@@ -390,6 +390,13 @@
                       "Value": "'#2E473B'"
                     }
                   }
+                }
+              }
+            },
+            "fillTransparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "50D"
                 }
               }
             }
@@ -437,7 +444,7 @@
             "fillTransparency": {
               "expr": {
                 "Literal": {
-                  "Value": "60D"
+                  "Value": "65D"
                 }
               }
             }
@@ -535,6 +542,18 @@
                   "Value": "false"
                 }
               }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
             }
           }
         }
@@ -545,7 +564,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
             }

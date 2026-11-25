@@ -281,6 +281,34 @@
               }
             }
           }
+        },
+        {
+          "properties": {
+            "labelPosition": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Auto'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "medidas.Nota Media KU"
+          }
+        },
+        {
+          "properties": {
+            "labelPosition": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Auto'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "medidas.Nota Media outras origens"
+          }
         }
       ],
       "legend": [
@@ -308,6 +336,13 @@
               }
             },
             "showTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "matchLineColor": {
               "expr": {
                 "Literal": {
                   "Value": "false"
@@ -347,6 +382,13 @@
                       "Percent": 0
                     }
                   }
+                }
+              }
+            },
+            "showMarker": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             }

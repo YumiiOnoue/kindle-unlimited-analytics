@@ -210,7 +210,7 @@ table Medidas
 			    SUM('book_analytics dim_livros'[numero_paginas]),
 			    'book_analytics fato_leituras'[status_leitura] = "Lido"
 			)
-		formatString: 0
+		formatString: #,0
 		lineageTag: eebe8c90-d83d-4ad4-8174-5f2d34522612
 
 	measure 'Média de Páginas por Livro' =
@@ -261,7 +261,8 @@ table Medidas
 			CALCULATE(
 			    DISTINCTCOUNT('book_analytics fato_leituras'[id_livro]),
 			    'book_analytics fato_leituras'[status_leitura] = "Lido",
-			    'book_analytics fato_leituras'[motivacao_leitura] = "Sim"
+			    'book_analytics fato_leituras'[motivacao_leitura] = "Sim",
+			    'book_analytics fato_leituras'[origem_acesso] = "Kindle+"
 			)
 		formatString: 0
 		lineageTag: 015321f3-42db-427d-a90e-10973a0e1492
@@ -477,6 +478,47 @@ table Medidas
 			DISTINCTCOUNT('book_analytics dim_livros'[editora])
 		formatString: 0
 		lineageTag: ae5a60dc-49b9-48c3-b519-0e246209ec9c
+
+	measure 'Preço Digital Médio' =
+			
+			CALCULATE(
+			    AVERAGEX(
+			        'book_analytics fato_leituras',
+			        VAR Preco =
+			            RELATED('book_analytics dim_livros'[preco_digital])
+			        RETURN
+			            IF(
+			                NOT ISBLANK(Preco) && Preco > 0,
+			                Preco,
+			                BLANK()
+			            )
+			    ),
+			    'book_analytics fato_leituras'[origem_acesso] = "Kindle+",
+			    'book_analytics fato_leituras'[status_leitura] = "Lido",
+			    NOT ISBLANK('book_analytics fato_leituras'[data_fim])
+			)
+		lineageTag: e7e7b6ec-1fb4-4d6d-9dd2-2a985d1bab3f
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Break-even Acumulado' =
+			
+			VAR TotalPago =
+			    [Custo Total Assinatura]
+			VAR PrecoMedioDigital =
+			    [Preço Digital Médio]
+			RETURN
+			    IF(
+			        TotalPago > 0
+			            && PrecoMedioDigital > 0,
+			        ROUNDUP(
+			            DIVIDE(TotalPago, PrecoMedioDigital),
+			            0
+			        ),
+			        BLANK()
+			    )
+		formatString: 0
+		lineageTag: 3994e7d8-049e-4480-a49f-4764f6dc7b67
 
 	column Column
 		isHidden

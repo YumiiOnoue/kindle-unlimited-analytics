@@ -382,7 +382,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Categorias Mais Lidas por Origem'"
+                  "Value": "'Gêneros Mais Frequentes por Origem'"
                 }
               }
             },
@@ -434,7 +434,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
             },
@@ -442,6 +442,20 @@
               "expr": {
                 "Literal": {
                   "Value": "'12'"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Um mesmo livro pode pertencer a múltiplas categorias'"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'center'"
                 }
               }
             }
@@ -798,6 +812,48 @@
             }
           ]
         }
+      },
+      {
+        "name": "a0081f300683c0dfb7d7",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "Livros Concluidos"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "eb455deea779488043b8",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "Livros Kindle+ Concluidos"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "e20e49b6cbe8dd9228c7",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "Livros Concluidos Outras Origens"
+          }
+        },
+        "type": "Advanced"
       }
     ]
   }

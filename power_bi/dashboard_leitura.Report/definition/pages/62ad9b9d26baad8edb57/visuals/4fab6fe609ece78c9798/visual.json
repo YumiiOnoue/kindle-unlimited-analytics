@@ -41,11 +41,11 @@
                       "Entity": "book_analytics fato_leituras"
                     }
                   },
-                  "Property": "data_fim"
+                  "Property": "data_inicio"
                 }
               },
-              "queryRef": "book_analytics fato_leituras.data_fim",
-              "nativeQueryRef": "data_fim"
+              "queryRef": "book_analytics fato_leituras.data_inicio",
+              "nativeQueryRef": "data_inicio"
             }
           ]
         }

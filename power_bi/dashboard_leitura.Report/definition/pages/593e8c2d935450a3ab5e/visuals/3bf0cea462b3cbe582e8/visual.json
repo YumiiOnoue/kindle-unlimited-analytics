@@ -260,7 +260,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Evolução Mensal do Custo por Livro no Kindle+'"
+                  "Value": "'Evolução Mensal do Custo por Livro Lido no Kindle+'"
                 }
               }
             }

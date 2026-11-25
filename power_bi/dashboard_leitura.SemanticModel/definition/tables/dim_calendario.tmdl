@@ -51,13 +51,15 @@ table dim_calendario
 	column AnoMesNum
 		formatString: 0
 		lineageTag: 2d123250-2b0b-4920-a8b2-a7adfa9ad2d6
-		summarizeBy: sum
+		summarizeBy: none
 		isNameInferred
 		sourceColumn: [AnoMesNum]
 
-		annotation SummarizationSetBy = Automatic
+		annotation SummarizationSetBy = User
 
 	column AnoMes
+		dataType: dateTime
+		formatString: Long Date
 		lineageTag: c1e04a4e-9008-401d-aff5-92d50983abf8
 		summarizeBy: none
 		isNameInferred
@@ -65,6 +67,8 @@ table dim_calendario
 		sortByColumn: AnoMesNum
 
 		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
 
 	column Trimestre
 		lineageTag: ffef53af-de2b-461a-8a2e-0d4318500c3a

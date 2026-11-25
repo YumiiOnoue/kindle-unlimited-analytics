@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.15.0/schema.json",
   "name": "baca449ec4e8de21295e",
   "position": {
-    "x": 970.71920260065724,
-    "y": 41.871005136744195,
+    "x": 1584.7796363636364,
+    "y": 43.690666666666665,
     "z": 7000,
-    "height": 199.07370347075303,
-    "width": 274.01909771856594,
+    "height": 200,
+    "width": 250,
     "tabOrder": 7000
   },
   "visual": {
@@ -23,11 +23,11 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "Custo Kindle+ por Livro Concluido"
+                  "Property": "Break-even Acumulado"
                 }
               },
-              "queryRef": "medidas.Custo KU por Livro Concluido",
-              "nativeQueryRef": "Custo KU por Livro Concluido"
+              "queryRef": "Medidas.Break-even Acumulado",
+              "nativeQueryRef": "Break-even Acumulado"
             }
           ]
         },
@@ -99,7 +99,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
             },
@@ -107,6 +107,27 @@
               "expr": {
                 "Literal": {
                   "Value": "'12'"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Livros para cobrir o gasto'"
+                }
+              }
+            },
+            "titleWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'center'"
                 }
               }
             }
@@ -119,7 +140,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Custo Médio por Livro Concluído no Kindle+'"
+                  "Value": "'Break-even Acumulado'"
                 }
               }
             },

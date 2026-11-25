@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.15.0/schema.json",
   "name": "fcc4e250216d1c01d83e",
   "position": {
-    "x": 1601.0160067119614,
-    "y": 48.515636567029134,
+    "x": 1613.3766731487133,
+    "y": 47.093156945962441,
     "z": 8000,
-    "height": 200.12700083899517,
-    "width": 250.66412226298385,
+    "height": 200.58196476984003,
+    "width": 251.16350371179968,
     "tabOrder": 7000
   },
   "visual": {
@@ -100,7 +100,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Leituras Planejadas no Kindle+'"
+                  "Value": "'Taxa de Leitura de Livros Planejados no Kindle+'"
                 }
               }
             },

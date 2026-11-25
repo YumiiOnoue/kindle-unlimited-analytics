@@ -1,0 +1,95 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.15.0/schema.json",
+  "name": "720ac258e85e1c4f2425",
+  "position": {
+    "x": 395.20193939393937,
+    "y": 736.78351515151519,
+    "z": 8002,
+    "height": 31.775030303030302,
+    "width": 1024.7447272727272,
+    "tabOrder": 8002
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "●",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "11pt",
+                      "color": "#e66c37"
+                    }
+                  },
+                  {
+                    "value": " Baixo aproveitamento (1 livro) ",
+                    "textStyle": {
+                      "fontSize": "11pt",
+                      "color": "#666666"
+                    }
+                  },
+                  {
+                    "value": " ",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": "●",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "11pt",
+                      "color": "#2e473b"
+                    }
+                  },
+                  {
+                    "value": " ",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "11pt",
+                      "color": "#666666"
+                    }
+                  },
+                  {
+                    "value": "Bom aproveitamento (2+ livros) ",
+                    "textStyle": {
+                      "fontSize": "11pt",
+                      "color": "#666666"
+                    }
+                  },
+                  {
+                    "value": " ",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": "- - ",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "11pt",
+                      "color": "#12239e"
+                    }
+                  },
+                  {
+                    "value": "Mensalidade",
+                    "textStyle": {
+                      "fontSize": "11pt",
+                      "color": "#666666"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

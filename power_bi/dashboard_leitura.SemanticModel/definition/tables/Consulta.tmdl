@@ -6,6 +6,77 @@ table Consulta
 			"Atualizado em: " & FORMAT(MAX(Consulta[Ultima_Atualizacao]), "dd/mm/yyyy \à\s HH:mm")
 		lineageTag: 66df223a-2a72-4771-bd0c-906bd77ec1d0
 
+	measure 'Teste - Livros na Origem' =
+			
+			DISTINCTCOUNT(
+			    'book_analytics fato_leituras'[id_livro]
+			)
+		formatString: 0
+		lineageTag: f2512fbe-7c3d-4d8f-a50f-451a401065f4
+
+	measure 'Teste - Editoras Gerais' =
+			
+			CALCULATE(
+			    DISTINCTCOUNT('book_analytics dim_livros'[editora]),
+			    REMOVEFILTERS('book_analytics fato_leituras'[origem_acesso])
+			)
+		formatString: 0
+		lineageTag: 3eec799e-a932-480b-b537-c2bc72042d39
+
+	measure 'Teste - Livros na Dimensão' =
+			
+			CALCULATE(
+			    DISTINCTCOUNT('book_analytics dim_livros'[id_livro]),
+			    TREATAS(
+			        VALUES('book_analytics fato_leituras'[id_livro]),
+			        'book_analytics dim_livros'[id_livro]
+			    )
+			)
+		formatString: 0
+		lineageTag: 3e76ecd7-d83e-43b7-965f-b1d5f53a9343
+
+	measure 'Teste - Registros Kindle+' =
+			
+			CALCULATE(
+			    COUNTROWS('book_analytics fato_leituras'),
+			    'book_analytics fato_leituras'[origem_acesso] = "Kindle+"
+			)
+		formatString: 0
+		lineageTag: 695298f8-6823-4086-9da4-4b367bc4fe35
+
+	measure 'Teste - Livros Kindle+' =
+			
+			CALCULATE(
+			    DISTINCTCOUNT('book_analytics fato_leituras'[id_livro]),
+			    'book_analytics fato_leituras'[origem_acesso] = "Kindle+"
+			)
+		formatString: 0
+		lineageTag: ee902595-31c4-4784-861c-2f3db00f09d9
+
+	measure 'Teste - Registros sem Filtros' =
+			
+			CALCULATE(
+			    COUNTROWS('book_analytics fato_leituras'),
+			    FILTER(
+			        ALL('book_analytics fato_leituras'),
+			        'book_analytics fato_leituras'[origem_acesso] = "Kindle+"
+			    )
+			)
+		formatString: 0
+		lineageTag: 50044022-e3b1-47c2-9aab-83d4c81efb19
+
+	measure 'Teste - Livros sem Filtros' =
+			
+			CALCULATE(
+			    DISTINCTCOUNT('book_analytics fato_leituras'[id_livro]),
+			    FILTER(
+			        ALL('book_analytics fato_leituras'),
+			        'book_analytics fato_leituras'[origem_acesso] = "Kindle+"
+			    )
+			)
+		formatString: 0
+		lineageTag: 552ec1f2-e69c-4e04-86fb-110db64d6d10
+
 	column Ultima_Atualizacao
 		dataType: dateTime
 		formatString: General Date

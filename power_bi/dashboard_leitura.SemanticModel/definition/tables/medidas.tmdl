@@ -443,6 +443,7 @@ table Medidas
 			
 			CALCULATE(
 			    [Livros Concluidos],
+			    'book_analytics fato_leituras'[origem_acesso] = "Kindle+",
 			    'book_analytics fato_leituras'[motivacao_leitura] = "Não"
 			)
 		formatString: 0
@@ -475,7 +476,10 @@ table Medidas
 
 	measure 'Total Editoras' =
 			
-			DISTINCTCOUNT('book_analytics dim_livros'[editora])
+			CALCULATE(
+			    DISTINCTCOUNT('book_analytics dim_livros'[editora]),
+			    'book_analytics fato_leituras'[status_leitura] = "Lido"
+			)
 		formatString: 0
 		lineageTag: ae5a60dc-49b9-48c3-b519-0e246209ec9c
 

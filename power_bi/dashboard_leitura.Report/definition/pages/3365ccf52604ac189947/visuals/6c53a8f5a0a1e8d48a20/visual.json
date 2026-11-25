@@ -805,6 +805,62 @@
             }
           ]
         }
+      },
+      {
+        "name": "72e4592335a7c4584dc0",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "Livros Concluidos"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "0b0b205e2622a769798f",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "% Descoberta Categoria"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "104c4142ddd88bd9e288",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "Livros Intencao Previa"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "541df4b14106ec8cfb7e",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "Livros Descoberta"
+          }
+        },
+        "type": "Advanced"
       }
     ]
   }

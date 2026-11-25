@@ -38,14 +38,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "book_analytics fato_leituras"
+                      "Entity": "dim_calendario"
                     }
                   },
-                  "Property": "data_fim"
+                  "Property": "Date"
                 }
               },
-              "queryRef": "book_analytics fato_leituras.data_fim",
-              "nativeQueryRef": "data_fim"
+              "queryRef": "dim_calendario.Date",
+              "nativeQueryRef": "Date"
             }
           ]
         }
@@ -425,5 +425,37 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "361b01cb2d7940b12284",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "Total Autores Lidos"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "6bb7f631f8c8f5f83a8b",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dim_calendario"
+              }
+            },
+            "Property": "Date"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
   }
 }

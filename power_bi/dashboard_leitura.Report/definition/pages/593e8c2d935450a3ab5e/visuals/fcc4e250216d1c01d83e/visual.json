@@ -413,5 +413,37 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "605d202c363e2eb1eb3d",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "% Livros com Motivação de Leitura"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "54a089c7a4bc3f00c0fb",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "book_analytics fato_leituras"
+              }
+            },
+            "Property": "data_fim"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
   }
 }

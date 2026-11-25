@@ -439,5 +439,37 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "3ade90e9bd6a99541d15",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "Livros Kindle+ Concluidos"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "8e8144a894d161b988a8",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "book_analytics fato_leituras"
+              }
+            },
+            "Property": "data_fim"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
   }
 }

@@ -1,12 +1,12 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.15.0/schema.json",
   "name": "a00fff227de2c0e4eee0",
   "position": {
-    "x": 16.324877359140093,
-    "y": 781.07916075894912,
+    "x": 16.267298678893344,
+    "y": 724.86787878787879,
     "z": 2000,
-    "height": 234.91102579216516,
-    "width": 293.63878224020647,
+    "height": 274.05963636363634,
+    "width": 293.9190303030303,
     "tabOrder": 5000
   },
   "visual": {
@@ -413,5 +413,23 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "1b4561f3be04052d4650"
+  "parentGroupName": "1b4561f3be04052d4650",
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "62bf7e8cf93cdaaf7385",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "book_analytics fato_leituras"
+              }
+            },
+            "Property": "origem_acesso"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
+  }
 }

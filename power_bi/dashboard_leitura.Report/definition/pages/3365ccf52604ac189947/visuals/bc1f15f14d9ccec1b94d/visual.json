@@ -2,8 +2,8 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.15.0/schema.json",
   "name": "bc1f15f14d9ccec1b94d",
   "position": {
-    "x": 389.24412121212123,
-    "y": 37.732848484848482,
+    "x": 393.216,
+    "y": 41.704727272727276,
     "z": 3000,
     "height": 198.59393939393939,
     "width": 248.24242424242425,
@@ -38,14 +38,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "book_analytics fato_leituras"
+                      "Entity": "dim_calendario"
                     }
                   },
-                  "Property": "data_fim"
+                  "Property": "Date"
                 }
               },
-              "queryRef": "book_analytics fato_leituras.data_fim",
-              "nativeQueryRef": "data_fim"
+              "queryRef": "dim_calendario.Date",
+              "nativeQueryRef": "Date"
             }
           ]
         }
@@ -425,5 +425,37 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "45adee95eacd7f137dcc",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "Total de Categorias"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "0360a72a5238efa6d6d2",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dim_calendario"
+              }
+            },
+            "Property": "Date"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
   }
 }

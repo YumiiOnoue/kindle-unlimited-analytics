@@ -91,6 +91,18 @@ table 'book_analytics fato_leituras'
 
 		annotation SummarizationSetBy = Automatic
 
+	column 'Motivação Formatada' =
+			
+			IF(
+			    'book_analytics fato_leituras'[motivacao_leitura] = "Sim",
+			    "Intenção Prévia",
+			    "Descoberta"
+			)
+		lineageTag: ea779d9e-d9a6-43ce-90bc-f7b17a60916f
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
 	partition 'book_analytics fato_leituras' = m
 		mode: import
 		source =

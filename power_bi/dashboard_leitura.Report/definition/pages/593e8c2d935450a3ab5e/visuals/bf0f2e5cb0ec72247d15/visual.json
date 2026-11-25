@@ -432,5 +432,37 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "deb7f7cfca4439b8d9d4",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "Meses Sem Conclusão Kindle+"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "ff9c7b2fcffb231acbc8",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "book_analytics fato_leituras"
+              }
+            },
+            "Property": "data_fim"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
   }
 }

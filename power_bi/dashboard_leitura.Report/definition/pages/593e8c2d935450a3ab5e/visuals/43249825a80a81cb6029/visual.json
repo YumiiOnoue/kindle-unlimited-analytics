@@ -412,5 +412,37 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "6ac1928f0e4f9656e028",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "Custo Kindle+ por Livro Concluido"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "e1522d56b8af9b779901",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "book_analytics fato_leituras"
+              }
+            },
+            "Property": "data_fim"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
   }
 }

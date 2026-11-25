@@ -1,0 +1,39 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.15.0/schema.json",
+  "name": "9d29d78cce9612190d96",
+  "position": {
+    "x": 9.7221717015710709,
+    "y": 159.7218989465411,
+    "z": 6000,
+    "height": 53.85971010988014,
+    "width": 299.01425267898975,
+    "tabOrder": 8008
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Painel pessoal de leitura e assinatura",
+                    "textStyle": {
+                      "fontSize": "14pt",
+                      "color": "#e3ddd3"
+                    }
+                  }
+                ],
+                "horizontalTextAlignment": "center"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "parentGroupName": "63ff248654cddae0ca4a"
+}

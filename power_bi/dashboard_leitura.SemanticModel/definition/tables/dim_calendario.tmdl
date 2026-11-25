@@ -126,7 +126,7 @@ table dim_calendario
 				    "NomeMes", FORMAT([Date], "mmmm"),
 				    "MesAbrev", FORMAT([Date], "mmm"),
 				    "AnoMesNum", YEAR([Date]) * 100 + MONTH([Date]),
-				    "AnoMes", FORMAT([Date], "mm/yyyy"),
+				    "AnoMes", DATE(YEAR([Date]), MONTH([Date]), 1),
 				    "Trimestre", "T" & FORMAT([Date], "q"),
 				    "TrimestreAno", "T" & FORMAT([Date], "q") & "/" & YEAR([Date]),
 				    "DiaSemanaNum", WEEKDAY([Date], 2), -- 1 = Segunda, 7 = Domingo

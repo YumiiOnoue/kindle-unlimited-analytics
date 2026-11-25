@@ -38,14 +38,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "book_analytics fato_leituras"
+                      "Entity": "dim_calendario"
                     }
                   },
-                  "Property": "data_fim"
+                  "Property": "Date"
                 }
               },
-              "queryRef": "book_analytics fato_leituras.data_fim",
-              "nativeQueryRef": "data_fim"
+              "queryRef": "dim_calendario.Date",
+              "nativeQueryRef": "Date"
             }
           ]
         }
@@ -425,5 +425,37 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "e099ff08bfc60b3ecdfe",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "Total Editoras"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "2c920974a8ac20178975",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dim_calendario"
+              }
+            },
+            "Property": "Date"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
   }
 }

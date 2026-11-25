@@ -151,7 +151,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Livros Descobertos'"
+                  "Value": "'Livros Descobertos pelo Kindle+'"
                 }
               }
             }
@@ -425,5 +425,37 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "de1652e2a8c248a7e81a",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "book_analytics fato_leituras"
+              }
+            },
+            "Property": "data_fim"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "44fac05462c8bb707645",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "Livros Descoberta"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

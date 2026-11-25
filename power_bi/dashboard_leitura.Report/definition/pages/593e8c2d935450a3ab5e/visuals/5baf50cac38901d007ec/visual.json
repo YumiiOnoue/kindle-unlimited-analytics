@@ -439,5 +439,37 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "763069eee7d959fc9cd6",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "Custo Total Assinatura"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "ce0809061ebe835dc21c",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "book_analytics fato_assinatura"
+              }
+            },
+            "Property": "servico"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
   }
 }
